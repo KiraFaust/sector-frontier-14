@@ -26,7 +26,7 @@ ent-CoffeeTableReinforcedUranium = укреплённый урановый ко�
     .desc = Браво. Вы достигли величия Урана.
 
 
-ent-TableReinforcedPlasmaGlass = стол из плазменного бронестекла
+ent-TablePlasmaGlassReinforced = стол из плазменного бронестекла
     .desc =  Очень крепкий стол из плазменного бронестекла.
 
 ent-TableReinforcedUraniumGlass = стол из уранового бронестекла
