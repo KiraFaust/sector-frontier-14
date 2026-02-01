@@ -72,3 +72,9 @@ ent-ADTClothingBackpackCCC = рюкзак консультанта ЦК
 
 ent-ClothingBackpackDuffelCCC = вещмешок консультанта ЦК
     .desc = Большой вещмешок для толстосуммов.
+
+ent-ClothingUniformJumpskirtPilotSD = юбка-комбинезон пилота службы безопасности
+    .desc = Чёрное платье для пилота шаттла СБ.
+
+ent-ClothingUniformJumpsuitPilotSD = комбинезон пилота службы безопасности
+    .desc = Чёрный комбинезон для пилота шаттла СБ.
