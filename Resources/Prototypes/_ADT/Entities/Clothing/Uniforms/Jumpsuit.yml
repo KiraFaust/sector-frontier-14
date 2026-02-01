@@ -291,9 +291,9 @@
   description: There are mistakes in your document, sir.
   components:
   - type: Sprite
-    sprite: _ADT/Clothing/Uniforms/Jumpsuit/Jumpsuit_hop.rsi
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/jumpsuit_hop.rsi
   - type: Clothing
-    sprite: _ADT/Clothing/Uniforms/Jumpsuit/Jumpsuit_hop.rsi
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/jumpsuit_hop.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -302,6 +302,6 @@
   description: There are mistakes in your behaviour, peasant.
   components:
   - type: Sprite
-    sprite: _ADT/Clothing/Uniforms/Jumpsuit/Jumpsuit_alt_hop.rsi
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/jumpsuit_alt_hop.rsi
   - type: Clothing
-    sprite: _ADT/Clothing/Uniforms/Jumpsuit/Jumpsuit_alt_hop.rsi
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/jumpsuit_alt_hop.rsi
