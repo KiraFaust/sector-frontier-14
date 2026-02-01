@@ -78,3 +78,6 @@ ent-ClothingUniformJumpskirtPilotSD = юбка-комбинезон пилота
 
 ent-ClothingUniformJumpsuitPilotSD = комбинезон пилота службы безопасности
     .desc = Чёрный комбинезон для пилота шаттла СБ.
+
+ent-ClothingHeadHelmetSecurityRed = шлем СБ
+    .desc = Стандартный боевой шлем для сотрудников службы безопасности. Обладает достаточной прочностью на разрыв. Держите голову низко.
