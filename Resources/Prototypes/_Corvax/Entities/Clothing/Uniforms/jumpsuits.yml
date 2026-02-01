@@ -49,6 +49,6 @@
   description: Black uniform for security shuttle pilot.
   components:
     - type: Sprite
-      sprite: Corvax/Clothing/Uniforms/Jumpsuit/pilot.rsi
+      sprite: _Corvax/Clothing/Uniforms/Jumpsuit/pilot.rsi
     - type: Clothing
-      sprite: Corvax/Clothing/Uniforms/Jumpsuit/pilot.rsi
+      sprite: _Corvax/Clothing/Uniforms/Jumpsuit/pilot.rsi

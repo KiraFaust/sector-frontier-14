@@ -50,6 +50,6 @@
   description: Black dress for security shuttle pilot.
   components:
     - type: Sprite
-      sprite: Corvax/Clothing/Uniforms/Jumpskirt/pilot.rsi
+      sprite: _Corvax/Clothing/Uniforms/Jumpskirt/pilot.rsi
     - type: Clothing
-      sprite: Corvax/Clothing/Uniforms/Jumpskirt/pilot.rsi
+      sprite: _Corvax/Clothing/Uniforms/Jumpskirt/pilot.rsi
