@@ -1,6 +1,6 @@
 - type: entity
   name: CC-7 "Arbiter"
-  parent: [BaseWeaponBattery, ADTBaseMagneticGun]
+  parent: [ BaseWeaponBattery ]
   id: ADTWeaponBlasterCC7Arbiter
   description: Arbiter
   components:
