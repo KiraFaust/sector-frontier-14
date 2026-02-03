@@ -41,7 +41,7 @@
     energyConsumption: 20
     disableDuration: 2
 
-  - type: entity
+- type: entity
   name: stanner bolt
   id: ADTBulletDisabler
   parent: BulletDisabler
