@@ -242,7 +242,7 @@
 #    materialComposition: # Frontier
 #      Durathread: 100 # Frontier
 #      Cloth: 50 # Frontier
-- type: HideInnerClothing # сокрытие шмоток под скафом
+  - type: HideInnerClothing # сокрытие шмоток под скафом
 
 - type: entity
   parent: ClothingOuterBase
