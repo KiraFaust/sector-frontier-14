@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using NpgsqlTypes;
@@ -13,22 +13,6 @@ namespace Content.Server.Database.Migrations.Postgres
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_server_ban_hit_server_ban_ban_id",
-                table: "server_ban_hit");
-
-            migrationBuilder.DropTable(
-                name: "server_role_unban");
-
-            migrationBuilder.DropTable(
-                name: "server_unban");
-
-            migrationBuilder.DropTable(
-                name: "server_role_ban");
-
-            migrationBuilder.DropTable(
-                name: "server_ban");
-
             migrationBuilder.CreateTable(
                 name: "ban",
                 columns: table => new
@@ -255,6 +239,264 @@ namespace Content.Server.Database.Migrations.Postgres
                 column: "ban_id",
                 unique: true);
 
+            migrationBuilder.Sql("""
+                CREATE INDEX "IX_ban_address_address"
+                    ON ban_address
+                    USING gist
+                    (address inet_ops)
+                    INCLUDE (ban_id);
+
+                CREATE UNIQUE INDEX "IX_ban_hwid_hwid_ban_id"
+                    ON ban_hwid
+                    (hwid_type, hwid, ban_id);
+
+                CREATE UNIQUE INDEX "IX_ban_address_address_ban_id"
+                    ON ban_address
+                    (address, ban_id);
+                """);
+
+            migrationBuilder.Sql("""
+                --
+                -- Insert server bans
+                --
+                INSERT INTO
+                	ban	(ban_id, type, playtime_at_note, ban_time, expiration_time, reason, severity, banning_admin, last_edited_by_id, last_edited_at, exempt_flags, auto_delete, hidden)
+                SELECT
+                	sb.server_ban_id,
+                	0,
+                	sb.playtime_at_note,
+                	sb.ban_time,
+                	sb.expiration_time,
+                	sb.reason,
+                	sb.severity,
+                	p_banning.user_id,
+                	p_edited.user_id,
+                	sb.last_edited_at,
+                	sb.exempt_flags,
+                	sb.auto_delete,
+                	sb.hidden
+                FROM
+                	server_ban sb
+                LEFT JOIN player p_banning
+                ON p_banning.user_id = sb.banning_admin
+                LEFT JOIN player p_edited
+                ON p_edited.user_id = sb.last_edited_by_id;
+
+                -- Update ID sequence to be after newly inserted IDs.
+                SELECT setval('ban_ban_id_seq', (SELECT MAX(ban_id) FROM ban));
+
+                -- Insert ban player records.
+                INSERT INTO
+                	ban_player (user_id, ban_id)
+                SELECT
+                	player_user_id, server_ban_id
+                FROM
+                	server_ban
+                WHERE
+                	player_user_id IS NOT NULL;
+
+                -- Insert ban address records.
+                INSERT INTO
+                	ban_address (address, ban_id)
+                SELECT
+                	address, server_ban_id
+                FROM
+                	server_ban
+                WHERE
+                	address IS NOT NULL;
+
+                -- Insert ban HWID records.
+                INSERT INTO
+                	ban_hwid (hwid, hwid_type, ban_id)
+                SELECT
+                	hwid, hwid_type, server_ban_id
+                FROM
+                	server_ban
+                WHERE
+                	hwid IS NOT NULL;
+
+                -- Insert ban unban records.
+                INSERT INTO
+                	unban (ban_id, unbanning_admin, unban_time)
+                SELECT
+                	ban_id, unbanning_admin, unban_time
+                FROM server_unban;
+
+                -- Insert ban round records.
+                INSERT INTO
+                	ban_round (round_id, ban_id)
+                SELECT
+                	round_id, server_ban_id
+                FROM
+                	server_ban
+                WHERE
+                	round_id IS NOT NULL;
+
+                --
+                -- Insert role bans
+                --
+
+                -- Create mapping table from role ban -> merged role ban ID.
+                CREATE TEMPORARY TABLE _role_ban_import_merge_map (merge_id INTEGER, server_role_ban_id INTEGER UNIQUE) ON COMMIT DROP;
+
+                -- Create a table to store merged IDs -> new ban IDs
+                CREATE TEMPORARY TABLE _role_ban_import_id_map (ban_id INTEGER UNIQUE, merge_id INTEGER UNIQUE) ON COMMIT DROP;
+
+                -- Calculate merged role bans.
+                INSERT INTO
+                	_role_ban_import_merge_map
+                SELECT
+                	(
+                		SELECT
+                			sub.server_role_ban_id
+                		FROM
+                			server_role_ban AS sub
+                		LEFT JOIN server_role_unban AS sub_unban
+                		ON sub_unban.ban_id = sub.server_role_ban_id
+                		WHERE
+                			main.reason IS NOT DISTINCT FROM sub.reason
+                			AND main.player_user_id IS NOT DISTINCT FROM sub.player_user_id
+                			AND main.address IS NOT DISTINCT FROM sub.address
+                			AND main.hwid IS NOT DISTINCT FROM sub.hwid
+                			AND main.hwid_type IS NOT DISTINCT FROM sub.hwid_type
+                			AND date_trunc('second', main.ban_time) = date_trunc('second', sub.ban_time)
+                			AND (
+                				(main.expiration_time IS NULL) = (sub.expiration_time IS NULL)
+                				OR date_trunc('minute', main.expiration_time) = date_trunc('minute', sub.expiration_time)
+                			)
+                			AND main.round_id IS NOT DISTINCT FROM sub.round_id
+                			AND main.severity IS NOT DISTINCT FROM sub.severity
+                			AND main.hidden IS NOT DISTINCT FROM sub.hidden
+                			AND main.banning_admin IS NOT DISTINCT FROM sub.banning_admin
+                			AND (sub_unban.ban_id IS NULL) = (main_unban.ban_id IS NULL)
+                		ORDER BY
+                			sub.server_role_ban_id ASC
+                		LIMIT 1
+                	), main.server_role_ban_id
+                FROM
+                	server_role_ban AS main
+                LEFT JOIN server_role_unban AS main_unban
+                ON main_unban.ban_id = main.server_role_ban_id;
+
+                -- Assign new ban IDs for merged IDs.
+                INSERT INTO
+                	_role_ban_import_id_map
+                SELECT
+                	DISTINCT ON (merge_id)
+                	nextval('ban_ban_id_seq'),
+                	merge_id
+                FROM
+                	_role_ban_import_merge_map;
+
+                -- Insert new ban records
+                INSERT INTO
+                	ban	(ban_id, type, playtime_at_note, ban_time, expiration_time, reason, severity, banning_admin, last_edited_by_id, last_edited_at, exempt_flags, auto_delete, hidden)
+                SELECT
+                	im.ban_id,
+                	1,
+                	srb.playtime_at_note,
+                	srb.ban_time,
+                	srb.expiration_time,
+                	srb.reason,
+                	srb.severity,
+                	p_banning.user_id,
+                	p_edited.user_id,
+                	srb.last_edited_at,
+                	0,
+                	FALSE,
+                	srb.hidden
+                FROM
+                	_role_ban_import_id_map im
+                INNER JOIN _role_ban_import_merge_map mm
+                ON im.merge_id = mm.merge_id
+                INNER JOIN server_role_ban srb
+                ON srb.server_role_ban_id = im.merge_id
+                LEFT JOIN player p_banning
+                ON p_banning.user_id = srb.banning_admin
+                LEFT JOIN player p_edited
+                ON p_edited.user_id = srb.last_edited_by_id
+                WHERE mm.merge_id = mm.server_role_ban_id;
+
+                -- Insert role ban player records.
+                INSERT INTO
+                	ban_player (user_id, ban_id)
+                SELECT
+                	player_user_id, im.ban_id
+                FROM
+                	_role_ban_import_id_map im
+                INNER JOIN _role_ban_import_merge_map mm
+                ON im.merge_id = mm.merge_id
+                INNER JOIN server_role_ban srb
+                ON srb.server_role_ban_id = im.merge_id
+                WHERE mm.merge_id = mm.server_role_ban_id
+                	AND player_user_id IS NOT NULL;
+
+                -- Insert role ban address records.
+                INSERT INTO
+                	ban_address (address, ban_id)
+                SELECT
+                	address, im.ban_id
+                FROM
+                	_role_ban_import_id_map im
+                INNER JOIN _role_ban_import_merge_map mm
+                ON im.merge_id = mm.merge_id
+                INNER JOIN server_role_ban srb
+                ON srb.server_role_ban_id = im.merge_id
+                WHERE mm.merge_id = mm.server_role_ban_id
+                	AND address IS NOT NULL;
+
+                -- Insert role ban HWID records.
+                INSERT INTO
+                	ban_hwid (hwid, hwid_type, ban_id)
+                SELECT
+                	hwid, hwid_type, im.ban_id
+                FROM
+                	_role_ban_import_id_map im
+                INNER JOIN _role_ban_import_merge_map mm
+                ON im.merge_id = mm.merge_id
+                INNER JOIN server_role_ban srb
+                ON srb.server_role_ban_id = im.merge_id
+                WHERE mm.merge_id = mm.server_role_ban_id
+                	AND hwid IS NOT NULL;
+
+                -- Insert role ban role records.
+                INSERT INTO
+                	ban_role (role_type, role_id, ban_id)
+                SELECT
+                	split_part(role_id, ':', 1), split_part(role_id, ':', 2), im.ban_id
+                FROM
+                	_role_ban_import_id_map im
+                INNER JOIN _role_ban_import_merge_map mm
+                ON im.merge_id = mm.merge_id
+                INNER JOIN server_role_ban srb
+                ON srb.server_role_ban_id = mm.server_role_ban_id
+                -- Yes, we have some messy ban records which, after merging, end up with duplicate roles.
+                ON CONFLICT DO NOTHING;
+
+                -- Insert role unban records.
+                INSERT INTO
+                	unban (ban_id, unbanning_admin, unban_time)
+                SELECT
+                	im.ban_id, unbanning_admin, unban_time
+                FROM server_role_unban sru
+                INNER JOIN _role_ban_import_id_map im
+                ON im.merge_id = sru.ban_id;
+
+                -- Insert role rounds
+                INSERT INTO
+                	ban_round (round_id, ban_id)
+                SELECT
+                	round_id, im.ban_id
+                FROM
+                	_role_ban_import_id_map im
+                INNER JOIN _role_ban_import_merge_map mm
+                ON im.merge_id = mm.merge_id
+                INNER JOIN server_role_ban srb
+                ON srb.server_role_ban_id = im.merge_id
+                WHERE mm.merge_id = mm.server_role_ban_id
+                	AND round_id IS NOT NULL;
+                """);
+
             migrationBuilder.AddForeignKey(
                 name: "FK_server_ban_hit_ban_ban_id",
                 table: "server_ban_hit",
@@ -262,6 +504,41 @@ namespace Content.Server.Database.Migrations.Postgres
                 principalTable: "ban",
                 principalColumn: "ban_id",
                 onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_server_ban_hit_server_ban_ban_id",
+                table: "server_ban_hit");
+
+            migrationBuilder.DropTable(
+                name: "server_role_unban");
+
+            migrationBuilder.DropTable(
+                name: "server_unban");
+
+            migrationBuilder.DropTable(
+                name: "server_role_ban");
+
+            migrationBuilder.DropTable(
+                name: "server_ban");
+
+            migrationBuilder.Sql("""
+                CREATE OR REPLACE FUNCTION send_server_ban_notification()
+                    RETURNS trigger AS $$
+                    BEGIN
+                        PERFORM pg_notify(
+                            'ban_notification',
+                            json_build_object('ban_id', NEW.ban_id)::text
+                        );
+                        RETURN NEW;
+                    END;
+                    $$ LANGUAGE plpgsql;
+
+                CREATE TRIGGER notify_on_server_ban_insert
+                    AFTER INSERT ON ban
+                    FOR EACH ROW
+                    WHEN (NEW.type = 0)
+                    EXECUTE FUNCTION send_server_ban_notification();
+                """);
         }
 
         /// <inheritdoc />
