@@ -44,6 +44,7 @@
     walkModifier: 0.9
     sprintModifier: 0.9
   - type: HeldSpeedModifier
+  - type: HideInnerClothing # сокрытие шмоток под скафом
 
 - type: entity
   abstract: true

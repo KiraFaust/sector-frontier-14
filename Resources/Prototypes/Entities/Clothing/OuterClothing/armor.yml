@@ -103,7 +103,7 @@
     sprite: Clothing/OuterClothing/Vests/detvest.rsi
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
+  parent: [ClothingOuterArmorBasic, AllowSuitStorageClothing]
   id: ClothingOuterArmorBaseCarapace
   abstract: true
   components:
