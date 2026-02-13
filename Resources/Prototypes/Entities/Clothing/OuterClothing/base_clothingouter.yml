@@ -25,6 +25,7 @@
     equipSound:
       collection: GenericEquip
   # Goobstation edit end
+  - type: HideInnerClothing # сокрытие шмоток под скафом
   - type: Sprite
     state: icon
   - type: StaticPrice # Frontier: setting base price to make material arbitrage happier
