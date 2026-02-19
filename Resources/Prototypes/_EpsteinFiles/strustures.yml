@@ -1,17 +1,19 @@
 - type: entity
-  id: BluespaceRandomTeleporterPallet
-  parent: Catwalk
-  name: cargo bluespace transfer pallet
+  id: BluespacePalletTeleporter
   components:
-    - type: BluespacePalletTeleporter
-      targetPalletPrototype: CargoPalletBuy
-    - type: TriggerOnSignal
-    - type: ExtensionCableReceiver
-    - type: WirelessNetworkConnection
-      range: 200
-    - type: DeviceLinkSink
-      ports:
-        - Open
-    - type: DeviceNetwork
-      deviceNetId: Wireless
-      receiveFrequencyId: BasicDevice
+  - type: BluespacePalletTeleporter
+    targetPalletPrototype: CargoPalletBuy
+    effectPrototype: EffectFlashBluespace
+    waitForEffect: true
+    whitelistComponents:
+      - EntityStorage
+  - type: TriggerOnSignal
+  - type: ExtensionCableReceiver
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+    - Open
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
