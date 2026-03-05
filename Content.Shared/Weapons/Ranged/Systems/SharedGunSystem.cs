@@ -394,7 +394,11 @@ public abstract partial class SharedGunSystem : EntitySystem
         if (shots > 0)
             RaiseLocalEvent(gunUid, ev);
 
-        DebugTools.Assert(ev.Ammo.Count <= shots);
+        if (ev.Ammo.Count > shots)
+        {
+            Log.Warning("TakeAmmoEvent returned {Count} ammo for {Shots} shots on {Gun}. Trimming to avoid over-fire.", ev.Ammo.Count, shots, gunUid);
+            ev.Ammo.RemoveRange(shots, ev.Ammo.Count - shots);
+        }
         DebugTools.Assert(shots >= 0);
         UpdateAmmoCount(gunUid);
 
@@ -611,6 +615,11 @@ public abstract partial class SharedGunSystem : EntitySystem
     // Mono - rewritten
     public void CauseImpulse(EntityCoordinates toCoordinates, Entity<GunComponent> ent, float scale)
     {
+        var beforeEv = new BeforeCauseImpulseEvent();
+        RaiseLocalEvent(ent, ref beforeEv);
+        if (beforeEv.Cancelled)
+            return;
+
         var totalImpulse = ent.Comp.Recoil * scale;
         var selfXform = Transform(ent);
 
