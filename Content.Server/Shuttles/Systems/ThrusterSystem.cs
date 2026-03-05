@@ -601,14 +601,10 @@ public sealed class ThrusterSystem : EntitySystem
 
         while (query.MoveNext(out var ent, out var comp)) // Frontier: add out var ent
         {
-            if (comp.NextFire > curTime)
-                continue;
-
+            if (comp.NextFire > curTime) continue;
             comp.NextFire += comp.FireCooldown;
-
-            if (!comp.Firing || comp.Damage == null)
-                continue;
-
+            if (!comp.Firing || comp.Damage == null) continue;
+            if (comp.Type == ThrusterType.Angular) continue;
             if (comp.BurnPoly.Count < 3) continue;
             var xform = Transform(ent);
             if (xform.GridUid is not { } gridUid) continue;
