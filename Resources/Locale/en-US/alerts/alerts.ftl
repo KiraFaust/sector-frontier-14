@@ -30,6 +30,12 @@ alerts-weightless-desc =
 alerts-walking-name = Walking
 alerts-walking-desc = You are walking, moving at a slow pace.
 
+alerts-political-loudspeaker-speed-name = [color=green]Rallying Pace[/color]
+alerts-political-loudspeaker-speed-desc = Your movement speed is increased.
+
+alerts-political-loudspeaker-fortify-name = [color=green]Fortified[/color]
+alerts-political-loudspeaker-fortify-desc = Incoming damage is reduced.
+
 alerts-stunned-name = [color=yellow]Stunned[/color]
 alerts-stunned-desc = You're [color=yellow]stunned[/color]! Something is impairing your ability to move or interact with objects.
 
