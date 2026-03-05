@@ -9,12 +9,21 @@ namespace Content.Shared.Lua.CLVar
     [CVarDefs]
     public sealed partial class CLVars
     {
+        public static readonly CVarDef<float> AlertsIconScale =
+            CVarDef.Create("ui.alerts_icon_scale", 2.0f, CVar.CLIENTONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<string> AlertsPosition =
+            CVarDef.Create("ui.alerts_position", "right", CVar.CLIENTONLY | CVar.ARCHIVE);
+
         public static readonly CVarDef<bool> BankFlushCacheEnabled = CVarDef.Create("bank.flushcache.enabled", false, CVar.SERVER | CVar.REPLICATED);
         public static readonly CVarDef<int> BankFlushCacheInterval = CVarDef.Create("bank.flushcache.interval", 300, CVar.SERVER | CVar.REPLICATED);
+
+        public static readonly CVarDef<string> TransferApiSecret = CVarDef.Create("transfer.api.secret", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
 
         public static readonly CVarDef<bool> NetDynamicTick =
             CVarDef.Create("net.dynamictick", false, CVar.ARCHIVE | CVar.SERVER | CVar.REPLICATED);
 
+        public static readonly CVarDef<int> TransferMaxAmountPerOperation =
+            CVarDef.Create("yupi.transfer.max_amount_per_operation", 50_000, CVar.SERVER | CVar.ARCHIVE);
         /// <summary>
         /// Whether to automatically spawn escape shuttles.
         /// </summary>
@@ -42,22 +51,16 @@ namespace Content.Shared.Lua.CLVar
             CVarDef.Create("zone.pvp_enabled", false, CVar.SERVERONLY | CVar.ARCHIVE,
                 "Отключить или включить пвп зоны.");
 
-        public static readonly CVarDef<bool> GenerateStarmapRoundstart =
-            CVarDef.Create("starmap.generate_roundstart", true, CVar.ARCHIVE);
-        public static readonly CVarDef<bool> StarmapRandomGenerationEnabled =
-            CVarDef.Create("starmap.random_enabled", false, CVar.ARCHIVE);
-        public static readonly CVarDef<int> StarmapMinStars =
-            CVarDef.Create("starmap.min_stars", 1, CVar.ARCHIVE);
-        public static readonly CVarDef<int> StarmapMaxStars =
-            CVarDef.Create("starmap.max_stars", 1, CVar.ARCHIVE);
+        public static readonly CVarDef<bool> LoadStarmapRoundstart =
+            CVarDef.Create("starmap.load_roundstart", true, CVar.ARCHIVE);
         public static readonly CVarDef<bool> StarmapIncludeSectors =
             CVarDef.Create("starmap.include_sectors", true, CVar.ARCHIVE);
-
-        /// <summary>
-        ///     What weighted random prototype is being used?
-        /// </summary>
-        public static readonly CVarDef<string> StarmapRandomPrototypeId =
-            CVarDef.Create("starmap.weighted_random_id", "DefaultStarmap", CVar.ARCHIVE);
+        public static readonly CVarDef<string> StarmapDataId =
+            CVarDef.Create("starmap.data_id", "StarmapData", CVar.ARCHIVE);
+        public static readonly CVarDef<bool> StarmapLazyLoading =
+            CVarDef.Create("starmap.lazy_loading", true, CVar.ARCHIVE);
+        public static readonly CVarDef<bool> StargateGuideShown =
+            CVarDef.Create("stargate.guide_shown", false, CVar.CLIENTONLY | CVar.ARCHIVE);
 
         public static readonly CVarDef<string> RabbitMQConnectionString =
             CVarDef.Create("rabbitmq.connection_string", "", CVar.SERVERONLY);
@@ -100,6 +103,12 @@ namespace Content.Shared.Lua.CLVar
             CVarDef.Create("shuttle.grid_cleanup_enabled", true, CVar.SERVERONLY | CVar.ARCHIVE);
 
         /// <summary>
+        /// Штрафы.
+        /// </summary>
+        public static readonly CVarDef<bool> FrontierParkingEnabled =
+            CVarDef.Create("frontier.parking_fines_enabled", true, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        /// <summary>
         /// Таймер ожидания возможности проснутся с криосна.
         /// </summary
         public static readonly CVarDef<int> CryoSleepTimerSet =
@@ -116,5 +125,48 @@ namespace Content.Shared.Lua.CLVar
         /// </summary>
         public static readonly CVarDef<bool> ShipLimitCheckExistence =
             CVarDef.Create("ship.limit_check_existence", true, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<bool> SpaceWhaleEnabled =
+            CVarDef.Create("spacewhale.enabled", true, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> SpaceWhaleOuterLimitRadius =
+            CVarDef.Create("spacewhale.outer_limit_radius", 25000f, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> SpaceWhaleCheckIntervalMinutes =
+            CVarDef.Create("spacewhale.check_interval_minutes", 5f, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> SpaceWhaleSpawnChance =
+            CVarDef.Create("spacewhale.spawn_chance", 0.1f, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> SpaceWhalePlayerClusterRadius =
+            CVarDef.Create("spacewhale.player_cluster_radius", 300f, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> SpaceWhaleSafeZoneRadius =
+            CVarDef.Create("spacewhale.safe_zone_radius", 20000f, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> SpaceWhaleTargetDetectionRange =
+            CVarDef.Create("spacewhale.target_detection_range", 2000f, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> SpaceWhaleDespawnLifetimeMinutes =
+            CVarDef.Create("spacewhale.despawn_lifetime_minutes", 20f, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<bool> ShuttleFreezeEnabled =
+            CVarDef.Create("shuttle.freeze.enabled", true, CVar.SERVERONLY);
+        public static readonly CVarDef<float> ShuttleFreezeDelay =
+            CVarDef.Create("shuttle.freeze.delay", 30f, CVar.SERVERONLY);
+        public static readonly CVarDef<float> ShuttleFreezeCheckInterval =
+            CVarDef.Create("shuttle.freeze.check_interval", 30f, CVar.SERVERONLY);
+        public static readonly CVarDef<float> ShuttleFreezeProximityTiles =
+            CVarDef.Create("shuttle.freeze.proximity_tiles", 3f, CVar.SERVERONLY);
+        public static readonly CVarDef<float> ShuttleFreezeUnfreezeInterval =
+            CVarDef.Create("shuttle.freeze.unfreeze_interval", 1f, CVar.SERVERONLY);
+
+        public static readonly CVarDef<bool> StargateEnabled =
+            CVarDef.Create("stargate.enabled", true, CVar.SERVERONLY);
+
+        public static readonly CVarDef<bool> SalvageExpeditionEnabled =
+            CVarDef.Create("salvage.expedition.enabled", true, CVar.SERVERONLY);
+
+        public static readonly CVarDef<bool> NpcSmartDespawnEnabled =
+            CVarDef.Create("npc.smart_despawn_enabled", true, CVar.SERVERONLY);
+        public static readonly CVarDef<float> NpcSmartDespawnSleepTimeout =
+            CVarDef.Create("npc.smart_despawn_sleep_timeout", 1200f, CVar.SERVERONLY);
+        public static readonly CVarDef<float> NpcSmartDespawnDeadTimeout =
+            CVarDef.Create("npc.smart_despawn_dead_timeout", 600f, CVar.SERVERONLY);
+        public static readonly CVarDef<float> NpcSmartDespawnCheckInterval =
+            CVarDef.Create("npc.smart_despawn_check_interval", 10f, CVar.SERVERONLY);
     }
 }

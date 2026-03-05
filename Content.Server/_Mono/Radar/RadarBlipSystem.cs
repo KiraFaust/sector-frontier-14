@@ -1,12 +1,6 @@
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 Ilya246
-// SPDX-FileCopyrightText: 2025 Redrover1760
-// SPDX-FileCopyrightText: 2025 ark1368
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
 using Content.Server.Chemistry.Components;
 using Content.Server.Temperature.Components;
+using Content.Shared._Lua.Shuttles.Components;
 using Content.Shared._Goobstation.Vehicles;
 using Content.Shared._Mono.Radar;
 using Content.Shared.Mobs.Components;
@@ -98,9 +92,9 @@ public sealed partial class RadarBlipSystem : EntitySystem
         RaiseNetworkEvent(removalEv);
     }
 
-    private List<(NetEntity netUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)> AssembleBlipsReport(EntityUid uid, RadarConsoleComponent? component = null)
+    private List<(NetEntity netUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape, bool SonarEcho)> AssembleBlipsReport(EntityUid uid, RadarConsoleComponent? component = null)
     {
-        var blips = new List<(NetEntity netUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape)>();
+        var blips = new List<(NetEntity netUid, NetCoordinates Position, Vector2 Vel, float Scale, Color Color, RadarBlipShape Shape, bool SonarEcho)>();
 
         if (Resolve(uid, ref component))
         {
@@ -185,7 +179,8 @@ public sealed partial class RadarBlipSystem : EntitySystem
                 if (blipGrid != null)
                     blipVelocity -= _physics.GetLinearVelocity(blipGrid.Value, coord.Position);
 
-                blips.Add((netBlipUid, GetNetCoordinates(coord), blipVelocity, blip.Scale, blip.RadarColor, blip.Shape));
+                var sonarEcho = HasComp<RadarSonarEchoComponent>(blipUid);
+                blips.Add((netBlipUid, GetNetCoordinates(coord), blipVelocity, blip.Scale, blip.RadarColor, blip.Shape, sonarEcho));
             }
         }
 

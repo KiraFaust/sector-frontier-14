@@ -119,6 +119,7 @@
       - CrewManifestCartridge
       - NotekeeperCartridge
       - YupiTransferCartridge
+      - NanoChatCartridge # Lua
       - NewsReaderCartridge
       - MedTekCartridge
   - type: GuideHelp
@@ -282,13 +283,6 @@
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Surgeon
-
-- type: jobIcon
-  parent: JobIcon
-  id: JobIconVip
-  icon:
-    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
-    state: Vip
 
 - type: jobIcon
   parent: JobIcon

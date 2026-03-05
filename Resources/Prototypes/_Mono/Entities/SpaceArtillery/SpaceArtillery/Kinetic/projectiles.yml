@@ -1,17 +1,4 @@
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Avalon
-# SPDX-FileCopyrightText: 2025 Blu
-# SPDX-FileCopyrightText: 2025 BlueHNT
-# SPDX-FileCopyrightText: 2025 Disguised Bear
-# SPDX-FileCopyrightText: 2025 Redrover1760
-# SPDX-FileCopyrightText: 2025 RikuTheKiller
-# SPDX-FileCopyrightText: 2025 core-mene
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 # CHARONETTE
-
 - type: entity
   id: ShipMiniRailgunProjectile
   name: M194 CHARONETTE 280mm 10.25 kg slug
@@ -49,6 +36,78 @@
   - type: GatheringProjectile
   - type: MiningGatheringSoft
   - type: MiningGatheringHard
+
+# Drone
+
+- type: entity
+  id: ShipShardProjectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 300
+        Blunt: 50
+        Piercing: 50
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/57_shell.rsi
+    layers:
+    - state: 57-shell
+    scale: 1, 1
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 2.5
+    requireNoGrid: true
+    shape: triangle
+    radarColor: "#1df1f5"
+  - type: TimedDespawn
+    lifetime: 5
+  - type: PointLight
+    color: "#FCBA03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 12
+    intensitySlope: 2
+    maxIntensity: 2
+    maxTileBreak: 1
+
+- type: entity
+  id: ShipPinholeProjectile
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Structural: 400
+        Blunt: 200
+        Piercing: 100
+  - type: Sprite
+    sprite: _Mono/Objects/SpaceArtillery/57_shell.rsi
+    layers:
+    - state: 57-shell
+    scale: 0.8, 2
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 2.5
+    requireNoGrid: true
+    shape: arrow
+    radarColor: "#1df1f5"
+  - type: TimedDespawn
+    lifetime: 4
+  - type: PointLight
+    color: "#FCBA03"
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 20
+    intensitySlope: 5
+    maxIntensity: 5
+    maxTileBreak: 1
+  - type: ProjectileKnockback
+    knockback: 75 # giga evil
 
 # 20mm
 

@@ -1,11 +1,4 @@
-# SPDX-FileCopyrightText: 2025 Ark
-# SPDX-FileCopyrightText: 2025 Ilya246
-# SPDX-FileCopyrightText: 2025 starch
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later
-
 # Base
-
 - type: entity
   id: BallisticArtilleryBase
   abstract: true
@@ -56,9 +49,6 @@
     rotateWhilePulling: false
     rotateWhileAnchored: false
     increment: 45
-  - type: DeviceLinkSink
-    ports:
-    - SpaceArtilleryFire
   - type: SpaceArtillery
   - type: DeviceNetwork
     deviceNetId: Wireless
@@ -143,9 +133,6 @@
         - MachineLayer
   - type: Transform
     anchored: true
-  - type: DeviceLinkSink
-    ports:
-    - SpaceArtilleryFire
   - type: SpaceArtillery
   - type: DeviceNetwork
     deviceNetId: Wireless
@@ -237,9 +224,6 @@
         - MachineLayer
   - type: Transform
     anchored: true
-  - type: DeviceLinkSink
-    ports:
-    - SpaceArtilleryFire
   - type: SpaceArtillery
   - type: DeviceNetwork
     deviceNetId: Wireless

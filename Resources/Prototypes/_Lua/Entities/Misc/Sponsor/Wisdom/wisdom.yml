@@ -4,6 +4,7 @@
   entity: ClothingBackpackWisdom
   sponsorOnly: true
   login: Wisdom
+  sponsorRole: Божество
 
 # Backpack
 - type: entity
@@ -237,6 +238,7 @@
     - CrewManifestCartridge
     - NotekeeperCartridge
     - YupiTransferCartridge
+    - NanoChatCartridge # Lua
     - NewsReaderCartridge
     - AstroNavCartridge
     - MedTekCartridge

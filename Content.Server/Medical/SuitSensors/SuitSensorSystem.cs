@@ -29,6 +29,7 @@ using Robust.Shared.Timing;
 using Content.Shared.DeviceNetwork.Components;
 using Content.Server.Salvage.Expeditions; // Frontier
 using Content.Server._NF.Medical.SuitSensors; // Frontier
+using Content.Server._Lua.Sectors; // Lua
 using Content.Shared.Emp; // Frontier
 
 namespace Content.Server.Medical.SuitSensors;
@@ -50,6 +51,7 @@ public sealed class SuitSensorSystem : EntitySystem
     [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
+    [Dependency] private readonly SectorSystem _sectors = default!; // Lua
 
     [Dependency] private readonly GameTicking.GameTicker _ticker = default!; //Lua Added to check run level
 
@@ -144,19 +146,23 @@ public sealed class SuitSensorSystem : EntitySystem
                 if (_nextServerLookup.TryGetValue(uid, out var nextLookup) && curTime < nextLookup)
                     continue;
                 // Lua end
-                if (!_singletonServerSystem.TryGetActiveServerAddress<CrewMonitoringServerComponent>(xform.MapID, out var address) &&
-                    !_singletonServerSystem.TryGetActiveServerAddressGlobal<CrewMonitoringServerComponent>(out address))
+                var hasLocalServer = _singletonServerSystem.TryGetActiveServerAddress<CrewMonitoringServerComponent>(xform.MapID, out var address);
+                var isolated = _sectors.TryGetSectorConfig(xform.MapID, out var sectorCfg) && sectorCfg.CrewMonitoringIsolated;
+                if (!hasLocalServer)
                 {
-                    // Lua start
-                    var backoff = _serverLookupBackoff.TryGetValue(uid, out var currentBackoff)
-                        ? currentBackoff
-                        : ServerLookupInitialBackoff;
+                    if (isolated || !_singletonServerSystem.TryGetActiveServerAddressGlobal<CrewMonitoringServerComponent>(out address))
+                    {
+                        // Lua start
+                        var backoff = _serverLookupBackoff.TryGetValue(uid, out var currentBackoff)
+                            ? currentBackoff
+                            : ServerLookupInitialBackoff;
 
-                    _nextServerLookup[uid] = curTime + backoff;
-                    var nextBackoffTicks = Math.Min(backoff.Ticks * 2, ServerLookupMaxBackoff.Ticks);
-                    _serverLookupBackoff[uid] = new TimeSpan(nextBackoffTicks);
-                    // Lua end
-                    continue;
+                        _nextServerLookup[uid] = curTime + backoff;
+                        var nextBackoffTicks = Math.Min(backoff.Ticks * 2, ServerLookupMaxBackoff.Ticks);
+                        _serverLookupBackoff[uid] = new TimeSpan(nextBackoffTicks);
+                        // Lua end
+                        continue;
+                    }
                 }
 
 
@@ -230,14 +236,6 @@ public sealed class SuitSensorSystem : EntitySystem
         component.StationId ??= _stationSystem.GetOwningStation(uid);
         */
 
-        //Lua: if an item with built-in sensors spawns during the round - force Coordinates mode
-        if (_ticker.RunLevel == GameRunLevel.InRound)
-        {
-            SetSensor((uid, component), SuitSensorMode.SensorCords); //Lua: default to coordinates so medics can find players
-            return;
-        }
-
-        // ����� (�� ������ ������) ��������� ����������� ��������� (������).
         if (component.RandomMode)
         {
             var modesDist = new[]
@@ -248,6 +246,13 @@ public sealed class SuitSensorSystem : EntitySystem
                 SuitSensorMode.SensorCords, SuitSensorMode.SensorCords
             };
             component.Mode = _random.Pick(modesDist);
+        }
+
+        //Lua: if an item with built-in sensors spawns during the round and sensors are not forced off in component - force Coordinates mode
+        if (_ticker.RunLevel == GameRunLevel.InRound && component.RandomMode)
+        {
+            SetSensor((uid, component), SuitSensorMode.SensorCords); //Lua: default to coordinates so medics can find players
+            return;
         }
     }
 
@@ -500,7 +505,12 @@ public sealed class SuitSensorSystem : EntitySystem
             totalDamageThreshold = critThreshold.Value.Int();
 
         // finally, form suit sensor status
+        int? mapHash = null;
+        if (transform.MapUid != null && TryComp<MapComponent>(transform.MapUid.Value, out var mapComp))
+            mapHash = mapComp.MapId.GetHashCode();
+
         var status = new SuitSensorStatus(GetNetEntity(sensor.User.Value), GetNetEntity(uid), userName, userJob, userJobIcon, userJobDepartments, userLocationName); // Frontier: add userLocationName
+        status.MapHash = mapHash;
         switch (sensor.Mode)
         {
             case SuitSensorMode.SensorBinary:
@@ -548,9 +558,6 @@ public sealed class SuitSensorSystem : EntitySystem
 
                     locationName = Loc.GetString("suit-sensor-location-unknown"); // Frontier
                 }
-
-                if (transform.MapUid != null && TryComp<MapComponent>(transform.MapUid.Value, out var mapComp)) // Frontier - Crew monitor map check
-                    status.MapHash = mapComp.MapId.GetHashCode(); // Frontier
 
                 status.Coordinates = GetNetCoordinates(coordinates);
                 status.LocationName = locationName; // Frontier

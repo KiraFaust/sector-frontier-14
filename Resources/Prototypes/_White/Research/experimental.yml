@@ -1,5 +1,3 @@
-# Tier 2
-
 - type: technology
   id: NightVisionTech
   name: research-technology-night-vision
@@ -11,8 +9,7 @@
   - ClothingEyesNightVisionGoggles
   technologyPrerequisites:
   - NFHardsuitsArmoredAdvanced
-  position: 6, 9
-
+  position: -6.162, 9.588
 - type: technology
   id: ThermalVisionTech
   name: research-technology-thermal-vision
@@ -24,4 +21,5 @@
   - ClothingEyesThermalVisionGoggles
   technologyPrerequisites:
   - NightVisionTech
-  position: 6, 10
+  position: -7.249, 10.596
+...

@@ -31,6 +31,7 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Systems;
@@ -276,6 +277,17 @@ public abstract partial class SharedGunSystem : EntitySystem
         gun.ShotCounter = 0;
     }
 
+    /// <summary>
+    /// Mono - attempts to shoot at the target coordinates for specified duration, or refreshes duration if already shooting.
+    /// </summary>
+    public void AttemptShots(EntityUid user, EntityUid gunUid, GunComponent gun, EntityCoordinates toCoordinates, TimeSpan duration)
+    {
+        gun.ShootCoordinates = toCoordinates;
+        var autoShoot = EnsureComp<AutoShootGunComponent>(gunUid);
+        if (autoShoot.RemainingTime < duration)
+            autoShoot.RemainingTime = duration;
+    }
+
     private void AttemptShoot(EntityUid user, EntityUid gunUid, GunComponent gun)
     {
         if (TryComp<AutoShootGunComponent>(gunUid, out var auto) && !auto.CanFire) // Frontier
@@ -382,7 +394,11 @@ public abstract partial class SharedGunSystem : EntitySystem
         if (shots > 0)
             RaiseLocalEvent(gunUid, ev);
 
-        DebugTools.Assert(ev.Ammo.Count <= shots);
+        if (ev.Ammo.Count > shots)
+        {
+            Log.Warning("TakeAmmoEvent returned {Count} ammo for {Shots} shots on {Gun}. Trimming to avoid over-fire.", ev.Ammo.Count, shots, gunUid);
+            ev.Ammo.RemoveRange(shots, ev.Ammo.Count - shots);
+        }
         DebugTools.Assert(shots >= 0);
         UpdateAmmoCount(gunUid);
 
@@ -444,15 +460,8 @@ public abstract partial class SharedGunSystem : EntitySystem
         Shoot(gunUid, gun, ev.Ammo, fromCoordinates, toCoordinates.Value, out var userImpulse, user, throwItems: attemptEv.ThrowItems);
         var shotEv = new GunShotEvent(user, ev.Ammo);
         RaiseLocalEvent(gunUid, ref shotEv);
-
-        if (!userImpulse || !TryComp<PhysicsComponent>(user, out var userPhysics))
-            return;
-
-        var shooterEv = new ShooterImpulseEvent();
-        RaiseLocalEvent(user, ref shooterEv);
-
-        if (shooterEv.Push)
-            CauseImpulse(fromCoordinates, toCoordinates.Value, user, userPhysics);
+        // Mono - recoil is applied to the gun's physical context (holder/container/grid)
+        CauseImpulse(toCoordinates.Value, (gunUid, gun), ev.Ammo.Count);
     }
 
     public void Shoot(
@@ -496,6 +505,31 @@ public abstract partial class SharedGunSystem : EntitySystem
             Projectiles.SetShooter(uid, projectile, shooter.Value);
 
         TransformSystem.SetWorldRotation(uid, direction.ToWorldAngle() + projectile.Angle);
+    }
+
+    // Mono
+    public bool TryNextShootPrototype(Entity<GunComponent?> gun, [NotNullWhen(true)] out EntityPrototype? proto)
+    {
+        proto = null;
+        if (!Resolve(gun, ref gun.Comp))
+            return false;
+
+        var checkEv = new CheckShootPrototypeEvent();
+        RaiseLocalEvent(gun, ref checkEv);
+        proto = checkEv.ShootPrototype;
+
+        return proto != null;
+    }
+
+    // Mono
+    public EntityPrototype GetBulletPrototype(EntityPrototype cartridge)
+    {
+        if (cartridge.TryGetComponent<CartridgeAmmoComponent>(out var cartComp, Factory))
+        {
+            return ProtoManager.Index<EntityPrototype>(cartComp.Prototype);
+        }
+
+        return cartridge;
     }
 
     protected abstract void Popup(string message, EntityUid? uid, EntityUid? user);
@@ -578,27 +612,37 @@ public abstract partial class SharedGunSystem : EntitySystem
         CreateEffect(gun, ev, user);
     }
 
-    public void CauseImpulse(EntityCoordinates fromCoordinates, EntityCoordinates toCoordinates, EntityUid user, PhysicsComponent userPhysics)
+    // Mono - rewritten
+    public void CauseImpulse(EntityCoordinates toCoordinates, Entity<GunComponent> ent, float scale)
     {
-        var fromMap = TransformSystem.ToMapCoordinates(fromCoordinates).Position;
-        var toMap = TransformSystem.ToMapCoordinates(toCoordinates).Position;
-        var shotDirection = (toMap - fromMap).Normalized();
+        var beforeEv = new BeforeCauseImpulseEvent();
+        RaiseLocalEvent(ent, ref beforeEv);
+        if (beforeEv.Cancelled)
+            return;
 
-        const float impulseStrength = 25.0f;
-        var impulseVector = shotDirection * impulseStrength;
+        var totalImpulse = ent.Comp.Recoil * scale;
+        var selfXform = Transform(ent);
 
-        // Frontier: apply impulse to buckled object if buckled
-        if (TryComp<BuckleComponent>(user, out var buckle) && buckle.BuckledTo is not null)
-        {
-            TryComp<PhysicsComponent>(buckle.BuckledTo, out var buckledPhys);
-            Physics.ApplyLinearImpulse(buckle.BuckledTo.Value, -impulseVector, body: buckledPhys);
-        }
-        else
-        {
-            Physics.ApplyLinearImpulse(user, -impulseVector, body: userPhysics);
-        }
-        // End Frontier
-        // Physics.ApplyLinearImpulse(user, -impulseVector, body: userPhysics); // Frontier: old implementation
+        var impulseCoord = new EntityCoordinates(ent, Vector2.Zero);
+
+        if (Containers.TryGetContainingContainer(ent.Owner, out var container))
+            impulseCoord = TransformSystem.WithEntityId(impulseCoord, container.Owner);
+        else if (selfXform.Anchored && selfXform.ParentUid != selfXform.MapUid)
+            impulseCoord = TransformSystem.WithEntityId(impulseCoord, selfXform.ParentUid);
+
+        var toEnt = impulseCoord.EntityId;
+        if (!TryComp<PhysicsComponent>(toEnt, out var toBody))
+            return;
+
+        // velocity is in world-aligned coordinates so get vec based off that
+        var worldSource = TransformSystem.GetWorldPosition(toEnt);
+        var worldTarget = TransformSystem.ToWorldPosition(toCoordinates);
+        var dirVec = worldTarget - worldSource;
+        dirVec.Normalize();
+
+        var pos = impulseCoord.Position;
+        pos = (pos - toBody.LocalCenter) * ent.Comp.RecoilRotation + toBody.LocalCenter;
+        Physics.ApplyLinearImpulse(toEnt, -dirVec * totalImpulse, pos);
     }
 
     public void RefreshModifiers(Entity<GunComponent?> gun)

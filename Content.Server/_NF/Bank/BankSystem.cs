@@ -43,6 +43,7 @@ public sealed partial class BankSystem : SharedBankSystem
     {
         base.Update(frameTime);
         UpdateSectorBanks(frameTime);
+        HousekeepYupiTransferHistory();
     }
 
     public void OnCleanup(RoundRestartCleanupEvent _)
@@ -262,9 +263,9 @@ public sealed partial class BankSystem : SharedBankSystem
         }
 
         // Update preferences in cache if the player data exists
-        if (_prefsManager.TryGetCachedPreferences(userId, out var cachedPrefs))
+        if (_prefsManager.TryGetCachedPreferences(userId, out var _)) // Харамные действия #Lua rm cachedPrefs
         {
-            _prefsManager.SetProfile(userId, index, newProfile);
+            _prefsManager.SetProfile(userId, index, newProfile, validateFields: false); // Харамные действия #Lua add validateFields: false
         }
         else
         {
@@ -304,9 +305,10 @@ public sealed partial class BankSystem : SharedBankSystem
         }
 
         // Update preferences in cache if the player data exists
-        if (_prefsManager.TryGetCachedPreferences(userId, out var cachedPrefs))
+        if (_prefsManager.TryGetCachedPreferences(userId, out var _))
         {
-            _prefsManager.SetProfile(userId, index, newProfile);
+            // See comment in TryBankWithdrawOffline: bypass anti-cheat field validation for server-side changes.
+            _prefsManager.SetProfile(userId, index, newProfile, validateFields: false);
         }
         else
         {

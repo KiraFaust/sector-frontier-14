@@ -1,30 +1,12 @@
-// SPDX-FileCopyrightText: 2022 Myctai
-// SPDX-FileCopyrightText: 2022 metalgearsloth
-// SPDX-FileCopyrightText: 2023 Artjom
-// SPDX-FileCopyrightText: 2023 Kevin Zheng
-// SPDX-FileCopyrightText: 2023 Morb
-// SPDX-FileCopyrightText: 2023 TemporalOroboros
-// SPDX-FileCopyrightText: 2024 Dvir
-// SPDX-FileCopyrightText: 2024 Ed
-// SPDX-FileCopyrightText: 2024 Leon Friedrich
-// SPDX-FileCopyrightText: 2024 Mervill
-// SPDX-FileCopyrightText: 2024 Nemanja
-// SPDX-FileCopyrightText: 2024 Pieter-Jan Briers
-// SPDX-FileCopyrightText: 2024 Tayrtahn
-// SPDX-FileCopyrightText: 2024 Whatstone
-// SPDX-FileCopyrightText: 2024 neuPanda
-// SPDX-FileCopyrightText: 2025 Ark
-// SPDX-FileCopyrightText: 2025 gus
-// SPDX-FileCopyrightText: 2025 sleepyyapril
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
+using Content.Server._Mono.FireControl; // Lua
 using Content.Server._Mono.Ships.Systems;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Radio.EntitySystems;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Station.Systems;
+using Content.Server._Lua.Shuttles.Systems; // Lua
+using Content.Shared._Lua.Shuttles.Components; // Lua
 using Content.Shared._Lua.Starmap;
 using Content.Shared._NF.Shipyard.Components;
 using Content.Shared._NF.Shuttles.Events; // Frontier
@@ -33,6 +15,7 @@ using Content.Shared.ActionBlocker;
 using Content.Shared.Alert;
 using Content.Shared.Construction.Components; // Frontier
 using Content.Shared.Lua.CLVar; // Lua
+using Content.Shared._Mono.FireControl; // Lua
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Power;
@@ -75,7 +58,8 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
     [Dependency] private readonly RadioSystem _radioSystem = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!; // Lua
     [Dependency] private readonly ILogManager _log = default!;
-    [Dependency] private readonly CrewedShuttleSystem _crewedShuttle = default!;
+    [Dependency] private readonly FireControlSystem _fireControl = default!; // Lua
+    [Dependency] private readonly ShuttleTabletSystem _tablet = default!; // Lua
 
     private ISawmill _sawmill = default!;
 
@@ -88,6 +72,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
     private readonly HashSet<EntityUid> _starMapVisibleConsoles = new();
 
     private static readonly ProtoId<TagPrototype> CanPilotTag = "CanPilot";
+    private static readonly ProtoId<TagPrototype> StructureTag = "Structure"; // Lua
 
     public override void Initialize()
     {
@@ -113,6 +98,8 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
             subs.Event<ToggleFTLLockRequestMessage>(OnToggleFTLLock);
             subs.Event<WarpToStarMessage>(OnWarpToStarMessage); // Lua
             subs.Event<ShuttleConsoleStarMapVisibilityMessage>(OnStarMapVisibilityMessage); // Lua
+            subs.Event<ShuttleConsoleFireMessage>(OnShuttleConsoleFire); // Lua
+            subs.Event<ShuttleConsoleRefreshFireControlMessage>(OnShuttleConsoleRefreshFireControl); // Lua
             subs.Event<BoundUIClosedEvent>(OnConsoleUIClose);
         });
 
@@ -157,6 +144,13 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
 
     private void OnConsoleGetVerbs(EntityUid uid, ShuttleConsoleComponent comp, GetVerbsEvent<AlternativeVerb> args)
     {
+        // Lua start
+        if (HasComp<ShuttleTabletComponent>(uid))
+        {
+            return;
+        }
+        // Lua end
+
         AddPanicButtonVerb(uid, comp, args);
         AddPreventRemoverVerb(uid, comp, args);
     }
@@ -243,16 +237,6 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         ShuttleConsoleComponent component,
         ActivatableUIOpenAttemptEvent args)
     {
-        var grid = Transform(uid).GridUid;
-        var uiOpen = grid != null && _crewedShuttle.AnyGunneryConsoleActiveOnGridByPlayer(grid.Value, args.User);
-
-        if (uiOpen)
-        {
-            args.Cancel();
-            _popup.PopupEntity(Loc.GetString("shuttle-console-crewed"), uid, args.User);
-            return;
-        }
-
         if (!TryPilot(args.User, uid))
             args.Cancel();
     }
@@ -276,11 +260,25 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         if (!_tags.HasTag(user, CanPilotTag) ||
             !TryComp<ShuttleConsoleComponent>(uid, out var component) ||
             !this.IsPowered(uid, EntityManager) ||
-            !Transform(uid).Anchored ||
+            //!Transform(uid).Anchored || // Lua
             !_blocker.CanInteract(user, uid))
         {
             return false;
         }
+
+        // Lua start
+        if (_tags.HasTag(uid, StructureTag)
+            && !Transform(uid).Anchored)
+        {
+            return false;
+        }
+
+        if (TryComp<ShuttleTabletComponent>(uid, out var tabletComp)
+            && !_tablet.IsValidTablet(uid, tabletComp, out _))
+        {
+            return false;
+        }
+        // Lua end
 
         if (!_access.IsAllowed(user, uid)) // Frontier: check access
             return false; // Frontier
@@ -455,6 +453,14 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
 
     private void UpdateState(EntityUid consoleUid, ref DockingInterfaceState? dockState)
     {
+        // Lua start
+        if (TryComp<ShuttleTabletComponent>(consoleUid, out var tabletComp))
+        {
+            _tablet.UpdateTabletState(consoleUid, tabletComp, dockState);
+            return;
+        }
+        // Lua end
+
         EntityUid? entity = consoleUid;
 
         var getShuttleEv = new ConsoleShuttleEvent
@@ -491,9 +497,45 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         {
             var currentMap = consoleXform?.MapID ?? MapId.Nullspace;
             var starMapState = GetStarMapState(currentMap, shuttleGridUid, consoleUid);
-            _ui.SetUiState(consoleUid, ShuttleConsoleUiKey.Key, new ShuttleBoundUserInterfaceState(navState, mapState, dockState, starMapState));
+
+            // Lua
+            var fcConnected = false;
+            FireControllableEntry[]? fcControllables = null;
+            if (shuttleGridUid != null && TryComp<FireControlGridComponent>(shuttleGridUid, out var fcGrid) && fcGrid.ControllingServer != null && Exists(fcGrid.ControllingServer) && TryComp<FireControlServerComponent>(fcGrid.ControllingServer, out var fcServer))
+            {
+                fcConnected = true;
+                var list = new List<FireControllableEntry>();
+                foreach (var c in fcServer.Controlled)
+                { list.Add(new FireControllableEntry(GetNetEntity(c), GetNetCoordinates(Transform(c).Coordinates), MetaData(c).EntityName)); }
+                fcControllables = list.ToArray();
+            }
+            // End Lua
+            _ui.SetUiState(consoleUid, ShuttleConsoleUiKey.Key, new ShuttleBoundUserInterfaceState(navState, mapState, dockState, starMapState, fcConnected, fcControllables));
         }
     }
+
+    // Lua
+    private void OnShuttleConsoleFire(EntityUid uid, ShuttleConsoleComponent comp, ShuttleConsoleFireMessage args)
+    {
+        var grid = Transform(uid).GridUid;
+        if (grid == null) return;
+        if (!TryComp<FireControlGridComponent>(grid, out var fcGrid) || fcGrid.ControllingServer == null) return;
+        if (!TryComp<FireControlServerComponent>(fcGrid.ControllingServer, out var server)) return;
+        _fireControl.FireWeapons(fcGrid.ControllingServer.Value, args.Selected, args.Coordinates, server);
+        var fireEvent = new FireControlConsoleFireEvent(args.Coordinates, args.Selected);
+        RaiseLocalEvent(uid, fireEvent);
+    }
+
+    // Lua
+    private void OnShuttleConsoleRefreshFireControl(EntityUid uid, ShuttleConsoleComponent comp, ShuttleConsoleRefreshFireControlMessage args)
+    {
+        var grid = Transform(uid).GridUid;
+        if (grid != null && HasComp<FireControlGridComponent>(grid))
+        { _fireControl.RefreshControllables(grid.Value); }
+        DockingInterfaceState? dockState = null;
+        UpdateState(uid, ref dockState);
+    }
+    // End Lua
 
     public override void Update(float frameTime)
     {
@@ -548,6 +590,8 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         ActionBlockerSystem.UpdateCanMove(entity);
         pilotComponent.Position = Comp<TransformComponent>(entity).Coordinates;
         Dirty(entity, pilotComponent);
+        DockingInterfaceState? dockState = null; // Lua
+        UpdateState(uid, ref dockState); // Lua
     }
 
     public void RemovePilot(EntityUid pilotUid, PilotComponent pilotComponent)
@@ -605,10 +649,12 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
             portNames = consoleComp.PortNames;
         }
 
+        var coordinates = _tablet.GetTabletCoordinates(entity.Owner) ?? entity.Comp2.Coordinates; // Lua
+
         return GetNavState(
             entity,
             docks,
-            entity.Comp2.Coordinates,
+            coordinates, // Lua
             entity.Comp2.LocalRotation,
             portNames);
     }

@@ -1,23 +1,20 @@
-// SPDX-FileCopyrightText: 2024 Aviu00
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later
-
+using Content.Server._Mono.Blocking;
 using Content.Server.Popups;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.PowerCell;
+using Content.Shared._Mono.Blocking; // Mono
+using Content.Shared._Mono.Blocking.Components;
 using Content.Shared.Damage;
 using Content.Shared.Examine;
-using Content.Shared.Item.ItemToggle;
-using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.PowerCell.Components;
 
 namespace Content.Server._White.Blocking;
 
-public sealed class RechargeableBlockingSystem : EntitySystem
+public sealed class RechargeableBlockingSystem : SharedBlockingSystem // Mono
 {
     [Dependency] private readonly BatterySystem _battery = default!;
-    [Dependency] private readonly ItemToggleSystem _itemToggle = default!;
+    [Dependency] private readonly ShieldToggleSystem _shieldToggle = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly PowerCellSystem _powerCell = default!;
 
@@ -25,7 +22,7 @@ public sealed class RechargeableBlockingSystem : EntitySystem
     {
         SubscribeLocalEvent<RechargeableBlockingComponent, ExaminedEvent>(OnExamined);
         SubscribeLocalEvent<RechargeableBlockingComponent, DamageChangedEvent>(OnDamageChanged);
-        SubscribeLocalEvent<RechargeableBlockingComponent, ItemToggleActivateAttemptEvent>(AttemptToggle);
+        SubscribeLocalEvent<RechargeableBlockingComponent, ShieldToggleAttemptEvent>(OnShieldToggleAttempt);
         SubscribeLocalEvent<RechargeableBlockingComponent, ChargeChangedEvent>(OnChargeChanged);
         SubscribeLocalEvent<RechargeableBlockingComponent, PowerCellChangedEvent>(OnPowerCellChanged);
     }
@@ -56,7 +53,8 @@ public sealed class RechargeableBlockingSystem : EntitySystem
     private void OnDamageChanged(EntityUid uid, RechargeableBlockingComponent component, DamageChangedEvent args)
     {
         if (!_battery.TryGetBatteryComponent(uid, out var batteryComponent, out var batteryUid)
-            || !_itemToggle.IsActivated(uid)
+            || !TryComp<ShieldToggleComponent>(uid, out var shield)
+            || !shield.Enabled
             || args.DamageDelta == null)
             return;
 
@@ -64,7 +62,7 @@ public sealed class RechargeableBlockingSystem : EntitySystem
         _battery.TryUseCharge(batteryUid.Value, batteryUse, batteryComponent);
     }
 
-    private void AttemptToggle(EntityUid uid, RechargeableBlockingComponent component, ref ItemToggleActivateAttemptEvent args)
+    private void OnShieldToggleAttempt(EntityUid uid, RechargeableBlockingComponent component, ref ShieldToggleAttemptEvent args)
     {
         if (!component.Discharged)
             return;
@@ -74,6 +72,7 @@ public sealed class RechargeableBlockingSystem : EntitySystem
             args.User ?? uid);
         args.Cancelled = true;
     }
+
     private void OnChargeChanged(EntityUid uid, RechargeableBlockingComponent component, ChargeChangedEvent args)
     {
         CheckCharge(uid, component);
@@ -96,7 +95,8 @@ public sealed class RechargeableBlockingSystem : EntitySystem
                 recharger.AutoRechargeRate = component.DischargedRechargeRate;
 
             component.Discharged = true;
-            _itemToggle.TryDeactivate(uid, predicted: false);
+            if (TryComp<ShieldToggleComponent>(uid, out var shieldComp))
+                _shieldToggle.SetEnabled(uid, shieldComp, false);
             return;
         }
 

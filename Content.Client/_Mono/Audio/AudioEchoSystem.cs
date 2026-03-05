@@ -1,8 +1,3 @@
-// SPDX-FileCopyrightText: 2025 LaCumbiaDelCoronavirus
-// SPDX-FileCopyrightText: 2025 ark1368
-//
-// SPDX-License-Identifier: MPL-2.0
-
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Numerics;
@@ -47,7 +42,13 @@ public sealed class AreaEchoSystem : EntitySystem
     ///     The directions that are raycasted to determine size for echo.
     ///         Used relative to the grid.
     /// </summary>
-    private Angle[] _calculatedDirections = [Direction.North.ToAngle(), Direction.West.ToAngle(), Direction.South.ToAngle(), Direction.East.ToAngle()];
+    private Angle[] _calculatedDirections = new[]
+    {
+        Direction.North.ToAngle(),
+        Direction.West.ToAngle(),
+        Direction.South.ToAngle(),
+        Direction.East.ToAngle()
+    };
 
     /// <summary>
     ///     Values for the minimum arbitrary size at which a certain audio preset
@@ -140,7 +141,13 @@ public sealed class AreaEchoSystem : EntitySystem
             return directions;
         }
 
-        return [Direction.North.ToAngle(), Direction.West.ToAngle(), Direction.South.ToAngle(), Direction.East.ToAngle()];
+        return new[]
+        {
+            Direction.North.ToAngle(),
+            Direction.West.ToAngle(),
+            Direction.South.ToAngle(),
+            Direction.East.ToAngle()
+        };
     }
 
     /// <summary>

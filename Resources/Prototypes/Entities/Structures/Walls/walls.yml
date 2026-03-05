@@ -527,10 +527,10 @@
       tags:
       - Wall
     - type: Sprite
-      sprite: Structures/Walls/plastitanium.rsi
+      sprite: _Corvax/Structures/Walls/plastitanium.rsi # Lua
       color: "#cdf3cd" # Frontier
     - type: Icon
-      sprite: Structures/Walls/plastitanium.rsi
+      sprite: _Corvax/Structures/Walls/plastitanium.rsi # Lua
     - type: IconSmooth
       key: walls
       base: plastitanium
@@ -594,11 +594,11 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
+    sprite: _Corvax/Structures/Walls/plastitanium_diagonal.rsi #Lua
     state: state0
     color: "#cdf3cd" # Lua
   - type: Icon
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
+    sprite: _Corvax/Structures/Walls/plastitanium_diagonal.rsi #Lua
     state: state0
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -621,11 +621,11 @@
     enabled: false
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
+    sprite: _Corvax/Structures/Walls/plastitanium_diagonal.rsi #Lua
     state: state0
     color: "#ffffff" # Lua
   - type: Icon
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
+    sprite: _Corvax/Structures/Walls/plastitanium_diagonal.rsi #Lua
     state: state0
   - type: Destructible
     thresholds:
@@ -831,7 +831,10 @@
   - type: Construction # Lua
     graph: DiagonalGirder
     node: diagonalReinforcedWall
-    
+  - type: RCDDeconstructable # Lua
+    cost: 6 # Lua
+    delay: 8 # Lua
+
 # Riveting
 - type: entity
   parent: BaseWall
@@ -1183,6 +1186,9 @@
   - type: Construction # Lua
     graph: DiagonalGirder
     node: diagonalWall
+  - type: RCDDeconstructable # Lua
+    cost: 6 # Lua
+    delay: 8 # Lua
 
 - type: entity
   parent: WallSolid
@@ -1589,7 +1595,7 @@
   - type: Construction # Lua
     graph: DiagonalGirder
     node: WallMiningDiagonal
-    
+
 # Vault Walls
 
 - type: entity

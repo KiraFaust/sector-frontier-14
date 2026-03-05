@@ -147,7 +147,7 @@ public partial class ListingData : IEquatable<ListingData>
     /// <summary>
     /// The entity that is given when the listing is purchased.
     /// </summary>
-    [DataField]
+    [DataField(customTypeSerializer: typeof(OptionalEntProtoIdSerializer))]
     public EntProtoId? ProductEntity;
 
     /// <summary>
@@ -274,6 +274,9 @@ public sealed partial class ListingDataWithCostModifiers : ListingData
     /// </summary>
     [DataField]
     public Dictionary<string, Dictionary<ProtoId<CurrencyPrototype>, FixedPoint2>> CostModifiersBySourceId = new();
+
+    [DataField]
+    public int? Stock;
 
     /// <inheritdoc />
     public ListingDataWithCostModifiers(ListingData listingData)

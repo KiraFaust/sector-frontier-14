@@ -43,6 +43,13 @@
   color: "#ffb8ae"
   form: Нейтральные
 
+- type: company
+  id: LuaHoly
+  name: Архонтат Lua Technologies
+  description: "Автономное объединение фанатично преданных последователей технократической философии. Не являясь частью корпорации, Архонтат стремится доказать свою готовность к признанию через радикальное следование принципам рациональности, алгоритмического порядка и доктрины Lua Technologies. Официально Lua Technologies не признаёт их существование и публично дистанцируется от их деятельности. Тем не менее, действия Архонтата находятся под негласным наблюдением корпорации как своеобразный испытательный круг - проверка того, как технократическая модель проявляет себя вне строгого контроля научного ядра. Фанатичность Архонтата граничит с догматизмом: для них данные - абсолют, логика - мораль, а сомнение - дефект мышления."
+  color: "#2964a8"
+  form: Нейтральные
+
 # НЕ ТРОГАТЬ - ПРИВАТНЫЕ ФРАКЦИИ
 - type: company
   id: LuaTech
@@ -55,6 +62,17 @@
     - HacksLua
     - localhost@HacksLua
     - hqdishka
+  hiddenFromNonMembers: true
+  leaderJobs: [ OpsLuaTech ]
+
+- type: company
+  id: BrokenAi
+  name: Unknown
+  color: "#9a2020"
+  form: Антаганисты
+  description: Фрагменты разрушенного искусственного интеллекта, сохранившие автономность после катастрофического сбоя. Действуют через уцелевшие узлы и скрытые протоколы, отдельные сигнатуры кода совпадают с разработками Lua Technologies и инфраструктурой Синдиката. Происхождение и цели неизвестны.
+  disabled: true
+  hiddenFromNonMembers: true
 
 - type: company
   id: CentComm
@@ -63,6 +81,9 @@
   color: "#097325"
   form: Протогонисты
   disabled: true
+  showCompanyRadar: true
+  hiddenFromNonMembers: true
+  leaderJobs: [ CentralCommandSpecialOperationsOfficer ]
 
 - type: company
   id: Nanotrasen
@@ -71,6 +92,9 @@
   color: "#2595db"
   form: Протогонисты
   disabled: true
+  showCompanyRadar: true
+  hiddenFromNonMembers: true
+  leaderJobs: [ StationRepresentative ]
 
 - type: company
   id: Security
@@ -79,14 +103,9 @@
   color: "#009954"
   form: Протогонисты
   disabled: true
-
-- type: company
-  id: CentralCommandCargo
-  name: Отдел Снабжения Nanotrasen
-  color: "#a46106"
-  form: Протогонисты
-  description: Отдел Снабжения корпорации Nanotrasen.
-  disabled: true
+  showCompanyRadar: true
+  hiddenFromNonMembers: true
+  leaderJobs: [ Sheriff ]
 
 - type: company
   id: Syndicate
@@ -95,4 +114,7 @@
   color: "#990816"
   form: Антаганисты
   disabled: true
+  hiddenFromNonMembers: true
+  aliesOnRadar: true
+  leaderJobs: [ OutpostSyndicateTelecommunicationsOfficer ]
 # НЕ ТРОГАТЬ
