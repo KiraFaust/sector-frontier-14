@@ -31,7 +31,7 @@
   lightMods:
   - Daylight
   - Evening
-  weight: 0.5
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetChaosWorld
@@ -63,7 +63,7 @@
   lightMods:
   - Lavalight
   - Evening
-  weight: 0.4
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetExplorerDream
@@ -97,7 +97,7 @@
   - Evening
   temperatureMods:
   - Cold
-  weight: 0.45
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetAlienGarden
@@ -130,4 +130,4 @@
   lightMods:
   - Evening
   - Daylight
-  weight: 0.55
+  weight: 0.01

@@ -20,7 +20,7 @@
   nameDataset: NamesBorer
   temperatureMods:
   - Tundra
-  weight: 0.7
+  weight: 0.03
 
 - type: stargatePlanetPreset
   id: SGPresetShadowRuin
@@ -44,7 +44,7 @@
   nameDataset: NamesBorer
   lightMods:
   - Night
-  weight: 0.7
+  weight: 0.16
 
 - type: stargatePlanetPreset
   id: SGPresetCavesCache
@@ -66,7 +66,7 @@
   mobLayerCount: 0
   lootLayerCount: 0
   nameDataset: NamesBorer
-  weight: 0.7
+  weight: 0.08
 
 - type: stargatePlanetPreset
   id: SGPresetGrasslandOutpost
@@ -94,7 +94,7 @@
   - Slimes
   lootLayerCount: 0
   nameDataset: NamesBorer
-  weight: 0.8
+  weight: 0.03
 
 - type: stargatePlanetPreset
   id: SGPresetLavaBunker
@@ -124,7 +124,7 @@
   - Lavalight
   temperatureMods:
   - Hot
-  weight: 0.7
+  weight: 0.08
 
 - type: stargatePlanetPreset
   id: SGPresetDesertLab

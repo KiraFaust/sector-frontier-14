@@ -3520,3 +3520,41 @@ Entries:
   id: 243
   time: '2026-03-05T12:05:37.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/454
+- author: Vecortys
+  changes:
+    - type: Tweak
+      message: >-
+        Зелёное крио более не открывает роль для late-join'а через лобби. Для
+        освобождения роли пользуйтесь синим.
+  id: 244
+  time: '2026-03-06T02:55:35.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/489
+- author: KiraFaust
+  changes:
+    - type: Fix
+      message: Исправлен спрайт шлема скафандра Научного Руководителя
+  id: 245
+  time: '2026-03-06T02:58:27.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/488
+- author: HacksLua
+  changes:
+    - type: Add
+      message: Добавлена консоль парковки
+    - type: Remove
+      message: Удалена защита от удаления шаттла
+    - type: Tweak
+      message: Шаттлы теперь удаляются через 2 часа если владелец оффлайн
+    - type: Add
+      message: >-
+        Консоли парковки добавлены на аэ, мц, фронтир, тортуга, нф, аванпост
+        наёмников, аванпост сб
+  id: 246
+  time: '2026-03-06T14:25:36.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/491
+- author: Raldjatech
+  changes:
+    - type: Fix
+      message: Исправлен набор Sil`а
+  id: 247
+  time: '2026-03-06T14:26:00.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/490

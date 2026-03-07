@@ -29,7 +29,7 @@
   lightMods:
   - Daylight
   - Evening
-  weight: 0.6
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetVerdantExpedition
@@ -63,7 +63,7 @@
   lightMods:
   - Daylight
   - Evening
-  weight: 0.5
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetTropicalRuins
@@ -94,7 +94,7 @@
   lightMods:
   - Daylight
   - Evening
-  weight: 0.5
+  weight: 0.03
 
 - type: stargatePlanetPreset
   id: SGPresetGlowingFrontier
@@ -126,7 +126,7 @@
   lightMods:
   - Evening
   - Daylight
-  weight: 0.5
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetWildernessMix
@@ -156,4 +156,4 @@
   lightMods:
   - Daylight
   - Evening
-  weight: 0.4
+  weight: 0.01

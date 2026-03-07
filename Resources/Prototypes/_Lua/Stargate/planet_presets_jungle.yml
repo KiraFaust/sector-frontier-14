@@ -26,7 +26,7 @@
   lightMods:
   - Daylight
   - Evening
-  weight: 0.6
+  weight: 0.04
 
 - type: stargatePlanetPreset
   id: SGPresetJunglePeaceful
@@ -45,7 +45,7 @@
   - GateAirHumid
   lightMods:
   - Daylight
-  weight: 0.5
+  weight: 0.03
 
 - type: stargatePlanetPreset
   id: SGPresetJungleRuins
@@ -74,7 +74,7 @@
   lightMods:
   - Daylight
   - Evening
-  weight: 0.5
+  weight: 0.03
 
 - type: stargatePlanetPreset
   id: SGPresetJungleHostile
@@ -102,7 +102,7 @@
   - GateAirSwamp
   lightMods:
   - Evening
-  weight: 0.35
+  weight: 0.02
 
 - type: stargatePlanetPreset
   id: SGPresetJungleExpedition
@@ -131,7 +131,7 @@
   - GateAirHumid
   lightMods:
   - Daylight
-  weight: 0.4
+  weight: 0.02
 
 - type: stargatePlanetPreset
   id: SGPresetJungleTreasure
@@ -158,4 +158,4 @@
   - GateAirBreathable
   lightMods:
   - Daylight
-  weight: 0.3
+  weight: 0.04

@@ -69,6 +69,15 @@ public sealed partial class AdminStatsWindow : DefaultWindow
 
     public void UpdateResources(AdminStatsEuiState state)
     {
+        if (!state.IsLinuxHost)
+        {
+            RamLabel.Text = "NaN — unsupported OS";
+            RamBar.Value = 0;
+            CpuLabel.Text = $"NaN — unsupported OS ({state.CpuCount} cores)";
+            CpuBar.Value = 0;
+            return;
+        }
+
         var ramUsedGb = state.RamUsedBytes / (1024.0 * 1024.0 * 1024.0);
         var ramTotalGb = state.RamTotalBytes / (1024.0 * 1024.0 * 1024.0);
         RamLabel.Text = $"{ramUsedGb:F2} / {ramTotalGb:F1} GB";

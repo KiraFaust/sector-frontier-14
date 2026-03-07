@@ -27,7 +27,7 @@
   - Lavalight
   temperatureMods:
   - Hot
-  weight: 0.6
+  weight: 0.14
 
 - type: stargatePlanetPreset
   id: SGPresetFireAndIce
@@ -54,7 +54,7 @@
   lightMods:
   - Lavalight
   - Evening
-  weight: 0.5
+  weight: 0.04
 
 - type: stargatePlanetPreset
   id: SGPresetInfernalCorruption
@@ -90,4 +90,4 @@
   - Burning
   airMods:
   - GateAirPlasmaTrace
-  weight: 0.4
+  weight: 0.09

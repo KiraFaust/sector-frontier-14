@@ -11,7 +11,7 @@
   mobLayerCount: 0
   lootLayerCount: 0
   nameDataset: NamesBorer
-  weight: 0.5
+  weight: 0.29
 
 - type: stargatePlanetPreset
   id: SGPresetEmptySnow
@@ -28,7 +28,7 @@
   nameDataset: NamesBorer
   temperatureMods:
   - Frozen
-  weight: 0.4
+  weight: 0.04
 
 - type: stargatePlanetPreset
   id: SGPresetBarrenLava
@@ -48,7 +48,7 @@
   - Lavalight
   temperatureMods:
   - Burning
-  weight: 0.4
+  weight: 0.09
 
 - type: stargatePlanetPreset
   id: SGPresetVoidAsteroid
@@ -66,7 +66,7 @@
   - Space
   lightMods:
   - Night
-  weight: 0.3
+  weight: 0.18
 
 - type: stargatePlanetPreset
   id: SGPresetEmptyShadow
@@ -84,7 +84,7 @@
   nameDataset: NamesBorer
   lightMods:
   - Night
-  weight: 0.3
+  weight: 0.03
 
 - type: stargatePlanetPreset
   id: SGPresetPeacefulGrass
@@ -101,7 +101,7 @@
   mobLayerCount: 0
   lootLayerCount: 0
   nameDataset: NamesBorer
-  weight: 0.6
+  weight: 0.02
 
 - type: stargatePlanetPreset
   id: SGPresetCavesMining
@@ -117,7 +117,7 @@
   mobLayerCount: 0
   lootLayerCount: 0
   nameDataset: NamesBorer
-  weight: 0.5
+  weight: 0.06
 
 - type: stargatePlanetPreset
   id: SGPresetGrasslandSafe
@@ -137,7 +137,7 @@
   mobLayerCount: 0
   lootLayerCount: 0
   nameDataset: NamesBorer
-  weight: 0.6
+  weight: 0.07
 
 - type: stargatePlanetPreset
   id: SGPresetDesertMining
@@ -156,7 +156,7 @@
   mobLayerCount: 0
   lootLayerCount: 0
   nameDataset: NamesBorer
-  weight: 0.5
+  weight: 0.29
 
 - type: stargatePlanetPreset
   id: SGPresetSnowMining
@@ -174,4 +174,4 @@
   nameDataset: NamesBorer
   temperatureMods:
   - Cold
-  weight: 0.5
+  weight: 0.04

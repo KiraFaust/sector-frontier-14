@@ -26,7 +26,7 @@
   lightMods:
   - Lavalight
   - Evening
-  weight: 0.5
+  weight: 0.12
 
 - type: stargatePlanetPreset
   id: SGPresetVolcanicOasis
@@ -56,7 +56,7 @@
   lightMods:
   - Lavalight
   - Daylight
-  weight: 0.5
+  weight: 0.03
 
 - type: stargatePlanetPreset
   id: SGPresetFrozenGlow
@@ -86,7 +86,7 @@
   - Evening
   temperatureMods:
   - Cold
-  weight: 0.45
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetWastelandExpedition
@@ -114,7 +114,7 @@
   lightMods:
   - Evening
   - Lavalight
-  weight: 0.35
+  weight: 0.03
 
 - type: stargatePlanetPreset
   id: SGPresetCaveJungle
@@ -143,4 +143,4 @@
   nameDataset: NamesBorer
   lightMods:
   - Evening
-  weight: 0.4
+  weight: 0.01

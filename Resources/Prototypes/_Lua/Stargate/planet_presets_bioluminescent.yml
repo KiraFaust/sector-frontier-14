@@ -26,7 +26,7 @@
   lightMods:
   - Evening
   - Daylight
-  weight: 0.6
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetBioluminescentPeaceful
@@ -45,7 +45,7 @@
   - GateAirHumid
   lightMods:
   - Evening
-  weight: 0.5
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetBioluminescentRuins
@@ -74,7 +74,7 @@
   lightMods:
   - Evening
   - Daylight
-  weight: 0.5
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetBioluminescentHostile
@@ -102,7 +102,7 @@
   - GateAirSwamp
   lightMods:
   - Evening
-  weight: 0.35
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetBioluminescentExpedition
@@ -131,7 +131,7 @@
   - GateAirHumid
   lightMods:
   - Evening
-  weight: 0.4
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetBioluminescentCrystals
@@ -158,4 +158,4 @@
   - GateAirBreathable
   lightMods:
   - Evening
-  weight: 0.3
+  weight: 0.04

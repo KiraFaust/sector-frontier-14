@@ -24,7 +24,7 @@
   - NFArgocytes
   lootLayerCount: 0
   nameDataset: NamesBorer
-  weight: 0.5
+  weight: 0.06
 
 - type: stargatePlanetPreset
   id: SGPresetDesertMega
@@ -52,7 +52,7 @@
   - NFMercenaries
   lootLayerCount: 0
   nameDataset: NamesBorer
-  weight: 0.35
+  weight: 0.04
 
 - type: stargatePlanetPreset
   id: SGPresetLavaFortress
@@ -83,7 +83,7 @@
   temperatureMods:
   - Hot
   - Burning
-  weight: 0.35
+  weight: 0.08
 
 - type: stargatePlanetPreset
   id: SGPresetShadowDomain
@@ -116,7 +116,7 @@
   - Night
   temperatureMods:
   - Tundra
-  weight: 0.4
+  weight: 0.04
 
 - type: stargatePlanetPreset
   id: SGPresetContinental
@@ -172,4 +172,4 @@
   - NFMercenaries
   lootLayerCount: 0
   nameDataset: NamesBorer
-  weight: 0.3
+  weight: 0.03
