@@ -4,12 +4,9 @@
   - GateJungle
   - GateBioluminescent
   - GateGrassCaves
-  dungeonConfigs:
-  - GateTinyOutpost
-  - GateScatteredCaches
-  - GateCompactCache
-  dungeonCountMin: 0
-  dungeonCountMax: 8
+  dungeonPool: true
+  dungeonCountMin: 1
+  dungeonCountMax: 3
   dungeonDistanceMin: 60
   dungeonDistanceMax: 140
   worldRadiusMin: 211
@@ -29,7 +26,7 @@
   lightMods:
   - Daylight
   - Evening
-  weight: 0.6
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetVerdantExpedition
@@ -38,12 +35,9 @@
   - GateBioluminescent
   - GateLavaGrass
   - GateDesertGrass
-  dungeonConfigs:
-  - GateMediumOutpost
-  - GateLineOutpost
-  - GateScatteredLabs
+  dungeonPool: true
   dungeonCountMin: 1
-  dungeonCountMax: 8
+  dungeonCountMax: 3
   dungeonDistanceMin: 60
   dungeonDistanceMax: 140
   worldRadiusMin: 193
@@ -63,7 +57,7 @@
   lightMods:
   - Daylight
   - Evening
-  weight: 0.5
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetTropicalRuins
@@ -71,12 +65,9 @@
   - GateJungle
   - GateGrassCaves
   - GateCavesGrass
-  dungeonConfigs:
-  - GateCompactCache
-  - GateScatteredLabs
-  - GateHookOutpost
+  dungeonPool: true
   dungeonCountMin: 1
-  dungeonCountMax: 8
+  dungeonCountMax: 3
   dungeonDistanceMin: 60
   dungeonDistanceMax: 130
   worldRadiusMin: 225
@@ -94,7 +85,7 @@
   lightMods:
   - Daylight
   - Evening
-  weight: 0.5
+  weight: 0.03
 
 - type: stargatePlanetPreset
   id: SGPresetGlowingFrontier
@@ -102,12 +93,9 @@
   - GateBioluminescent
   - GateGrassCaves
   - GateGrassLava
-  dungeonConfigs:
-  - GateTinyOutpost
-  - GateSmallOutpost
-  - GateScatteredCaches
-  dungeonCountMin: 0
-  dungeonCountMax: 8
+  dungeonPool: true
+  dungeonCountMin: 1
+  dungeonCountMax: 3
   dungeonDistanceMin: 60
   dungeonDistanceMax: 140
   worldRadiusMin: 211
@@ -126,7 +114,7 @@
   lightMods:
   - Evening
   - Daylight
-  weight: 0.5
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetWildernessMix
@@ -134,11 +122,9 @@
   - GateJungle
   - GateBioluminescent
   - GateGrassDesert
-  dungeonConfigs:
-  - GateQuadBunker
-  - GateCrossBunker
+  dungeonPool: true
   dungeonCountMin: 1
-  dungeonCountMax: 8
+  dungeonCountMax: 3
   dungeonDistanceMin: 70
   dungeonDistanceMax: 150
   worldRadiusMin: 198
@@ -156,4 +142,4 @@
   lightMods:
   - Daylight
   - Evening
-  weight: 0.4
+  weight: 0.01

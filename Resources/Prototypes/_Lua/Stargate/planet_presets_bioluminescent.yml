@@ -2,12 +2,9 @@
   id: SGPresetBioluminescent
   biome:
   - GateBioluminescent
-  dungeonConfigs:
-  - GateTinyOutpost
-  - GateSmallOutpost
-  - GateLineOutpost
-  dungeonCountMin: 0
-  dungeonCountMax: 8
+  dungeonPool: true
+  dungeonCountMin: 1
+  dungeonCountMax: 3
   dungeonDistanceMin: 60
   dungeonDistanceMax: 140
   worldRadiusMin: 203
@@ -26,13 +23,13 @@
   lightMods:
   - Evening
   - Daylight
-  weight: 0.6
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetBioluminescentPeaceful
   biome:
   - GateBioluminescent
-  dungeonCountMin: 0
+  dungeonCountMin: 1
   dungeonCountMax: 0
   worldRadiusMin: 226
   worldRadiusMax: 256
@@ -45,18 +42,15 @@
   - GateAirHumid
   lightMods:
   - Evening
-  weight: 0.5
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetBioluminescentRuins
   biome:
   - GateBioluminescent
-  dungeonConfigs:
-  - GateScatteredCaches
-  - GateScatteredLabs
-  - GateCompactCache
+  dungeonPool: true
   dungeonCountMin: 1
-  dungeonCountMax: 8
+  dungeonCountMax: 3
   dungeonDistanceMin: 70
   dungeonDistanceMax: 150
   worldRadiusMin: 198
@@ -74,17 +68,15 @@
   lightMods:
   - Evening
   - Daylight
-  weight: 0.5
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetBioluminescentHostile
   biome:
   - GateBioluminescent
-  dungeonConfigs:
-  - GateSmallOutpost
-  - GateLineOutpost
+  dungeonPool: true
   dungeonCountMin: 1
-  dungeonCountMax: 8
+  dungeonCountMax: 3
   dungeonDistanceMin: 50
   dungeonDistanceMax: 120
   worldRadiusMin: 222
@@ -102,18 +94,15 @@
   - GateAirSwamp
   lightMods:
   - Evening
-  weight: 0.35
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetBioluminescentExpedition
   biome:
   - GateBioluminescent
-  dungeonConfigs:
-  - GateMediumOutpost
-  - GateQuadBunker
-  - GateScatteredMixed
+  dungeonPool: true
   dungeonCountMin: 2
-  dungeonCountMax: 8
+  dungeonCountMax: 3
   dungeonDistanceMin: 80
   dungeonDistanceMax: 180
   worldRadiusMin: 191
@@ -131,17 +120,15 @@
   - GateAirHumid
   lightMods:
   - Evening
-  weight: 0.4
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetBioluminescentCrystals
   biome:
   - GateBioluminescent
-  dungeonConfigs:
-  - GateScatteredCaches
-  - GateTinyOutpost
-  dungeonCountMin: 0
-  dungeonCountMax: 8
+  dungeonPool: true
+  dungeonCountMin: 1
+  dungeonCountMax: 3
   dungeonDistanceMin: 60
   dungeonDistanceMax: 130
   worldRadiusMin: 214
@@ -158,4 +145,4 @@
   - GateAirBreathable
   lightMods:
   - Evening
-  weight: 0.3
+  weight: 0.04

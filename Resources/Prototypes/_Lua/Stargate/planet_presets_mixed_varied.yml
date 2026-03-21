@@ -6,12 +6,9 @@
   - GateGrassCaves
   - GateLavaGrass
   - GateDesertGrass
-  dungeonConfigs:
-  - GateTinyOutpost
-  - GateCompactCache
-  - GateScatteredCaches
-  dungeonCountMin: 0
-  dungeonCountMax: 8
+  dungeonPool: true
+  dungeonCountMin: 1
+  dungeonCountMax: 3
   dungeonDistanceMin: 60
   dungeonDistanceMax: 140
   worldRadiusMin: 191
@@ -31,7 +28,7 @@
   lightMods:
   - Daylight
   - Evening
-  weight: 0.5
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetChaosWorld
@@ -41,12 +38,9 @@
   - GateJungle
   - GateBioluminescent
   - GateWasteland
-  dungeonConfigs:
-  - GateQuadBunker
-  - GateCrossBunker
-  - GateScatteredMixed
-  dungeonCountMin: 0
-  dungeonCountMax: 8
+  dungeonPool: true
+  dungeonCountMin: 1
+  dungeonCountMax: 3
   dungeonDistanceMin: 70
   dungeonDistanceMax: 160
   worldRadiusMin: 226
@@ -63,7 +57,7 @@
   lightMods:
   - Lavalight
   - Evening
-  weight: 0.4
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetExplorerDream
@@ -72,12 +66,9 @@
   - GateBioluminescent
   - GateGrassSnow
   - GateSnowDesert
-  dungeonConfigs:
-  - GateMediumOutpost
-  - GateLineOutpost
-  - GateScatteredLabs
-  dungeonCountMin: 0
-  dungeonCountMax: 8
+  dungeonPool: true
+  dungeonCountMin: 1
+  dungeonCountMax: 3
   dungeonDistanceMin: 60
   dungeonDistanceMax: 140
   worldRadiusMin: 208
@@ -97,7 +88,7 @@
   - Evening
   temperatureMods:
   - Cold
-  weight: 0.45
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetAlienGarden
@@ -106,10 +97,7 @@
   - GateJungle
   - GateGrassLava
   - GateShadowDesert
-  dungeonConfigs:
-  - GateScatteredCaches
-  - GateCompactCache
-  - GateHookOutpost
+  dungeonPool: true
   dungeonCountMin: 1
   dungeonCountMax: 1
   dungeonDistanceMin: 60
@@ -130,4 +118,4 @@
   lightMods:
   - Evening
   - Daylight
-  weight: 0.55
+  weight: 0.01

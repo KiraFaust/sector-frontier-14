@@ -4,11 +4,9 @@
   - GateLavaShadow
   - GateShadowLava
   - GateInferno
-  dungeonConfigs:
-  - GateQuadBunker
-  - GateMineshaft
+  dungeonPool: true
   dungeonCountMin: 1
-  dungeonCountMax: 8
+  dungeonCountMax: 3
   dungeonDistanceMin: 60
   dungeonDistanceMax: 140
   worldRadiusMin: 212
@@ -26,7 +24,7 @@
   lightMods:
   - Lavalight
   - Evening
-  weight: 0.5
+  weight: 0.12
 
 - type: stargatePlanetPreset
   id: SGPresetVolcanicOasis
@@ -34,11 +32,9 @@
   - GateLavaGrass
   - GateVolcanicSavanna
   - GateJungle
-  dungeonConfigs:
-  - GateScatteredCaches
-  - GateMediumOutpost
+  dungeonPool: true
   dungeonCountMin: 1
-  dungeonCountMax: 8
+  dungeonCountMax: 3
   dungeonDistanceMin: 60
   dungeonDistanceMax: 130
   worldRadiusMin: 190
@@ -56,7 +52,7 @@
   lightMods:
   - Lavalight
   - Daylight
-  weight: 0.5
+  weight: 0.03
 
 - type: stargatePlanetPreset
   id: SGPresetFrozenGlow
@@ -64,11 +60,9 @@
   - GateSnowDesert
   - GateShadowSnow
   - GateBioluminescent
-  dungeonConfigs:
-  - GateSmallOutpost
-  - GateCompactCache
-  dungeonCountMin: 0
-  dungeonCountMax: 8
+  dungeonPool: true
+  dungeonCountMin: 1
+  dungeonCountMax: 3
   dungeonDistanceMin: 50
   dungeonDistanceMax: 120
   worldRadiusMin: 216
@@ -86,7 +80,7 @@
   - Evening
   temperatureMods:
   - Cold
-  weight: 0.45
+  weight: 0.01
 
 - type: stargatePlanetPreset
   id: SGPresetWastelandExpedition
@@ -94,11 +88,9 @@
   - GateWasteland
   - GateInferno
   - GateJungle
-  dungeonConfigs:
-  - GateMineshaft
-  - GateScatteredOutposts
+  dungeonPool: true
   dungeonCountMin: 2
-  dungeonCountMax: 8
+  dungeonCountMax: 3
   dungeonDistanceMin: 70
   dungeonDistanceMax: 160
   worldRadiusMin: 199
@@ -114,7 +106,7 @@
   lightMods:
   - Evening
   - Lavalight
-  weight: 0.35
+  weight: 0.03
 
 - type: stargatePlanetPreset
   id: SGPresetCaveJungle
@@ -123,11 +115,9 @@
   - GateCavesGrass
   - GateJungle
   - GateBioluminescent
-  dungeonConfigs:
-  - GateMineshaft
-  - GateScatteredLabs
+  dungeonPool: true
   dungeonCountMin: 1
-  dungeonCountMax: 8
+  dungeonCountMax: 3
   dungeonDistanceMin: 60
   dungeonDistanceMax: 140
   worldRadiusMin: 224
@@ -143,4 +133,4 @@
   nameDataset: NamesBorer
   lightMods:
   - Evening
-  weight: 0.4
+  weight: 0.01
