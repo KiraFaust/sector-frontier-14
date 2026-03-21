@@ -292,7 +292,7 @@
 
 #region FSF
 - type: entity
-  parent: ClothingOuterHardsuitSyndieCommander
+  parent: [ ClothingOuterHardsuitSyndieCommander, EnergyShieldClothing ]
   id: ClothingOuterHardsuitFSFCommanderBravo
   name: скафандр командира рейнджеров
   suffix: ФСФ, Браво
@@ -319,10 +319,6 @@
         Caustic: 0.45
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitFSFCommanderBravo
-  - type: Inject #Lua
-    openCloseDelay: 1
-    autoClose: true
-    autoCloseDelay: 3
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95
@@ -332,9 +328,10 @@
   - type: Speech
   - type: TTS
     voice: Adjutant
+  - type: HardsuitReanimation
 
 - type: entity
-  parent: ClothingOuterHardsuitSyndie
+  parent: [ ClothingOuterHardsuitSyndie, EnergyShieldClothing ]
   id: ClothingOuterHardsuitFSFSpecialistBravo
   name: средний скафандр рейнджера
   suffix: ФСФ, Браво
@@ -363,22 +360,19 @@
     tags:
     - Hardsuit
     - WhitelistChameleon
-  - type: Inject #Lua
-    openCloseDelay: 1
-    autoClose: true
-    autoCloseDelay: 3
   - type: HardsuitIdentification
     emaggable: false
   - type: HardsuitDNARadial
   - type: Speech
   - type: TTS
     voice: Adjutant
+  - type: HardsuitReanimation
 
 ######## CHARLIE
 
 
 - type: entity
-  parent: ClothingOuterHardsuitSyndieCommander
+  parent: [ ClothingOuterHardsuitSyndieCommander, EnergyShieldClothing ]
   id: ClothingOuterHardsuitFSFCommanderCharlie
   name: скафандр командира рейнджеров
   suffix: ФСФ, Чарли
@@ -405,10 +399,6 @@
         Caustic: 0.35
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitFSFCommanderCharlie
-  - type: Inject #Lua
-    openCloseDelay: 1
-    autoClose: true
-    autoCloseDelay: 3
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95
@@ -418,9 +408,10 @@
   - type: Speech
   - type: TTS
     voice: Adjutant
+  - type: HardsuitReanimation
 
 - type: entity
-  parent: ClothingOuterHardsuitSyndie
+  parent: [ ClothingOuterHardsuitSyndie, EnergyShieldClothing ]
   id: ClothingOuterHardsuitFSFSpecialistCharlie
   name: средний скафандр рейнджера
   suffix: ФСФ, Чарли
@@ -449,16 +440,13 @@
     tags:
     - Hardsuit
     - WhitelistChameleon
-  - type: Inject #Lua
-    openCloseDelay: 1
-    autoClose: true
-    autoCloseDelay: 3
   - type: HardsuitIdentification
     emaggable: false
   - type: HardsuitDNARadial
   - type: Speech
   - type: TTS
     voice: Adjutant
+  - type: HardsuitReanimation
 
 ###### ALT
 
@@ -575,10 +563,6 @@
   - type: StaticPrice
     price: 1500
     vendPrice: 4000
-  - type: Inject
-    openCloseDelay: 1
-    autoClose: true
-    autoCloseDelay: 3
   - type: HardsuitIdentification
   - type: HardsuitDNARadial
   - type: Speech
@@ -625,10 +609,6 @@
   - type: StaticPrice
     price: 1500
     vendPrice: 4000
-  - type: Inject
-    openCloseDelay: 1
-    autoClose: true
-    autoCloseDelay: 3
   - type: HardsuitIdentification
   - type: HardsuitDNARadial
   - type: Speech
