@@ -418,7 +418,7 @@
       department: Security
       time: 36000 # 10 hours
     - !type:RoleTimeRequirement
-      role: JobSeniorOfficer
+      role: JobNFSeniorOfficer
       time: 36000 # 10 hours
     raffle:
       settings: default

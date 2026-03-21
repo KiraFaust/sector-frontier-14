@@ -1,5 +1,5 @@
 - type: loadout
-  id: SeniorOfficerOuterClothing
+  id: NFSeniorOfficerOuterClothing
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable

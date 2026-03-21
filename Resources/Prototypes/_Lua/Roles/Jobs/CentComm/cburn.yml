@@ -11,7 +11,7 @@
   playTimeTracker: JobCBURNLeader
   setPreference: false
   startingGear: CBURNLeaderGear
-  icon: "JobIconNanotrasenRed"
+  icon: "JobIconCBURN"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
@@ -69,7 +69,7 @@
   playTimeTracker: JobCBURNSierraLeader
   setPreference: false
   startingGear: CBURNSierraLeaderGear
-  icon: "JobIconNanotrasenRed"
+  icon: "JobIconCBURN"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
@@ -134,7 +134,7 @@
   playTimeTracker: JobCBURNAgent
   setPreference: false
   startingGear: CBURNAgentGear
-  icon: "JobIconNanotrasen"
+  icon: "JobIconCBURN"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:
@@ -188,7 +188,7 @@
   playTimeTracker: JobCBURNSierraAgent
   setPreference: false
   startingGear: CBURNSierraAgentGear
-  icon: "JobIconNanotrasen"
+  icon: "JobIconCBURN"
   supervisors: job-supervisors-centcom
   canBeAntag: false
   accessGroups:

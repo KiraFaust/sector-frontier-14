@@ -485,8 +485,8 @@
     layers:
     - state: default
     - state: idbrigmedic
-  - type: PresetIdCard # Frontier
-    job: Brigmedic # Frontier
+  - type: PresetIdCard
+    job: Brigmedic
 
 # - type: entity
 #   parent: IDCardStandard

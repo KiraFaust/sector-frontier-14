@@ -9,10 +9,9 @@
   description: Extremely expensive mantle, that is made of thick light durathread cloth and golden threads.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Neck/capcloakformal.rsi
+    sprite: _Lua/Clothing/Neck/Cloaks/capcloakformal.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Neck/capcloakformal.rsi
-
+    sprite: _Lua/Clothing/Neck/Cloaks/capcloakformal.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -21,7 +20,7 @@
   description: Can't hide bloodstains of your prisoners, but can definetly hide all your war crimes.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Neck/hoscloakformal.rsi
+    sprite: _Lua/Clothing/Cloaks/Neck/hoscloakformal.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/hoscloakformal.rsi
 
@@ -32,9 +31,9 @@
   description: Just looking at it you might think about how you would need to sell the whole station, if it will get dirty.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Neck/centcomcloakformal.rsi
+    sprite: _Lua/Clothing/Neck/Cloaks/centcomcloakformal.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Neck/centcomcloakformal.rsi
+    sprite: _Lua/Clothing/Neck/Cloaks/centcomcloakformal.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -43,6 +42,28 @@
   description: Bob-the-Builder.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Neck/ce.rsi
+    sprite: _Lua/Clothing/Neck/Cloaks/ce.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Neck/ce.rsi
+    sprite: _Lua/Clothing/Neck/Cloaks/ce.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakEngiLead
+  name: lead engineer cloak
+  description: Special cloak of 'THE ELECTRO' collection. Only for Lead Engineers.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Cloaks/ce_electro.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Neck/Cloaks/ce_electro.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakBlueshieldShoulder
+  name: плащ офицера 'Синий Щит'
+  description: Стандартный плащ, сшитый из лёгких материалов. Не сковывает движения и не натирает шею от длительного ношения.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Cloaks/blueshield.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Neck/Cloaks/blueshield.rsi

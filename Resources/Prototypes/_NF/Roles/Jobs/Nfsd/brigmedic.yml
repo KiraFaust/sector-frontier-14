@@ -1,8 +1,8 @@
 - type: job
-  id: Brigmedic
+  id: NFBrigmedic
   name: job-name-brigmedic
   description: job-description-brigmedic-nf
-  playTimeTracker: JobBrigmedic
+  playTimeTracker: JobNFBrigmedic
   salary: 45000
   requirements:
     - !type:OverallPlaytimeRequirement

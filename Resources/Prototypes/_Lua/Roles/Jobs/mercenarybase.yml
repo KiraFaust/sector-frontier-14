@@ -9,7 +9,7 @@
   playTimeTracker: JobMercenaryBase
   requirements:
     - !type:RoleTimeRequirement
-      role: JobSeniorOfficer
+      role: JobNFSeniorOfficer
       time: 21600
     - !type:RoleTimeRequirement
       role: JobBrigmedic
@@ -24,7 +24,7 @@
       time: 61200 #17 hrs
   startingGear: MercenaryGear
   canBeAntag: true
-  icon: "JobIconMercenary" 
+  icon: "JobIconMercenary"
   supervisors: job-supervisors-hire
   setPreference: true
   accessGroups: # Frontier

@@ -13,7 +13,7 @@
     stampedColor: "#650E00"
     stampState: "paper_stamp-mag"
   - type: Sprite
-    sprite: ADT/KD/Magistrat.rsi
+    sprite: _ADT/Objects/Specific/magistrat.rsi
     state: stamp-magistrat
 
 - type: entity

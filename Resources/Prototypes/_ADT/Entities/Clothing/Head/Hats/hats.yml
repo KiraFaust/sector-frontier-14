@@ -6,9 +6,9 @@
   description: So heavy, but it's worth it to proudly wear it.
   components:
   - type: Sprite
-    sprite: ADT/Clothing/Head/Hats/great_druid_wreath.rsi
+    sprite: _ADT/Clothing/Head/Hats/great_druid_wreath.rsi
   - type: Clothing
-    sprite: ADT/Clothing/Head/Hats/great_druid_wreath.rsi
+    sprite: _ADT/Clothing/Head/Hats/great_druid_wreath.rsi
 
 - type: entity
   parent: ClothingHeadBase
@@ -17,9 +17,9 @@
   description: Dungeon Master Hat.
   components:
   - type: Sprite
-    sprite: ADT/Clothing/Head/Hats/dungeon_master.rsi
+    sprite: _ADT/Clothing/Head/Hats/dungeon_master.rsi
   - type: Clothing
-    sprite: ADT/Clothing/Head/Hats/dungeon_master.rsi
+    sprite: _ADT/Clothing/Head/Hats/dungeon_master.rsi
 
 - type: entity
   parent: ClothingHeadBase
@@ -28,9 +28,9 @@
   description: Marine beret
   components:
   - type: Sprite
-    sprite: ADT/Clothing/Head/Hats/marineberet.rsi
+    sprite: _ADT/Clothing/Head/Hats/marineberet.rsi
   - type: Clothing
-    sprite: ADT/Clothing/Head/Hats/marineberet.rsi
+    sprite: _ADT/Clothing/Head/Hats/marineberet.rsi
 
 #Conjurer
 - type: entity
@@ -40,11 +40,11 @@
   description: Looks strange but cool
   components:
   - type: Sprite
-    sprite: ADT/Clothing/Head/Hats/johan_cap.rsi
+    sprite: _ADT/Clothing/Head/Hats/johan_cap.rsi
   - type: Clothing
-    sprite: ADT/Clothing/Head/Hats/johan_cap.rsi
+    sprite: _ADT/Clothing/Head/Hats/johan_cap.rsi
 
-#Фуражка следователя
+# СБ
 - type: entity
   parent: ClothingHeadBase
   id: ADTClothingHeadHatsInvestigatorCap
@@ -52,9 +52,31 @@
   description: Glory to NanoTrasen! # GLORY TO THE GORK AND MORK!
   components:
   - type: Sprite
-    sprite: ADT/Clothing/Head/Hats/investigator_cap.rsi
+    sprite: _ADT/Clothing/Head/Hats/investigator_cap.rsi
   - type: Clothing
-    sprite: ADT/Clothing/Head/Hats/investigator_cap.rsi
+    sprite: _ADT/Clothing/Head/Hats/investigator_cap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ADTClothingHeadHatsCorrectionsOfficerCap
+  name: corrections officer cap
+  description: Still too scary.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Head/Hats/corrections_officer_cap.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Head/Hats/corrections_officer_cap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ADTClothingHeadHatsCorrectionsOfficerGreyCap
+  name: corrections officer grey cap
+  description: ACTGTGCT... I red it from your genome directly. No, I am not using any tech.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Head/Hats/corrections_officer_cap_grey.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Head/Hats/corrections_officer_cap_grey.rsi
 
 # Капитанская треуголка
 - type: entity
@@ -79,3 +101,51 @@
     sprite: _ADT/Clothing/Head/Hats/ccc_cap.rsi
   - type: Clothing
     sprite: _ADT/Clothing/Head/Hats/ccc_cap.rsi
+
+# Берет СИ
+- type: entity
+  parent: ClothingHeadBase
+  id: ADTClothingHeadHatsBeretChiefEngineer
+  name: chief engineer beret
+  description: Absolute necessary.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Head/Hats/beret_ce.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Head/Hats/beret_ce.rsi
+
+# Берет ГП
+- type: entity
+  parent: ClothingHeadBase
+  id: ADTClothingHeadHatsBeretHeadOfPersonnel
+  name: head of personnel beret
+  description: Papers, please.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Head/Hats/beret_HOP.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Head/Hats/beret_HOP.rsi
+
+# Берет Парамедика
+- type: entity
+  parent: ClothingHeadBase
+  id: ADTClothingHeadHatsBeretParamedic
+  name: paramedic beret
+  description: Absolute necessary.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Head/Hats/beret_paramedic.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Head/Hats/beret_paramedic.rsi
+
+# Берет Атмосферного Техника
+- type: entity
+  parent: ClothingHeadBase
+  id: ADTClothingHeadHatsBeretAtmosian
+  name: atmosian beret
+  description: Gas leak.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Head/Hats/beret_atmospheric_technician.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Head/Hats/beret_atmospheric_technician.rsi

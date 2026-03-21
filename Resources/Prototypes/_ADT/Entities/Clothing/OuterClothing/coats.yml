@@ -1,4 +1,4 @@
-# бушлат следователя
+# СБ
 - type: entity
   parent: ClothingOuterStorageBase
   id: ADTClothingOuterCoatInvestigator
@@ -6,9 +6,9 @@
   description: This pea jacket increases the chance of a suspect's confession by half.
   components:
   - type: Sprite
-    sprite: ADT/Clothing/OuterClothing/Coats/investigator_coat.rsi
+    sprite: _ADT/Clothing/OuterClothing/Coats/investigator_coat.rsi
   - type: Clothing
-    sprite: ADT/Clothing/OuterClothing/Coats/investigator_coat.rsi
+    sprite: _ADT/Clothing/OuterClothing/Coats/investigator_coat.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -16,6 +16,26 @@
         Slash: 0.8
         Piercing: 0.7
         Heat: 0.8
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatCorrectionsOfficer
+  name: corrections officer's coat
+  description: Ah... free at last... Oh, Gabriel... Now dawns thy recogning. And Thy gore shall glisten before the temples of men...
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/OuterClothing/Coats/corrections_officer_coat_grey.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/OuterClothing/Coats/corrections_officer_coat_grey.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.8
+        Heat: 0.9
+        Caustic: 0.8
+
 
 # Тренчкот КЦК
 - type: entity

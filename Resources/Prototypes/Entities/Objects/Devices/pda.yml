@@ -1009,6 +1009,27 @@
   categories: [ HideSpawnMenu ] # Frontier: use NF variant
   description: If you are not an admin please return this PDA to the nearest admin.
   components:
+  - type: Sprite
+    sprite: _ADT/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-ghost"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _ADT/Objects/Devices/pda.rsi
+    state: pda-ghost
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-ghost
   - type: Pda
     id: UniversalIDCard
   - type: HealthAnalyzer

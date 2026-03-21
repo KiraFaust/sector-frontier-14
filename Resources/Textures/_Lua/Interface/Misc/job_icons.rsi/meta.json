@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "by HacksLua",
+    "copyright": "Typan, Blue/Red, Vip icons by HacksLua, navy, cburn, cryo and syndicate by FaustNetzach",
 
     "size": {
         "x": 8,
@@ -73,6 +73,24 @@
 	},
 	{
 		"name": "security_officer"
+	},
+    {
+		"name": "navy_pilot"
+	},
+	{
+		"name": "navy_navigator"
+	},
+	{
+		"name": "navy_fighter"
+	},
+    {
+		"name": "syndicate_highest_command"
+	},
+    {
+		"name": "cburn"
+	},
+    {
+		"name": "cryotech"
 	}
   ]
 }

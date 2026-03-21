@@ -94,7 +94,7 @@
   name: uplink-typan-XC67Bundle-name
   description: uplink-typan-XC67Bundle-desc
   productEntity: WeaponCaseLongXC67Bundle
-  icon: { sprite: /Textures/ADT/Objects/Weapons/Guns/Rifels/xc67.rsi, state: icon }
+  icon: { sprite: /Textures/_ADT/Objects/Weapons/Guns/Rifels/xc67.rsi, state: icon }
   cost:
     Telecrystal: 14
   categories:
@@ -111,7 +111,7 @@
   name: uplink-typan-C20rBundle-name
   description: uplink-typan-C20rBundle-desc
   productEntity: WeaponCaseLongC20rBundle
-  icon: { sprite: /Textures/Objects/Weapons/Guns/SMGs/c20r.rsi, state: icon }
+  icon: { sprite: _ADT/Textures/Objects/Weapons/Guns/SMGs/c20r.rsi, state: icon }
   cost:
     Telecrystal: 17
   categories:
@@ -386,7 +386,7 @@
   id: UplinkMagazineRifleWeaponXC67
   name: uplink-rifle-magazine-XC67-name
   description: uplink-rifle-magazine-XC67-desc
-  icon: { sprite: /Textures/ADT/Objects/Weapons/Guns/Ammunition/Magazine/ext_rifle_mag.rsi, state: base }
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/ext_rifle_mag.rsi, state: base }
   productEntity: ADTExtMagazineRifle
   cost:
     Speso: 15000

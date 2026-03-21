@@ -6,23 +6,23 @@
   parent: ClothingUniformBase
   id: ClothingUniformKimonoMiku
   name: одеяние мику
-  description: Одежда сенотаской жрицы. В этом вы чувствуете благословение великих богов синто. Удивительно что даже тут есть датчики."
+  description: Одежда сенотаской жрицы. В этом вы чувствуете благословение великих богов синто. Удивительно что даже тут есть датчики.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/kimonomiku.rsi
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/kimonomiku.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/kimonomiku.rsi
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/kimonomiku.rsi
 
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformSweaterRed
   name: красивый красный свитер
-  description: Это привлекательный красный свитер с открытой спиной. В нём вы сразите любого."
+  description: Это привлекательный красный свитер с открытой спиной. В нём вы сразите любого.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/sweaterred.rsi
+    sprite: _Lua/Clothing/Uniforms/Misc/sweaterred.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/sweaterred.rsi
+    sprite: _Lua/Clothing/Uniforms/Misc/sweaterred.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -31,9 +31,9 @@
   description: Это привлекательный синий свитер с открытой спиной. Яркий синий не оставит равнодушным.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/sweaterblue.rsi
+    sprite: _Lua/Clothing/Uniforms/Misc/sweaterblue.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/sweaterblue.rsi
+    sprite: _Lua/Clothing/Uniforms/Misc/sweaterblue.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -42,9 +42,9 @@
   description: Это привлекательный чёрный свитер с открытой спиной. Выглядит элегантно. Вы центр внимания.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/sweaterblack.rsi
+    sprite: _Lua/Clothing/Uniforms/Misc/sweaterblack.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/sweaterblack.rsi
+    sprite: _Lua/Clothing/Uniforms/Misc/sweaterblack.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -53,9 +53,9 @@
   description: Это привлекательный фиолетовый свитер с открытой спиной. Вы знаете себе цену.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/sweaterviolet.rsi
+    sprite: _Lua/Clothing/Uniforms/Misc/sweaterviolet.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/sweaterviolet.rsi
+    sprite: _Lua/Clothing/Uniforms/Misc/sweaterviolet.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -64,20 +64,9 @@
   description: Это привлекательный радужный свитер с открытой спиной. Вы излучаете краски... и внимание обоих полов
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/sweaterraindbow.rsi
+    sprite: _Lua/Clothing/Uniforms/Misc/sweaterraindbow.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/sweaterraindbow.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformLatexJanimaid
-  name: латексный наряд уборщика
-  description: У меня есть подозрение что он не предназначен для уборки.
-  components:
-  - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/janimaid.rsi
-  - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/janimaid.rsi
+    sprite: _Lua/Clothing/Uniforms/Misc/sweaterraindbow.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -86,9 +75,9 @@
   description: У меня есть подозрение что он не для работы с высоким  напряжением.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/latex_catsuit_female.rsi
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/latex_catsuit_female.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/latex_catsuit_female.rsi
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/latex_catsuit_female.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -97,9 +86,9 @@
   description: У меня есть подозрение что он не для работы с высоким  напряжением.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/latex_catsuit_male.rsi
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/latex_catsuit_male.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/latex_catsuit_male.rsi
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/latex_catsuit_male.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -108,6 +97,6 @@
   description: Тут и так всё очевидно.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/lovedmaid.rsi
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/lovedmaid.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/lovedmaid.rsi
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/lovedmaid.rsi

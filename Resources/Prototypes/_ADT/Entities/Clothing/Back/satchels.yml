@@ -1,11 +1,11 @@
 - type: entity
   parent: ClothingBackpack
   id: ADTClothingBackpackSatchelninja
-  name: satchel
+  name: ninja satchel
   description: A trendy looking satchel.
   components:
   - type: Sprite
-    sprite: ADT/Clothing/Back/ninjasatchel.rsi
+    sprite: _ADT/Clothing/Back/Satchels/ninjasatchel.rsi
   - type: Storage
     maxItemSize: Huge
 
@@ -31,5 +31,25 @@
   components:
   - type: Sprite
     sprite: _ADT/Clothing/Back/Satchels/centcom_satchel.rsi
+  - type: Storage
+    maxItemSize: Huge
+
+- type: entity
+  parent: ClothingBackpack
+  id: ADTClothingBackpackHeartSatchel
+  name: heart satchel
+  description: Satchel for storage. Wow, whats there? A stolen hearts?
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Back/Satchels/heart_satchel.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelBlueshield
+  name: blueshield satchel
+  description: Trendy satchel for fast access to medical and not-medical tools.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Back/Satchels/blueshield_satchel.rsi
   - type: Storage
     maxItemSize: Huge

@@ -44,7 +44,7 @@
           availableJobs:
             Sheriff: [ 1, 1 ]
             Bailiff: [ 1, 1 ]
-            SeniorOfficer: [ 1, 1 ]
+            NFSeniorOfficer: [ 1, 1 ]
             Brigmedic: [ 1, 1 ]
             NFDetective: [ 1, 1 ]
             Deputy: [ 3, 3 ]

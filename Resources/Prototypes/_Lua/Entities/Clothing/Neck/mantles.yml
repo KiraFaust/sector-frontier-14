@@ -1,8 +1,6 @@
 # LuaWorld - This file is licensed under AGPLv3
-# Copyright (c) 2025 LuaWorld Contributors
+# Copyright (c) 2026 LuaCorp Contributors
 # See AGPLv3.txt for details.
-
-
 
 - type: entity # Corvax-Resprite: Old mantle renamed and saved as that new entity
   parent: ClothingNeckBase
@@ -22,6 +20,51 @@
   description: Very formal. In fact, You might go away from me, Sir.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Neck/capmantle.rsi
+    sprite: _Lua/Clothing/Neck/mantles/capmantle.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Neck/capmantle.rsi
+    sprite: _Lua/Clothing/Neck/mantles/capmantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleBlueshield
+  name: наплечная мантия офицера 'Синий Щит'
+  description: Обычная хлопковая наплечная мантия офицера формирования 'Синий Щит'. Достаточно громоздка на вид, хотя на деле лёгкая.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/mantles/blueshieldmantle_shoulder.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Neck/mantles/blueshieldmantle_shoulder.rsi
+  # Я добавлю ВендОМат с одеждой О'СЩ', так что некоторые вещи сможет купить обычный игрок (хотя и очень редко, ведь в спавнеры я их добавлять как-то не хочу).
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleWarden
+  name: мантия смотрителя
+  description: Обычная мантия смотрителя, вероятно, точно не сшитая из шерсти Рантайма после того, как Главный Врач нагрубил Главе Службы Безопастности.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/mantles/wardenmantle.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Neck/mantles/wardenmantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleSecOfficerOutpostSyndicate
+  name: мантия офицера телекоммуникации
+  description: Вы уже не до конца понимаете, напоминает ли вам этот плащ кроваво-красный цвет Синдиката, или всё же кровь?
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/mantles/comantle.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Neck/mantles/comantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleSecOfficerOutpostSyndicate
+  name: мантия главы обеспечения
+  description: По-инженерному замечательна, по-замечательному инженерна.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/mantles/technical_supervisormantle.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Neck/mantles/technical_supervisormantle.rsi

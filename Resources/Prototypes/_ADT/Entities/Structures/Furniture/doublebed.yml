@@ -5,7 +5,7 @@
   description: You now, hot to use it.
   components:
   - type: Sprite
-    sprite: ADT/Structures/Furniture/doublebed.rsi
+    sprite: _ADT/Structures/Furniture/doublebed.rsi
     noRot: true
     state: splitbed
   - type: Construction

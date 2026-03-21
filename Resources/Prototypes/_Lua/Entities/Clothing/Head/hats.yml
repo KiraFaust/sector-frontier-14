@@ -92,12 +92,12 @@
   parent: ClothingHeadBase
   id: ClothingHeadOutpostSyndicate
   name: берет офицера телекоммуникаций
-  description: Черный берет с позолоченной вышивкой, предпочитаемый офицерами телекоммуникаций.
+  description: Черный берет с красной вышивкой логотипа Синдиката, предпочитаемый офицерами телекоммуникаций.
   components:
   - type: Clothing
-    sprite: Clothing/Head/Hats/beret_hos.rsi
+    sprite: _Lua/Clothing/Head/Hats/beret_co.rsi
   - type: Sprite
-    sprite: Clothing/Head/Hats/beret_hos.rsi
+    sprite: _Lua/Clothing/Head/Hats/beret_co.rsi
   - type: Tag
     tags:
     - ClothMade
@@ -119,3 +119,25 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretBrigmedicWhite
+  name: белый берет бригмедика
+  description: Белый берет бригмедика. Не был запачкан кровью.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Head/Hats/beret_brigmedic.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Head/Hats/beret_brigmedic.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretCargotech
+  name: берет грузчика
+  description: Оранжевый берет эльфа отдела снабжения. Йо-хо-дзынь!
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Head/Hats/beret_cargo.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Head/Hats/beret_cargo.rsi

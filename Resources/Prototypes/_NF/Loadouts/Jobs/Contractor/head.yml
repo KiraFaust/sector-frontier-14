@@ -494,6 +494,18 @@
     head: ClothingHeadHatQMsoft
 
 - type: loadout
+  id: ContractorClothingHeadHatBeretCargotech
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 1250
+  equipment:
+    head: ClothingHeadHatBeretCargotech
+
+- type: loadout
   id: ContractorClothingHeadHatCardinal
   effects:
   - !type:GroupLoadoutEffect

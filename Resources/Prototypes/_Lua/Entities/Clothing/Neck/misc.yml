@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCaptainCape
+  name: капитанский кейп
+  description: Лёгкое летнее пальто капитана, обычно носящееся на плечах. Странным образом, в рукава не влезают руки даже самых небольших гуманоидных существ.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Misc/cap_coat_neck.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Neck/Misc/cap_coat_neck.rsi

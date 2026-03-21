@@ -1,9 +1,9 @@
 - type: loadout
-  id: SeniorOfficerClothingUniformJumpsuitSeniorOfficer
+  id: NFSeniorOfficerClothingUniformJumpsuitSeniorOfficer
   equipment:
     jumpsuit: ClothingUniformJumpsuitNfsdTacBlack
 
 - type: loadout
-  id: SeniorOfficerClothingUniformJumpskirtSeniorOfficer
+  id: NFSeniorOfficerClothingUniformJumpskirtSeniorOfficer
   equipment:
     jumpsuit: ClothingUniformJumpskirtNfsd

@@ -53,6 +53,9 @@
   id: JobSeniorOfficer
 
 - type: playTimeTracker
+  id: JobNFSeniorOfficer
+
+- type: playTimeTracker
   id: JobStc
 
 - type: playTimeTracker

@@ -130,6 +130,166 @@
   - type: ThermalCloak
     enabled: false
 
+- type: entity
+  parent: [ClothingOuterHardsuitBase, BaseC2ContrabandUnredeemable]
+  id: ClothingOuterHardsuitCapspaceReinforced
+  name: боевой бронескафандр капитана
+  description: Элитный капитанский бронескафандр. Его выдают лучшим капитанам, для которых сражения с врагами НТ - каждый понедельник.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/capspace_reinforced.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/capspace_reinforced.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.001
+    coolingCoefficient: 0.001
+  - type: FireProtection
+    reduction: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.3
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35
+        Heat: 0.3
+        Cold: 0.3
+        Caustic: 0.4
+        Radiation: 0.4
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCapspaceHelmetReinforced
+
+#region Shareholder
+- type: entity
+  parent: [ClothingOuterHardsuitAtmos, HardsuitSpeedBuff]
+  id: ClothingOuterHardsuitShareholder
+  name: десантный скафандр акционера
+  description: Выглядит неприлично дорого, неизвестно чья это разработка но на бирке по стирке выгравировано "lt&cs"
+  components:
+  - type: ThermalCloak
+    enabled: false
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/shareholder_hardsuit.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/shareholder_hardsuit.rsi
+  - type: HardsuitIdentification
+    emaggable: false
+  - type: HardsuitDNARadial
+  - type: PowerCellDraw
+    drawRate: 3.6
+    enabled: false
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: false
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+      toggleable-clothing: !type:ContainerSlot
+      beakerSlot: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      beakerSlot:
+        whitelist:
+          tags:
+          - FitsHardsuit
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMicroreactor
+        disableEject: true
+        whitelist:
+          tags:
+            - PowerCell
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetShareholder
+  - type: Item
+    size: Huge
+  - type: Speech
+  - type: TTS
+    voice: Adjutant
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.55
+        Heat: 0.65
+        Radiation: 0.55
+        Caustic: 0.55
+
+- type: entity
+  parent: [ClothingOuterHardsuitAtmos, HardsuitSpeedBuff]
+  id: ClothingOuterHardsuitShareholderSyn
+  name: десантный скафандр акционера синдиката
+  description: Выглядит неприлично дорого, неизвестно чья это разработка но на бирке по стирке выгравировано "lt&cs"
+  components:
+  - type: ThermalCloak
+    enabled: false
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/shareholder_syn_hardsuit.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/shareholder_syn_hardsuit.rsi
+  - type: HardsuitIdentification
+    emaggable: false
+  - type: HardsuitDNARadial
+  - type: PowerCellDraw
+    drawRate: 3.6
+    enabled: false
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: false
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+      toggleable-clothing: !type:ContainerSlot
+      beakerSlot: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      beakerSlot:
+        whitelist:
+          tags:
+          - FitsHardsuit
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMicroreactor
+        disableEject: true
+        whitelist:
+          tags:
+            - PowerCell
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetShareholderSyn
+  - type: Item
+    size: Huge
+  - type: Speech
+  - type: TTS
+    voice: Adjutant
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.55
+        Heat: 0.65
+        Radiation: 0.55
+        Caustic: 0.55
+
 #region FSF
 - type: entity
   parent: ClothingOuterHardsuitSyndieCommander

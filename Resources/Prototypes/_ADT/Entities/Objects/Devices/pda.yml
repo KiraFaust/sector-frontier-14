@@ -1,0 +1,31 @@
+- type: entity
+  parent: BasePDA
+  id: AltCaptainPDA
+  name: formal captain PDA
+  description: Smells like space shuttles.
+  components:
+  - type: PdaBorderColor
+    borderColor: "#772d32"
+  - type: Icon
+    sprite: _ADT/Objects/Devices/pda.rsi
+    state: pda-captain
+  - type: Sprite
+    layers:
+    - sprite: _ADT/Objects/Devices/pda.rsi
+      map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-captain"
+    - sprite: _ADT/Objects/Devices/pda.rsi
+      state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - sprite: _ADT/Objects/Devices/pda.rsi
+      state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+       !type:String
+        pda-captain

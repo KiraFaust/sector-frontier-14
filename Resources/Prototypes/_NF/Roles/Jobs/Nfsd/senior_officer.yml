@@ -1,8 +1,8 @@
 - type: job
-  id: SeniorOfficer
+  id: NFSeniorOfficer
   name: job-name-senior-officer
   description: job-description-senior-officer
-  playTimeTracker: JobSeniorOfficer
+  playTimeTracker: JobNFSeniorOfficer
   salary: 60500
   requirements:
     - !type:OverallPlaytimeRequirement
@@ -20,7 +20,7 @@
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
       time: 21600 # 6 hours
-  startingGear: SeniorOfficerGear
+  startingGear: NFSeniorOfficerGear
   icon: JobIconSergeant
   supervisors: job-supervisors-bailiff
   weight: 140
@@ -42,7 +42,7 @@
         companyName: Security
 
 - type: startingGear
-  id: SeniorOfficerGear
+  id: NFSeniorOfficerGear
   equipment:
     pocket1: NFWeaponPistolUniversalNfsdLessLethal
   storage:
@@ -54,8 +54,8 @@
     - ShipVoucherNfsdSergeant
 
 - type: chameleonOutfit
-  id: SeniorOfficerChameleonOutfit
-  job: SeniorOfficer
+  id: NFSeniorOfficerChameleonOutfit
+  job: NFSeniorOfficer
   hasMindShield: true
   equipment:
     head: ClothingHeadHatNfsdBeretBrown

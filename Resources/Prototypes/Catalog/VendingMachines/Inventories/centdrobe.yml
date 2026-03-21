@@ -21,7 +21,7 @@
     ClothingHeadHatCentcomcap: 3
     ADTClothingHeadHatsCapCCC: 3 # Lua
     ClothingMaskGasCentcom: 3
-    ClothingHeadsetCentCom: 3
+    # ClothingHeadsetCentCom: 3 # Lua
     ClothingOuterWinterCentcom: 3
     ClothingOuterCoatExpensive: 1
     ClothingNeckScarfStripedCentcom: 3

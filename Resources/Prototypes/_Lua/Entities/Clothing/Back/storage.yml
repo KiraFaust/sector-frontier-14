@@ -42,3 +42,57 @@
     - 8,0,9,3
   - type: Sprite
     sprite: _Lua/Clothing/Back/bag.rsi
+
+- type: entity
+  parent: NFClothingDuffel
+  id: ClothingBackpackDuffelHoP
+  name: hop duffel bag
+  description: A large duffel bag made of cloth. Smells like office.
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/Back/Duffels/hop.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelHoP
+  name: hop satchel
+  description: A satchel with extra pockets for papers!
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Back/Satchels/hop.rsi
+
+- type: entity
+  parent: NFClothingBackpack
+  id: ClothingBackpackHoP
+  name: hop backpack
+  description: It's a light backpack for a papers lovers!
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Back/Backpacks/hop.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackBrigmedicWhite
+  name: белый рюкзак бригмедика
+  description: Рюкзак бригмедика в белом формате. На нём вышит значок пульса.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Back/Backpacks/brigmedic.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelBrigmedicWhite
+  name: белая сумка бригмедика
+  description: Сумка ангела хранителя СБ. Вы не можете знать, что в этой сумке содержится теперь, поэтому заглядывать туда не рекомендуется.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Back/Satchels/brigmedic.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelBrigmedicWhite
+  name: белый вещмешок бригмедика
+  description: Большой вещмешок для переноса вещей бригмедика по станции и за её пределами. Определённо точно не предназначен для таскания фелинидов.
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/Back/Duffels/brigmedic.rsi

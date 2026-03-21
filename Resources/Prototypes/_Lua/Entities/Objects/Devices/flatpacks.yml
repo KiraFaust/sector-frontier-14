@@ -24,12 +24,12 @@
 #   - type: StorageFill
 #     contents:
 #       - id: ADTSMESIndustrialEmptyFlatpack
-  
+
 # #Из ящика в карго консоль
 # - type: cargoProduct
 #   id: ADTSMESIndustrialEmpty
 #   icon:
-#     sprite: ADT/Structures/Power/smes.rsi
+#     sprite: _ADT/Structures/Power/smes.rsi
 #     state: smes
 #   product: CrateADTSMESIndustrialEmpty
 #   cost: 30000

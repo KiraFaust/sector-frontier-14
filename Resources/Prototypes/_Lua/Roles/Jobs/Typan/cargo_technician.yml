@@ -21,7 +21,7 @@
     #   role: JobOutpostTypanScience
     #   time: 12600
     - !type:RoleTimeRequirement
-      role: JobSeniorOfficer
+      role: JobNFSeniorOfficer
       time: 50000 #Lua
     - !type:DepartmentTimeRequirement
       department: Antag

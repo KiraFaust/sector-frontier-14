@@ -1,0 +1,70 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ангельские крылья
+  description: Порхай как бабочка! Жаль лишь, что как кирпич. Сделаны из ваты.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Wings/Angel.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckVampireWings
+  name: вампирские крылья
+  description: Чёрные крылья. При просвете отсвечивают бордовым.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Wings/BlackVampire.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckWingsMagic
+  name: крылья мага
+  description: К сожалению, совершенно не магические.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Wings/Magic.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckWingsPegasus
+  name: крылья пегаса
+  description: Величиственные крылья божественной лошади, отодранные браконьерами и проданные вам. Шутка.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Wings/Pegas.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckWingsSkeleton
+  name: скелетные крылья
+  description: Крылья настоящего скелета. Постойте, а откуда у скелетов крылья...?
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Wings/Skeleton.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckWingsSkeletonBlack
+  name: чёрные крылья скелета
+  description: Были созданы после ходатайства Коалиции Черношёрстных Вульпканинов о том, что черношёрстные вульпканины не имеют соответсвующих крыльев. К сожалению, ходатайства Колации Синих и Коалиции Зелёных приняты не были.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Wings/SkeletonBlack.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckWingsSkeletonRed
+  name: красные крылья скелета
+  description: Дизайн этих крыльев был создан совершенно случайно. Во время создания дизайна этих крыльев НИКТО НЕ ПОСТРАДАЛ.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Wings/SkeletonRed.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckWingsForCoolGuys
+  name: по-настоящему ангельские крылья
+  description: Ничем не отличаются от обычных. Не позволяют вам летать.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Wings/Violet.rsi

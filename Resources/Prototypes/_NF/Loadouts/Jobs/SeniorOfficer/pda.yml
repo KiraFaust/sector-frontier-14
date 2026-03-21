@@ -1,5 +1,4 @@
 - type: loadout
-  id: SeniorOfficerSeniorOfficerPDA
+  id: NFSeniorOfficerSeniorOfficerPDA
   equipment:
     id: SergeantPDA
-    

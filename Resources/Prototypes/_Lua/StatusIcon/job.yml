@@ -1,6 +1,33 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconPirates
+  jobName: Пират
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: Pirate
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconTeam
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: team
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconTeamCaptain
+  icon:
+    sprite: /Textures/Interface/Misc/job_icons.rsi
+    state: teamcaptain
+
 - type: jobIcon
   parent: JobIcon
   id: JobIconVip
+  jobName: Акционер Nanotrasen
   icon:
     sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
     state: Vip
@@ -8,7 +35,55 @@
 - type: jobIcon
   parent: JobIcon
   id: JobIconSyndicateShareholder
+  jobName: Акционер Синдиката
   icon:
     sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
     state: SyndicateShareholder
 
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconNavyFighter
+  jobName: Десантник ФNT
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: navy_fighter
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconNavyNavigator
+  jobName: Мичман ФNT
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: navy_navigator
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconNavyPilot
+  jobName: Корабельный Старшина ФNT
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: navy_pilot
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCBURN
+  jobName: Оперативник РХБЗЗ
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: cburn
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSyndicateCC
+  jobName: ???
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: syndicate_highest_command
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCryotech
+  jobName: Криотехник
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: cryotech

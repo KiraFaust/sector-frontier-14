@@ -30,6 +30,8 @@
     ClothingUniformJumpsuitAtmos: 3
     ClothingUniformJumpskirtAtmos: 3
     ClothingUniformJumpsuitAtmosCasual: 3
+    ClothingCloakAtmosian: 1 # Lua
+    ADTClothingHeadHatsBeretAtmosian: 1 # Lua
     ClothingShoesColorWhite: 3
     ClothingHeadHelmetFire: 2
     ClothingOuterSuitFire: 2
@@ -47,6 +49,7 @@
     ClothingUniformJumpsuitChiefEngineerTurtle: 1
     ClothingUniformJumpskirtChiefEngineerTurtle: 1
     ClothingOuterWinterCE: 1
+    ADTClothingHeadHatsBeretChiefEngineer: 1 # Lua
     ClothingShoesBootsWinterChiefEngineer: 1
     ClothingHeadHatBeretEngineering: 1
     ClothingNeckCloakCe: 1

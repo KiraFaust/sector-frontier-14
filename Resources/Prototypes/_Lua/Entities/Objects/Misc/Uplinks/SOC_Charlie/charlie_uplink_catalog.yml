@@ -103,7 +103,7 @@
   id: CharlieUplinkWeaponADTAbakanRifleAEK
   name: AEK-974
   description: "строение древнего автомата калашникова с использованием современных материалов создало это: высококласный автомат чья убойная сила не имеет равных так еще и который удобно держать даже в 1 руке! Но в две руки его не взять ибо он слишком мал..."
-  icon: { sprite: ADT/Objects/Weapons/Guns/Rifels/abakan.rsi, state: icon }
+  icon: { sprite: _ADT/Objects/Weapons/Guns/Rifels/abakan.rsi, state: icon }
   productEntity: ADTAbakanRifleAEK
   cost:
     FrontierUplinkCoin: 12
@@ -256,7 +256,7 @@
     FrontierUplinkCoin: 3
   categories:
     - CharlieUplinkAmmo
-    
+
 - type: listing
   id: CharlieUplinkAmmoNFAmmunitionBoxBigRifle30Uranium
   name: Ящик патронов (.30 винтовочные, урановые)
@@ -360,7 +360,7 @@
   id: CharlieUplinkAmmoADTMagazineShotgunXL
   name: ammo drum XL (.50 pellet)
   description: Расширенный барабан на 16 патрон заполненный летальными боеприпасами для автоматического дробовика "Бульдог"
-  icon: { sprite: ADT/Objects/Weapons/Guns/Ammunition/Magazine/xl.rsi, state: pellets }
+  icon: { sprite: _ADT/Objects/Weapons/Guns/Ammunition/Magazine/xl.rsi, state: pellets }
   productEntity: ADTMagazineShotgunXL
   cost:
     FrontierUplinkCoin: 1
@@ -500,7 +500,7 @@
     FrontierUplinkCoin: 1
   categories:
     - CharlieUplinkMisc
-    
+
 - type: listing
   id: CharlieUplinkMiscMicroBombImplanter
   name: имплантер микробомбы

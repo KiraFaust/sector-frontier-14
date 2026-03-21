@@ -64,9 +64,9 @@
   description: Яркий лабораторный халат, предоставляющий защиту от окружающей среды.
   components:
   - type: Clothing
-    sprite: ADT/Clothing/OuterClothing/Coats/labcyber.rsi
+    sprite: _ADT/Clothing/OuterClothing/Coats/labcyber.rsi
   - type: Sprite
-    sprite: ADT/Clothing/OuterClothing/Coats/labcyber.rsi
+    sprite: _ADT/Clothing/OuterClothing/Coats/labcyber.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -131,3 +131,23 @@
     sprite: _Lua/Clothing/OuterClothing/Coats/pathologist.rsi
   - type: Clothing
     sprite: _Lua/Clothing/OuterClothing/Coats/pathologist.rsi
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatQuartermaster
+  name: QM's jacket
+  description: Пусть и достаточно тонкое, но всё же мощное и тяжёлое пальто для чувака, одобряющего заказы пушек.
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/OuterClothing/Coats/qmcoat.rsi
+    - type: Clothing
+      sprite: _Lua/Clothing/OuterClothing/Coats/qmcoat.rsi
+    - type: Armor
+      modifiers:
+        coefficents:
+          Blunt: 0.7
+          Slash: 0.7
+          Piercing: 0.8
+          Heat: 0.7
+          Radiation: 0.9
+          Caustic: 0.7

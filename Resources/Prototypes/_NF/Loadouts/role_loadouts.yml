@@ -511,7 +511,7 @@
   - SocksUnderwear
 
 - type: roleLoadout
-  id: JobSeniorOfficer
+  id: JobNFSeniorOfficer
   groups:
   - SeniorOfficerHead
   - SeniorOfficerNeck

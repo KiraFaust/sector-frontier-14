@@ -153,7 +153,7 @@
   - Deputy # Frontier
   - Bailiff # Frontier
   - Sheriff # Frontier
-  - SeniorOfficer # Frontier
+  - NFSeniorOfficer # Frontier
   - PublicAffairsLiaison # Frontier
 
 - type: department

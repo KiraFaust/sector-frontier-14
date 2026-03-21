@@ -5,7 +5,7 @@
   description: A large duffel bag for holding extra things.
   components:
   - type: Sprite
-    sprite: ADT/Clothing/Back/ussp_attaked_backpack.rsi
+    sprite: _ADT/Clothing/Back/ussp_attaked_backpack.rsi
     state: icon
   - type: Item
     size: Huge
@@ -15,6 +15,8 @@
     - back
   - type: Storage
     maxItemSize: Huge
+    grid:
+    - 0,0,9,7
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
@@ -32,21 +34,12 @@
 
 - type: entity
   parent: ClothingBackpack
-  id: ADTClothingBackpackHeartSatchel
-  name: heart satchel
-  description: Satchel for storage. Wow, whats there? A stolen hearts?
-  components:
-  - type: Sprite
-    sprite: ADT/Clothing/Back/heart_satchel.rsi
-
-- type: entity
-  parent: ClothingBackpack
   id: ADTClothingBackpackHeart
   name: heart backpack
   description: Backpack for storage. Wow, whats there? A stolen hearts?
   components:
   - type: Sprite
-    sprite: ADT/Clothing/Back/heart_backpack.rsi
+    sprite: _ADT/Clothing/Back/Backpacks/heart_backpack.rsi
 
 - type: entity
   parent: ClothingBackpack
@@ -56,3 +49,12 @@
   components:
   - type: Sprite
     sprite: _ADT/Clothing/Back/Backpacks/centcom_backpack.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackBlueshield
+  name: blueshield backpack
+  description: Storage for medical (or not) tools.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Back/Backpacks/blueshield_backpack.rsi

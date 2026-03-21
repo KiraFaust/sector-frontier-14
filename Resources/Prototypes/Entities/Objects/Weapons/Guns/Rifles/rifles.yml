@@ -159,7 +159,6 @@
   - type: Appearance
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
   name: Lecter
   parent: [BaseWeaponRifle, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponRifleLecter

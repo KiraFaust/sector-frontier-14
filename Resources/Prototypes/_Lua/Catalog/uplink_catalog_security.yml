@@ -71,7 +71,7 @@
     - !type:BuyerJobCondition
       whitelist:
         - Bailiff
-        - SeniorOfficer
+        - NFSeniorOfficer
         - Sheriff
 
 - type: listing
@@ -200,7 +200,7 @@
     - !type:BuyerJobCondition
       whitelist:
         - Bailiff
-        - SeniorOfficer
+        - NFSeniorOfficer
         - Sheriff
 
 #region weapons
@@ -223,7 +223,7 @@
     - !type:BuyerJobCondition
       whitelist:
           - Bailiff
-          - SeniorOfficer
+          - NFSeniorOfficer
           - Sheriff
           - Deputy
 
@@ -276,7 +276,7 @@
   - !type:BuyerJobCondition
     whitelist:
       - Bailiff
-      - SeniorOfficer
+      - NFSeniorOfficer
       - Sheriff
       - Deputy
 
@@ -337,7 +337,7 @@
       whitelist:
           - Bailiff
           - Sheriff
-          - SeniorOfficer
+          - NFSeniorOfficer
 
 - type: listing
   id: UplinkSecurityNtsfLtrBundle # NTSF-LTR-556 (5.56x45mm,6.8x52mm Caseless)
@@ -473,7 +473,7 @@
     - !type:BuyerJobCondition
       whitelist:
         - Bailiff
-        - SeniorOfficer
+        - NFSeniorOfficer
         - Sheriff
 
 #region ammo
@@ -872,7 +872,7 @@
     - !type:BuyerJobCondition
       whitelist:
         - Bailiff
-        - SeniorOfficer
+        - NFSeniorOfficer
         - Sheriff
 
 - type: listing
@@ -941,7 +941,7 @@
     - !type:BuyerJobCondition
       whitelist:
         - Bailiff
-        - SeniorOfficer
+        - NFSeniorOfficer
         - Sheriff
 
 #region medicine
@@ -1204,7 +1204,7 @@
     # - !type:BuyerJobCondition
     #   whitelist:
     #     - Bailiff
-    #     - SeniorOfficer
+    #     - NFSeniorOfficer
     #     - Sheriff
 
 - type: listing
@@ -1241,7 +1241,7 @@
     # - !type:BuyerJobCondition
     #   whitelist:
     #     - Bailiff
-    #     - SeniorOfficer
+    #     - NFSeniorOfficer
     #     - Sheriff
 
 - type: listing
@@ -1310,7 +1310,7 @@
       whitelist:
         - Sheriff
         - Bailiff
-        - SeniorOfficer
+        - NFSeniorOfficer
         - NFDetective
 
 - type: listing
@@ -1347,7 +1347,7 @@
     # - !type:BuyerJobCondition
     #   whitelist:
     #     - Bailiff
-    #     - SeniorOfficer
+    #     - NFSeniorOfficer
     #     - Sheriff
 
 - type: listing
