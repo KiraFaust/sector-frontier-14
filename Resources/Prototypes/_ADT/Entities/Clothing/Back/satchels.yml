@@ -53,3 +53,14 @@
     sprite: _ADT/Clothing/Back/Satchels/blueshield_satchel.rsi
   - type: Storage
     maxItemSize: Huge
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelParamedic
+  name: paramedic satchel
+  description: Ambulance-man satchel.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Back/Satchels/paramedic_satchel.rsi
+  - type: Storage
+    maxItemSize: Huge
