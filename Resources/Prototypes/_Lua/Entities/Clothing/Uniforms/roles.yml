@@ -149,8 +149,31 @@
 
 
 # region Typan
+
 - type: entity
-  parent: ClothingSyndieBaseOutpostSyndicate
+  parent: [ClothingSyndieBaseOutpostSyndicate, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpskirtOutpostSyndicateChef
+  name: юбка-комбинезон шеф-повара синдиката
+  description: Без неё ничего и никого не приготовить.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/chefskirt.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/chefskirt.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostSyndicate, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpskirtOutpostSyndicateMedic
+  name: юбка-комбинезон медика синдиката
+  description: Практичность юбки обусловлена тяжестью стирания крови.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/medicalskirt.rsi #TODO: сделать нормальную униформу медикам Тайпана, а не украденную
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/medicalskirt.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostSyndicate, BaseC1SyndicateContrabandNoValue]
   id: ClothingUniformJumpsuitOutpostSyndicateBotanist
   name: комбинезон ботаника синдиката
   description: Имеет сильный запах земли. Будем надеяться, что он просто грязный, а не весь в земле.
@@ -173,7 +196,7 @@
 
 
 - type: entity
-  parent: ClothingSyndieBaseOutpostSyndicate
+  parent: [ClothingSyndieBaseOutpostSyndicate, BaseC1SyndicateContrabandNoValue]
   id: ClothingUniformJumpsuitOutpostSyndicateCargotech
   name: комбинезон карготехника синдиката
   description: Удобный прочный комбинезон.
@@ -195,7 +218,7 @@
     sprite: _Lua/Clothing/Uniforms/Jumpskirt/cargotechskirt.rsi
 
 - type: entity
-  parent: ClothingSyndieBaseOutpostSyndicate
+  parent: [ClothingSyndieBaseOutpostSyndicate, BaseC1SyndicateContrabandNoValue]
   id: ClothingUniformJumpsuitOutpostSyndicateChef
   name: комбинезон шеф-повара синдиката
   description: Без него ничего и никого не приготовить.
@@ -217,7 +240,7 @@
     sprite: _Lua/Clothing/Uniforms/Jumpskirt/chefskirt.rsi
 
 - type: entity
-  parent: ClothingSyndieBaseOutpostSyndicate
+  parent: [ClothingSyndieBaseOutpostSyndicate, BaseC1SyndicateContrabandNoValue]
   id: ClothingUniformJumpsuitOutpostSyndicateDirectory
   name: парадная форма директора исследований синдиката
   description: Роскошная униформа директора исследований, для особых случаев.
@@ -228,7 +251,7 @@
     sprite: _Lua/Clothing/Uniforms/Jumpsuit/directory.rsi
 
 - type: entity
-  parent: ClothingSyndieBaseOutpostSyndicate
+  parent: [ClothingSyndieBaseOutpostSyndicate, BaseC1SyndicateContrabandNoValue]
   id: ClothingUniformJumpsuitOutpostSyndicateMedic
   name: комбинезон медика синдиката
   description: Удобный комбинезон для оказания различного рода медицинских услуг
@@ -250,7 +273,7 @@
     sprite: _Lua/Clothing/Uniforms/Jumpskirt/suitmedical.rsi
 
 - type: entity
-  parent: ClothingSyndieBaseOutpostSyndicate
+  parent: [ClothingSyndieBaseOutpostSyndicate, BaseC1SyndicateContrabandNoValue]
   id: ClothingUniformJumpsuitRDOutpostSyndicate
   name: униформа директора исследований
   description: Слегка выцветшая от химикатов униформа.
@@ -272,7 +295,7 @@
     sprite: _Lua/Clothing/Uniforms/Jumpskirt/rd_jumpskirt.rsi
 
 - type: entity
-  parent: ClothingSyndieBaseOutpostSyndicate
+  parent: [ClothingSyndieBaseOutpostSyndicate, BaseC1SyndicateContrabandNoValue]
   id: ClothingUniformScienceOutpostSyndicate
   name: униформа ученого синдиката
   description: Черный тактический комбинезон, подходящий для всех видов исследований.
@@ -306,7 +329,7 @@
 
 
 - type: entity
-  parent: ClothingSyndieBaseOutpostSyndicate
+  parent: [ClothingSyndieBaseOutpostSyndicate, BaseC1SyndicateContrabandNoValue]
   id: ClothingUniformJumpsuitTelecommOfficerOutpostSyndicate
   name: комбинезон офицера телекоммуникаций
   description: Черный тренч на белой рубашке, представляющие собой комбинезон Офицера Телекоммуникаций Синдиката. Он скрывает тело ужасающего существа.
@@ -317,7 +340,7 @@
     sprite: _Lua/Clothing/Uniforms/Jumpsuit/co_jumpsuit.rsi
 
 - type: entity
-  parent: ClothingSyndieBaseOutpostSyndicate
+  parent: [ClothingSyndieBaseOutpostSyndicate, BaseC1SyndicateContrabandNoValue]
   id: ClothingUniformJumpskirtTelecommOfficerOutpostSyndicate
   name: комбинезон офицера телекоммуникаций
   description: Черный тренч на белой рубашке, представляющие собой комбинезон Офицера Телекоммуникаций Синдиката. Он скрывает тело ужасающего существа. Теперь с юбкой

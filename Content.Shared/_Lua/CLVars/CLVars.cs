@@ -182,5 +182,10 @@ namespace Content.Shared.Lua.CLVar
             CVarDef.Create("npc.smart_despawn_dead_timeout", 600f, CVar.SERVERONLY);
         public static readonly CVarDef<float> NpcSmartDespawnCheckInterval =
             CVarDef.Create("npc.smart_despawn_check_interval", 10f, CVar.SERVERONLY);
+
+        public static readonly CVarDef<string> SponsorMusicApiUrl =
+            CVarDef.Create("sponsor_music.api_url", "", CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<string> SponsorMusicApiToken =
+            CVarDef.Create("sponsor_music.api_token", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
     }
 }
