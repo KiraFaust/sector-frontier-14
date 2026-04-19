@@ -259,3 +259,14 @@
     sprite: _Lua/Clothing/Uniforms/cargotechskirt.rsi
   - type: Sprite
     sprite: _Lua/Clothing/Uniforms/cargotechskirt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNFSDEmergencyResponse
+  name: blue brigmedic uniform
+  description: A blue uniform that is specialized for field operations. Healing toolbox is build-in.
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/Uniforms/Jumpsuit/nfsd_brigmedic_uniform.rsi
+    - type: Clothing
+      sprite: _Lua/Clothing/Uniforms/Jumpsuit/nfsd_brigmedic_uniform.rsi

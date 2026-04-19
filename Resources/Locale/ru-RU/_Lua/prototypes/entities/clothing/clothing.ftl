@@ -84,3 +84,9 @@ ent-ClothingHeadHelmetSecurityRed = шлем СБ
 
 ent-ClothingUniformJumpskirtElegantMaid = элегантное платье горничной
     .desc = Платье для действительно профессиональных горничных. На него обязательно нужно получить лицензию.
+
+ent-ClothingUniformJumpsuitNFSDEmergencyResponse = комбинезон фельдшера
+    .desc = Синяя униформа, предназначенная для полевых операций. Лечащий тулбокс идёт в комплекте.
+
+ent-ClothingHeadPapahaBumanLopes = папаха Бумана Лопеса
+    .desc = Подозрительная папаха.
