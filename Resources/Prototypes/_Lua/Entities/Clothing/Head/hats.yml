@@ -141,3 +141,14 @@
     sprite: _Lua/Clothing/Head/Hats/beret_cargo.rsi
   - type: Sprite
     sprite: _Lua/Clothing/Head/Hats/beret_cargo.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadPapahaBumanLopes
+  name: Buman Lopes' papaha
+  description: Suspicious.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Head/Hats/ded_papaha.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Head/Hats/ded_papaha.rsi

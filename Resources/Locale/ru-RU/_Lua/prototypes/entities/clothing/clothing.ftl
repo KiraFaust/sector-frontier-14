@@ -99,3 +99,9 @@ ent-ClothingBackpackSatchelHoP = сумка главы персонала
 
 ent-ClothingBackpackHoP = рюкзак главы персонала
     .desc = Рюкзак для главного фаната документов.
+
+ent-ClothingUniformJumpsuitNFSDEmergencyResponse = комбинезон фельдшера
+    .desc = Синяя униформа, предназначенная для полевых операций. Лечащий тулбокс идёт в комплекте.
+
+ent-ClothingHeadPapahaBumanLopes = папаха Бумана Лопеса
+    .desc = Подозрительная папаха.
