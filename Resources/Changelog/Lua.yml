@@ -3785,3 +3785,66 @@ Entries:
   id: 267
   time: '2026-03-25T14:51:54.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/534
+- author: Almaz3200
+  changes:
+    - type: Add
+      message: >-
+        Добавлен шаттл "Гладиатор" для ДСБФ. Имеет тяжелую броню и 2 кирехи с
+        прискорбными углами наведения
+    - type: Remove
+      message: Удален шаттл "Fracture"
+  id: 268
+  time: '2026-04-02T10:32:33.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/532
+- author: Pcolik505
+  changes:
+    - type: Add
+      message: Новые классы контрабанды.
+    - type: Tweak
+      message: >-
+        Вся контрабанда была переработана под реалии вики (как и сама вики под
+        реалии контрабанды), изменены расценки, классы и ещё некоторые мелочи.
+        **Изменения не касаются вооружения!**
+    - type: Fix
+      message: >-
+        Больше нельзя дюпать ТаможенныеКредиты через стимпаки и боевые медипены
+        (они больше ничего не стоят)
+    - type: Fix
+      message: >-
+        Турели АКЭТ больше не расстреливают бойцов КСО/ОБР и РХБЗЗ из-за их
+        скафандров.
+  id: 269
+  time: '2026-04-16T12:56:06.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/536
+- author: PyotrIgn
+  changes:
+    - type: Add
+      message: >-
+        Добавлена недостающая локализация для некоторых позиций в продаже на
+        консоли заказов ТА и ЧР
+    - type: Add
+      message: >-
+        Добавлена недостающая локализация для хС-67 и спрайты оружия на слоте
+        баллона и в двух руках
+    - type: Fix
+      message: >-
+        Исправлено необходимое число реагента "яйцо" для кулинарных рецептов -
+        требования уменьшены в 6 раз, в соответствии с уменьшившимся ранее
+        количеством реагента в яйцах. 
+  id: 270
+  time: '2026-04-16T12:58:00.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/541
+- author: LeptonComm
+  changes:
+    - type: Add
+      message: Третий ремап МЦ
+  id: 271
+  time: '2026-04-16T13:35:51.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/542
+- author: Nz
+  changes:
+    - type: Fix
+      message: Нианы и унатхи теперь имеют свои акценты.
+  id: 272
+  time: '2026-04-16T13:37:22.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/545

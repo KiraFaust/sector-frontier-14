@@ -1787,7 +1787,6 @@
   - Weapon80mmBaseFlatpack
   technologyPrerequisites:
   - MachineGCSMediumCircuitboardTech
-  - ShipCpuLargeTechnology
   position: 15.548, 13.433
 - type: technology
   id: ShiparmoryHeavyBallisticBases
@@ -1958,42 +1957,4 @@
   technologyPrerequisites:
   - ShiparmoryPlastitaniumStructures
   position: 17.205, 18.974
-- type: technology
-  id: ShipCpuSmallTechnology
-  name: lua-research-technology-ship-cpu-small
-  entityIcon: ShipCpuSmall
-  discipline: NFEngineering
-  tier: 1
-  cost: 7000
-  recipeUnlocks:
-  - ShipCpuSmallMachineCircuitboard
-  position: 5.906, 5.108
-  technologyPrerequisites:
-  - BasicShuttleWeapon
-- type: technology
-  id: ShipCpuMediumTechnology
-  name: lua-research-technology-ship-cpu-medium
-  entityIcon: ShipCpuMedium
-  discipline: NFEngineering
-  tier: 2
-  cost: 14000
-  recipeUnlocks:
-  - ShipCpuMediumMachineCircuitboard
-  technologyPrerequisites:
-  - ShipCpuSmallTechnology
-  - ShuttleGrenade
-  position: 10.999, 8.868
-- type: technology
-  id: ShipCpuLargeTechnology
-  name: lua-research-technology-ship-cpu-large
-  entityIcon: ShipCpuLarge
-  discipline: NFEngineering
-  tier: 3
-  cost: 22000
-  recipeUnlocks:
-  - ShipCpuLargeMachineCircuitboard
-  technologyPrerequisites:
-  - ShipCpuMediumTechnology
-  - MachineGCSMediumCircuitboardTech
-  position: 15.515, 12.199
 ...
