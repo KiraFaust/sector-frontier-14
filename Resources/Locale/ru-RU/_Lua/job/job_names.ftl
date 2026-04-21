@@ -1,0 +1,15 @@
+job-name-pirates = пираты
+job-name-team = член команды
+job-name-teamcap = командный капитан
+job-name-vip = акционер
+job-name-synvip = акционер Синдиката
+job-name-opslua = оперативник LuaTech
+job-name-surgeon = хирург
+job-name-magistrat = магистрат
+job-name-iaa = агент внутренних дел
+job-name-blueshield = офицер 'Синий Щит'
+job-name-securitypilot = пилот СБ
+job-name-pathologist = патологоанатом
+job-name-seniorservice = администратор сервиса
+jobName: job-name-soc = оперативник КСО
+job-name-seniorsalvage = ведущий утилизатор

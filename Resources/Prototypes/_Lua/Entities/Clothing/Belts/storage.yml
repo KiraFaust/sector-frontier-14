@@ -130,3 +130,14 @@
     sprite: _Lua/Clothing/Belt/webbing_blueshield.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Belt/webbing_blueshield.rsi
+
+- type: entity
+  parent: [ ClothingBeltSecurity, BaseSecurityCargoContraband ]
+  id: ClothingBeltWebbingMedicNFSD
+  name: medical NFSD webbing
+  description: Webbing for medical security workers' needs.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Belt/web_er_nfsd.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Belt/web_er_nfsd.rsi
