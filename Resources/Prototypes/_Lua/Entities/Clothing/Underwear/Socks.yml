@@ -460,6 +460,15 @@
 
 - type: entity
   parent: ClothingUnderwearSocksBase
+  id: ClothingUnderwearSocksWomanDetective
+  name: чулки констебля
+  description: Стандартные чулки констебля.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Underwear/Security/detective/womensocks.rsi
+
+- type: entity
+  parent: ClothingUnderwearSocksBase
   id: ClothingUnderwearSocksSecurityOfficer
   name: носки офицера СБ
   description: Стандартные носки офицера СБ.

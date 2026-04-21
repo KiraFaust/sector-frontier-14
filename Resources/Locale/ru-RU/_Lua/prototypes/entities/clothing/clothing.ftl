@@ -93,3 +93,24 @@ ent-ClothingHeadPapahaBumanLopes = папаха Бумана Лопеса
 
 ent-ClothingBeltWebbingMedicNFSD = медицинский РПС ДСБФ
     .desc = Стандартный РПС Фельдшера, содержащий в себе самые нужные лекарства. Красный крест на брюхе наверняка означает, что перед вами врач. Но, это не вполне доказуемо...
+
+ent-ClothingNeckMedalSecurityOfficer = медаль офицера СБ
+    .desc = Выдаётся лишь лучшим офицерам!
+
+ent-ClothingNeckMedalSecurityDetective = медаль детектива СБ
+    .desc = Правда скрывается, но вы всегда можете её раскрыть.
+
+ent-ClothingNeckMedalSecurityMedic = медаль бригмедика
+    .desc = Только те, кто убегает от взрывов, могут получить эту медаль.
+
+ent-ClothingNeckMedalSecurityPilot = медаль пилота СБ
+    .desc = Взлетай!
+
+ent-ClothingNeckMedalSecuritySeniorOfficer = медаль инструктора СБ
+    .desc = Настоящая медаль среди медалей. Выдаётся лишь лучшим учителям.
+
+ent-ClothingNeckMedalSecurityWarden = медаль смотрителя СБ
+    .desc = Заключённых держат не стены, а ваша воля! И эта медаль подчёркивает её.
+
+ent-ClothingNeckMedalSecurityHeadOfSecurity = медаль главы СБ
+    .desc = Эта медаль может не отличаться от других внешне, но в ней значительно больше золота!
