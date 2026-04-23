@@ -110,6 +110,25 @@
         - Seed
 
 - type: entity
+  id: ClothingBeltPlantManagerFilled
+  parent: ClothingBeltChiefEngineer
+  suffix: Filled
+  components:
+  - type: Storage
+    grid:
+    - 0,0,9,1
+  - type: StorageFill
+    contents:
+      - id: PowerDrill
+      - id: JawsOfLife
+      - id: WelderExperimental
+      - id: Multitool
+      - id: HolofanProjector
+      - id: GasAnalyzer
+      - id: trayScanner
+      - id: RCDRecharging
+
+- type: entity
   id: ClothingBeltMilitaryWebbingBlueShieldFilled
   parent: ClothingBeltMilitaryWebbingMed
   name: РПС офицера "Синий Щит"

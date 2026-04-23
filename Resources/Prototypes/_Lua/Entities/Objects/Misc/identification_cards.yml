@@ -530,3 +530,18 @@
     - state: idsynsharehold
   - type: Clothing
     sprite: _NF/Objects/Misc/id_cards.rsi
+
+- type: entity
+  parent: IDCardStandard
+  id: AdjutantIDCard
+  name: adjutant ID card
+  components:
+  - type: PresetIdCard
+    job: Adjutant
+  - type: Sprite
+    sprite: _Lua/Objects/Misc/id_cards.rsi
+    layers:
+    - state: silver
+    - state: idadjutant
+  - type: Clothing
+    sprite: _Lua/Objects/Misc/id_cards.rsi

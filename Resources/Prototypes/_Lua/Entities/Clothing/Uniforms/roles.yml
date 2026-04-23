@@ -270,3 +270,25 @@
       sprite: _Lua/Clothing/Uniforms/Jumpsuit/nfsd_brigmedic_uniform.rsi
     - type: Clothing
       sprite: _Lua/Clothing/Uniforms/Jumpsuit/nfsd_brigmedic_uniform.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitAdjutantAlt
+  name: adjutant's turtleneck
+  description: A blue uniform that is specialized for field operations. Healing toolbox is build-in.
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/Uniforms/Jumpsuit/adjutant_alt.rsi
+    - type: Clothing
+      sprite: _Lua/Clothing/Uniforms/Jumpsuit/adjutant_alt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtAdjutantAlt
+  name: adjutant's turtleneck
+  description: A blue turtleneck with skirt to service heads even at the cold stations.
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/Uniforms/Jumpskirt/adjutant_alt.rsi
+    - type: Clothing
+      sprite: _Lua/Clothing/Uniforms/Jumpskirt/adjutant_alt.rsi

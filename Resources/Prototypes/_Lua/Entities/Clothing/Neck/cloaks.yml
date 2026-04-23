@@ -46,3 +46,14 @@
     sprite: _Lua/Clothing/Neck/ce.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/ce.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakFormalSeniorEngineer
+  name: senior engineer's formal cloak
+  description: To create a singularity, you need to connect these two things... Not like this!!!
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/le.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Neck/le.rsi

@@ -369,3 +369,37 @@
     id: OpsLuaTechIDCard
   - type: PdaBorderColor
     borderColor: "#35a5da"
+
+- type: entity
+  parent: BasePDA
+  id: AdjutantPDA
+  name: adjutant PDA
+  description: Ink and coffee stains are seen on its surface.
+  components:
+  - type: Pda
+    id: AdjutantIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+      !type:String
+        adj-pda
+  - type: Sprite
+    sprite: _Lua/Objects/Devices/pda.rsi
+    layers:
+    - state: "adj-pda"
+      map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: PdaBorderColor
+    borderColor: "#999875"
+    accentHColor: "#274d5f"
+    accentVColor: "#274d5f"
+  - type: Icon
+    sprite: _Lua/Objects/Devices/pda.rsi
+    state: adj-pda

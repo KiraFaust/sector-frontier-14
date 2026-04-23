@@ -6,6 +6,7 @@
   - PlantManagerClothingUniformJumpskirtChiefEngineer
   - PlantManagerClothingUniformJumpsuitChiefEngineerTurtle
   - PlantManagerClothingUniformJumpskirtChiefEngineerTurtle
+  - ClothingUniformJumpsuitChiefEngineerNT
   - PlantManagerClothingUniformJumpsuitMilitaryEngineeringChief
   fallbacks:
   - PlantManagerClothingUniformJumpsuitChiefEngineer
@@ -21,6 +22,8 @@
   - EngineeringClothingUniformJumpsuitAtmos
   - EngineeringClothingUniformJumpskirtAtmos
   - EngineeringClothingUniformJumpsuitAtmosCasual
+  - ClothingUniformJumpsuitSeniorEngineer
+  - ClothingUniformJumpskirtSeniorEngineer
   - EngineeringClothingUniformJumpsuitMilitaryEngineering
   - EngineeringClothingUniformJumpsuitMilitaryAtmospherics
   fallbacks:
@@ -31,6 +34,9 @@
   id: PlantManagerBackpack
   name: loadout-group-contractor-backpack
   loadouts:
+  - PlantManagerClothingBackpackChiefEngineer
+  - PlantManagerClothingBackpackSatchelChiefEngineer
+  - PlantManagerClothingBackpackDuffelChiefEngineer
   - PlantManagerClothingBackpackMessengerChiefEngineer
   - EngineeringClothingBackpackEngineering
   - EngineeringClothingBackpackDuffelEngineering
@@ -164,6 +170,7 @@
   loadouts:
   - PlantManagerClothingNeckMantleCE
   - PlantManagerClothingNeckCloakCe
+  - PlantManagerClothingNeckCloakFormalCE
 
 - type: loadoutGroup
   id: PlantManagerPDA
@@ -211,13 +218,19 @@
   - EngineeringClothingMaskGasAtmos
 
 - type: loadoutGroup
+  id: EngineeringNeck
+  name: loadout-group-contractor-neck
+  loadouts:
+  - EngineeringClothingNeckCloakSE
+
+- type: loadoutGroup
   id: PlantManagerBelt
   name: loadout-group-contractor-belt
   hidden: true
   loadouts:
-  - PlantManagerClothingBeltChiefEngineerFilledBasic
+  - ClothingBeltPlantManagerFilled
   fallbacks:
-  - PlantManagerClothingBeltChiefEngineerFilledBasic
+  - ClothingBeltPlantManagerFilled
 
 - type: loadoutGroup
   id: EngineeringBelt
