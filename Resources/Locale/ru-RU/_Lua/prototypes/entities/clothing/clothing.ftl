@@ -189,3 +189,6 @@ ent-ClothingBackpackSatchelHoS = сумка главы службы безопа
 
 ent-ClothingHeadHatCapLeatherHoS = кожанная фуражка главы службы безопасности
     .desc = Старинная кожанная фуражка. От неё всё ещё пахнет дымом.
+
+ent-ClothingHeadBeretChemist = берет химика
+    .desc = Плавательная шапочка самого обычного химика.
