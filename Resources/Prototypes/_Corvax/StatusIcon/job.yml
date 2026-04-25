@@ -46,7 +46,6 @@
     state: SecurityPilot
   jobName: job-name-securitypilot
 
-
 - type: jobIcon
   parent: JobIcon
   id: JobIconBlueShieldOfficer
@@ -73,7 +72,7 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconOutpostSyndicateBotanist
+  id: JobIconOutpostTypanBotanist
   icon:
     sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
     state: botanist
@@ -81,7 +80,7 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconOutpostSyndicateCargotech
+  id: JobIconOutpostTypanCargotech
   icon:
     sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
     state: cargo_technician
@@ -89,7 +88,7 @@
 
 - type: jobIcon
   parent: JobIcon
-  id: JobIconOutpostSyndicateChef
+  id: JobIconOutpostTypanChef
   icon:
     sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
     state: chef
