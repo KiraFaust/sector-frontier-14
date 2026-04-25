@@ -3909,3 +3909,44 @@ Entries:
   id: 275
   time: '2026-04-25T12:05:42.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/552
+- author: HacksLua
+  changes:
+    - type: Add
+      message: Порт обновления Липтона
+  id: 276
+  time: '2026-04-25T13:35:16.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/553
+- author: ressuw
+  changes:
+    - type: Tweak
+      message: Полный ремап Ориона
+  id: 277
+  time: '2026-04-25T13:37:07.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/506
+- author: mke35870-jpg
+  changes:
+    - type: Add
+      message: Feledor
+  id: 278
+  time: '2026-04-25T14:33:46.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/458
+- author: harara228-prog
+  changes:
+    - type: Add
+      message: >-
+        Сентинел -  новый пиратский шаттл(за референс взят шаттл с монолита и
+        переделан +-достаточно сильно), имеет 2 эми, 2 пулемета, 2 220мм, 1
+        чаронета, 2 гарпун пушки. Сильное носовое бронирование,
+        неповоротливость.
+  id: 279
+  time: '2026-04-25T14:34:37.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/515
+- author: harara228-prog
+  changes:
+    - type: Add
+      message: >-
+        Шаттл Sentinel с вооружением в виде: 3 220мм Сайбрекса, 2 ЭМИ-Рубикон, 2
+        средних миномёта. В наличии ультра-сервер вооружения. Для ДСБФ.
+  id: 280
+  time: '2026-04-25T14:37:03.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/500
