@@ -131,3 +131,18 @@
     sprite: _Lua/Clothing/OuterClothing/Coats/pathologist.rsi
   - type: Clothing
     sprite: _Lua/Clothing/OuterClothing/Coats/pathologist.rsi
+
+- type: entity
+  parent: ClothingOuterStorageFoldableBase
+  id: ClothingOuterYesod
+  name: black technocoat
+  description: Black dandy coat with arueate elements. Extremely technological, though, very uncomfortable for usual sentient being.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Coats/dandy_coat.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Coats/dandy_coat.rsi
+  - type: Tag
+    tags:
+    - ClothMade

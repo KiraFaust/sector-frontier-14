@@ -23,6 +23,14 @@
     ClothingNeckCloakAdmin: 3
 #    ClothingNeckCloakGoliathCloak: 3 #Lua
     ClothingNeckCloakHerald: 3
+    ClothingNeckAngelWings: 3
+    ClothingNeckVampireWings: 3
+    ClothingNeckWingsMagic: 3
+    ClothingNeckWingsPegasus: 3
+    ClothingNeckWingsSkeleton: 3
+    ClothingNeckWingsSkeletonBlack: 3
+    ClothingNeckWingsSkeletonRed: 3
+    ClothingNeckWingsForCoolGuys: 3
 #  contrabandInventory:
 #    ClothingMaskNeckGaiter: 2
 #    ClothingUniformJumpsuitTacticool: 1
