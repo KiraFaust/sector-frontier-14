@@ -429,7 +429,7 @@
     - HeadTop
     - HeadSide
 
-    - type: entity
+- type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitChiefEngineerMOD
   name: advanced chief engineer hardsuit helmet

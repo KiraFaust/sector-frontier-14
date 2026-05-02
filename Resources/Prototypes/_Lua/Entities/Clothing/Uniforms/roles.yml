@@ -292,3 +292,181 @@
       sprite: _Lua/Clothing/Uniforms/Jumpskirt/adjutant_alt.rsi
     - type: Clothing
       sprite: _Lua/Clothing/Uniforms/Jumpskirt/adjutant_alt.rsi
+
+#region Nanotrasen
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBrigmedicAlt
+  name: униформа бригмедика
+  description: Стандартная красная униформа, значительно менее угрожающая, чем стандартная чёрная.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/brigmedic.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/brigmedic.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtBrigmedicAlt
+  name: юбка бригмедика
+  description: Стандартная красная унифицированная юбка, значительно менее угрожающая, чем стандартная чёрная.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/brigmedic.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/brigmedic.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBrigmedicTurtle
+  name: водолазка бригмедика
+  description: Достаточно красная, чтобы спрятать следы рабочего 'ой, не туда' на вашей униформе.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/brigmedic_alt.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/brigmedic_alt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtBrigmedicTurtle
+  name: юбка-водолазка бригмедика
+  description: Достаточно красная, чтобы спрятать следы рабочего 'ай!' на вашей униформе. Теперь с юбкой.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/brigmedic_alt.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/brigmedic_alt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBrigmedicWhite
+  name: белый комбинезон бригмедика
+  description: Ходят слухи, что этот комбинезон был спроектирован компанией, что придумала формулу 'космического очистителя'. Белый, для настоящего ангела-спасителя.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/brigmedic_white.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/brigmedic_white.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtBrigmedicWhite
+  name: белая юбка-комбинезон бригмедика
+  description: Ходят слухи, что эта юбка была спроектирована компанией, что придумала формулу 'космического очистителя'. Белая, для настоящего ангела-спасителя.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/brigmedic_white.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/brigmedic_white.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitTurtleScientist
+  name: scientist's turtleneck
+  description: It's a durable turtleneck for elite sciences in bad conditions.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/scientist_turtle.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/scientist_turtle.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtTurtleScientist
+  name: scientist's turtleneck skirt
+  description: It's a durable turtleneck with skirt for elite sciences in bad conditions.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/scientist_turtle.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/scientist_turtle.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSalvageSpecialistFormal
+  name: salvage specialist's formal jumpsuit
+  description: It's a jumpsuit with a sturdy set of overalls. It's dirty... a bit.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/salvageformal.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/salvageformal.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtSalvageSpecialistFormal
+  name: salvage specialist's formal jumpskirt
+  description: It's a jumpskirt with a sturdy set of overalls. It's not dirty at all.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/salvageformal.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/salvageformal.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitChiefEngineerFormal
+  name: торжественный комбинезон старшего инженера
+  description: Торжественный пиджак с брюками для главы отдела инженеров. Пора отсветить золотом не только в автолате, но и в одежде!
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/ce_formal.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/ce_formal.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitDetectiveFormal
+  name: торжественный костюм детектива
+  description: Торжественный костюм из коричневой жилетки, рубашки и галстука. Да не полнит оно тебя...
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/detective.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/detective.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitDetectiveFormalBlack
+  name: торжественный костюм детектива
+  description: Торжественный костюм из чёрной жилетки, рубашки и галстука. Пора садиться за пианино!
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/detective.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/detective.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitChiefEngineerFormal
+  name: торжественный комбинезон старшего инженера
+  description: Торжественный пиджак с брюками для главы отдела инженеров. Пора отсветить золотом не только в автолате, но и в одежде!
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/ce_formal.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/ce_formal.rsi
+
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtSalvageSpecialist
+  name: salvage specialist's jumpskirt
+  description: It's a snappy jumpskirt with a sturdy set of overalls. It's very dirty.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/salvage.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/salvage.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtScientistFormal
+  name: scientist's formal jumpskirt
+  description: A uniform for sophisticated scientists, best worn with its matching tie and skirt.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/scientist_formal.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/scientist_formal.rsi

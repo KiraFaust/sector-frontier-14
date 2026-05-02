@@ -22,6 +22,6 @@
   description: Very formal. In fact, You might go away from me, Sir.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Neck/capmantle.rsi
+    sprite: _Lua/Clothing/Neck/mantles/capmantle.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Neck/capmantle.rsi
+    sprite: _Lua/Clothing/Neck/mantles/capmantle.rsi
