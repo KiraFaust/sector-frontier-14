@@ -13,6 +13,16 @@
   - type: Wires
     layoutId: AirlockSecurity
 
+- type: entity
+  parent: Airlock
+  id: AirlockRepresentative
+  suffix: Sr
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/representative.rsi
+  - type: Wires
+    layoutId: AirlockCommand
+
 # Glass Airlocks
 - type: entity
   parent: AirlockGlass
@@ -24,6 +34,15 @@
   - type: Wires
     layoutId: AirlockSecurity
 
+- type: entity
+  parent: AirlockGlass
+  id: AirlockGlassRepresentative
+  suffix: Sr
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/representative
+  - type: Wires
+    layoutId: AirlockCommand
 
 # LuaTech
 - type: entity

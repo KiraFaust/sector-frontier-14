@@ -1,3 +1,4 @@
+# Standard
 - type: entity
   parent: AirlockAssembly
   id: AirlockAssemblySecurityOld
@@ -9,9 +10,28 @@
 
 - type: entity
   parent: AirlockAssembly
+  id: AirlockAssemblyRepresentative
+  suffix: Sr
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/representative.rsi
+    state: "assembly"
+
+# Glass
+- type: entity
+  parent: AirlockAssembly
   id: AirlockAssemblySecurityGlassOld
   suffix: Security, Glass
   components:
   - type: Sprite
     sprite: _Lua/Structures/Doors/Airlocks/Glass/secairlockredglass.rsi
+    state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyRepresentativeGlass
+  suffix: Sr
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/representative.rsi
     state: "assembly"
