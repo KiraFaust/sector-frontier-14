@@ -4,7 +4,7 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/29/2026 11:35:17
+  time: 04/20/2026 13:58:46
   entityCount: 4763
 maps:
 - 6
@@ -12502,6 +12502,14 @@ entities:
     - type: Transform
       pos: -0.5,15.5
       parent: 1
+- proto: ComputerWallmountCrewMonitoring
+  entities:
+  - uid: 4764
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -14.5,12.5
+      parent: 1
 - proto: ComputerWallmountRadar
   entities:
   - uid: 1795
@@ -13183,6 +13191,12 @@ entities:
       parent: 1
 - proto: DisposalBend
   entities:
+  - uid: 1404
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 21.5,7.5
+      parent: 1
   - uid: 4587
     components:
     - type: Transform
@@ -13266,6 +13280,12 @@ entities:
       parent: 1
 - proto: DisposalPipe
   entities:
+  - uid: 4498
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 22.5,7.5
+      parent: 1
   - uid: 4586
     components:
     - type: Transform
@@ -13979,12 +13999,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 21.5,8.5
       parent: 1
-  - uid: 4721
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 21.5,7.5
-      parent: 1
   - uid: 4725
     components:
     - type: Transform
@@ -14128,22 +14142,6 @@ entities:
     - type: Transform
       pos: -15.5,11.5
       parent: 1
-- proto: EncryptionKeyFreelance
-  entities:
-  - uid: 4498
-    components:
-    - type: Transform
-      parent: 1925
-    - type: Physics
-      canCollide: False
-- proto: EncryptionKeyMercenary
-  entities:
-  - uid: 4499
-    components:
-    - type: Transform
-      parent: 1925
-    - type: Physics
-      canCollide: False
 - proto: ERCPlanFolderSpawner
   entities:
   - uid: 1204
@@ -18724,22 +18722,22 @@ entities:
       - 4581
     - type: AtmosPipeColor
       color: '#791500FF'
-- proto: GeneratorBasic15kW
+- proto: GeneratorBasic30kW
   entities:
-  - uid: 1404
-    components:
-    - type: Transform
-      pos: 13.5,17.5
-      parent: 1
-  - uid: 1405
-    components:
-    - type: Transform
-      pos: 14.5,17.5
-      parent: 1
   - uid: 1417
     components:
     - type: Transform
       pos: 15.5,17.5
+      parent: 1
+  - uid: 1925
+    components:
+    - type: Transform
+      pos: 14.5,17.5
+      parent: 1
+  - uid: 2105
+    components:
+    - type: Transform
+      pos: 13.5,17.5
       parent: 1
 - proto: GravityGeneratorMini
   entities:
@@ -20064,6 +20062,13 @@ entities:
     - type: Transform
       pos: -16.5,13.5
       parent: 1
+- proto: MercenaryTechFabStation
+  entities:
+  - uid: 4499
+    components:
+    - type: Transform
+      pos: 10.5,19.5
+      parent: 1
 - proto: MiniStationAnchorOff
   entities:
   - uid: 4500
@@ -20080,27 +20085,11 @@ entities:
       parent: 1
 - proto: NFTelecomServerFilled
   entities:
-  - uid: 1925
+  - uid: 1405
     components:
     - type: Transform
       pos: -17.5,11.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        key_slots: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4498
-          - 4499
-        machine_board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
-        machine_parts: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
 - proto: NFVendingMachineCart
   entities:
   - uid: 1228
@@ -20397,11 +20386,6 @@ entities:
     components:
     - type: Transform
       pos: -16.5,19.5
-      parent: 1
-  - uid: 2105
-    components:
-    - type: Transform
-      pos: 10.5,19.5
       parent: 1
 - proto: PoweredlightExterior
   entities:

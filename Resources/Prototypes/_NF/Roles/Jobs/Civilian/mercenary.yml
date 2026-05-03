@@ -10,8 +10,8 @@
     - !type:DepartmentTimeRequirement
       department: Medical
       time: 36000 #Lua 10h
-    - !type:RoleTimeRequirement
-      role: JobFrontierEngineer
+    - !type:DepartmentTimeRequirement
+      department: Frontier
       time: 36000 #Lua 10h 
     - !type:RoleTimeRequirement
       role: JobSecurityCadet

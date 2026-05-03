@@ -75,7 +75,7 @@
     maxAngle: 3.5 #Lua
     angleIncrease: 0.2 #Lua
     angleDecay: 1 #Lua
-    fireRate: 1.8 #Lua 2.4<1.8
+    fireRate: 1.3 #Lua 2.4<1.3
     soundGunshot:
       collection: N14RevolverMagnunGunshot
 
@@ -92,7 +92,7 @@
     maxAngle: 3.5 #Lua
     angleIncrease: 0.2 #Lua
     angleDecay: 1 #Lua
-    fireRate: 2.25 #Lua 2<2.25
+    fireRate: 1.6 #Lua 2<1.6
     resetOnHandSelected: false
     soundGunshot:
       collection: N14RevolverMagnunGunshot
@@ -120,7 +120,7 @@
     maxAngle: 3.5 #Lua
     angleIncrease: 0.2 #Lua
     angleDecay: 1 #Lua
-    fireRate: 2.25 #Lua
+    fireRate: 1.6 #Lua
     soundGunshot:
       collection: N14HunterRevolverGunshot
   - type: Sprite

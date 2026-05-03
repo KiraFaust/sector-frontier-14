@@ -17,7 +17,9 @@
     maxAngle: 3.5 #Lua
     angleIncrease: 0.2 #Lua
     angleDecay: 1 #Lua
-    fireRate: 3.15
+    fireRate: 2.2
+  - type: Wieldable #Lua
+  - type: GunRequiresWield #Lua
   - type: RevolverAmmoProvider
     proto: Cartridge45_magnumFMJ #Lua RMCCartridgeRevolver44<Cartridge45_magnumFMJ
     capacity: 7

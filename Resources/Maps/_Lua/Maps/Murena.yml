@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/02/2026 12:13:30
-  entityCount: 6414
+  time: 04/20/2026 14:14:11
+  entityCount: 6413
 maps: []
 grids:
 - 1
@@ -2917,7 +2917,6 @@ entities:
       id: Murena
     - type: IFF
       color: '#948471FF'
-    - type: ShipCpuLimit
 - proto: AirAlarm
   entities:
   - uid: 6197
@@ -19861,7 +19860,7 @@ entities:
     - type: Transform
       pos: 35.5,11.5
       parent: 1
-- proto: ComputerStationRecords
+- proto: TelecomServerFilledFreelance
   entities:
   - uid: 4335
     components:
@@ -27228,7 +27227,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 27.5,-27.5
       parent: 1
-- proto: GunneryServerOmega
+- proto: GunneryServerHigh
   entities:
   - uid: 388
     components:
@@ -31836,12 +31835,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 23.5,10.5
       parent: 1
-  - uid: 3027
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 23.5,12.5
-      parent: 1
 - proto: StorageCanister
   entities:
   - uid: 1863
@@ -32058,11 +32051,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 28.5,9.5
       parent: 1
-  - uid: 3037
-    components:
-    - type: Transform
-      pos: 22.5,12.5
-      parent: 1
   - uid: 3120
     components:
     - type: Transform
@@ -32151,6 +32139,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 25.5,-31.5
+      parent: 1
+- proto: VendingMachineBooze
+  entities:
+  - uid: 3027
+    components:
+    - type: Transform
+      pos: 22.5,12.5
       parent: 1
 - proto: VendingMachineChefvend
   entities:

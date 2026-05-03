@@ -66,7 +66,7 @@
   [color=yellow][bold]Примечание:[/bold][/color] Гражданские суда и суда экспедиций [bold]не оснащены[/bold] межзвёздным двигателем по умолчанию. Его необходимо приобрести и установить отдельно.
 
   <Box>
-    <GuideEntityEmbed Entity="MachineWarpDrive"/>
+    <GuideEntityEmbed Entity="MachineFTLDrive600"/>
   </Box>
 
   #### Системный двигатель

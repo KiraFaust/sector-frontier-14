@@ -49,11 +49,11 @@
   - type: ProjectileBatteryAmmoProvider
     proto: BulletEnergyGunFrostNonLethal
     fireCost: 20 #Lua 75<20
-  - type: EnergyGun
-    fireModes:
-    - proto: BulletEnergyGunFrostNonLethal
-      fireCost: 20 #Lua 75<20
-      name: disable
+  # - type: EnergyGun # comment from _Lua
+  #   fireModes:
+  #   - proto: BulletEnergyGunFrostNonLethal
+  #     fireCost: 20 #Lua 75<20
+  #     name: disable
   - type: MagazineVisuals
     magState: mag
     steps: 4

@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/02/2026 12:39:20
-  entityCount: 3003
+  time: 04/20/2026 14:00:42
+  entityCount: 3002
 maps: []
 grids:
 - 1
@@ -1137,13 +1137,6 @@ entities:
     components:
     - type: Transform
       pos: 2.5,-26.5
-      parent: 1
-- proto: AtmosDeviceFanTiny
-  entities:
-  - uid: 63
-    components:
-    - type: Transform
-      pos: 0.5,14.5
       parent: 1
 - proto: AtmosFixBlockerMarker
   entities:
@@ -13608,7 +13601,7 @@ entities:
     - type: Occluder
       enabled: False
     - type: Door
-      secondsUntilStateChange: -305.95923
+      secondsUntilStateChange: -334.30743
       state: Closing
 - proto: SpaceCash
   entities:

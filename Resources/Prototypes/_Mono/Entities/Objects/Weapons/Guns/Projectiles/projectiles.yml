@@ -70,5 +70,5 @@
     soundHit:
       collection: WeakHit
     forceSound: true
-  - type: ChangeTemperatureOnCollide
-    heat: -35500
+  # - type: ChangeTemperatureOnCollide # comment from _Lua
+  #   heat: -35500

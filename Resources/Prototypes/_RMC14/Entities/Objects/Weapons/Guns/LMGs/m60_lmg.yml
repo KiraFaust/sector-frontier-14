@@ -42,6 +42,9 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+  - type: MagazineAmmoProvider #Lua
+    autoEject: false
+    soundAutoEject: null
   - type: Gun
     examineCaliber: gun-examine-caliber-865 #Lua
     minAngle: 3 #Lua
@@ -109,7 +112,6 @@
       rmc-aslot-underbarrel: 0.618, -0.263
   - type: Wieldable
   - type: GunRequiresWield
-
 
 - type: entity
   parent: RMCMagazineLMGBase
