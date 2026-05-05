@@ -6,8 +6,8 @@
   - PlantManagerClothingUniformJumpskirtChiefEngineer
   - PlantManagerClothingUniformJumpsuitChiefEngineerTurtle
   - PlantManagerClothingUniformJumpskirtChiefEngineerTurtle
-  - ClothingUniformJumpsuitChiefEngineerNT
-  - ClothingUniformJumpsuitChiefEngineerFormal
+  - PlantManagerClothingUniformJumpskirtChiefEngineerNT
+  - PlantManagerClothingUniformJumpskirtChiefEngineerFormal
   - PlantManagerClothingUniformJumpsuitMilitaryEngineeringChief
   fallbacks:
   - PlantManagerClothingUniformJumpsuitChiefEngineer
@@ -23,8 +23,8 @@
   - EngineeringClothingUniformJumpsuitAtmos
   - EngineeringClothingUniformJumpskirtAtmos
   - EngineeringClothingUniformJumpsuitAtmosCasual
-  - ClothingUniformJumpsuitSeniorEngineer
-  - ClothingUniformJumpskirtSeniorEngineer
+  - EngineeringClothingUniformJumpsuitSeniorEngineer
+  - EngineeringClothingUniformJumpskirtSeniorEngineer
   - EngineeringClothingUniformJumpsuitMilitaryEngineering
   - EngineeringClothingUniformJumpsuitMilitaryAtmospherics
   fallbacks:
@@ -122,6 +122,7 @@
   minLimit: 0
   loadouts:
   - PlantManagerClothingHeadHatHardhatWhite
+  - PlantManagerClothingHeadHatBeretChiefEngineer
   - PlantManagerClothingHeadHatBeretEngineering
   subgroups:
   - EngineeringHead

@@ -71,16 +71,13 @@
     sprite: _Lua/Clothing/Neck/Wings/Violet.rsi
 
 - type: entity
-  parent: Clothing
+  parent: ClothingNeckBase
   id: ClothingNeckWingsTheAnemone
   name: wings of horror
   description: Fly, perfect wings!
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Neck/Wings/horror.rsi
-  - type: Item
-    size: Small
-  - type: Clothing
-    quickEquip: true
-    slots:
-    - neck
+  - type: Tag
+    tags:
+    - ClothMade

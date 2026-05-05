@@ -170,3 +170,14 @@
     sprite: _Lua/Clothing/Belt/web_er_nfsd.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Belt/web_er_nfsd.rsi
+
+- type: entity
+  parent: ClothingBeltSecurity
+  id: ClothingBeltMedicNFSD
+  name: medical NFSD belt
+  description: Medical belt for NFSD workers.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Belt/web_er_nfsd.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Belt/web_er_nfsd.rsi

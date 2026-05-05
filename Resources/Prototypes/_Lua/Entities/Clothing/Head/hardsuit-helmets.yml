@@ -109,6 +109,26 @@
     - HeadTop
     - HeadSide
 
+- type: entity
+  parent: ClothingHeadHelmetHardsuitSecurity
+  id: ClothingHeadHelmetHardsuitBrigmedicWhite
+  categories: [ HideSpawnMenu ]
+  name: white brigmedic' helmet
+  description: White medical version of security hardsuit's helmet.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Head/Hardsuits/brigmedic.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Head/Hardsuits/brigmedic.rsi
+  - type: PointLight
+    color: "#E6E6FA"
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+    - HeadTop
+    - HeadSide
+
 #region FSF
 
 - type: entity
@@ -437,9 +457,9 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Head/Hardsuit/engimodhelmet.rsi
+    sprite: _Lua/Clothing/Head/Hardsuits/engimodhelmet.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Head/Hardsuit/engimodhelmet.rsi
+    sprite: _Lua/Clothing/Head/Hardsuits/engimodhelmet.rsi
   - type: PointLight
     color: "#ffd107"
   - type: PressureProtection

@@ -40,7 +40,7 @@
   suffix: Sr
   components:
   - type: Sprite
-    sprite: _Lua/Structures/Doors/Airlocks/Glass/representative
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/representative.rsi
   - type: Wires
     layoutId: AirlockCommand
 

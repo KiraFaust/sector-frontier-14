@@ -1,7 +1,7 @@
 - type: entity
   parent: VendingMachine
   id: VendingMachineChiefEngineer
-  name: Brigadier-o-Mat
+  name: ChiefEngiDrobe
   description:
   components:
   - type: VendingMachine
