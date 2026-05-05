@@ -100,6 +100,9 @@ ent-ClothingHeadPapahaBumanLopes = папаха Бумана Лопеса
 ent-ClothingBeltWebbingMedicNFSD = медицинский РПС ДСБФ
     .desc = Стандартный РПС Фельдшера, содержащий в себе самые нужные лекарства. Красный крест на брюхе наверняка означает, что перед вами врач. Но, это не вполне доказуемо...
 
+ent-ClothingBeltNfsdFilledBrigmedic = медицинский пояс ДСБФ
+    .desc = Совершенно обычный пояс медицинского сотрудника ДСБФ. На его левой части расположен красный крест.
+
 ent-ClothingBeltMedicNFSD = медицинский пояс ДСБФ
     .desc = Совершенно обычный пояс медицинского сотрудника ДСБФ. На его левой части расположен красный крест.
 
@@ -283,7 +286,7 @@ ent-ClothingUniformJumpskirtBrigmedicAlt = юбка бригмедика
 ent-ClothingUniformJumpsuitBrigmedicTurtle = водолазка бригмедика
     .desc = Достаточно красная, чтобы спрятать следы рабочего 'ой, не туда' на вашей униформе.
 
-ent-ClothingUniformJumpskirtBrigmedicAlt = юбка-водолазка бригмедика
+ent-ClothingUniformJumpskirtBrigmedicTurtle = юбка-водолазка бригмедика
     .desc = Достаточно красная, чтобы спрятать следы рабочего 'ай!' на вашей униформе. Теперь с юбкой.
 
 ent-ClothingUniformJumpsuitBrigmedicWhite = белый комбинезон бригмедика

@@ -161,7 +161,7 @@
     sprite: _Lua/Clothing/Belt/webbing_blueshield.rsi
 
 - type: entity
-  parent: ClothingBeltSecurity
+  parent: [ BaseC2ContrabandUnredeemable, ClothingBeltSecurityWebbing ]
   id: ClothingBeltWebbingMedicNFSD
   name: medical NFSD webbing
   description: Webbing for medical security workers' needs.
@@ -172,12 +172,28 @@
     sprite: _Lua/Clothing/Belt/web_er_nfsd.rsi
 
 - type: entity
-  parent: ClothingBeltSecurity
+  parent: [ BaseC2ContrabandUnredeemable, ClothingBeltSecurityWebbing ]
   id: ClothingBeltMedicNFSD
   name: medical NFSD belt
   description: Medical belt for NFSD workers.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Belt/web_er_nfsd.rsi
+    sprite: _Lua/Clothing/Belt/belt_er_nfsd.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Belt/web_er_nfsd.rsi
+    sprite: _Lua/Clothing/Belt/belt_er_nfsd.rsi
+
+- type: entity
+  id: ClothingBeltNfsdFilledBrigmedic
+  parent: ClothingBeltMedicNFSD
+  suffix: Filled, Brigmedic
+  components:
+  - type: StorageFill
+    contents:
+      - id: Brutepack
+        amount: 2
+      - id: Ointment
+        amount: 1
+      - id: Bloodpack
+        amount: 1
+      - id: Gauze
+      - id: EmergencyMedipen #You never know what people are going to latejoin into
