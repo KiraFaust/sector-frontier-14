@@ -451,6 +451,15 @@
     neck: ClothingNeckMantleCE
 
 - type: loadout
+  id: ContractorClothingNeckFormalCE
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT3
+  price: 2500
+  equipment:
+    neck: ClothingNeckCloakFormalSeniorEngineer
+
+- type: loadout
   id: ContractorClothingNeckCloakVoid
   effects:
   - !type:GroupLoadoutEffect

@@ -52,3 +52,11 @@ ent-AirlockAssemblyRepresentative = каркас шлюза
 ent-AirlockAssemblyRepresentativeGlass = каркас стеклянного шлюза
     .desc = Он открывается, он закрывается, и он может вас раздавить.
     .suffix = Представитель Сектора
+
+ent-AirlockOld =  шлюза
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Устаревший
+
+ent-AirlockOldGlass = стеклянный шлюз
+    .desc = Он открывается, он закрывается, и он может вас раздавить.
+    .suffix = Устаревший

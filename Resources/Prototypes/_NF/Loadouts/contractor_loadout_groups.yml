@@ -13,8 +13,11 @@
   - ContractorClothingUniformJumpsuitCargo
   - ContractorClothingUniformJumpskirtCargo
   - ContractorClothingUniformJumpsuitSalvageSpecialist
-  - ContractorClothingUniformJumpsuitChef
-  - ContractorClothingUniformJumpskirtChef
+  - ContractorClothingUniformJumpskirtSalvageSpecialist
+  - ContractorClothingUniformJumpsuitSalvageSpecialistFormal
+  - ContractorClothingUniformJumpskirtSalvageSpecialistFormal
+  - ContractorClothingUniformJumpsuitSalvageSpecialistFormal
+  - ContractorClothingUniformJumpskirtSalvageSpecialistFormal
   - ContractorClothingUniformJumpsuitEngineering
   - ContractorClothingUniformJumpskirtEngineering
   - ContractorClothingUniformJumpsuitHydroponics
@@ -23,6 +26,8 @@
   - ContractorClothingUniformJumpskirtMedicalDoctor
   - ContractorClothingUniformJumpsuitScientist
   - ContractorClothingUniformJumpskirtScientist
+  - ContractorClothingUniformJumpsuitTurtleneckScientist
+  - ContractorClothingUniformJumpskirtTurtleneckScientist
   - ContractorClothingUniformJumpsuitColorWhite
   - ContractorClothingUniformJumpskirtColorWhite
   - ContractorClothingUniformJumpsuitColorBlack
@@ -95,6 +100,7 @@
   - ContractorClothingUniformJumpsuitPsychologist
   - ContractorClothingUniformJumpskirtPsychologist
   - ContractorClothingUniformJumpsuitScientistFormal
+  - ContractorClothingUniformJumpskirtScientistFormal
   - ContractorClothingUniformJumpsuitRoboticist
   - ContractorClothingUniformJumpskirtRoboticist
   - ContractorClothingUniformJumpsuitLawyerBlue
@@ -145,6 +151,8 @@
   - ContractorClothingUniformJumpskirtChiefEngineer
   - ContractorClothingUniformJumpsuitChiefEngineerTurtle
   - ContractorClothingUniformJumpskirtChiefEngineerTurtle
+  - ContractorClothingUniformJumpsuitCryotech
+  - ContractorClothingUniformJumpskirtCryotech
   - ContractorClothingUniformJumpsuitJester
   - ContractorClothingUniformJumpsuitJesterAlt
   - ContractorClothingUniformJumpsuitKilt
@@ -314,6 +322,7 @@
   - ContractorClothingOuterHardsuitVoidParamed
   - ContractorClothingOuterHoodieGrey
   - ContractorClothingOuterVestHazard
+  - ContractorClothingSlimArmor
   - ContractorClothingOuterApron
   - ContractorClothingOuterApronBar
   - ContractorClothingOuterApronBotanist
@@ -529,6 +538,8 @@
   - ContractorClothingHeadHatParamedicsoft
   - ContractorClothingHeadNurseHat
   - ContractorClothingHeadHatBeretMedic
+  - ContractorClothingHeadHatChemist
+  - ContractorClothingHeadHatBeretSeniorPhysician
   - ContractorClothingHeadHatSurgcapGreen
   - ContractorClothingHeadHatSurgcapBlue
   - ContractorClothingHeadHatSurgcapPurple
@@ -539,7 +550,9 @@
   - ContractorClothingHeadTinfoil
   - ContractorClothingHeadHatBeretRND
   - ContractorClothingHeadHatBeretEngineering
-  - ContractorClothingHeadHatBeretSeniorPhysician
+  - ContractorClothingHeadHatChiefEngineer
+  - ContractorClothingHeadHatAtmos
+  - ContractorClothingHeadHatCargo
 #  - ContractorClothingHeadHatBeretCmo # Temp removed for DOC. Will return if replaced.
   - ContractorClothingHeadHatBeretQM
   - ContractorClothingHeadHatQMsoft
@@ -693,6 +706,7 @@
   - ContractorClothingNeckMantleRD
   - ContractorClothingNeckCloakCe
   - ContractorClothingNeckMantleCE
+  - ContractorClothingNeckFormalCE
   - ContractorClothingNeckCloakVoid
   - ContractorClothingNeckBling
 
