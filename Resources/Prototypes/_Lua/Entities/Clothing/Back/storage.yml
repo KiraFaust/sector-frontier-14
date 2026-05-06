@@ -89,3 +89,30 @@
   components:
     - type: Sprite
       sprite: _Lua/Clothing/Back/Duffels/brigmedic.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackHeadOfPersonnel
+  name: head of personnel's backpack
+  description: Although looks expensive, costs not very much
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Back/Backpacks/hop.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelHeadOfPersonnel
+  name: head of personnel's satchel
+  description: Great bureaucratic satchel for pens and papers.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Back/Satchels/hop.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelHeadOfPersonnel
+  name: head of personnel's duffel
+  description: Full of money and papers.
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/Back/Duffels/hop.rsi

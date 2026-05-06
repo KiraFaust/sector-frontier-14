@@ -318,3 +318,12 @@ ent-ClothingBackpackSatchelBrigmedicWhite = белая сумка бригмед
 
 ent-ClothingBackpackDuffelBrigmedicWhite = белый вещмешок бригмедика
     .desc = Белый большой вещмешок для большого количества больших вещей. Всё ещё достаточно небольшой.
+
+ent-ClothingBackpackHeadOfPersonnel = рюкзак главы персонала
+    .desc = Хотя и выглядит дорогим, на деле достаточно дешёвый. Никогда не заменит Иана.
+
+ent-ClothingBackpackSatchelHeadOfPersonnel = сумка главы персонала
+    .desc = Отличная сумка бюрократа для ручек и бумаг. Пахнет деревом.
+
+ent-ClothingBackpackDuffelHeadOfPersonnel = вещмешок главы персонала
+    .desc = Полон денег и бумаг. Сегодня было РЕАЛЬНО много пассажиров.
