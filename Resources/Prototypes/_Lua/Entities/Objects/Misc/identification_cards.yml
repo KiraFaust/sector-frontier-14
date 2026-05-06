@@ -545,3 +545,63 @@
     - state: idadjutant
   - type: Clothing
     sprite: _Lua/Objects/Misc/id_cards.rsi
+
+- type: entity
+  parent: IDCardStandard
+  id: SCSoldierIDCard
+  name: ID карта Солдата Кодекса
+  suffix: Need balance test
+  components:
+  - type: PresetIdCard
+    job: StormCreedSoldier
+  - type: Sprite
+    sprite: _Lua/Objects/Misc/id_cards.rsi
+    layers:
+    - state: synsharehold
+    - state: idsynsharehold
+  - type: Clothing
+    sprite: _NF/Objects/Misc/id_cards.rsi
+
+- type: entity
+  parent: IDCardStandard
+  id: SCFirstmateIDCard
+  name: ID карта Штурмана Кодекса
+  suffix: Need balance test
+  components:
+  - type: PresetIdCard
+    job: StormCreedFirstmate
+  - type: Sprite
+    sprite: _Lua/Objects/Misc/id_cards.rsi
+    layers:
+    - state: synsharehold
+    - state: idsynsharehold
+  - type: Clothing
+    sprite: _NF/Objects/Misc/id_cards.rsi
+
+- type: entity
+  parent: IDCardStandard
+  id: SCCaptainIDCard
+  name: ID карта Командира Кодекса
+  suffix: Need balance test
+  components:
+  - type: PresetIdCard
+    job: StormCreedCaptain
+  - type: Sprite
+    sprite: _Lua/Objects/Misc/id_cards.rsi
+    layers:
+    - state: synsharehold
+    - state: idsynsharehold
+  - type: Clothing
+    sprite: _NF/Objects/Misc/id_cards.rsi
+
+- type: entity
+  parent: IDCardStandard
+  id: FrontierEngineerIDCard
+  name: ID карта Инженера ЭИК
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idstationengineer
+  - type: PresetIdCard
+    job: FrontierEngineer
