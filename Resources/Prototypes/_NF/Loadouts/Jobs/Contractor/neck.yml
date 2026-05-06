@@ -360,6 +360,15 @@
   groupBy: "IFFstrobe"
 
 - type: loadout
+  id: ContractorClothingNeckCloakSeniorEngineer
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    neck: ClothingNeckCloakFormalSeniorEngineer
+
+- type: loadout
   id: ContractorClothingNeckMantleCap
   effects:
   - !type:GroupLoadoutEffect

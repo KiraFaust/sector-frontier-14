@@ -151,8 +151,11 @@ ent-ClothingHeadsetAltEngineeringPlantManager = гарнитура менедж�
 ent-ADTClothingHeadHatsBeretChiefEngineer = берет старшего инженера
     .desc = Бригада! А ну быстро за работу!
 
-ent-ADTClothingHeadHatsBeretHeadOfPersonnel = берет атмосферного техника
+ent-ADTClothingHeadHatsBeretAtmosphericTechnician = берет атмосферного техника
     .desc = Берет техника, что никогда не топил станцию в лишней плазме. Точно-точно.
+
+ent-ADTClothingHeadHatsBeretHeadOfPersonnel = берет главы персонала
+    .desc = Берет существа, отвечающего за ваше качество питания. Ну, наверное...
 
 ent-ADTClothingHeadHatsBeretCargo = берет отдела снабжения
     .desc = Фирменный берет отдела снабжения!

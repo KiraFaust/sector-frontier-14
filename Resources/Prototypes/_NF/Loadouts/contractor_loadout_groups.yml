@@ -140,6 +140,8 @@
   #- ContractorClothingUniformJumpskirtCMO # Temp removed for MOM. Will return if replaced. #
   #- ContractorClothingUniformTurtleneckCMO # Temp removed for MOM. Will return if replaced. #
   #- ContractorClothingUniformTurtleskirtCMO # Temp removed for MOM. Will return if replaced. #
+  - ContractorClothingUniformJumpsuitAdjutantAlt
+  - ContractorClothingUniformJumpskirtAdjutantAlt
   - ContractorClothingUniformJumpsuitSeniorResearcher
   - ContractorClothingUniformJumpskirtSeniorResearcher
   - ContractorClothingUniformJumpsuitResearchDirector
@@ -695,6 +697,7 @@
   - ContractorClothingNeckIFFCyan
   - ContractorClothingNeckIFFOrange
   - ContractorClothingNeckIFFPurple
+  - ContractorClothingNeckCloakSeniorEngineer
   - ContractorClothingNeckMantleCap
   - ContractorClothingNeckCloakCap
   - ContractorClothingNeckCloakCapFormal

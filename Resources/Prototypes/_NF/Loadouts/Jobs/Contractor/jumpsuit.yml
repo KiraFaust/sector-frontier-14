@@ -1290,6 +1290,25 @@
     jumpsuit: ClothingUniformJumpskirtCMOTurtle
 
 - type: loadout
+  id: ContractorClothingUniformJumpsuitAdjutantAlt
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAdjutantAlt
+
+- type: loadout
+  id: ContractorClothingUniformJumpskirtAdjutantAlt
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 1000
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtAdjutantAlt
+
+
+- type: loadout
   id: ContractorClothingUniformJumpsuitSeniorResearcher
   effects:
   - !type:GroupLoadoutEffect
