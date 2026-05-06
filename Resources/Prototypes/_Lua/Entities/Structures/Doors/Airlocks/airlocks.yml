@@ -31,16 +31,6 @@
     sprite: _Lua/Structures/Doors/Airlocks/Standard/basic.rsi
   - type: Wires
     layoutId: Airlock
-  - type: Door
-    crushDamage:
-      types:
-        Blunt: 15
-    openSound:
-      path: /Audio/Machines/airlock_open.ogg
-    closeSound:
-      path: /Audio/Machines/airlock_close.ogg
-    denySound:
-      path: /Audio/Machines/airlock_deny.ogg
 
 # Glass Airlocks
 - type: entity
@@ -71,16 +61,6 @@
     sprite: _Lua/Structures/Doors/Airlocks/Glass/basic.rsi
   - type: Wires
     layoutId: Airlock
-  - type: Door
-    crushDamage:
-      types:
-        Blunt: 15
-    openSound:
-      path: /Audio/Machines/airlock_open.ogg
-    closeSound:
-      path: /Audio/Machines/airlock_close.ogg
-    denySound:
-      path: /Audio/Machines/airlock_deny.ogg
 
 # LuaTech
 - type: entity
