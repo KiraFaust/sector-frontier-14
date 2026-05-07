@@ -512,3 +512,22 @@
   - type: Icon
     sprite: _Lua/Objects/Devices/StormCreedPDA.rsi
     state: icon
+
+- type: entity
+  parent: BasePDA
+  id: FrontierEngineerPDA
+  name: КПК Инженера ЭИК
+  description: Rugged and well-worn.
+  components:
+  - type: Pda
+    id: FrontierEngineerIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-engineer
+  - type: PdaBorderColor
+    borderColor: "#949137"
+    accentVColor: "#A32D26"
+  - type: Icon
+    state: pda-engineer
