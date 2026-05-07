@@ -245,9 +245,9 @@
   name: loadout-group-contractor-belt
   hidden: true
   loadouts:
-  - ClothingBeltPlantManagerFilled
+  - PlantManagerClothingBeltChiefEngineerFilledBasic
   fallbacks:
-  - ClothingBeltPlantManagerFilled
+  - PlantManagerClothingBeltChiefEngineerFilledBasic
 
 - type: loadoutGroup
   id: EngineeringBelt

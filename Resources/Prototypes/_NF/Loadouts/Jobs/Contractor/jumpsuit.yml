@@ -48,13 +48,13 @@
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitSalvageSpecialistFormal
-  price: 200
+  price: 250
   equipment:
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialistFormal
 
 - type: loadout
   id: ContractorClothingUniformJumpskirtSalvageSpecialistFormal
-  price: 200
+  price: 250
   equipment:
     jumpsuit: ClothingUniformJumpskirtSalvageSpecialistFormal
 
