@@ -137,9 +137,9 @@
   description: The helmet, that protects heads of elite captains.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Head/Hardsuit/capspace_helmet_reinforced.rsi
+    sprite: _Lua/Clothing/Head/Hardsuits/capspace_helmet_reinforced.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Head/Hardsuit/capspace_helmet_reinforced.rsi
+    sprite: _Lua/Clothing/Head/Hardsuits/capspace_helmet_reinforced.rsi
   - type: PointLight
     color: "#ffaf38"
 

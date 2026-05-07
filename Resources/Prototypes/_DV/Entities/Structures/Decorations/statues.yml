@@ -15,20 +15,20 @@
       beaker:
         maxVol: 1000
   - type: MixableSolution
-    solution: bowl
+    solution: beaker
   - type: RefillableSolution
-    solution: bowl
+    solution: beaker
   - type: DrainableSolution
-    solution: bowl
+    solution: beaker
   - type: ExaminableSolution
-    solution: bowl
+    solution: beaker
   - type: DrawableSolution
-    solution: bowl
+    solution: beaker
   - type: InjectableSolution
-    solution: bowl
+    solution: beaker
   - type: SolutionContainerVisuals
     maxFillLevels: 6
-    fillBaseName: oracle
+    fillBaseName: oracle-
 
 - type: entity
   id: StatueSophie

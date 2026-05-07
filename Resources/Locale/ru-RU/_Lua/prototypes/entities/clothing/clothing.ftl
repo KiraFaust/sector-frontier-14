@@ -337,7 +337,7 @@ ent-ClothingOuterCoatSalo2016 = кроваво-чёрное сальное па�
 ent-ClothingNeckMantleBlue = синия мантия
     .desc = Самая обычная синяя мантия.
 
-ent-ClothingNeckMantleBlue = мантия офицера 'Синий Щит'
+ent-ClothingNeckMantleBlueShield = мантия офицера 'Синий Щит'
     .desc = Кто теперь хитман, а?
 
 ent-ClothingNeckCloakBlueshield = плащ офицера 'Синий Щит'
