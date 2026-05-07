@@ -4,7 +4,7 @@
 
 #новый CentralCommandSpecialOperationsOfficer
 # - type: job
-#   id: CentralCommandSpecialOperationsOfficer 
+#   id: CentralCommandSpecialOperationsOfficer
 #   name: job-name-soo
 #   description: job-description-soo
 #   playTimeTracker: JobCentralCommandSpecialOperationsOfficer
@@ -18,12 +18,12 @@
 #   access:
 #   - CentralCommand
 
-- type: chameleonOutfit
-  id: CentralCommandSpecialOperationsOfficerChameleonOutfit
-  job: CentralCommandSpecialOperationsOfficer
-  hasMindShield: true
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitCentcomOfficerBlack
+#- type: chameleonOutfit
+#  id: CentralCommandSpecialOperationsOfficerChameleonOutfit
+#  job: CentralCommandSpecialOperationsOfficer
+#  hasMindShield: true
+#  equipment:
+#    jumpsuit: ClothingUniformJumpsuitCentcomOfficerBlack
 
 - type: startingGear
   id: CentcomSpecialOperationsOfficerGear
@@ -45,7 +45,7 @@
   # innerClothingSkirt: ClothingUniformJumpskirtOperationsOfficer
   # storage:
   #   back:
-  #   - 
+  #   -
 
 - type: entity
   parent: ClothingBackpackERTLeader

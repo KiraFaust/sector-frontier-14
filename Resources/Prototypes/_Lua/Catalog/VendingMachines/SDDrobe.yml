@@ -23,7 +23,7 @@
     ClothingMaskGasSecurity: 3
     ClothingMaskBreathMedicalSecurity: 3
     ClothingHeadHatBeretSecurity: 3
-    ClothingHeadHatBeretWarden: 3
+    ClothingHeadHatBeretWarden: 2
     ClothingHeadHatBeretSecurityMedic: 3
     ClothingHeadHatSecsoft: 3
     ClothingHeadHatWarden: 1
@@ -31,6 +31,7 @@
     ClothingHeadHatCapWardenAlt: 1
     ClothingHeadHelmetBasic: 3
     ClothingHeadHelmetRiot: 1
+    ClothingNeckMantleWarden: 2
   # Uniform
     ClothingUniformJumpsuitSec: 3
     ClothingUniformJumpskirtSec: 3

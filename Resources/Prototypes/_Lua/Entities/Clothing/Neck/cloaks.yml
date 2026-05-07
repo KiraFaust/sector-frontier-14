@@ -72,3 +72,14 @@
     - type: Tag
       tags:
       - ClothMade
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakBlueshield
+  name: blueshield cloak
+  description: Protect the king!
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Cloaks/blueshield.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Neck/Cloaks/blueshield.rsi

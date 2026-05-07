@@ -146,3 +146,38 @@
   - type: Tag
     tags:
     - ClothMade
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatQuartermaster
+  name: пальто квартирмейстера
+  description: Роскошное пальто для чувака, закупающего оружие и пиццу. Обладает небольшой защитой.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Coats/qmcoat.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Coats/qmcoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.8
+        Piercing: 0.7
+        Heat: 0.9
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatSalo2016
+  name: кроваво-чёрное сальное пальто
+  description: От него пахнет салом и кибербезопасностью, а ещё чем-то проклятым.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Coats/salo_coat.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Coats/salo_coat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
