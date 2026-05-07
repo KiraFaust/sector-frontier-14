@@ -5,7 +5,7 @@
   playTimeTracker: JobAdjutant
   salary: 15000
   setPreference: false
-  supervisors: job-supervisors-hire
+  supervisors: job-supervisors-sr
   canBeAntag: true
   hideConsoleVisibility: false
   icon: "JobIconAdjutant"
@@ -17,10 +17,16 @@
   access:
   - External
   - Maintenance
+  - StationTrafficController
   - Service
   - Command
   - Frontier
   - Pilot
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: AdjutantGear
@@ -29,12 +35,26 @@
     back: AdjutantPDA
     mask: ClothingMaskBreath
     eyes: ClothingEyesGlassesCommand
-    ears: ClothingHeadsetService
+    ears: ClothingHeadsetCommand
     gloves: ClothingHandsGlovesFingerless
     shoes: ClothingShoesBootsLaceup
     id: AdjutantPDA
 #    suitstorage: AirTankFilled
   storage:
     back:
+    - Flash
     - HandheldStationMapUnpowered
     - BoxFolderClipboard
+
+- type: chameleonOutfit
+  id: AdjutantChameleonOutfit
+  job: Adjutant
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAdjutantAlt
+    back: AdjutantPDA
+    mask: ClothingMaskBreath
+    eyes: ClothingEyesGlassesCommand
+    ears: ClothingHeadsetCommand
+    gloves: ClothingHandsGlovesFingerless
+    shoes: ClothingShoesBootsLaceup
+    id: AdjutantPDA

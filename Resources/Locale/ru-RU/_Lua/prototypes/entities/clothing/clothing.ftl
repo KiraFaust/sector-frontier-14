@@ -423,3 +423,9 @@ ent-ClothingHeadHatHeadOfSecurity = шляпа главы службы безо�
 
 ent-ClothingMaskGasCaptainCombat = боевой противогаз капитана
     .desc = Продолжая безыдейную линейку капитанских противогазов, на этот раз выделили целый списанный противогаз утилизаторов.
+
+ent-ClothingOuterHardsuitCapspaceReinforced = боевой бронескафандр капитана
+    .desc =  Элитный капитанский бронескафандр. Его выдают лучшим капитанам, для которых сражения с врагами НТ - каждый понедельник.
+
+ent-ClothingHeadHelmetHardsuitCapspaceHelmetReinforced = шлем боевого скафандра капитана
+    .desc = Шлем, защищающий голову элитных капитанов.
