@@ -150,8 +150,8 @@
 - type: entity
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatQuartermaster
-  name: пальто квартирмейстера
-  description: Роскошное пальто для чувака, закупающего оружие и пиццу. Обладает небольшой защитой.
+  name: quartermaster's coat
+  description: Cool coat for guy, that buys guns and pizza. Has slim layer of armor.
   components:
   - type: Clothing
     sprite: _Lua/Clothing/OuterClothing/Coats/qmcoat.rsi
@@ -168,8 +168,8 @@
 - type: entity
   parent: ClothingOuterStorageBase
   id: ClothingOuterCoatSalo2016
-  name: кроваво-чёрное сальное пальто
-  description: От него пахнет салом и кибербезопасностью, а ещё чем-то проклятым.
+  name: vermilion salo coat
+  description: It smells like salo, like cybersecurity and it is also very cursed.
   components:
   - type: Clothing
     sprite: _Lua/Clothing/OuterClothing/Coats/salo_coat.rsi

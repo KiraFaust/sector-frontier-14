@@ -74,3 +74,36 @@
     sprite: _Lua/Clothing/Neck/Medals/warden.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Neck/Medals/warden.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMedalScienceEpistemics
+  name: scientific medal
+  description: This one looks strangely handsome. Even with Nanotrasen logo on its back, you can't identify the field it belongs to.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Medals/sciencemedal.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Neck/Medals/sciencemedal.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMedalSecurityShield
+  name: security shield medal
+  description: This medal is given to those, who protected who they love with their own body.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Medals/securitymedal.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Neck/Medals/securitymedal.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMedalProsecutor
+  name: prosecutor's badge
+  description: This badge can shoo bad cops and criminals away.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Neck/Medals/prosecutorbadge.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Neck/Medals/prosecutorbadge.rsi

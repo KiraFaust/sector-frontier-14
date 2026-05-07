@@ -327,3 +327,99 @@ ent-ClothingBackpackSatchelHeadOfPersonnel = сумка главы персон�
 
 ent-ClothingBackpackDuffelHeadOfPersonnel = вещмешок главы персонала
     .desc = Полон денег и бумаг. Сегодня было РЕАЛЬНО много пассажиров.
+
+ent-ClothingOuterCoatQuartermaster = пальто квартирмейстера
+    .desc = Роскошное пальто для чувака, закупающего оружие и пиццу. Обладает небольшой защитой.
+
+ent-ClothingOuterCoatSalo2016 = кроваво-чёрное сальное пальто
+    .desc = От него пахнет салом и кибербезопасностью, а ещё чем-то проклятым.
+
+ent-ClothingNeckMantleBlue = синия мантия
+    .desc = Самая обычная синяя мантия.
+
+ent-ClothingNeckMantleBlue = мантия офицера 'Синий Щит'
+    .desc = Кто теперь хитман, а?
+
+ent-ClothingNeckCloakBlueshield = плащ офицера 'Синий Щит'
+    .desc = Защитите Его Величество!
+
+ent-ClothingNeckMantleBlue = мантия смотрителя
+    .desc = Удерживается чистой волей.
+
+ent-ClothingNeckMiscCapeCaptain = кейп капитана
+    .desc = Укрывает ваши атлантские плечи и защищает от сильных ветров.
+
+ent-ClothingUnderwearSocksBlueshield = носки ОСЩ
+    .desc = Стандартные носки офицеров 'Синий Щит'.
+
+ent-ClothingShoesBootsMagDeathSquad = магнитные ботинки эскадрона смерти
+    .desc = Очень жуткие ботинки.
+
+ent-ClothingShoesBootsMagBlueshield = магнитные ботинки офицера 'Синий Щит'
+    .desc = Очень продвинутые магнитные ботинки офицеров 'Синий Щит', предназначенные для непрерывной защиты любой цели.
+
+ent-ClothingShoesBootsMagCaptain = магнитные ботинки капитана
+    .desc = Обычные магнитные ботинки, покрашенные в синий цвет. Настроены лучше обычных и почти не замедляют.
+
+ent-ClothingNeckMedalScienceEpistemics = медаль научного сотрудника
+    .desc = Эта медаль выглядит одновременно и странной, и симпатичной. Даже при учёте логотипа Nanotrasen на её задней части, вы не можете идентифицировать, к какой области она принадлежит.
+
+ent-ClothingNeckMedalSecurityShield = медаль щита
+    .desc = Данная выдаётся тем, кто защитил своих сотрудников при помощи своего тела. К сожалению, такие медали очень редки.
+
+ent-ClothingNeckMedalProsecutor = значок прокурора
+    .desc = Значок, устрашающий и плохих полицейских, и преступников. Сделана из чистого золота, но рубин по центру не настоящий.
+
+ent-ClothingNeckTieObscure = тёмный галстук
+    .desc = Очень тёмный галстук.
+
+ent-ClothingNeckTieDarkPurple = тёмно-фиолетовый галстук
+    .desc = Deep Purple галстук.
+
+ent-ClothingNeckTieDarkBrown = тёмно-коричневый галстук
+    .desc = Тёмно-коричневый галстук.
+
+ent-ClothingNeckTieChemist = галстук химика
+    .desc = Апельсин каждый день держит химика вдали от клиники. Главное, не свари что-нибудь не то...
+
+ent-ClothingNeckTieGreen = зелёный галстук
+    .desc = Зелёный галстук. Потрогай траву!
+
+ent-ClothingNeckTieWhite = белый галстук
+    .desc = Это и было нашей основной целью. Он ОЧЕНЬ белый.
+
+ent-ClothingNeckTieAquamarine = аквамариновый галстук
+    .desc = Аквамариновый галстук.
+
+ent-ClothingNeckTieAzure = лазурный галстук
+    .desc = Галстук лазурного цвета. Море... а на море суша... а на суше пальма... а на пальме кот сидит и видит море... а на море суша...
+
+ent-ClothingNeckTieBrown = коричневый галстук
+    .desc = Тёмно-коричневый галстук.
+
+ent-ClothingNeckTieBlue = синий галстук
+    .desc = Синий галстук. На нём прицеплена золотая клипса с сильно затёртым логотипом AEgis LLC.
+
+ent-ClothingNeckTieGolden = золотой галстук
+    .desc = Золотой галстук. Роскошный, и сияет.
+
+ent-ClothingNeckTieLightGrey = светло-серый галстук
+    .desc = Светло-серый галстук.
+
+ent-ClothingNeckTieOrange = оранжевый галстук
+    .desc = Галстук оранжевого цвета.
+
+ent-ClothingNeckTiePink = розовый галстук
+    .desc = Галстук зефирного цвета.
+
+ent-ClothingNeckTiePurple = фиолетовый галстук
+    .desc = Фиолетовый галстук.
+
+ent-ClothingNeckTieYellow = жёлтый галстук
+    .desc = Галстук жёлтого цвета.
+
+ent-ClothingHeadHatHeadOfSecurity = шляпа главы службы безопасности
+    .desc = Шляпа в ковбойском стиле для настоящей главы.
+
+ent-ClothingMaskGasCaptainCombat = боевой противогаз капитана
+    .desc = Продолжая безыдейную линейку капитанских противогазов, на этот раз выделили целый списанный противогаз утилизаторов.

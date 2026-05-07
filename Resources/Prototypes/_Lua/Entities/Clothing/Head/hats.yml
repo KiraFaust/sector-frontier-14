@@ -141,3 +141,14 @@
     sprite: _Lua/Clothing/Head/Hats/beret_chemist.rsi
   - type: Sprite
     sprite: _Lua/Clothing/Head/Hats/beret_chemist.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHeadOfSecurity
+  name: head of security's hat
+  description: Great hat for a great man.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Head/Hats/hoshat.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Head/Hats/hoshat.rsi
