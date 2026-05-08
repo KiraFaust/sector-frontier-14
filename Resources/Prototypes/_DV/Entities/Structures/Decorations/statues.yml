@@ -32,7 +32,7 @@
   - type: InjectableSolution
     solution: bowl
   - type: SolutionContainerVisuals
-    maxFillLevels: 6
+    maxFillLevels: 9
     fillBaseName: oracle-
   - type: Drink
     solution: bowl
