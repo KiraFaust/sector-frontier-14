@@ -11,25 +11,21 @@
       "name": "icon"
     },
     {
-      "name": "icon-unshaded"
-    },
-    {
       "name": "icon-flash"
     },
     {
-      "name": "light-overlay"
+      "name": "icon-unshaded"
     },
     {
-      "name": "equipped-head",
+      "name": "off-equipped-HELMET",
       "directions": 4
     },
     {
-      "name": "equipped-head-light",
+      "name": "on-equipped-HELMET",
       "directions": 4
     },
     {
-      "name": "equipped-head-unshaded",
-      "directions": 4
+      "name": "equipped-HELMET-unshaded"
     }
   ]
 }
