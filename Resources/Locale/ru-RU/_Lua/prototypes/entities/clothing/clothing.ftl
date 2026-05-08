@@ -343,7 +343,7 @@ ent-ClothingNeckMantleBlueShield = мантия офицера 'Синий Щи�
 ent-ClothingNeckCloakBlueshield = плащ офицера 'Синий Щит'
     .desc = Защитите Его Величество!
 
-ent-ClothingNeckMantleBlue = мантия смотрителя
+ent-ClothingNeckMantleWarden = мантия смотрителя
     .desc = Удерживается чистой волей.
 
 ent-ClothingNeckMiscCapeCaptain = кейп капитана
