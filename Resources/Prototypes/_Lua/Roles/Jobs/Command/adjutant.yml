@@ -51,7 +51,7 @@
   job: Adjutant
   equipment:
     jumpsuit: ClothingUniformJumpsuitAdjutantAlt
-    back: AdjutantPDA
+    back: NFClothingBackpack
     mask: ClothingMaskBreath
     eyes: ClothingEyesGlassesCommand
     ears: ClothingHeadsetCommand
