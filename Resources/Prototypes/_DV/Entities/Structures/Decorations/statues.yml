@@ -7,28 +7,35 @@
   - type: Sprite
     noRot: true
     sprite: _DV/Structures/Decoration/statues.rsi
-    state: oracle-0
+    layers:
+    - state: oracle-0
+    - state: oracle-1
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+      visible: false
     drawdepth: Mobs
     offset: "0.0,0.5"
+  - type: Appearance
   - type: SolutionContainerManager
     solutions:
-      beaker:
+      bowl:
         maxVol: 1000
   - type: MixableSolution
-    solution: beaker
+    solution: bowl
   - type: RefillableSolution
-    solution: beaker
+    solution: bowl
   - type: DrainableSolution
-    solution: beaker
+    solution: bowl
   - type: ExaminableSolution
-    solution: beaker
+    solution: bowl
   - type: DrawableSolution
-    solution: beaker
+    solution: bowl
   - type: InjectableSolution
-    solution: beaker
+    solution: bowl
   - type: SolutionContainerVisuals
     maxFillLevels: 6
     fillBaseName: oracle-
+  - type: Drink
+    solution: bowl
 
 - type: entity
   id: StatueSophie
