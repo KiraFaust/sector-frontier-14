@@ -62,6 +62,22 @@
   - type: Wires
     layoutId: Airlock
 
+- type: entity
+  parent: AirlockGlass
+  id: AirlockGlassOld
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/glass_old.rsi
+  - type: Wires
+    layoutId: Airlock
+
+- type: entity
+  id: MediumAirlockGlassOld
+  parent: [MediumGlassAirlockBase, AirlockGlass]
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/big_glass_old.rsi
+
 # LuaTech
 - type: entity
   parent: Airlock
