@@ -4006,3 +4006,67 @@ Entries:
   id: 284
   time: '2026-05-01T19:39:45.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/555
+- author: BTReflex
+  changes:
+    - type: Add
+      message: немало локализаций
+  id: 285
+  time: '2026-05-08T03:57:37.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/568
+- author: BTReflex
+  changes:
+    - type: Add
+      message: Добавлены блюспейс ковры
+  id: 286
+  time: '2026-05-08T03:58:11.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/570
+- author: 25Hydra08
+  changes:
+    - type: Add
+      message: Добавлено веселье!
+    - type: Remove
+      message: Удалено веселье!
+    - type: Tweak
+      message: Изменено веселье!
+    - type: Fix
+      message: Исправлено веселье!
+  id: 287
+  time: '2026-05-08T03:58:39.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/571
+- author: KiraFaust
+  changes:
+    - type: Add
+      message: Униформа, пояс и РПС фельдшера
+    - type: Add
+      message: Кубанка Бумана Лопеса для Бумана Лопеса
+    - type: Add
+      message: Остеклённый гермозатвор
+    - type: Add
+      message: Добавлены крылья, их можно купить в плащвенде
+    - type: Add
+      message: Куча одежды разного назначения
+    - type: Add
+      message: Несколько старых шлюзов и шлюз ПФа
+    - type: Fix
+      message: Локализация для некоторых вещей
+    - type: Add
+      message: Добавлено множество вещей в СБДроб (пока только в меню спавна)
+    - type: Remove
+      message: Из Хамелеона убраны вещи Эскадрона Смерти, а также удалён плакат ЭС
+    - type: Add
+      message: Медали СБ, значок Прокурора и прочие медальки
+    - type: Add
+      message: Носки ОСЩ
+    - type: Add
+      message: Декоративные научные конструкции связанные с эпистемикой
+    - type: Add
+      message: Добавлено множество вещей в лод-ауты
+    - type: Add
+      message: Сильно изменён лод-аут Менеджера Э"Э", а также ВендОМат СИ
+    - type: Tweak
+      message: >-
+        Теперь HighSec-шлюзы имеют старые звуки шлюзов (они звучат более
+        тяжёлыми и мощными)
+  id: 288
+  time: '2026-05-10T07:00:07.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/546
