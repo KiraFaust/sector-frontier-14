@@ -112,12 +112,12 @@
   description: A void suit made for paramedics.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/paramed.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
     layers:
     - state: icon
   - type: Appearance
   - type: Clothing
-    sprite: _Lua/Clothing/OuterClothing/Hardsuits/paramed.rsi #Lua
+    sprite: Clothing/OuterClothing/Hardsuits/paramed.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000

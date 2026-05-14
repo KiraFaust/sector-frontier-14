@@ -1,0 +1,230 @@
+#region Typan
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpskirtOutpostTypanChef
+  name: юбка-комбинезон шеф-повара синдиката
+  description: Без неё ничего и никого не приготовить.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/chefskirt.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/chefskirt.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpskirtOutpostTypanMedic
+  name: юбка-комбинезон медика синдиката
+  description: Практичность юбки обусловлена тяжестью стирания крови.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/medicalskirt.rsi #TODO: сделать нормальную униформу медикам Тайпана, а не украденную
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/medicalskirt.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpskirtOutpostTypanBotanist
+  name: юбка-комбинезон ботаника синдиката
+  description: Имеет сильный запах земли. Будем надеяться, что она просто грязная, а не вся в земле.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/botanistskirt.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/botanistskirt.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpskirtOutpostTypanCargotech
+  name: юбка-комбинезон карготехника синдиката
+  description: Удобный прочный комбинезон, теперь с юбкой.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/cargotechskirt.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/cargotechskirt.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpskirtRDOutpostTypan
+  name: юбка-комбинезон директора исследований
+  description: Слегка выцветшая от химикатов униформа.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/rd_jumpskirt.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/rd_jumpskirt.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpskirtScienceOutpostTypan
+  name: юбка-комбинезон ученого синдиката
+  description: Белый комбинезон, подходящий для всех видов исследований.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/researcher_jumpskirt.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/researcher_jumpskirt.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpskirtTelecommunicationsOfficer
+  name: юбка-комбинезон офицера телекоммуникаций
+  description: Комбинезон настоящего офицера телекоммуникаций. Да, именно телевизоров.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/co_jumpskirt.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/co_jumpskirt.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpskirtAtmosphericTechnicianOupostTypan
+  name: юбка-комбинезон атмосферного техника Синдиката
+  description: Комбинезон, владелец которого будет смотреть на то, как вы горите в чистой плазме. Юбка отнюдь не вселяет надежды.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/atmos_jumpskirt.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/atmos_jumpskirt.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpskirtTechnicianOutpostTypan
+  name: юбка-комбинезон инженера синдиката
+  description: Чёрный комбинезон с оранжевыми лямками и юбкой. От него веет злом.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/technician_jumpskirt.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/technician_jumpskirt.rsi
+
+
+#region Nanotrasen
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtAdjutantAlt
+  name: adjutant's turtleneck
+  description: A blue turtleneck with skirt to service heads even at the cold stations.
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/Uniforms/Jumpskirt/adjutant_alt.rsi
+    - type: Clothing
+      sprite: _Lua/Clothing/Uniforms/Jumpskirt/adjutant_alt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtCryotech
+  name: cryotech jumpskirt
+  description: This is VERY warm turtleneck, it's also very sturdy. This one has skirt.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/cryotech.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/cryotech.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtTurtleScientist
+  name: scientist's turtleneck skirt
+  description: It's a durable turtleneck with skirt for elite sciences in bad conditions.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/scientist_turtle.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/scientist_turtle.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtSalvageSpecialistFormal
+  name: salvage specialist's formal jumpskirt
+  description: It's a jumpskirt with a sturdy set of overalls. It's not dirty at all.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/salvageformal.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/salvageformal.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtSalvageSpecialist
+  name: salvage specialist's jumpskirt
+  description: It's a snappy jumpskirt with a sturdy set of overalls. It's very dirty.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/salvage.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/salvage.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtScientistFormal
+  name: scientist's formal jumpskirt
+  description: A uniform for sophisticated scientists, best worn with its matching tie and skirt.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/scientist_formal.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/scientist_formal.rsi
+
+
+#region Security NT
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtBrigmedicAlt
+  name: brigmedic's skirt
+  description: Standart red brigmedic's skirt. Much less uncanny than the black one.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/brigmedic.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/brigmedic.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtBrigmedicTurtle
+  name: brigmedic's turtleneck with skirt
+  description: Red enough to hide spots of 'oh!' on itself. Now with a skirt.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/brigmedic_alt.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/brigmedic_alt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtBrigmedicWhite
+  name: white brigmedic's jumpskirt
+  description: There is a rumor, that this type of jumpskirts were created by same brand, that created SpaceCleaner. White, for real guardian angel.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/brigmedic_white.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/brigmedic_white.rsi
+
+
+#region Misc
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformLatexLovedmaid
+  name: латексный наряд горничной
+  description: Тут и так всё очевидно.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/lovedmaid.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/lovedmaid.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformKimonoMiku
+  name: одеяние мику
+  description: Одежда сенотаской жрицы. В этом вы чувствуете благословение великих богов синто. Удивительно что даже тут есть датчики."
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/kimonomiku.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/kimonomiku.rsi

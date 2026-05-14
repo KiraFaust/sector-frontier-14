@@ -54,6 +54,12 @@
       "name": "adj-pda"
     },
     {
+      "name": "pda-investigator"
+    },
+    {
+      "name": "pda-captain"
+    },
+    {
       "name": "pda-r",
       "delays": [
         [
@@ -65,6 +71,17 @@
     {
       "name": "equipped-IDCARD",
       "directions": 4
+    },
+    {
+      "name": "pda-blueshield",
+      "delays": [
+        [
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ]
+      ]
     }
   ]
 }

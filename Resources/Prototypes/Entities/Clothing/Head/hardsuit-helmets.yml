@@ -682,9 +682,9 @@
   description: A bizarre gem-encrusted helmet that radiates magical energies.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Head/Hardsuits/wizard.rsi #Lua
+    sprite: Clothing/Head/Hardsuits/wizard.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Head/Hardsuits/wizard.rsi #Lua
+    sprite: Clothing/Head/Hardsuits/wizard.rsi
   - type: PointLight
     color: "#ffadfb"
   - type: PressureProtection

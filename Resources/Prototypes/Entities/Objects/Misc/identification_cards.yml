@@ -596,8 +596,10 @@
   name: death squad ID card
   components:
   - type: Sprite
+    sprite: _Lua/Objects/Misc/id_cards.rsi
     layers:
     - state: centcom
+    - state: iddeathsquade
   - type: Item
     heldPrefix: blue
   - type: PresetIdCard
@@ -665,7 +667,7 @@
     job: AtmosphericTechnician
 
 - type: entity
-  parent: [BaseC3SyndicateContraband, IDCardStandard] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband 
+  parent: [BaseC3SyndicateContraband, IDCardStandard] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: SyndicateIDCard
   name: syndicate ID card
   components:

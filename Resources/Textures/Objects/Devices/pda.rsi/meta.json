@@ -157,6 +157,19 @@
       "name": "pda-rd"
     },
     {
+      "name": "pda-ds",
+      "delays": [
+        [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      ]
+    },
+    {
       "name": "pda-roboticist"
     },
     {

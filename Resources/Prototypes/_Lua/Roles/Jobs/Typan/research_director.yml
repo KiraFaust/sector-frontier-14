@@ -63,7 +63,7 @@
     gloves: ClothingHandsRDOutpostTypan
     id: SyndiPDARD
     back: ClothingBackpackSyndicateFilled
-    jumpsuit: ClothingUniformJumpsuitSyndieFormal
+    jumpsuit: ClothingUniformJumpskirtRDOutpostTypan
     belt: ClothingBeltAssaultOutpostTypan
 
 - type: chameleonOutfit
