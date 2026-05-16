@@ -429,3 +429,7 @@ ent-ClothingOuterHardsuitCapspaceReinforced = боевой бронескафа�
 
 ent-ClothingHeadHelmetHardsuitCapspaceHelmetReinforced = шлем боевого скафандра капитана
     .desc = Шлем, защищающий голову элитных капитанов.
+
+ent-ClothingOuterWinterCoatCaptainArmored = зимняя капитанская бронекуртка
+    .desc = Крутая синяя куртка с толстой бронированной подкладкой. Она изначально была создана для полевых операций капитанов флота Nanotrasen, однако понравилась и стационарным капитанам.
+

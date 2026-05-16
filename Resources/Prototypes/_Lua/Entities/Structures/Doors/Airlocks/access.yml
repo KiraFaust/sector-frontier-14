@@ -453,6 +453,15 @@
     containers:
       board: [ DoorElectronicsHeadOfPersonnel ] # Will change to "Sr" when I will finish it
 
+- type: entity
+  parent: AirlockOldCommand
+  id: AirlockOldCommandLocked
+  suffix: Command
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCommand ]
+
 #Glass
 - type: entity
   parent: AirlockGlass
@@ -475,3 +484,12 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsHeadOfPersonnel ] # Will change to "Sr" when I will finish it
+
+- type: entity
+  parent: AirlockOldGlassCommand
+  id: AirlockOldGlassCommandLocked
+  suffix: Command
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCommand ]

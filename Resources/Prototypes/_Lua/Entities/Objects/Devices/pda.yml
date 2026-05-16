@@ -14,8 +14,26 @@
     borderColor: "#735321"
     accentHColor: "#62237F"
     accentVColor: "#62237F"
-  # - type: IconSeniorSalvagePDA
-  #   state: pda-seniorminer
+  - type: Sprite
+    sprite: Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-seniorminer"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    state: pda-seniorminer
+  - type: Appearance
+    appearanceDataInit:
+    enum.PdaVisuals.PdaType:
+     !type:String
+        pda-seniorminer
 
 - type: entity
   parent: BasePDA
@@ -28,9 +46,27 @@
   - type: PdaBorderColor
     borderColor: "#789876"
     accentHColor: "#CEC155"
+  - type: Sprite
+    sprite: Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-seniorservice"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
   - type: Icon
     sprite: Objects/Devices/pda.rsi
     state: pda-seniorservice
+  - type: Appearance
+    appearanceDataInit:
+    enum.PdaVisuals.PdaType:
+     !type:String
+        pda-seniorservice
 
 - type: entity
   parent: CentcomPDA
@@ -107,9 +143,27 @@
     borderColor: "#212121"
     accentHColor: "#EAEAEA"
     accentVColor: "#EAEAEA"
+  - type: Sprite
+    sprite: Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-pathologist"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
   - type: Icon
     sprite: Objects/Devices/pda.rsi
-    state: pda-pathologist
+    state:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+      !type:String
+        pda-pathologist
 
 - type: entity
   parent: BasePDA
@@ -121,8 +175,27 @@
     id: SecurityPilotIDCard
   - type: PdaBorderColor
     borderColor: "#772d32"
+  - type: Sprite
+    sprite: Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda-security"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
   - type: Icon
+    sprite: Objects/Devices/pda.rsi
     state: pda-security
+  - type: Appearance
+    appearanceDataInit:
+    enum.PdaVisuals.PdaType:
+     !type:String
+        pda-security
 
 - type: entity
   parent: ERTLeaderPDA
@@ -403,6 +476,40 @@
   - type: Icon
     sprite: _Lua/Objects/Devices/pda.rsi
     state: adj-pda
+
+- type: entity
+  parent: BasePDA
+  id: FleetCaptainPDA
+  name: navy captain PDA
+  description: It smells like salt and good whiskey.
+  components:
+  - type: Pda
+    id: CaptainIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+      !type:String
+        pda-captain
+  - type: Sprite
+    sprite: _Lua/Objects/Devices/pda.rsi
+    layers:
+    - state: "pda-captain"
+      map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: PdaBorderColor
+    borderColor: "#39657f"
+    accentHColor: "#ffce5b"
+    accentVColor: "#ffce5b"
+  - type: Icon
+    sprite: _Lua/Objects/Devices/pda.rsi
+    state: pda-captain
 
 # StormCreed
 - type: entity

@@ -672,22 +672,22 @@
   name: security winter coat
   components:
   - type: Sprite
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: _ADT/Clothing/OuterClothing/Coats/sec_coat.rsi
     layers:
-    - state: SEC-icon
+    - state: icon
   - type: Item
     inhandVisuals:
       left:
-      - state: SEC-inhand-left
+      - state: inhand-left
       right:
-      - state: SEC-inhand-right
+      - state: inhand-right
   - type: Clothing
-    sprite: Clothing/OuterClothing/WinterCoats/coat.rsi
+    sprite: _ADT/Clothing/OuterClothing/Coats/sec_coat.rsi
     clothingVisuals:
       outerClothing:
-      - state: SEC-equipped-OUTERCLOTHING
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHatHoodWinterSec
+      - state: equipped-OUTERCLOTHING
+#  - type: ToggleableClothing
+#    clothingPrototype: ClothingHeadHatHoodWinterSec
 
 - type: entity
   parent: ClothingOuterWinterCoatToggleable
