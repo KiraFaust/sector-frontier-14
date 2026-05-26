@@ -57,7 +57,13 @@
       "name": "pda-investigator"
     },
     {
-      "name": "pda-captain"
+      "name": "pda-correctionsofficer"
+    },
+    {
+      "name": "pda-iaa"
+    },
+    {
+      "name": "pda-magistrate"
     },
     {
       "name": "pda-r",

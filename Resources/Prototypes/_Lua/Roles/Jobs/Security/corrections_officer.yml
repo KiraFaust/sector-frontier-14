@@ -1,0 +1,60 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: job
+  id: CorrectionsOfficer
+  name: job-name-corrections-officer
+  description: job-description-corrections-officer
+  playTimeTracker: JobCorrectionsOfficer
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobDetective
+      time: 14400 # 4 hours
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 21600 # 6 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 216000 # 60 hours
+  startingGear: CorrectionsOfficerGear
+  icon: "JobIconCorrectionsOfficer"
+  supervisors: job-supervisors-warden
+  setPreference: false
+  canBeAntag: false
+  access:
+  - Security
+  - Brig
+  - Maintenance
+  - Service
+  - Medical
+  - External
+  - Salvage
+  - Cargo
+  - Research
+  - Detective
+  - Engineering
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: CorrectionsOfficerGear
+  equipment:
+    jumpsuit: ADTClothingUniformJumpsuitCorrectionsOfficer
+    eyes: ClothingEyesGlassesSecurity
+    head: ADTClothingHeadHatsCapCorrectionsOfficer
+    gloves: ClothingHandsGlovesForensic
+    outerClothing: ADTClothingOuterCoatCorrectionsOfficer
+    ears: ClothingHeadsetSecurity
+    shoes: ClothingShoesBootsJackSec
+    pocket1: N14WeaponPistol22lr
+    pocket2: ForensicScanner
+    id: CorrectionsOfficerPDA
+  storage:
+    back:
+    - Flash
+    - BoxFolderRed
+    - N14MagazinePistol22lr
+    - N14MagazinePistol22lr

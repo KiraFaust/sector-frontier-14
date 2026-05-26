@@ -1431,8 +1431,8 @@
 
 - type: entity
   parent: BaseComputer
-  id: ComputerSurveillanceCameraMonitor
-  name: camera monitor
+  id: OldComputerSurveillanceCameraMonitor # Lua: ComputerSurveillanceCameraMonitor < OldComputerSurveillanceCameraMonitor
+  name: old camera monitor # Lua: Added Old
   description: A surveillance camera monitor. You're watching them. Maybe.
   components:
   - type: Sprite

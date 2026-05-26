@@ -36,3 +36,75 @@
         Piercing: 0.6
         Heat: 0.9
         Cold: 0.9
+
+# Куртка Надзирателя
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ADTClothingOuterCoatCorrectionsOfficer
+  name: corrections officer jacket
+  description: Scary jacket for disciplinary team director. This is the last thing that clown will see before falling unconscious.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/OuterClothing/Coats/corrections_officer_coat_grey.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/OuterClothing/Coats/corrections_officer_coat_grey.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.85
+
+# Лабораторный халат безумного учёного
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ADTClothingOuterCoatCrazyScientist
+  name: crazy scientist labcoat
+  description: An extremely long labcoat. It is unknown, why the hell it was made so long, but it is now associated with crazy scientists.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/OuterClothing/Coats/crazyscientist.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/OuterClothing/Coats/crazyscientist.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Shock: 0.9
+        Caustic: 0.9
+
+# Лабораторный халат Патологоанатома
+- type: entity
+  parent: ClothingOuterStorageFoldableBase
+  id: ADTClothingOuterCoatPathologist
+  name: pathologist labcoat
+  description: A white labcoat with black stripes on its shoulders. It grants you the permission to do horrible things legally. Do not use it without being pathologist.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/OuterClothing/Coats/labcoat_pathologist.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/OuterClothing/Coats/labcoat_pathologist.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.9
+        Caustic: 0.9
+
+
+# Чёрный лабораторный халат Патологоанатома
+- type: entity
+  parent: ClothingOuterStorageFoldableBase
+  id: ADTClothingOuterCoatPathologistBlack
+  name: black pathologist labcoat
+  description: Corpses are much less uncanny.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/OuterClothing/Coats/labcoat_pathologist_alt.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/OuterClothing/Coats/labcoat_pathologist_alt.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.9
+        Caustic: 0.9

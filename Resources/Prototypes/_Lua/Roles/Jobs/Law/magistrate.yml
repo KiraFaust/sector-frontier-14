@@ -63,26 +63,26 @@
     id: MagistratIDCard
   - type: Sprite
     layers:
-    - sprite: Objects/Devices/pda.rsi
+    - sprite: _Lua/Objects/Devices/pda.rsi
       map: [ "enum.PdaVisualLayers.Base" ]
-      state: "pda-lawyer"
-    - sprite: Objects/Devices/pda.rsi
+      state: "pda-magistrate"
+    - sprite: _Lua/Objects/Devices/pda.rsi
       state: "light_overlay"
       map: [ "enum.PdaVisualLayers.Flashlight" ]
       shader: "unshaded"
       visible: false
-    - sprite: Objects/Devices/pda.rsi
+    - sprite: _Lua/Objects/Devices/pda.rsi
       state: "id_overlay"
       map: [ "enum.PdaVisualLayers.IdLight" ]
       shader: "unshaded"
       visible: false
   - type: Icon
-    state: pda-lawyer
+    state: pda-magistrate
   - type: Appearance
     appearanceDataInit:
     enum.PdaVisuals.PdaType:
      !type:String
-        pda-lawyer
+        pda-magistrate
 
 - type: entity
   parent: IDCardStandard

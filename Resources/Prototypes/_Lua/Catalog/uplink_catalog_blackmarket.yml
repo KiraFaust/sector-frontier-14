@@ -75,6 +75,112 @@
         tags:
           - BMUplink
 
+# Скафандры (UplinkBMHardsuits)
+- type: listing
+  id: UplinkBMHardsuitSB
+  name: скафандр СБ
+  description:
+  productEntity: ClothingOuterHardsuitSecurity
+  cost:
+    Speso: 42000
+  categories:
+    - UplinkBMHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBMHardsuitVeteranSB
+  name: скафандр ветерана СБ
+  description:
+  productEntity: ADTVeteranSecHardsuit
+  cost:
+    Speso: 210000
+  categories:
+    - UplinkBMHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBMHardsuitPilotSB
+  name: скафандр пилота СБ
+  description:
+  productEntity: ClothingOuterHardsuitSecurityPilot
+  cost:
+    Speso: 65000
+  categories:
+    - UplinkBMHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBMHardsuitBrigmedic
+  name: скафандр бригмедика
+  description:
+  productEntity: ClothingOuterHardsuitBrigmedic
+  cost:
+    Speso: 45000
+  categories:
+    - UplinkBMHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBMHardsuitWarden
+  name: скафандр смотрителя
+  description:
+  productEntity: ClothingOuterHardsuitWarden
+  cost:
+    Speso: 270000
+  categories:
+    - UplinkBMHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBMHardsuitHOS
+  name: скафандр ГСБ
+  description:
+  productEntity: ClothingOuterHardsuitSecurityRed
+  cost:
+    Speso: 230000
+  categories:
+    - UplinkBMHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBMHardsuitSalvageMax
+  name: максимальный скафандр утилизаторов
+  description:
+  productEntity: ClothingOuterHardsuitSalvageMax
+  cost:
+    Speso: 380000
+  categories:
+    - UplinkBMHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
 #region clothing
 
 # - type: listing
@@ -139,144 +245,17 @@
           - BMUplink
 
 # Region weapons
-## 6.8x54 STANAG LMGs
+# Пистолеты (UplinkBMPistols)
 - type: listing
-  id: UplinkBMAutoRifle
-  name:  uplink-bm-autorifle-name
-  description: uplink-bm-autorifle-desc
-  productEntity: N14WeaponAutoRifle
-  cost:
-    Speso: 35000
-  categories:
-    - UplinkBMWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
+  id: UplinkBlackMarketN14WeaponPistol22lr
+  name: пистолет с глушителем
+  description: ""
+  productEntity: N14WeaponPistol22lr
 
-# 8x65 SKR LMGs
-- type: listing
-  id: UplinkBMLMG
-  name:  uplink-bm-LMG-name
-  description: uplink-bm-LMG-desc
-  productEntity: N14WeaponLMG
   cost:
-    Speso: 35000
+    Speso: 10000
   categories:
-    - UplinkBMWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
-
-# 12.7mm Bolt-action rifles
-- type: listing
-  id: UplinkBMBrushGun
-  name:  uplink-bm-brushgun-name
-  description: uplink-bm-brushgun-desc
-  productEntity: N14WeaponBrushGun
-  cost:
-    Speso: 35000
-  categories:
-    - UplinkBMWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
-
-# 5.56x45 Auto rifles
-- type: listing
-  id: UplinkBMRifleR91
-  name:  uplink-bm-R91-name
-  description: uplink-bm-R91-desc
-  productEntity: N14WeaponRifleR91
-  cost:
-    Speso: 25000
-  categories:
-    - UplinkBMWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
-
-# 7.62x39 Auto rifles
-- type: listing
-  id: UplinkBMChineseRifle
-  name:  uplink-bm-chinese-name
-  description: uplink-bm-chinese-desc
-  productEntity: N14WeaponChineseRifle
-  cost:
-    Speso: 25000
-  categories:
-    - UplinkBMWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
-
-# 7.62x51 Semi-auto rifles
-- type: listing
-  id: UplinkBMService
-  name:  uplink-bm-service-name
-  description: uplink-bm-service-desc
-  productEntity: N14WeaponService
-  cost:
-    Speso: 25000
-  categories:
-    - UplinkBMWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
-
-# 7.62x54 Semi-auto marksman rifles
-- type: listing
-  id: UplinkBMLeverRifle
-  name:  uplink-bm-lever-name
-  description: uplink-bm-lever-desc
-  productEntity: N14WeaponLeverRifle
-  cost:
-    Speso: 35000
-  categories:
-    - UplinkBMWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
-
-# .45 magnum Revolvers
-- type: listing
-  id: UplinkBMMagnum
-  name:  uplink-bm-magnum-name
-  description: uplink-bm-magnum-desc
-  productEntity: N14WeaponRevolverMagnun
-  cost:
-    Speso: 15000
-  categories:
-    - UplinkBMWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
-
-# .45 ACP Heavy SMGs and pistols
-- type: listing
-  id: UplinkBM12mmPipe
-  name:  uplink-bm-12mmpipe-name
-  description: uplink-bm-12mmpipe-desc
-  productEntity: N14weapon12mmpipe
-  cost:
-    Speso: 25000
-  categories:
-    - UplinkBMWeapons
+    - UplinkBMPistols
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -284,30 +263,15 @@
           - BMUplink
 
 - type: listing
-  id: UplinkBMPistol12mm
-  name:  uplink-bm-pistol12mm-name
-  description: uplink-bm-pistol12mm-desc
-  productEntity: N14WeaponPistol12mm
-  cost:
-    Speso: 15000
-  categories:
-    - UplinkBMWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
+  id: UplinkBlackMarketNFWeaponPistolMk58
+  name: МК-58
+  description: ""
+  productEntity: NFWeaponPistolMk58
 
-# 9x19mm Medium SMGs and pistols
-- type: listing
-  id: UplinkBM10mmPipe
-  name:  uplink-bm-10mmpipe-name
-  description: uplink-bm-10mmpipe-desc
-  productEntity: N14weapon10mmpipe
   cost:
-    Speso: 25000
+    Speso: 20000
   categories:
-    - UplinkBMWeapons
+    - UplinkBMPistols
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -315,30 +279,15 @@
           - BMUplink
 
 - type: listing
-  id: UplinkBMPistol9mm
-  name:  uplink-bm-pistol9mm-name
-  description: uplink-bm-pistol9mm-desc
+  id: UplinkBlackMarketN14WeaponPistol9mm
+  name: 9х19 мм Пистолет
+  description: ""
   productEntity: N14WeaponPistol9mm
-  cost:
-    Speso: 15000
-  categories:
-    - UplinkBMWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
 
-# 6.35x40 Light SMGs and pistols
-- type: listing
-  id: UplinkBM9mmSMG
-  name:  uplink-bm-9mmsmg-name
-  description: uplink-bm-9mmsmg-desc
-  productEntity: N14weapon9mmSMG
   cost:
     Speso: 25000
   categories:
-    - UplinkBMWeapons
+    - UplinkBMPistols
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -346,30 +295,15 @@
           - BMUplink
 
 - type: listing
-  id: UplinkBMPistolChinese
-  name:  uplink-bm-pistolchinese-name
-  description: uplink-bm-pistolchinese-desc
+  id: UplinkBlackMarketN14WeaponPistolChinese
+  name: Китайский Пистолет
+  description: ""
   productEntity: N14WeaponPistolChinese
-  cost:
-    Speso: 15000
-  categories:
-    - UplinkBMWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
 
-# 4_gauge Shotguns
-- type: listing
-  id: UplinkBMShotgun
-  name:  uplink-bm-shotgun-name
-  description: uplink-bm-shotgun-desc
-  productEntity: N14WeaponShotgun
   cost:
     Speso: 25000
   categories:
-    - UplinkBMWeapons
+    - UplinkBMPistols
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -377,31 +311,448 @@
           - BMUplink
 
 - type: listing
-  id: UplinkBMDBShotgun
-  name:  uplink-bm-dbshotgun-name
-  description: uplink-bm-dbshotgun-desc
-  productEntity: N14WeaponDoubleBarrelShotgun
+  id: UplinkBlackMarketN14WeaponPistol12mm
+  name: Пистолет .45 ACP
+  description: ""
+  productEntity: N14WeaponPistol12mm
+
   cost:
     Speso: 25000
   categories:
-    - UplinkBMWeapons
+    - UplinkBMPistols
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
         tags:
           - BMUplink
 
-# Energy guns
 - type: listing
-  id: UplinkBMLaserAutoRifle
-  name: uplink-bm-laserautorifle-name
-  description: uplink-bm-laserautorifle-desc
-  productEntity: WeaponCaseShortN14WeaponLaserAutoRifle
-  icon: { sprite: _Nuclear14/Objects/Weapons/Guns/Battery/laser_autorifle.rsi, state: icon }
+  id: UplinkBlackMarketNFWeaponPistolCobra
+  name: Кобра
+  description: ""
+  productEntity: NFWeaponPistolCobra
+
+  cost:
+    Speso: 25000
+  categories:
+    - UplinkBMPistols
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketRMCWeaponPistolMK45
+  name: МК-45 Автомагнум
+  description: ""
+  productEntity: RMCWeaponPistolMK45
+
+  cost:
+    Speso: 30000
+  categories:
+    - UplinkBMPistols
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponRevolver10mm
+  name: прототип револьвера .45 ACP
+  description: ""
+  productEntity: N14WeaponRevolver10mm
+
+  cost:
+    Speso: 38000
+  categories:
+    - UplinkBMPistols
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketNFWeaponPistolN1984
+  name: N1984
+  description: ""
+  productEntity: NFWeaponPistolN1984
+
+  cost:
+    Speso: 40000
+  categories:
+    - UplinkBMPistols
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14weapon10mmpipe
+  name: 9х19 автоматический гладкоствольный пистолет
+  description: ""
+  productEntity: N14weapon10mmpipe
+
+  cost:
+    Speso: 80000
+  categories:
+    - UplinkBMPistols
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+# Пистолеты-пулемёты (UplinkBMSMGs)
+- type: listing
+  id: UplinkBlackMarketWeaponSubMachineGunTypewriter
+  name: Пищущая Машинка
+  description: ""
+  productEntity: WeaponSubMachineGunTypewriter
+
+  cost:
+    Speso: 60000
+  categories:
+    - UplinkBMSMGs
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketNFWeaponSubMachineGunC20r
+  name: C-20r
+  description: ""
+  productEntity: NFWeaponSubMachineGunC20r
+  cost:
+    Speso: 100000
+  categories:
+    - UplinkBMSMGs
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketNFWeaponSubMachineGunAtreides
+  name: Атрейдес
+  description: ""
+  productEntity: NFWeaponSubMachineGunAtreides
+  cost:
+    Speso: 75000
+  categories:
+    - UplinkBMSMGs
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketADTObjectsWeaponSubMachineGunUmp
+  name: UMP
+  description: ""
+  productEntity: ADTObjectsWeaponSubMachineGunUmp
+  cost:
+    Speso: 100000
+  categories:
+    - UplinkBMSMGs
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14weapon9mmSMG
+  name: пистолет-пулемёт 6.35х40
+  description: ""
+  productEntity: N14weapon9mmSMG
+
+  cost:
+    Speso: 100000
+  categories:
+    - UplinkBMSMGs
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14weapon12mmpipe
+  name: .45 ACP пистолет-пулемёт
+  description: ""
+  productEntity: N14weapon12mmpipe
+
+  cost:
+    Speso: 100000
+  categories:
+    - UplinkBMSMGs
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketNFWeaponSubMachineGunWt550
+  name: WT-550
+  description: ""
+  productEntity: NFWeaponSubMachineGunWt550
+
+  cost:
+    Speso: 100000
+  categories:
+    - UplinkBMSMGs
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponSubMachineGun12mm
+  name: пистолет-пулемёт 6.35х40
+  description: ""
+  productEntity: N14WeaponSubMachineGun12mm
+
+  cost:
+    Speso: 200000
+  categories:
+    - UplinkBMSMGs
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponSubMachineGun10mm
+  name: пистолет-пулемёт 9х19
+  description: ""
+  productEntity: N14WeaponSubMachineGun10mm
+
+  cost:
+    Speso: 200000
+  categories:
+    - UplinkBMSMGs
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketWeaponSubMachineGunAK220
+  name: NCI AK-220
+  description: ""
+  productEntity: WeaponSubMachineGunAK220
+
+  cost:
+    Speso: 200000
+  categories:
+    - UplinkBMSMGs
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketNFWeaponRifleAssaultLecter
+  name: NTM Лектер
+  description: ""
+  productEntity: NFWeaponRifleAssaultLecter
+
+  cost:
+    Speso: 200000
+  categories:
+    - UplinkBMSMGs
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+# Винтовки (UplinkBMRifles)
+- type: listing
+  id: UplinkBlackMarketWeaponRifleVulcanFCMC
+  name: FCM-C
+  description: ""
+  productEntity: WeaponRifleVulcanFCMC
+
+  cost:
+    Speso: 25000
+  categories:
+    - UplinkBMRifles
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketNFWeaponRifleAssaultVulcan
+  name: Вулкан
+  description: ""
+  productEntity: NFWeaponRifleAssaultVulcan
+
+  cost:
+    Speso: 75000
+  categories:
+    - UplinkBMRifles
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketWeaponRifleJackdaw
+  name: Галка
+  description: ""
+  productEntity: WeaponRifleJackdaw
+
+  cost:
+    Speso: 125000
+  categories:
+    - UplinkBMRifles
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponChineseRifle
+  name: Китайская штурмовая винтовка
+  description: ""
+  productEntity: N14WeaponChineseRifle
+
+  cost:
+    Speso: 75000
+  categories:
+    - UplinkBMRifles
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponService
+  name: M-16
+  description: ""
+  productEntity: N14WeaponService
+
+  cost:
+    Speso: 125000
+  categories:
+    - UplinkBMRifles
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponRifleR91
+  name: R-91
+  description: ""
+  productEntity: N14WeaponRifleR91
+
+  cost:
+    Speso: 125000
+  categories:
+    - UplinkBMRifles
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponLeverRifle
+  name: винтовка с рычажным затвором
+  description: ""
+  productEntity: N14WeaponLeverRifle
+
+  cost:
+    Speso: 100000
+  categories:
+    - UplinkBMRifles
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+# Пулемёты (UplinkBMLMGs)
+- type: listing
+  id: UplinkBlackMarketN14WeaponLMG
+  name: РКП Клён
+  description: ""
+  productEntity: N14WeaponLMG
+
+  cost:
+    Speso: 200000
+  categories:
+    - UplinkBMLMGs
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponAutoRifle
+  name: РПМ Рокот
+  description: ""
+  productEntity: N14WeaponAutoRifle
+
+  cost:
+    Speso: 200000
+  categories:
+    - UplinkBMLMGs
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+# Энергооружие (UplinkBMEnergy)
+- type: listing
+  id: UplinkBlackMarketNFWeaponEnergyPlasmaLaser
+  name: плазменный пистолет
+  description: ""
+  productEntity: N14WeaponPlasmaPistol
+
+  cost:
+    Speso: 40000
+  categories:
+    - UplinkBMEnergy
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketNFWeaponEnergyPistolLaser
+  name: лазерный пистолет
+  description: ""
+  productEntity: NFWeaponEnergyPistolLaser
+
   cost:
     Speso: 50000
   categories:
-    - UplinkBMWeapons
+    - UplinkBMEnergy
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -409,15 +760,15 @@
           - BMUplink
 
 - type: listing
-  id: UplinkBMPlasmaRifle
-  name: uplink-bm-plasmarifle-name
-  description: uplink-bm-plasmarifle-desc
-  productEntity: WeaponCaseShortN14WeaponPlasmaRifle
-  icon: { sprite: _Nuclear14/Objects/Weapons/Guns/Battery/plasma_rifle.rsi, state: icon }
+  id: UplinkBlackMarketWeaponAntiqueGun
+  name: антикварный лазерный пистолет
+  description: ""
+  productEntity: NFWeaponEnergyPistolLaserAntique
+
   cost:
-    Speso: 50000
+    Speso: 60000
   categories:
-    - UplinkBMWeapons
+    - UplinkBMEnergy
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -425,15 +776,15 @@
           - BMUplink
 
 - type: listing
-  id: UplinkBMWatzz2000
-  name: uplink-bm-wattz2-name
-  description: uplink-bm-wattz2-desc
-  productEntity: WeaponCaseShortN14WeaponWattz2000
-  icon: { sprite: _Nuclear14/Objects/Weapons/Guns/Battery/wattz2000.rsi, state: icon }
+  id: UplinkBlackMarketN14WeaponRechargerPistol
+  name: лазерный пистолет с подзарядкой
+  description: ""
+  productEntity: N14WeaponRechargerPistol
+
   cost:
-    Speso: 50000
+    Speso: 70000
   categories:
-    - UplinkBMWeapons
+    - UplinkBMEnergy
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -441,29 +792,111 @@
           - BMUplink
 
 - type: listing
-  id: UplinkBMPlasmaCutter
-  name: uplink-bm-plasmacutter-name
-  description: uplink-bm-plasmacutter-desc
-  productEntity: WeaponPlasmaCutter
-  cost:
-    Speso: 50000
-  categories:
-    - UplinkBMWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
-
-- type: listing
-  id: UplinkBMAutoPulser
-  name: uplink-bm-autopulser-name
-  description: uplink-bm-autopulser-desc
+  id: UplinkBlackMarketWeaponRifleAsakimAutopulser
+  name: Куница-Паттерн автопульс-лазер
+  description: ""
   productEntity: WeaponRifleAsakimAutopulser
+
   cost:
-    Speso: 50000
+    Speso: 100000
   categories:
-    - UplinkBMWeapons
+    - UplinkBMEnergy
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponLaserAutoRifle
+  name: автолазер AER-9
+  description: ""
+  productEntity: N14WeaponLaserAutoRifle
+
+  cost:
+    Speso: 75000
+  categories:
+    - UplinkBMEnergy
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponWattz2000
+  name: снайперская винтовка Wattz 2000
+  description: ""
+  productEntity: N14WeaponWattz2000
+
+  cost:
+    Speso: 110000
+  categories:
+    - UplinkBMEnergy
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponPlasmaRifle
+  name: плазменная винтовка
+  description: ""
+  productEntity: N14WeaponPlasmaRifle
+
+  cost:
+    Speso: 75000
+  categories:
+    - UplinkBMEnergy
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponPlasmaAutoRifle
+  name: автоматическая плазменная винтовка
+  description: ""
+  productEntity: N14WeaponPlasmaAutoRifle
+
+  cost:
+    Speso: 80000
+  categories:
+    - UplinkBMEnergy
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponUrbanPlasmaRifle
+  name: автоматическая плазменная винтовка
+  description: ""
+  productEntity: N14WeaponUrbanPlasmaRifle
+
+  cost:
+    Speso: 90000
+  categories:
+    - UplinkBMEnergy
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - BMUplink
+
+- type: listing
+  id: UplinkBlackMarketN14WeaponRechargerRifle
+  name: лазерная винтовка с подзарядкой
+  description: ""
+  productEntity: N14WeaponRechargerRifle
+
+  cost:
+    Speso: 130000
+  categories:
+    - UplinkBMEnergy
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -904,73 +1337,6 @@
         tags:
           - BMUplink
 
-# Region medicine
-
-- type: listing
-  id: UplinkBMCombatMedkit
-  name:  uplink-security-medkit-name
-  description: uplink-security-medkit-desc
-  productEntity: MedkitCombatFilled
-  icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: blackkit }
-  cost:
-    Speso: 5000
-  categories:
-    - UplinkBMMedicine
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
-
-- type: listing
-  id: UplinkBMMechMedipen
-  name:  uplink-bm-mechmedipen-name
-  description: uplink-bm-mechmedipen-desc
-  productEntity: BruteAutoInjector
-  cost:
-    Speso: 5000
-  categories:
-    - UplinkBMMedicine
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
-
-- type: listing
-  id: UplinkBMBurnMedipen
-  name:  uplink-bm-burnmedipen-name
-  description: uplink-bm-burnmedipen-desc
-  productEntity: BurnAutoInjector
-  cost:
-    Speso: 5000
-  categories:
-    - UplinkBMMedicine
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
-
-- type: listing
-  id: UplinkBMStimpackMini
-  name:  uplink-bm-stimpackmini-name
-  description: uplink-bm-stimpackmini-desc
-  productEntity: StimpackMini
-  icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: blackkit }
-  cost:
-    Speso: 12500
-  categories:
-    - UplinkBMMedicine
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - BMUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - MercenaryBase
-
 # Region utility
 
 - type: listing
@@ -1021,8 +1387,24 @@
   name: store-category-bmutility
 
 - type: storeCategory
-  id: UplinkBMWeapons
-  name: store-category-bmweapons
+  id: UplinkBMPistols
+  name: Пистолеты
+
+- type: storeCategory
+  id: UplinkBMSMGs
+  name: Пистолеты-Пулемёты
+
+- type: storeCategory
+  id: UplinkBMRifles
+  name: Винтовки
+
+- type: storeCategory
+  id: UplinkBMLMGs
+  name: Лёгкие пулемёты
+
+- type: storeCategory
+  id: UplinkBMEnergy
+  name: Энергооружие
 
 - type: storeCategory
   id: UplinkBMAmmo
@@ -1031,10 +1413,6 @@
 - type: storeCategory
   id: UplinkBMExplosives
   name: store-category-bmexplosives
-
-- type: storeCategory
-  id: UplinkBMMedicine
-  name: store-category-bmmedicine
 
 # Tag
 - type: Tag
@@ -1049,11 +1427,14 @@
     name: store-preset-name-bm-uplink
     categories:
     - UplinkBMHardsuits
-    - UplinkBMWeapons
+    - UplinkBMPistols
+    - UplinkBMSMGs
+    - UplinkBMRifles
+    - UplinkBMLMGs
+    - UplinkBMEnergy
     - UplinkBMAmmo
     - UplinkBMUtility
     - UplinkBMExplosives
-    - UplinkBMMedicine
     currencyWhitelist:
     - Speso
     useBankAccount: true

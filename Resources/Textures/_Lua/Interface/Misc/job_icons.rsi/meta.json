@@ -93,6 +93,12 @@
 		"name": "cryotech"
 	},
     {
+		"name": "corrections_officer"
+	},
+    {
+		"name": "investigator"
+	},
+    {
 		"name": "adjutant"
 	}
   ]

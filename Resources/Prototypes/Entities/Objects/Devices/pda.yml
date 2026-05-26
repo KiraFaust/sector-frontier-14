@@ -701,7 +701,9 @@
        !type:String
        pda-captain
   - type: PdaBorderColor
-    borderColor: "#7C5D00"
+    borderColor: "#003ba8"
+    accentHColor: "#fff56b"
+    accentVColor: "#fff56b"
   - type: Icon
     state: pda-captain
 

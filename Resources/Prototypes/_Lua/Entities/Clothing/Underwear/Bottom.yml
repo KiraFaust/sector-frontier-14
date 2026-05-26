@@ -500,8 +500,8 @@
 - type: entity
   parent: ClothingUnderwearBottomBase
   id: ClothingUnderwearBottomBoxersHeadofSecurity
-  name: боксеры Полковника
-  description: Cтандартное нижнее бельё Полковника.
+  name: боксеры Шериф
+  description: Cтандартное нижнее бельё Шериф
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Underwear/Security/head_of_security/man.rsi
@@ -518,8 +518,8 @@
 - type: entity
   parent: ClothingUnderwearBottomBase
   id: ClothingUnderwearBottomBoxersSeniorOfficer
-  name: боксеры лейтенанта СБ
-  description: Cтандартное нижнее бельё лейтенанта СБ.
+  name: боксеры сержанта СБ
+  description: Cтандартное нижнее бельё сержанта СБ.
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Underwear/Security/senior_officer/man.rsi
@@ -527,8 +527,8 @@
 - type: entity
   parent: ClothingUnderwearBottomBase
   id: ClothingUnderwearBottomBoxersWarden
-  name: боксеры Смотрителя
-  description: Cтандартное нижнее бельё Смотрителя.
+  name: боксеры лейтенанта
+  description: Cтандартное нижнее бельё Лейтенанта.
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Underwear/Security/warden/man.rsi
@@ -986,8 +986,8 @@
 - type: entity
   parent: ClothingUnderwearBottomBase
   id: ClothingUnderwearBottomPantiesHeadofSecurity
-  name: стринги Полковника
-  description: Cтандартное нижнее бельё Полковника.
+  name: стринги Шериф
+  description: Cтандартное нижнее бельё Шерифа.
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Underwear/Security/head_of_security/women/pants.rsi
@@ -1004,8 +1004,8 @@
 - type: entity
   parent: ClothingUnderwearBottomBase
   id: ClothingUnderwearBottomPantiesSeniorOfficer
-  name: стринги лейтенанта СБ
-  description: Cтандартное нижнее бельё лейтенанта СБ.
+  name: стринги сержанта СБ
+  description: Cтандартное нижнее бельё сержанта СБ.
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Underwear/Security/senior_officer/women/pants.rsi
@@ -1013,8 +1013,8 @@
 - type: entity
   parent: ClothingUnderwearBottomBase
   id: ClothingUnderwearBottomPantiesWarden
-  name: стринги Смотрителя
-  description: Cтандартное нижнее бельё Смотрителя.
+  name: стринги лейтенанта
+  description: Cтандартное нижнее бельё лейтенанта.
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Underwear/Security/warden/women/pants.rsi

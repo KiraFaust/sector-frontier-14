@@ -1,0 +1,49 @@
+# LuaCorp - This file is licensed under AGPLv3
+# Copyright (c) 2026 LuaCorp Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: BaseComputer
+  id: ComputerSurveillanceCameraMonitor
+  name: camera monitor
+  description: A surveillance camera monitor. You're watching them. Maybe.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: cameras
+    - map: ["computerLayerKeys"]
+      state: tech_key
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: Computer
+    board: SurveillanceCameraMonitorCircuitboard
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCamera
+    transmitFrequencyId: SurveillanceCamera
+  - type: WiredNetworkConnection
+  - type: DeviceNetworkRequiresPower
+  - type: SurveillanceMonitor
+  - type: ActivatableUIRequiresVision
+  - type: ActivatableUIRequiresPower
+  - type: ActivatableUI
+    key: enum.SurveillanceMonitorUiKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.SurveillanceMonitorUiKey.Key:
+          type: SurveillanceMonitorWindowBoundUserInterface
+        enum.WiresUiKey.Key:
+          type: WiresBoundUserInterface
+
+- type: entity
+  parent: ComputerSurveillanceCameraMonitor
+  id: AdminComputerSurveillanceCameraMonitor
+  suffix: Admin, MultiGrid
+  components:
+  - type: SurveillanceMonitor
+    multiGrid: true

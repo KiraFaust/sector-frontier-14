@@ -509,8 +509,8 @@
 - type: entity
   parent: ClothingUnderwearTopBase
   id: ClothingUnderwearTopBraHeadofSecurity
-  name: бра Полковника
-  description: Стандартное нижнее бельё Полковника.
+  name: бра Шериф
+  description: Стандартное нижнее бельё Шерифа.
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Underwear/Security/head_of_security/women/bra.rsi
@@ -527,8 +527,8 @@
 - type: entity
   parent: ClothingUnderwearTopBase
   id: ClothingUnderwearTopBraSeniorOfficer
-  name: бра лейтенанта СБ
-  description: Стандартное нижнее бельё лейтенанта СБ.
+  name: бра сержанта СБ
+  description: Стандартное нижнее бельё сержанта СБ.
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Underwear/Security/senior_officer/women/bra.rsi
@@ -536,8 +536,8 @@
 - type: entity
   parent: ClothingUnderwearTopBase
   id: ClothingUnderwearTopBraWarden
-  name: бра Смотрителя
-  description: Стандартное нижнее бельё Смотрителя.
+  name: бра лейтенанта
+  description: Стандартное нижнее бельё лейтена.
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Underwear/Security/warden/women/bra.rsi

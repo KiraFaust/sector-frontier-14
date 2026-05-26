@@ -624,22 +624,23 @@
   id: PonderingOrbWizard
   name: pondering orb
   description: Ponderous, man... Really ponderous. Magically shows the station's camera network.
-  suffix: Wizard
+  suffix: Wizard, MultiGrid # Lua: Wizard < Wizard, MultiGrid
   components:
   - type: ActivatableUI
     requireActiveHand: false
     inHandsOnly: true
-    key: enum.SurveillanceCameraMonitorUiKey.Key
+    key: enum.SurveillanceMonitorUiKey.Key # Lua
   - type: UserInterface
     interfaces:
-      enum.SurveillanceCameraMonitorUiKey.Key:
-        type: SurveillanceCameraMonitorBoundUserInterface
+      enum.SurveillanceMonitorUiKey.Key: # Lua
+        type: SurveillanceMonitorWindowBoundUserInterface # Lua
   - type: DeviceNetwork
     deviceNetId: Wired
     receiveFrequencyId: SurveillanceCamera
     transmitFrequencyId: SurveillanceCamera
   - type: WiredNetworkConnection
-  - type: SurveillanceCameraMonitor
+  - type: SurveillanceMonitor # Lua
+    multiGrid: true # Lua
 
 - type: entity
   parent: BaseItem
