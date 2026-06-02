@@ -4101,3 +4101,120 @@ Entries:
   id: 289
   time: '2026-05-13T05:35:45.0000000+00:00'
   url: https://github.com/Lua-Frontier/sector-frontier-14/pull/575
+- author: BTReflex
+  changes:
+    - type: Add
+      message: Добавлены напольные светильники
+  id: 290
+  time: '2026-05-27T14:28:40.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/576
+- author: dovacot
+  changes:
+    - type: Add
+      message: Консоль верфи теперь показывает размер, тип и питание шаттла
+    - type: Fix
+      message: У большинства шаттлов подправлена информация о типе и питании
+  id: 291
+  time: '2026-05-27T14:35:42.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/578
+- author: HavvaMariajmiPalmer
+  changes:
+    - type: Add
+      message: Добавлено Кортофельное пюре с тефтелями и его крафт
+  id: 292
+  time: '2026-05-27T14:36:02.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/579
+- author: ressuw
+  changes:
+    - type: Add
+      message: Добавлено веселье!
+    - type: Remove
+      message: Удалено веселье!
+    - type: Tweak
+      message: Изменено веселье!
+    - type: Fix
+      message: >-
+        На орион:  Добавлены кнопочки для гермозатворов, повернут медвенд,
+        добавлены углы на сканере масс, добавлены стулья в отделе рнд, убрано 2
+        плаката, полноценные подстанции заменены на настенные, категория шаттла
+        стала медиум, снижена цена на 7500 спесос.
+  id: 293
+  time: '2026-05-27T14:37:15.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/580
+- author: BTReflex
+  changes:
+    - type: Add
+      message: Крафты раздвижных окон и бронеокон из урана и плазмы.
+    - type: Add
+      message: Крафты пончиков и желейных пончиков.
+    - type: Add
+      message: Крафты ступенек.
+    - type: Add
+      message: Плюшки Аматы Хабаровой.
+    - type: Add
+      message: Крафты направленных урановых окон и бронеокон
+  id: 294
+  time: '2026-05-27T14:49:33.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/577
+- author: dovacot
+  changes:
+    - type: Add
+      message: >-
+        В руководство добавлена возможность скрыть дерево записей нажатием ПКМ
+        на заголовок окна
+    - type: Tweak
+      message: >-
+        Возвращение в категорию химических веществ руководства подкатегории
+        "Другое"
+    - type: Remove
+      message: >-
+        Откат Петидина, Свинец возвращён в рецепт Фентанила, убран из Синдисоков
+        и набора химического синтеза
+    - type: Tweak
+      message: Враждебной фауне отключены датчики на комбинезонах
+    - type: Add
+      message: >-
+        Добавлен рецепт инженерных очков в технологию "Эксп. сварочные
+        инструменты"
+    - type: Fix
+      message: ПанкоМат теперь имеет свой ассортимент, а не БонанзоМата
+    - type: Tweak
+      message: >-
+        Ассортимент ПанкоМата расширен одеждой (и новыми неоновыми кошачьими
+        ушками)
+    - type: Tweak
+      message: Ассортимент БонанзоМата расширен экипировкой
+    - type: Add
+      message: >-
+        Гарнитура теперь показывает в описании отображаемый в рации цвет и
+        количество свободных слотов для ключей шифрования
+    - type: Tweak
+      message: >-
+        Перевод некоторых гарнитур, панковских вещей, правильное отображение
+        панковских очков в хранилище
+    - type: Tweak
+      message: Фелиниды могут переключать мягкое ночное зрение
+    - type: Fix
+      message: >-
+        Машины уже точно правильно показывают процент ускорения/замедления от
+        смазки/клея
+    - type: Tweak
+      message: Голопад меняет имя при переименовании шаттла
+  id: 295
+  time: '2026-05-27T15:03:55.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/582
+- author: Maksimvini
+  changes:
+    - type: Add
+      message: Добавлены шаттлы  FrameWorker, Avorion, Lifecomer
+    - type: Remove
+      message: Удалены шаттлы  Eden, Framework, Skalpel
+    - type: Tweak
+      message: Изменено веселье!
+    - type: Fix
+      message: >-
+        Skalpel более не имеет Сервера мониторинга экипажа, что ломает при
+        покупке все мониторинги сервера.
+  id: 296
+  time: '2026-05-27T15:04:07.0000000+00:00'
+  url: https://github.com/Lua-Frontier/sector-frontier-14/pull/581
