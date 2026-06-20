@@ -7,7 +7,7 @@
   fallbacks:
   - DeputyClothingUniformJumpsuitDeputy
   - DeputyClothingUniformJumpskirtDeputy
-  
+
 - type: loadoutGroup
   id: DeputyOuterClothing
   name: loadout-group-contractor-outerclothing
@@ -34,8 +34,8 @@
 - type: loadoutGroup
   id: DeputyPDA
   name: loadout-group-contractor-pda
-  hidden: true # No point in showing this, it gets auto-selected.
   loadouts:
   - DeputyDeputyPDA
+  - CorporalGefreiterPDA
   fallbacks:
   - DeputyDeputyPDA

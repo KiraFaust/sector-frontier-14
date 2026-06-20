@@ -40,3 +40,12 @@ job-name-virologist = вирусолог
 job-name-no-id = ???
 job-name-unknown = Неизвестно
 job-name-station-ai = Станционный ИИ
+
+job-name-corporal-nfsd = Капрал ДСБФ
+job-name-gefreiter-nfsd = Ефрейтор ДСБФ
+job-name-lieutenant-nfsd = Лейтенант ДСБФ
+job-name-chief-nfsd = Шеф ДСБФ
+job-name-major-nfsd = Сержант-Майор ДСБФ
+job-name-senior-nfsd = Старшина ДСБФ
+job-name-service-nfsd = Сервис ДСБФ
+job-name-chef-nfsd = Повар ДСБФ

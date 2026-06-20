@@ -27,7 +27,7 @@
 #      role: JobSecurityOfficer
 #      time: 21600 # 6 hours
   startingGear: SeniorOfficerGear
-  icon: JobIconSergeant
+  icon: JobIconDeputy
   supervisors: job-supervisors-bailiff
   weight: 140
   displayWeight: 50

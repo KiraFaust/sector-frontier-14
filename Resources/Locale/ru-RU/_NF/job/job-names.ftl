@@ -1,7 +1,7 @@
 # Frontier
-job-name-bailiff = Смотритель ДСБФ
+job-name-bailiff = Лейтенант ДСБФ
 job-name-brigmedic = Фельдшер ДСБФ
-job-name-cadet-nf = Констебль ДСБФ
+job-name-cadet-nf = Рядовой ДСБФ
 job-name-contractor = Гражданский
 job-name-deputy = Капрал ДСБФ
 job-name-nf-detective = Детектив

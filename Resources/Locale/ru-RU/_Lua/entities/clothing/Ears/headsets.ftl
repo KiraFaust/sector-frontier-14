@@ -6,6 +6,3 @@ ent-ClothingHeadsetPrison = гарнитура заключённого
 
 ent-ClothingHeadsetMagistrat = гарнитура магистрата
     .desc = Гарнитура, используемая магистратом.
-
-ent-ClothingHeadsetIAA = гарнитура АВД
-    .desc = Гарнитура для агента внутренних дел, чтобы слышать последние слова капитана.

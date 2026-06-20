@@ -21,6 +21,6 @@ ent-RubberStampPal = штамп представителя юридическо�
 ent-RubberStampDoc = штамп менеджера медицинских операций
     .suffix = НЕ МАППИТЬ
     .desc = { ent-RubberStampBase.desc }
-ent-RubberStampBailiff = штамп Смотрителя
+ent-RubberStampBailiff = штамп лейтенанта
     .suffix = НЕ МАППИТЬ
     .desc = { ent-RubberStampBase.desc }

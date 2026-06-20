@@ -24,7 +24,7 @@
   icon: JobIconBrigmedicNF
   supervisors: job-supervisors-bailiff
   weight: 125
-  displayWeight: 35
+  displayWeight: 55
   canBeAntag: false
   access:
   - Brigmedic

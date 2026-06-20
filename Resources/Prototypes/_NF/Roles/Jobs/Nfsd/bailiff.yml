@@ -9,10 +9,10 @@
     role: JobSeniorOfficer
     time: 36000 # 10h
   startingGear: BailiffGear
-  icon: JobIconBailiff
+  icon: JobIconLieutenant
   supervisors: job-supervisors-sheriff
   weight: 150
-  displayWeight: 60
+  displayWeight: 65
   canBeAntag: false
   access:
   - Armory
