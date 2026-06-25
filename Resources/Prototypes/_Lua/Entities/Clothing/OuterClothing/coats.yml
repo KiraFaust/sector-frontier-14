@@ -167,6 +167,25 @@
 
 - type: entity
   parent: ClothingOuterStorageBase
+  id: ClothingOuterWinterCoatCaptainArmored
+  name: captain's armored wintercoat
+  description: Blue coat with thick hidden armor for station's captain. It was designed for navy captains' planet operations, but it was liked by station ones'.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/WinterCoats/captain_wintercoat.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/WinterCoats/captain_wintercoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.7
+        Piercing: 0.4
+        Heat: 0.7
+        Coat: 0.8
+
+- type: entity
+  parent: ClothingOuterStorageBase
   id: ClothingOuterCoatSalo2016
   name: vermilion salo coat
   description: It smells like salo, like cybersecurity and it is also very cursed.

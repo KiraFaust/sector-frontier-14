@@ -180,9 +180,9 @@
   description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to the station's finest.
   components:
   - type: Sprite
-    sprite: _ADT/Clothing/OuterClothing/Armor/captain_carapace.rsi # Lua
+    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
   - type: Clothing
-    sprite: _ADT/Clothing/OuterClothing/Armor/captain_carapace.rsi # Lua
+    sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
   - type: Tag
     tags:
     - CorgiWearable
@@ -263,7 +263,7 @@
 
 #Mercenary web vest
 - type: entity
-  parent: [ BaseC1Contraband, ClothingOuterStorageBase, AllowSuitStorageClothing] #web vest so it should have some pockets for ammo # Frontier: ClothingOuterVestWeb < "ClothingOuterStorageBase, AllowSuitStorageClothing" 
+  parent: [ BaseC1Contraband, ClothingOuterStorageBase, AllowSuitStorageClothing] #web vest so it should have some pockets for ammo # Frontier: ClothingOuterVestWeb < "ClothingOuterStorageBase, AllowSuitStorageClothing"
   id: ClothingOuterVestWebMercenary # Frontier: Merc<Mercenary
   name: mercenary web vest
   description: A high-quality armored vest made from a hard synthetic material. It's surprisingly flexible and light, despite formidable armor plating.

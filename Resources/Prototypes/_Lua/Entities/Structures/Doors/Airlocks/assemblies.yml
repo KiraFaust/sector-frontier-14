@@ -13,7 +13,7 @@
   id: AirlockOldAssembly
   components:
   - type: Sprite
-    sprite: _Lua/Structures/Doors/Airlocks/Standard/basic.rsi
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/basic_old.rsi
     state: "assembly"
 
 - type: entity
@@ -49,7 +49,7 @@
   id: AirlockOldAssemblyGlass
   components:
   - type: Sprite
-    sprite: _Lua/Structures/Doors/Airlocks/Glass/basic.rsi
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/basic_old.rsi
     state: "assembly"
 
 - type: entity
@@ -83,3 +83,19 @@
         - FullTileMask
         layer:
         - GlassAirlockLayer
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockOldAssemblyCommand
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/command_old.rsi
+    state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockOldGlassAssemblyCommand
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/command_old.rsi
+    state: "assembly"
