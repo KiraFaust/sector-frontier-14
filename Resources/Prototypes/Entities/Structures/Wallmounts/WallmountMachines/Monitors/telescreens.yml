@@ -25,15 +25,15 @@
     transmitFrequencyId: SurveillanceCamera
   - type: WiredNetworkConnection
   - type: DeviceNetworkRequiresPower
-  - type: SurveillanceCameraMonitor
+  - type: SurveillanceMonitor # Lua
   - type: ActivatableUI
-    key: enum.SurveillanceCameraMonitorUiKey.Key
+    key: enum.SurveillanceMonitorUiKey.Key # Lua
   - type: ActivatableUIRequiresPower
   - type: ActivatableUIRequiresVision
   - type: UserInterface
     interfaces:
-        enum.SurveillanceCameraMonitorUiKey.Key:
-          type: SurveillanceCameraMonitorBoundUserInterface
+        enum.SurveillanceMonitorUiKey.Key: # Lua
+          type: SurveillanceMonitorWindowBoundUserInterface # Lua
 
 - type: entity
   parent: BaseWallmountMetallic

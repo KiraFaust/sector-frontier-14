@@ -30,6 +30,7 @@
         components:
           - SurveillanceCamera
           - SurveillanceCameraMonitor
+          - SurveillanceMonitor # Lua
           - RadioSpeaker
     - type: ActiveListener
       range: 6 # Frontier 10>6

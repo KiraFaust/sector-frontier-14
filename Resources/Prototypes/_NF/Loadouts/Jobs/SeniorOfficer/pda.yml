@@ -2,4 +2,13 @@
   id: SeniorOfficerSeniorOfficerPDA
   equipment:
     id: SergeantPDA
-    
+
+- type: loadout
+  id: SergeantMajorPDA
+  equipment:
+    id: MajorPDA
+
+- type: loadout
+  id: SergeantForemanPDA
+  equipment:
+    id: ForemanPDA

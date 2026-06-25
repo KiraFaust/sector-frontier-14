@@ -1,0 +1,58 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:ui="clr-namespace:Content.Client._Lua.Surveillance.UI"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      xmlns:viewport="clr-namespace:Content.Client.Viewport"
+                      xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+                      Title="{Loc 'surveillance-monitor-menu-title'}"
+                      SetSize="1100 600"
+                      Resizable="False">
+    <PanelContainer HorizontalExpand="True" VerticalExpand="True">
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#181818" />
+        </PanelContainer.PanelOverride>
+        <ui:SurveillanceNavMapControl Name="NavMap" Margin="0 30 0 0"/>
+    </PanelContainer>
+    <Label Text="{Loc 'surveillance-monitor-version'}"
+           StyleClasses="WindowFooterText"
+           HorizontalAlignment="Left"
+           VerticalAlignment="Bottom"
+           Margin="15 10"/>
+    <PanelContainer SetSize="350 380"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="6 5">
+        <BoxContainer Orientation="Vertical"
+                      HorizontalExpand="True"
+                      VerticalExpand="True">
+                <BoxContainer Orientation="Horizontal" SetSize="350 30">
+                    <OptionButton Name="GridSelector" HorizontalExpand="True"/>
+                    <Button Name="UpdateGridsButton" MinSize="50 30">
+                        <TextureButton MouseFilter="Ignore"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       StyleClasses="Refresh"/>
+                    </Button>
+                </BoxContainer>
+                <PanelContainer HorizontalExpand="True" VerticalExpand="True">
+                    <TextureRect Name="CameraViewBackground"
+                                 Stretch="KeepAspectCentered"
+                                 TexturePath="/Textures/Interface/Nano/square_black.png"/>
+                    <Label Name="CameraViewLoadingLabel"
+                           Text="{Loc 'surveillance-monitor-loading-label'}"
+                           StyleClasses="LabelBig"
+                           Align="Center"
+                           Visible="False"/>
+                    <viewport:ScalingViewport Name="CameraView" MouseFilter="Ignore"/>
+                </PanelContainer>
+        </BoxContainer>
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#181818" />
+        </PanelContainer.PanelOverride>
+    </PanelContainer>
+    <TextureRect StyleClasses="NTLogoDark"
+                 Stretch="KeepAspectCentered"
+                 SetSize="19 19"
+                 Margin="15 10"
+                 VerticalAlignment="Bottom"
+                 HorizontalAlignment="Right"/>
+</controls:FancyWindow>

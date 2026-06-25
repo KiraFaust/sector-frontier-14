@@ -5,13 +5,13 @@ highlights-mail-carrier = почтальон, почта
 highlights-security-guard = Охранник Аванпоста, охранник, охрана
 highlights-director-of-care = Менеджер медицинских операций, "ММО", директор
 
-highlights-cadet = Рядовой, "СРБС", "NFSD"
-highlights-deputy = Сержант, "СРБС", "NFSD"
-highlights-brigmedic = Фельдшер, бригмедик, "СРБС", "NFSD"
-highlights-sergeant = сержант, "серж", "СРБС", "NFSD"
-highlights-bailiff = Смотритель, Смотритель, "СРБС", "NFSD"
-highlights-public-affairs-liaison = Представитель Юридического Департамента, "ПЮД", связной, "СРБС", "NFSD"
-highlights-sheriff = Полковник, Полковник, "СРБС", "NFSD"
+highlights-cadet = Рядовой, Констебль, "ДСБФ", "NFSD"
+highlights-deputy = Капрал, Ефрейтор, "ДСБФ", "NFSD"
+highlights-brigmedic = Фельдшер, бригмедик, "ДСБФ", "NFSD"
+highlights-sergeant = Сержант, "серж", "ДСБФ", "NFSD"
+highlights-bailiff = Лейтенант, Лейтенант, Шеф, "ДСБФ", "NFSD"
+highlights-public-affairs-liaison = Представитель Юридического Департамента, "ПЮД"
+highlights-sheriff = Шериф, ГСБ, "ДСБФ", "NFSD"
 
 highlights-prisoner = заключённый, заключенный, зек
 highlights-pirate = Пират, пират

@@ -86,7 +86,7 @@
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
     - state: nfsd
-    - state: idnfsddeputy
+    - state: idnfsdcorporal
 
 - type: entity
   parent: CadetIDCard
@@ -112,7 +112,7 @@
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
     - state: nfsd
-    - state: idnfsdsergeant
+    - state: idnfsddeputy
 
 - type: entity
   parent: CadetIDCard
@@ -125,7 +125,7 @@
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
     - state: nfsd
-    - state: idnfsdbailiff
+    - state: idnfsdlieutenant
 
 - type: entity
   parent: [CadetIDCard, BaseCommandContraband]
@@ -158,7 +158,7 @@
 - type: entity #from _Lua
   parent: CadetIDCard
   id: SDEngineerIDCard
-  name: ID-карта Инженера СРБС
+  name: ID-карта Инженера ДСБФ
   components:
   - type: PresetIdCard
     job: SDEngineer
@@ -166,7 +166,7 @@
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
     - state: nfsd
-    - state: idnfsdengineer
+    - state: idnfsdsergeant
 
 - type: entity
   parent: SecurityIDCard

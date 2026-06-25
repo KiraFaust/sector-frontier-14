@@ -88,3 +88,21 @@
   components:
   - type: Sprite
     sprite: _ADT/Clothing/Neck/Cloaks/captain_neck.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ADTClothingNeckHeadOfPersonnelFormal
+  name: head's of personnel formal cloak
+  description: A great cloak of Service head. Still as gaudy as jumpsuit.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Neck/Cloaks/HoP_alt_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ADTClothingNeckInvestigator
+  name: investigator's cloak
+  description: Cool black coat. Less threatening, than HoS' one.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Neck/Cloaks/investigator_cloak.rsi

@@ -425,8 +425,8 @@
 - type: entity
   parent: ClothingUnderwearSocksBase
   id: ClothingUnderwearSocksHeadOfSecurity
-  name: носки Полковника
-  description: Стандартные носки Полковника.
+  name: носки шерифа
+  description: Стандартные носки шерифа
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Underwear/Security/head_of_security/socks.rsi
@@ -497,8 +497,8 @@
 - type: entity
   parent: ClothingUnderwearSocksBase
   id: ClothingUnderwearSocksWarden
-  name: носки смотрителя
-  description: Стандартные носки смотрителя.
+  name: носки лейтенанта
+  description: Стандартные носки лейтенанта.
   components:
   - type: Sprite
     sprite: _Lua/Clothing/Underwear/Security/warden/socks.rsi

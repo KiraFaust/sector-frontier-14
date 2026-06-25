@@ -1,7 +1,11 @@
 - type: accessLevel
   id: Sergeant
   name: id-card-access-level-sergeant
-  
+
+- type: accessLevel
+  id: NfsdService
+  name: id-card-access-level-nfsd-service
+
 - type: accessLevel
   id: Bailiff
   name: id-card-access-level-bailiff
@@ -17,7 +21,7 @@
   - External
   - Security
   - Brig
-  
+
 - type: accessGroup
   id: GeneralNfsdAccess
   tags:
@@ -34,6 +38,7 @@
   tags:
   - HeadOfSecurity
   - Bailiff
+  - NfsdService
   - Sergeant
   - Detective
   - Brigmedic

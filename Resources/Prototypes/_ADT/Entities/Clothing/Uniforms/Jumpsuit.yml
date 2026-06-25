@@ -305,3 +305,36 @@
     sprite: _ADT/Clothing/Uniforms/Jumpsuit/jumpsuit_alt_hop.rsi
   - type: Clothing
     sprite: _ADT/Clothing/Uniforms/Jumpsuit/jumpsuit_alt_hop.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ADTClothingUniformJumpsuitCorrectionsOfficer
+  name: corrections officer jumpsuit
+  description: A jumpsuit of the Deathly Gaze. Also, of a prisoners' drinking buddy.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/corrections_officer.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/corrections_officer.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ADTClothingUniformJumpsuitCorrectionsOfficerGrey
+  name: grey corrections officer jumpsuit
+  description: Grey uniform of corrections officer, that is made of durathreads. It looks depressing.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/corrections_officer_grey.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/corrections_officer_grey.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ADTClothingUniformJumpsuitCorrectionsOfficerLight
+  name: light corrections officer jumpsuit
+  description: Light reddish uniform for times without prisoners.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/corrections_officer_light.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniforms/Jumpsuit/corrections_officer_light.rsi

@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "by HacksLua, adjutant by FaustNetzach",
+    "copyright": "by HacksLua, adjutant and nfsd- by FaustNetzach",
 
     "size": {
         "x": 8,
@@ -93,7 +93,31 @@
 		"name": "cryotech"
 	},
     {
+		"name": "corrections_officer"
+	},
+    {
+		"name": "investigator"
+	},
+    {
 		"name": "adjutant"
-	}
+	},
+    {
+       "name" : "nfsdchief"
+    },
+    {
+       "name" : "nfsdcorporal"
+    },
+    {
+       "name" : "nfsdlieutenant"
+    },
+    {
+       "name" : "nfsdsenior"
+    },
+    {
+       "name" : "nfsdsergeantmajor"
+    },
+    {
+       "name" : "nfsdservice"
+    }
   ]
 }

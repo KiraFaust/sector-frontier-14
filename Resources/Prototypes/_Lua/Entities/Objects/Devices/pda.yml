@@ -479,21 +479,21 @@
 
 - type: entity
   parent: BasePDA
-  id: FleetCaptainPDA
-  name: navy captain PDA
-  description: It smells like salt and good whiskey.
+  id: InvestigatorPDA
+  name: investigator PDA
+  description: It has scratches on it. They form a map of something, that is unreadable.
   components:
   - type: Pda
-    id: CaptainIDCard
+    id: InvestigatorIDCard
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
       !type:String
-        pda-captain
+        pda-investigator
   - type: Sprite
     sprite: _Lua/Objects/Devices/pda.rsi
     layers:
-    - state: "pda-captain"
+    - state: "pda-investigator"
       map: [ "enum.PdaVisualLayers.Base" ]
     - state: "light_overlay"
       map: [ "enum.PdaVisualLayers.Flashlight" ]
@@ -504,12 +504,45 @@
       shader: "unshaded"
       visible: false
   - type: PdaBorderColor
-    borderColor: "#39657f"
-    accentHColor: "#ffce5b"
-    accentVColor: "#ffce5b"
+    borderColor: "#d31717"
+    accentVColor: "#ffebeb"
   - type: Icon
     sprite: _Lua/Objects/Devices/pda.rsi
-    state: pda-captain
+    state: pda-investigator
+
+- type: entity
+  parent: BasePDA
+  id: CorrectionsOfficerPDA
+  name: corrections officer PDA
+  description: Extremely clean and looks like the new one. White lines look a bit yellow though. Discipline.
+  components:
+  - type: Pda
+    id: CorrectionsOfficerIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+      !type:String
+        pda-correctionsofficer
+  - type: Sprite
+    sprite: _Lua/Objects/Devices/pda.rsi
+    layers:
+    - state: "pda-correctionsofficer"
+      map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: PdaBorderColor
+    borderColor: "#312f2f"
+    accentVColor: "#d70000"
+    accentHColor: "#f8f5f5"
+  - type: Icon
+    sprite: _Lua/Objects/Devices/pda.rsi
+    state: pda-correctionsofficer
 
 # StormCreed
 - type: entity

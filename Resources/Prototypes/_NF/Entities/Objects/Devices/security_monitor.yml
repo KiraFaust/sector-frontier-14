@@ -24,14 +24,14 @@
   - type: ActivatableUI
     requireActiveHand: false
     inHandsOnly: true
-    key: enum.SurveillanceCameraMonitorUiKey.Key
+    key: enum.SurveillanceMonitorUiKey.Key # Lua
   - type: UserInterface
     interfaces:
-      enum.SurveillanceCameraMonitorUiKey.Key:
-        type: SurveillanceCameraMonitorBoundUserInterface
+      enum.SurveillanceMonitorUiKey.Key: # Lua
+        type: SurveillanceMonitorWindowBoundUserInterface # Lua
   - type: DeviceNetwork
     deviceNetId: Wired
     receiveFrequencyId: SurveillanceCamera
     transmitFrequencyId: SurveillanceCamera
   - type: WiredNetworkConnection
-  - type: SurveillanceCameraMonitor
+  - type: SurveillanceMonitor # Lua

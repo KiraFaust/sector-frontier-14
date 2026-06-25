@@ -29,7 +29,7 @@
 - type: entity
   parent: IDCardStandard
   id: SeniorSalvageIDCard
-  name: pathologist ID card
+  name: senior miner ID card
   components:
   - type: Sprite
     layers:
@@ -605,3 +605,110 @@
     - state: idstationengineer
   - type: PresetIdCard
     job: FrontierEngineer
+
+- type: entity
+  parent: IDCardStandard
+  id: InvestigatorIDCard
+  name: investigator ID card
+  components:
+  - type: PresetIdCard
+    job: Investigator
+  - type: Sprite
+    sprite: Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+    - state: idinvestigator
+  - type: Clothing
+    sprite: _NF/Objects/Misc/id_cards.rsi
+
+- type: entity
+  parent: IDCardStandard
+  id: CorrectionsOfficerIDCard
+  name: corrections officer ID card
+  components:
+  - type: PresetIdCard
+    job: CorrectionsOfficer
+  - type: Sprite
+    sprite: _Lua/Objects/Misc/id_cards.rsi
+    layers:
+    - state: silver
+    - state: id-correctionsofficer
+  - type: Clothing
+    sprite: _NF/Objects/Misc/id_cards.rsi
+
+# Alt Job Names
+
+# NFSD Sergeant
+- type: entity
+  parent: SergeantIDCard
+  id: MajorIDCard
+  name: sergeant-major ID card
+  components:
+  - type: IdCard
+    jobTitle: job-name-major-nfsd
+    jobIcon: JobIconSergeantMajor
+  - type: Sprite
+    sprite: _NF/Objects/Misc/id_cards.rsi
+    layers:
+    - state: nfsd
+    - state: idnfsdmajor
+
+- type: entity
+  parent: SergeantIDCard
+  id: ForemanIDCard
+  name: foreman ID card
+  components:
+  - type: IdCard
+    jobTitle: job-name-senior-nfsd
+    jobIcon: JobIconSeniorNfsd
+  - type: Sprite
+    sprite: _NF/Objects/Misc/id_cards.rsi
+    layers:
+    - state: nfsd
+    - state: idnfsdsenior
+
+# NFSD Corporal
+- type: entity
+  parent: DeputyIDCard
+  id: GefreiterIDCard
+  name: gefreiter ID card
+  components:
+  - type: IdCard
+    jobTitle: job-name-gefreiter-nfsd
+  - type: Sprite
+    sprite: _NF/Objects/Misc/id_cards.rsi
+    layers:
+    - state: nfsd
+    - state: idnfsdcorporal
+
+# NFSD Lieutenant
+- type: entity
+  parent: BailiffIDCard
+  id: NfsdChiefIDCard
+  name: sheriff's chief ID card
+  components:
+  - type: IdCard
+    jobTitle: job-name-chief-nfsd
+    jobIcon: JobIconChiefNfsd
+  - type: Sprite
+    sprite: _NF/Objects/Misc/id_cards.rsi
+    layers:
+    - state: nfsd
+    - state: idnfsdchief
+
+# NFSD Service
+- type: entity
+  parent: IDCardStandard
+  id: NfsdServiceIDCard
+  name: nfsd service personnel ID card
+  components:
+  #- type: PresetIdCard
+  #  job: NfsdService
+  - type: IdCard
+    jobTitle: job-name-service-nfsd
+    jobIcon: JobIconServiceNfsd
+  - type: Sprite
+    sprite: _NF/Objects/Misc/id_cards.rsi
+    layers:
+    - state: nfsd
+    - state: idnfsdservice

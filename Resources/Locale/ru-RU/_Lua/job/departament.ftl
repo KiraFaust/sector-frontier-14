@@ -6,5 +6,5 @@ department-Outpost-Typan = ННКСС Тайпан
 
 department-service = Гражданские (DS)
 department-Frontier-ds = Экспедиционно-Исследовательский Корпус NT (DS)
-department-security = Служба Разведки и Безопасности Сектора (DS)
+department-security = Департамент Службы Безопасности Фронтира
 department-stormcreed = Кодекс Бури (DS)

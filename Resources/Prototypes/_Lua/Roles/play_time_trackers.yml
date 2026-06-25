@@ -160,3 +160,9 @@
 
 - type: playTimeTracker
   id: JobFrontierEngineer
+
+- type: playTimeTracker
+  id: JobInvestigator
+
+- type: playTimeTracker
+  id: JobCorrectionsOfficer

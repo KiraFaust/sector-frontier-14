@@ -430,6 +430,7 @@
     containers:
       board: [ DoorElectronicsMaintenance ]
 
+#region Standart Airlocks
 #Standart
 - type: entity
   parent: Airlock
@@ -462,6 +463,87 @@
     containers:
       board: [ DoorElectronicsCommand ]
 
+- type: entity
+  parent: AirlockOldMedical
+  id: AirlockOldMedicalLocked
+  suffix: Medical
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMedical ]
+
+- type: entity
+  parent: AirlockOldScience
+  id: AirlockOldScienceLocked
+  suffix: Science
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsScience ]
+
+- type: entity
+  parent: AirlockOldSecurity
+  id: AirlockOldSecurityLocked
+  suffix: Security
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  parent: AirlockOldMaint
+  id: AirlockOldMaintLocked
+  suffix: Maintenance
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMaintenance ]
+
+- type: entity
+  parent: AirlockOldEngineering
+  id: AirlockOldEngineeringLocked
+  suffix: Engineering
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEngineering ]
+
+- type: entity
+  parent: AirlockOldAtmospherics
+  id: AirlockOldAtmosphericsLocked
+  suffix: Atmospherics
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsAtmospherics ]
+
+- type: entity
+  parent: AirlockOldCargo
+  id: AirlockOldCargoLocked
+  suffix: Cargo
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCargo ]
+
+- type: entity
+  parent: AirlockOldCentComm
+  id: AirlockOldCentCommLocked
+  suffix: Central Command
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCentralCommand ]
+
+- type: entity
+  parent: AirlockOldSyndicate
+  id: AirlockOldSyndicateLocked
+  suffix: Syndicate
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicateAgent ]
+
 #Glass
 - type: entity
   parent: AirlockGlass
@@ -493,3 +575,84 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsCommand ]
+
+- type: entity
+  parent: AirlockOldGlassMedical
+  id: AirlockOldGlassMedicalLocked
+  suffix: Medical
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMedical ]
+
+- type: entity
+  parent: AirlockOldGlassScience
+  id: AirlockOldGlassScienceLocked
+  suffix: Science
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsScience ]
+
+- type: entity
+  parent: AirlockOldGlassSecurity
+  id: AirlockOldGlassSecurityLocked
+  suffix: Security
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  parent: AirlockOldGlassMaint
+  id: AirlockOldGlassMaintLocked
+  suffix: Maintenance
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMaintenance ]
+
+- type: entity
+  parent: AirlockOldGlassEngineering
+  id: AirlockOldGlassEngineeringLocked
+  suffix: Engineering
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEngineering ]
+
+- type: entity
+  parent: AirlockOldGlassAtmospherics
+  id: AirlockOldGlassAtmosphericsLocked
+  suffix: Atmospherics
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsAtmospherics ]
+
+- type: entity
+  parent: AirlockOldGlassCargo
+  id: AirlockOldGlassCargoLocked
+  suffix: Cargo
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCargo ]
+
+- type: entity
+  parent: AirlockOldGlassCentComm
+  id: AirlockOldGlassCentCommLocked
+  suffix: Central Command
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCentralCommand ]
+
+- type: entity
+  parent: AirlockOldGlassSyndicate
+  id: AirlockOldGlassSyndicateLocked
+  suffix: Syndicate
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSyndicateAgent ]
