@@ -1,5 +1,8 @@
 using Robust.Shared.Enums;
+using Robust.Shared.Prototypes; // Lua
 using Robust.Shared.Serialization;
+using Content.Shared.StatusIcon; // Lua
+using Content.Shared.Roles; // Lua
 
 namespace Content.Shared.StationRecords;
 
@@ -31,10 +34,10 @@ public sealed record GeneralStationRecord
     ///     Job icon tied to this station record.
     /// </summary>
     [DataField]
-    public string JobIcon = string.Empty;
+    public ProtoId<JobIconPrototype> JobIcon = string.Empty; // Lua
 
     [DataField]
-    public string JobPrototype = string.Empty;
+    public ProtoId<JobPrototype> JobPrototype = string.Empty; // Lua
 
     /// <summary>
     ///     Species tied to this station record.

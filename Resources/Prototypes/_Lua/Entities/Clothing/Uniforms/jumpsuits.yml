@@ -271,6 +271,27 @@
   - type: Clothing
     sprite: _Lua/Clothing/Uniforms/Jumpsuit/pathologistalt.rsi
 
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNfsdService
+  name: nfsd service jumpsuit
+  description: Coffee-colored jumpsuit with white shirt. It smells like SpaceCleaner, like paper and like cacao.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/nfsd_service.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/nfsd_service.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitAdjutant
+  name: adjutant's jumpsuit
+  description: A jumpsuit, that is made to show status. Status of Command. Command's helper, of course.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/adjutant.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/adjutant.rsi
 
 #region Security NT
 

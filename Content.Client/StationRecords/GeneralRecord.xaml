@@ -3,7 +3,17 @@
         <Label Name="RecordName" StyleClasses="LabelBig"/>
         <Label Name="Age"/>
         <Label Name="Title"/>
-        <Label Name="Job"/>
+        <!-- Lua start -->
+        <BoxContainer Orientation="Horizontal">
+            <Label Text="{Loc 'general-station-record-console-record-job'}"/>
+            <Label Name="Job"/>
+            <TextureRect Name="JobIcon"
+                         SetSize="16 16"
+                         Stretch="KeepAspectCentered"
+                         TextureScale="2 2"
+                         Margin="5"/>
+        </BoxContainer>
+        <!-- Lua end -->
         <Label Name="Species"/>
         <Label Name="Gender"/>
         <Label Name="Fingerprint"/>

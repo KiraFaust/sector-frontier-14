@@ -168,6 +168,27 @@
   - type: Sprite
     sprite: _Lua/Clothing/Uniforms/Jumpskirt/scientist_formal.rsi
 
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtNfsdService
+  name: nfsd service jumpskirt
+  description: Coffee-colored jumpsuit and skirt with white shirt. It smells like SpaceCleaner, like paper and like cacao.
+  components:
+  - type: Sprite
+    sprite:  _Lua/Clothing/Uniforms/Jumpskirt/nfsd_service.rsi
+  - type: Clothing
+    sprite:  _Lua/Clothing/Uniforms/Jumpskirt/nfsd_service.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtAdjutant
+  name: adjutant's jumpskirt
+  description: A jumpskirt, that is made to show status. Status of Command. Command's helper, of course.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/adjutant.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/adjutant.rsi
 
 #region Security NT
 

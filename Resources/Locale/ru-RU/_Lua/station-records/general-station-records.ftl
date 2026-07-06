@@ -2,6 +2,7 @@ general-station-record-console-ad-label = Объявление
 general-station-record-console-ad-default-text = Напишите объявление о своём судне здесь! (макс. { $size } символов)
 general-station-record-console-ad-unsaved-changes = Есть несохранённые изменения.
 general-station-record-console-ad-submit = Отправить
+general-station-record-console-record-job = Должность:{" "}
 ship-crew-console-title = Управление персоналом судна
 ship-crew-console-captain-id = Основная ID
 ship-crew-console-target-id = Целевая ID
