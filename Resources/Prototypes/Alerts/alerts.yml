@@ -14,8 +14,6 @@
     - category: Buckled
     - alertType: Pulling
     - alertType: Walking
-    - alertType: PoliticalLoudspeakerSpeed
-    - alertType: PoliticalLoudspeakerFortify
     - category: Piloting
     - alertType: Corporeal
     - alertType: Stun
