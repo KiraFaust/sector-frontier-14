@@ -6,4 +6,4 @@ stamp-component-stamped-name-stc = Диспетчер Аванпоста
 stamp-component-stamped-name-sr = Директор Исследований
 stamp-component-stamped-name-doctor = Доктор
 stamp-component-stamped-name-engineer = Инженер
-stamp-component-stamped-name-bailiff = Смотритель
+stamp-component-stamped-name-bailiff = Лейтенант

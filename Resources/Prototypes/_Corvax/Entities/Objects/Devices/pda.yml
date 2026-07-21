@@ -7,6 +7,24 @@
     - type: Pda
       id: IAAIDCard
     - type: PdaBorderColor
-      borderColor: "#6f6192"
+      borderColor: "#1f1d1d"
+    - type: Sprite
+      sprite: _Lua/Objects/Devices/pda.rsi
+      layers:
+        - state: "pda-iaa"
+          map: [ "enum.PdaVisualLayers.Base" ]
+        - state: "light_overlay"
+          map: [ "enum.PdaVisualLayers.Flashlight" ]
+          shader: "unshaded"
+          visible: false
+        - state: "id_overlay"
+          map: [ "enum.PdaVisualLayers.IdLight" ]
+          shader: "unshaded"
+          visible: false
     - type: Icon
-      state: pda-lawyer
+      state: pda-iaa
+    - type: Appearance
+      appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+          pda-iaa

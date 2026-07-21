@@ -20,8 +20,8 @@ loadout-group-senior-researcher-id = Ведущий учёный, ID
 # Security
 loadout-group-brigmedic-jumpsuit = Фельдшер, комбинезон
 loadout-group-brigmedic-backpack = Фельдшер, рюкзак
-loadout-group-senior-officer-jumpsuit = Лейтенант СБ, комбинезон
-loadout-group-senior-officer-backpack = Лейтенант СБ, рюкзак
+loadout-group-senior-officer-jumpsuit = Сержант СБ, комбинезон
+loadout-group-senior-officer-backpack = Сержант СБ, рюкзак
 # Medical
 loadout-group-senior-physician-head = Ведущий врач, голова
 loadout-group-senior-physician-jumpsuit = Ведущий врач, комбинезон

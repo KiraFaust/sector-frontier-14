@@ -28,9 +28,100 @@
   id: AirlockOld
   components:
   - type: Sprite
-    sprite: _Lua/Structures/Doors/Airlocks/Standard/basic.rsi
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/basic_old.rsi
   - type: Wires
     layoutId: Airlock
+
+- type: entity
+  parent: Airlock
+  id: AirlockOldCommand
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/command_old.rsi
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
+  parent: Airlock
+  id: AirlockOldMedical
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/medical_old.rsi
+  - type: Wires
+    layoutId: AirlockMedical
+
+- type: entity
+  parent: Airlock
+  id: AirlockOldScience
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/science_old.rsi
+  - type: Wires
+    layoutId: AirlockScience
+
+- type: entity
+  parent: Airlock
+  id: AirlockOldSecurity
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/security_old.rsi
+  - type: Wires
+    layoutId: AirlockScience
+
+- type: entity
+  parent: Airlock
+  id: AirlockOldMaint
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/maint_old.rsi
+  - type: Wires
+    layoutId: Airlock
+
+- type: entity
+  parent: Airlock
+  id: AirlockOldEngineering
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/engineering_old.rsi
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: Airlock
+  id: AirlockOldAtmospherics
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/atmospherics_old.rsi
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: Airlock
+  id: AirlockOldCargo
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/cargo_old.rsi
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: Airlock
+  id: AirlockOldCentComm
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/centcomm_old.rsi
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
+  parent: Airlock
+  id: AirlockOldSyndicate
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/syndicate_old.rsi
+  - type: Wires
+    layoutId: AirlockSecurity
+
 
 # Glass Airlocks
 - type: entity
@@ -58,7 +149,7 @@
   id: AirlockOldGlass
   components:
   - type: Sprite
-    sprite: _Lua/Structures/Doors/Airlocks/Glass/basic.rsi
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/basic_old.rsi
   - type: Wires
     layoutId: Airlock
 
@@ -77,6 +168,97 @@
   components:
   - type: Sprite
     sprite: _Lua/Structures/Doors/Airlocks/Glass/big_glass_old.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockOldGlassCommand
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/command_old.rsi
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockOldGlassMedical
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/medical_old.rsi
+  - type: Wires
+    layoutId: AirlockMedical
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockOldGlassScience
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/science_old.rsi
+  - type: Wires
+    layoutId: AirlockScience
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockOldGlassSecurity
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/security_old.rsi
+  - type: Wires
+    layoutId: AirlockScience
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockOldGlassMaint
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/maint_old.rsi
+  - type: Wires
+    layoutId: Airlock
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockOldGlassEngineering
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/engineering_old.rsi
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockOldGlassAtmospherics
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/atmospherics_old.rsi
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockOldGlassCargo
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/cargo_old.rsi
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockOldGlassCentComm
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/centcomm_old.rsi
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockOldGlassSyndicate
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/syndicate_old.rsi
+  - type: Wires
+    layoutId: AirlockSecurity
+
 
 # LuaTech
 - type: entity

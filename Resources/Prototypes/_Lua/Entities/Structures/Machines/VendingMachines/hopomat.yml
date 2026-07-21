@@ -1,0 +1,29 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineCart
+  name: PaperOMat
+  description: Extreme speed of bureaucracy! Glory to the HoP!
+  components:
+  - type: VendingMachine
+    pack: HopVendInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+  - type: Sprite
+    sprite: _Lua/Structures/Machines/VendingMachines/HoPend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1
+    energy: 2.0
+    color: "#01a2ff"
+#  - type: AccessReader
+#    access: [["HeadOfPersonnel"]]

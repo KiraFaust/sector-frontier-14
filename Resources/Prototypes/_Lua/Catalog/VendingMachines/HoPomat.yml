@@ -1,0 +1,16 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2026 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: vendingMachineInventory
+  id: HopVendInventory
+  startingInventory:
+  # Storage
+
+  # Headsets, caps and masks
+
+  # Uniform
+    ClothingUniformJumpsuitHoP: 1
+  # Coats and armor
+
+   # Legs&Hands

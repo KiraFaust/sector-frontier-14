@@ -2,4 +2,8 @@
   id: BailiffBailiffPDA
   equipment:
     id: BailiffPDA
-    
+
+- type: loadout
+  id: BailiffChiefPDA
+  equipment:
+    id: SheriffChiefPDA

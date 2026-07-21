@@ -127,3 +127,27 @@
     sprite: _ADT/Clothing/Head/Hats/beret_cargo.rsi
   - type: Clothing
     sprite: _ADT/Clothing/Head/Hats/beret_cargo.rsi
+
+# Кепка Надзирателя
+- type: entity
+  parent: ClothingHeadBase
+  id: ADTClothingHeadHatsCorrectionsOfficer
+  name: corrections officer's hat
+  description: Good old hat, not bad for protecting your head.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Head/Hats/corrections_officer_cap.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Head/Hats/corrections_officer_cap.rsi
+
+# Фуражка Надзирателя
+- type: entity
+  parent: ClothingHeadBase
+  id: ADTClothingHeadHatsCapCorrectionsOfficer
+  name: corrections officer's cap
+  description: Grey cap, that shows your right to enforce the will of Corporation.
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Head/Hats/corrections_officer_cap_grey.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Head/Hats/corrections_officer_cap_grey.rsi

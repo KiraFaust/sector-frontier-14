@@ -1,0 +1,48 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesBootsJackPathologist
+  name: сапоги патологоанатома
+  description: Кто сказал, что кровь не может быть модной? Ой, а что там на подошве...
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/Shoes/Boots/pathologist.rsi
+    - type: Clothing
+      sprite: _Lua/Clothing/Shoes/Boots/pathologist.rsi
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesBootsOutpostTypan
+  name: ботинки атмосферного инженера
+  description: Кожаные ботинки, предпочитаемые инженерными работниками на станциях синдиката.
+  components:
+  - type: Sprite
+    sprite: Clothing/Shoes/Boots/explorer.rsi
+  - type: Clothing
+    sprite: Clothing/Shoes/Boots/explorer.rsi
+  - type: Matchbox
+
+- type: entity
+  parent: [ClothingShoesMilitaryBase, BaseC1SyndicateContrabandNoValue]
+  id: ClothingShoesBootsCombatOutpostTypan
+  name: ботинки синдиката
+  description: Ботинки для боевых операций или боевых действий.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Shoes/syndicate.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Shoes/syndicate.rsi
+
+- type: entity
+  parent: [ClothingShoesMilitaryBase, BaseC1SyndicateContrabandNoValue]
+  id: ClothingShoesSr
+  name: sector representative shoes
+  description: Those are leather shoes for sector representatve. They have golden edging.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Shoes/sr.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Shoes/sr.rsi

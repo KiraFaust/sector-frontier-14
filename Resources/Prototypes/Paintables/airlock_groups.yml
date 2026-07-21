@@ -9,6 +9,7 @@
     cargo: AirlockCargo
     chemistry: AirlockChemistry
     command: AirlockCommand
+    sr: AirlockRepresentative
     engineering: AirlockEngineering
     freezer: AirlockFreezer
     hydroponics: AirlockHydroponics
@@ -17,9 +18,22 @@
     salvage: AirlockSalvage
     science: AirlockScience
     security: AirlockSecurity
+    redSecurity: AirlockSecurityOld
     virology: AirlockVirology
     mercenary: AirlockMercenary # Frontier
     nfsd: AirlockNfsd # Frontier: surely nothing bad will happen
+    miner: AirlockMining
+    hatch: AirlockHatch
+    hatchMaint: AirlockHatchMaintenance
+    atmosphericsOld: AirlockOldAtmospherics
+    basicOld: AirlockOld
+    cargoOld: AirlockOldCargo
+    commandOld: AirlockOldCommand
+    engineeringOld: AirlockOldEngineering
+    maintOld: AirlockOldMaint
+    medicalOld: AirlockOldMedical
+    scienceOld: AirlockOldScience
+    securityOld: AirlockOldSecurity
 
 - type: paintableGroup
   id: AirlockGlass
@@ -32,6 +46,7 @@
     cargo: AirlockCargoGlass
     chemistry: AirlockChemistryGlass
     command: AirlockCommandGlass
+    sr: AirlockGlassRepresentative
     engineering: AirlockEngineeringGlass
     hydroponics: AirlockHydroponicsGlass
     maintenance: AirlockMaintGlass
@@ -39,6 +54,18 @@
     salvage: AirlockSalvageGlass
     science: AirlockScienceGlass
     security: AirlockSecurityGlass
+    redSecurity: AirlockGlassSecurityOld
     virology: AirlockVirologyGlass
     mercenary: AirlockMercenaryGlass # Frontier
     nfsd: AirlockNfsdGlass # Frontier: surely nothing bad will happen
+    miner: AirlockMiningGlass
+    atmosphericsOld: AirlockOldGlassAtmospherics
+    glassOld: AirlockGlassOld
+    basicOld: AirlockOldGlass
+    cargoOld: AirlockOldGlassCargo
+    commandOld: AirlockOldGlassCommand
+    engineeringOld: AirlockOldGlassEngineering
+    maintOld: AirlockOldGlassMaint
+    medicalOld: AirlockOldGlassMedical
+    scienceOld: AirlockOldGlassScience
+    securityOld: AirlockOldGlassSecurity

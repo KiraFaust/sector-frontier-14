@@ -117,11 +117,11 @@
   description: The upper part of the station representative's uniform.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Misc/sr_jacket.rsi
+    sprite: _Lua/Clothing/OuterClothing/Coats/sr_jacket.rsi # Lua
     layers:
     - state: icon
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Misc/sr_jacket.rsi
+    sprite: _Lua/Clothing/OuterClothing/Coats/sr_jacket.rsi # Lua
     clothingVisuals:
       outerClothing:
       - state: equipped-OUTERCLOTHING

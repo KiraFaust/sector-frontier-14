@@ -92,7 +92,7 @@ holopad-cargo-mailroom = Снабжение - Почта
 
 holopad-traffic = Трафик
 holopad-sheriff = Шериф
-holopad-bailiff = Маршал
+holopad-bailiff = Лейтенант
 holopad-station-representative = Представитель станции
 holopad-hub = Хаб
 

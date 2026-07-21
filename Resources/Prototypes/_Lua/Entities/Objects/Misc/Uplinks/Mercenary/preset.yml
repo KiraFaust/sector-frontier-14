@@ -18,4 +18,3 @@
     - UplinkMercenaryNocat
     currencyWhitelist:
     - Speso
-    useBankAccount: true

@@ -9,7 +9,7 @@
   requiredCompany: Syndicate
   salary: 65000
   description: Офицер телекомуникаций из далёкого космоса.
-  startingGear: SyndicateFormal
+  startingGear: TelecommunicationsOfficerGear
   icon: "JobIconSyndicateFormal"
   supervisors: job-supervisors-typan-syndicate
   canBeAntag: true
@@ -55,12 +55,12 @@
     implants: [ TrackingImplantNordfoll ]
 
 - type: startingGear
-  id: SyndicateFormal
+  id: TelecommunicationsOfficerGear
   equipment:
     eyes: ClothingEyesHudOutpostTypan
     ears: ClothingHeadsetAltOutpostTypan
     shoes: ClothingShoesBootsCombat
-    jumpsuit: ClothingUniformJumpsuitSyndieFormal
+    jumpsuit: ClothingUniformJumpsuitTelecommunicationsOfficer
     gloves: ClothingHandsGlovesCombat
     id: SyndiPDACom
     back: ClothingBackpackSyndicateFilled

@@ -97,3 +97,75 @@
     sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
     state: cryotech
   jobName: job-name-cryotech
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconInvestigator
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: investigator
+  jobName: job-name-investigator
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCorrectionsOfficer
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: corrections_officer
+  jobName: job-name-corrections-officer
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconChiefNfsd
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: nfsdchief
+  jobName: job-name-chief-nfsd
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCorporal
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: nfsdcorporal
+  jobName: job-name-corporal-nfsd
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLieutenant
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: nfsdlieutenant
+  jobName: job-name-lieutenant-nfsd
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSeniorNfsd
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: nfsdsenior
+  jobName: job-name-senior-nfsd
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSergeantMajor
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: nfsdsergeantmajor
+  jobName: job-name-major-nfsd
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconServiceNfsd
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: nfsdservice
+  jobName: job-name-service-nfsd
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSr
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: sr
+  jobName: job-name-sr

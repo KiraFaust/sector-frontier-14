@@ -246,3 +246,14 @@
     sprite: _ADT/Clothing/Uniforms/Jumpskirt/jumpskirt_alt_hop.rsi
   - type: Clothing
     sprite: _ADT/Clothing/Uniforms/Jumpskirt/jumpskirt_alt_hop.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ADTClothingUniformJumpskirtCorrectionsOfficer
+  name: corrections officer jumpskirt
+  description: A jumpskirt of the not-so-Deathly Gaze. Will correct your behaviour for sure!
+  components:
+  - type: Sprite
+    sprite: _ADT/Clothing/Uniforms/Jumpskirt/corrections_officer.rsi
+  - type: Clothing
+    sprite: _ADT/Clothing/Uniforms/Jumpskirt/corrections_officer.rsi

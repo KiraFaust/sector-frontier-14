@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "resprite by semkagamez (discord) for Space Station 14 server Dead Space",
+  "copyright": "resprite by semkagamez (discord) for Space Station 14 server Dead Space | stripe_cluwne by brainfood1183 (github) | black-inhands by DinnerCalzone (github)",
   "size": {
     "x": 32,
     "y": 32
@@ -23,7 +23,38 @@
       "name": "silver"
     },
     {
+      "name": "black"
+    },
+    {
+      "name": "centcom"
+    },
+    {
       "name": "idadjutant"
+    },
+    {
+      "name": "idblueshield"
+    },
+    {
+      "name": "iddeathsquade"
+    },
+    {
+      "name": "id-correctionsofficer"
+    },
+    {
+      "name": "black-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "black-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "blue-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "blue-inhand-right",
+      "directions": 4
     },
     {
       "name": "silver-inhand-left",

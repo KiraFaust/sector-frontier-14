@@ -75,11 +75,30 @@
     - type: Pda
       id: BlueShieldOfficerIDCard
     - type: PdaBorderColor
-      borderColor: "#12445b"
-      accentHColor: "#772d32"
-      accentVColor: "#772d32"
+      borderColor: "#36007e"
+      accentHColor: "#02ccff"
+      accentVColor: "#00e1ff"
+    - type: Sprite
+      sprite: _Lua/Objects/Devices/pda.rsi
+      layers:
+      - map: [ "enum.PdaVisualLayers.Base" ]
+        state: "pda-blueshield"
+      - state: "light_overlay"
+        map: [ "enum.PdaVisualLayers.Flashlight" ]
+        shader: "unshaded"
+        visible: false
+      - state: "id_overlay"
+        map: [ "enum.PdaVisualLayers.IdLight" ]
+        shader: "unshaded"
+        visible: false
+    - type: Appearance
+      appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+          pda-blueshield
     - type: Icon
-      state: pda-ert
+      sprite: _Lua/Objects/Devices/pda.rsi
+      state: pda-blueshield
     - type: HealthAnalyzer
       scanDelay: 1
 
@@ -88,9 +107,10 @@
   id: BlueShieldOfficerIDCard
   components:
     - type: Sprite
+      sprite: _Lua/Objects/Misc/id_cards.rsi
       layers:
-        - state: default
-        - state: ert_security
+        - state: centcom
+        - state: idblueshield
     - type: PresetIdCard
       job: BlueShieldOfficer
     - type: Access

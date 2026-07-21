@@ -1,0 +1,409 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+#region Pajamas
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformPajamasCaptain
+  name: пижама капитана
+  description: Капитанская пижама с золотой тканью и грозным видом снаружи, но мягкой отделкой внутри."
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pajamascaptain.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pajamascaptain.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformPajamasCEngineer
+  name: пижама главного инженера
+  description: Пижама главного инженера с золотистой и яркой тканью, но мягкой и лёгкой отделкой внутри. Не защищает от радиации"
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pajamasce_nt.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pajamasce_nt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformPajamasCMO
+  name: пижама главного врача
+  description: Пижама главного врача с белой тканью и тёплой, нитриловой отделкой внутри. Выглядит профессионально и чисто."
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pajamascmo.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pajamascmo.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformPajamasQM
+  name: пижама квартермейстре
+  description: Пижама квартермейстра в коричневой расцветке и бархатными вставками. Очень удобная и тёплая."
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pajamasqm.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pajamasqm.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformPajamasRND
+  name: пижама научного руководителя
+  description: Пижама научного руководителя с фиолетовой тканью и очень-очень мягкой отделкой внутри. Идеальна для долгих ночей в лаборатории или сна в скафандре."
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pajamasrnd.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pajamasrnd.rsi
+
+
+# region Typan
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpsuitOutpostTypanBotanist
+  name: комбинезон ботаника синдиката
+  description: Имеет сильный запах земли. Будем надеяться, что он просто грязный, а не весь в земле.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/suitbotanist.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/suitbotanist.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpsuitOutpostTypanCargotech
+  name: комбинезон карготехника синдиката
+  description: Удобный прочный комбинезон.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/suitcargotech.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/suitcargotech.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpsuitOutpostTypanChef
+  name: комбинезон шеф-повара синдиката
+  description: Без него ничего и никого не приготовить.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/suitchef.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/suitchef.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpsuitOutpostTypanDirectory
+  name: парадная форма директора исследований синдиката
+  description: Роскошная униформа директора исследований, для особых случаев.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/directory.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/directory.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpsuitOutpostTypanMedic
+  name: комбинезон медика синдиката
+  description: Удобный комбинезон для оказания различного рода медицинских услуг
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/suitmedical.rsi #TODO: сделать нормальную униформу медикам Тайпана, а не украденную
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/suitmedical.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformScienceRDOutpostTypan
+  name: комбинезон директора исследований
+  description: Слегка выцветшая от химикатов униформа.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/rd_jumpsuit.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/rd_jumpsuit.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpsuitScienceOutpostTypan
+  name: комбинезон ученого синдиката
+  description: Белый комбинезон, подходящий для всех видов исследований.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/researcher_jumpsuit.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/researcher_jumpsuit.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformScienceOutpostTypan
+  name: тактический комбинезон исследователя синдиката
+  description: Чёрный тактический комбинезон, специально спроектированный для работы в тяжёлых условиях.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/researcher.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/researcher.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpsuitTelecommunicationsOfficer
+  name: комбинезон офицера телекоммуникаций
+  description: Комбинезон настоящего офицера телекоммуникаций. Да, именно телевизоров.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/co_jumpsuit.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/co_jumpsuit.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpsuitAtmosphericTechnicianOupostTypan
+  name: комбинезон атмосферного техника Синдиката
+  description: Комбинезон, владелец которого будет смотреть на то, как вы горите в чистой плазме.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/atmos_jumpsuit.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/atmos_jumpsuit.rsi
+
+- type: entity
+  parent: [ClothingSyndieBaseOutpostTypan, BaseC1SyndicateContrabandNoValue]
+  id: ClothingUniformJumpsuitTechnicianOutpostTypan
+  name: комбинезон инженера синдиката
+  description: Чёрный комбинезон с оранжевыми лямками. От него веет злом.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/technician_jumpsuit.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/technician_jumpsuit.rsi
+
+#region Nanotrasen
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitAdjutantAlt
+  name: adjutant's turtleneck
+  description: A blue uniform that is specialized for field operations. Healing toolbox is build-in.
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/Uniforms/Jumpsuit/adjutant_alt.rsi
+    - type: Clothing
+      sprite: _Lua/Clothing/Uniforms/Jumpsuit/adjutant_alt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitTurtleScientist
+  name: scientist's turtleneck
+  description: It's a durable turtleneck for elite sciences in bad conditions.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/scientist_turtle.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/scientist_turtle.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSalvageSpecialistFormal
+  name: salvage specialist's formal jumpsuit
+  description: It's a jumpsuit with a sturdy set of overalls. It's dirty... a bit.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/salvageformal.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/salvageformal.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCryotech
+  name: cryotech jumpsuit
+  description: This is VERY warm turtleneck, it's also very sturdy.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/cryotech.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/cryotech.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitChiefEngineerFormal
+  name: chief engineer's formal jumpsuit
+  description: Formal uniform with trousers for chief of engineers. It's time to shine with gold not only in industry, but also in clothing!
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/ce_formal.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/ce_formal.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPathologist
+  name: комбинезон патологоанатома
+  description: Форма, выдаваемая квалифицированным и прошедшим обучение лицам. Имеется надпись "я не просто работаю с мертвецами, я танцую с ними на их последнем параде!"
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pathologist.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pathologist.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtPathologist
+  name: юбка-комбинезон патологоанатома
+  description: Она изготовлена из специального волокна, обеспечивающего слабую защиту от биологических опасностей. Кто сказал, что стиль должен умирать вместе с пациентами?
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/pathologist.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/pathologist.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPathologistAlt
+  name: хирургический халат
+  description: Гарантированно сбережет ваш гардероб от кровавых подробностей, но мы не уверены в этом.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pathologistalt.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/pathologistalt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNfsdService
+  name: nfsd service jumpsuit
+  description: Coffee-colored jumpsuit with white shirt. It smells like SpaceCleaner, like paper and like cacao.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/nfsd_service.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/nfsd_service.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitAdjutant
+  name: adjutant's jumpsuit
+  description: A jumpsuit, that is made to show status. Status of Command. Command's helper, of course.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/adjutant.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/adjutant.rsi
+
+#region Security NT
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMedicNFSD
+  name: blue security medic uniform
+  description: A blue uniform that is specialized for field operations. Healing toolbox is build-in.
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/Uniforms/Jumpsuit/nfsd_brigmedic_uniform.rsi
+    - type: Clothing
+      sprite: _Lua/Clothing/Uniforms/Jumpsuit/nfsd_brigmedic_uniform.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBrigmedicAlt
+  name: brigmedic's uniform
+  description: Standart red brigmedic's uniform. Much less uncanny than the black one.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/brigmedic.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/brigmedic.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBrigmedicTurtle
+  name: brigmedic's turtleneck
+  description: Red enough to hide spots of 'oh shit' on itself.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/brigmedic_alt.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/brigmedic_alt.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBrigmedicWhite
+  name: white brigmedic's jumpsuit
+  description: There is a rumor, that this type of jumpsuits were created by same brand, that created SpaceCleaner. White, for real guardian angel.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/brigmedic_white.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/brigmedic_white.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitDetectiveFormal
+  name: detective's formal uniform
+  description: Formal uniform, consists of brown jacket, white shirt and a tie.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/detective.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/detective.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitDetectiveFormalBlack
+  name: gray detective's formal uniform
+  description: Formal uniform, consists of black jacket, white shirt and a tie. It's time to play the piano!
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/detective_grey.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/detective_grey.rsi
+
+#region CentCom
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBlueShield
+  name: комбинезон офицера "Синий щит"
+  description: Текстилевый комбинезон, обшитый в некоторых местах толстой кожей.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/blueshield.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/blueshield.rsi
+
+# by inspector_jeleshka
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformCentcomOfficial
+  name: костюм-карандаш офицера Центкома
+  description: Строгий зелёный костюм в стиле "карандаш" придает образу строгость. Облегающий пиджак и прямые брюки создают изысканный силуэт, подходящий для различных событий, от деловых встреч до увольнения капитана.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/pencil_centcom_official.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/pencil_centcom_official.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtOperationsOfficer
+  name: костюм-карандаш офицера КСО
+  description: Строгий чёрный костюм офицера корпуса специальный операций в стиле "карандаш" придает образу строгость. Облегающий пиджак и прямые брюки создают изысканный силуэт, подходящий для различных событий, от деловых встреч до геноцида членов экипажа ненавистной станции номер 14.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/pencil_special_operations_officer.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpskirt/pencil_special_operations_officer.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCentComRep
+  name: central command representative uniform
+  description: A sign of faith and actually just old HoP jumsuit.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/centcom_official.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/Uniforms/Jumpsuit/centcom_official.rsi

@@ -46,6 +46,12 @@ ent-FuelBluespace1 = блюспейс топливо
 ent-FuelBluespace = блюспейс топливо
     .desc = { ent-FuelBluespace1.desc }
 
+ent-RubberStampIAA = печать Агента Внутренних Дел
+    .desc = Великая печать АВД. На документы с этой печатью страшно смотреть.
+
+ent-BriefcaseIAAFilled = чемодан АВД
+    .desc = Полезен для перемещения нужных обьектов.
+
 ent-ADTShipBottle = кораблик в бутылке
     .desc = Загадка века - как кораблик оказался внтури?
 

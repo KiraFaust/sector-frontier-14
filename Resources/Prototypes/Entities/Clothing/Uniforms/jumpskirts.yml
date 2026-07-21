@@ -16,9 +16,9 @@
   description: It's a blue jumpskirt with some gold markings denoting the rank of "Captain".
   components:
   - type: Sprite
-    sprite: _ADT/Clothing/Uniforms/Jumpskirt/captain.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/captain.rsi
   - type: Clothing
-    sprite: _ADT/Clothing/Uniforms/Jumpskirt/captain.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/captain.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -345,9 +345,9 @@
   description: 'What can brown do for you?'
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/Jumpskirt/qm.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/qm.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/Jumpskirt/qm.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/qm.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase # Frontier: remove BaseCommandContraband
@@ -400,9 +400,9 @@
   description: A jumpskirt made of strong material, providing robust protection.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/Jumpskirt/security.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/security.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/Jumpskirt/security.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/security.rsi
 #  - type: Item
 #    inhandVisuals:
 #      left:
@@ -426,9 +426,9 @@
   description: A formal security suit for officers complete with Nanotrasen belt buckle.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/Jumpskirt/warden.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/warden.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/Jumpskirt/warden.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/warden.rsi
 #  - type: Item
 #    inhandVisuals:
 #      left:
@@ -485,9 +485,9 @@
   description: A dress for special occasions.
   components:
   - type: Sprite
-    sprite: _ADT/Clothing/Uniforms/Jumpskirt/capformaldress.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/capformaldress.rsi
   - type: Clothing
-    sprite: _ADT/Clothing/Uniforms/Jumpskirt/capformaldress.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/capformaldress.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -700,9 +700,9 @@
   description: A sign of skill and prestige within the security department.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/Jumpskirt/senior_officer.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/senior_officer.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/Jumpskirt/senior_officer.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/senior_officer.rsi
 #  - type: Item
 #    inhandVisuals:
 #      left:
@@ -725,9 +725,9 @@
   description: A tactical relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood.
   components:
   - type: Sprite
-    sprite: _Lua/Clothing/Uniforms/Jumpskirt/security_grey.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/security_grey.rsi
   - type: Clothing
-    sprite: _Lua/Clothing/Uniforms/Jumpskirt/security_grey.rsi # Lua
+    sprite: Clothing/Uniforms/Jumpskirt/security_grey.rsi
 #  - type: Item
 #    inhandVisuals:
 #      left:

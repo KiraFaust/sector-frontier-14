@@ -2,4 +2,8 @@
   id: DeputyDeputyPDA
   equipment:
     id: DeputyPDA
-    
+
+- type: loadout
+  id: CorporalGefreiterPDA
+  equipment:
+    id: GefreiterPDA

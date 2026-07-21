@@ -1,7 +1,7 @@
 corvax-chatsan-word-1 = хос
-corvax-chatsan-replacement-1 = Полковник
+corvax-chatsan-replacement-1 = Шериф
 corvax-chatsan-word-2 = хоса
-corvax-chatsan-replacement-2 = Полковника
+corvax-chatsan-replacement-2 = Шерифа
 corvax-chatsan-word-3 = смо
 corvax-chatsan-replacement-3 = гв
 corvax-chatsan-word-4 = се

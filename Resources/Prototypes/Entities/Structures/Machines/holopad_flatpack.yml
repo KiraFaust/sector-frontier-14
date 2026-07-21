@@ -33,7 +33,7 @@
 - type: entity
   parent: [ HolopadLongRange, Holopad ]
   id: HolopadSheriff
-  suffix: Полковник
+  suffix: Шериф
   components:
   - type: Label
     currentLabel: holopad-sheriff
@@ -41,7 +41,7 @@
 - type: entity
   parent: [ HolopadLongRange, Holopad ]
   id: HolopadBailiff
-  suffix: Смотритель
+  suffix: Лейтенант
   components:
   - type: Label
     currentLabel: holopad-bailiff
