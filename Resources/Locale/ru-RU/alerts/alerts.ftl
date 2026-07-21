@@ -76,8 +76,3 @@ alerts-deflecting-name = Отражение
 alerts-deflecting-desc = У вас есть шанс отразить входящие снаряды. Стоя на месте или двигаясь медленно, вы увеличиваете этот шанс.
 alerts-offer-name = Получить
 alerts-offer-desc = Кто-то передаёт вам предмет.
-alerts-political-loudspeaker-speed-name = [color=green]Ускорение[/color]
-alerts-political-loudspeaker-speed-desc = Скорость передвижения увеличена.
-
-alerts-political-loudspeaker-fortify-name = [color=green]Укрепление[/color]
-alerts-political-loudspeaker-fortify-desc = Входящий урон снижен.
