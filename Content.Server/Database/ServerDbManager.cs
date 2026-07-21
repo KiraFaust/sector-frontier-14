@@ -205,6 +205,52 @@ namespace Content.Server.Database
         Task UpdateAdminRankAsync(AdminRank rank, CancellationToken cancel = default);
         #endregion
 
+        #region Reputation
+
+        Task<ReputationSummaryRecord> GetReputationSummary(
+            ReputationTargetKind kind,
+            Guid targetUserId,
+            CancellationToken cancel = default);
+
+        Task<ReputationVoteRecord?> TryCreateReputationVote(
+            ReputationTargetKind kind,
+            Guid targetUserId,
+            string targetName,
+            Guid voterUserId,
+            string voterName,
+            ReputationVoteValue value,
+            string? comment,
+            int? roundId,
+            DateTimeOffset now,
+            CancellationToken cancel = default);
+
+        Task<List<ReputationVoteRecord>> GetReputationVotes(
+            ReputationTargetKind kind,
+            Guid targetUserId,
+            bool includeDeleted = false,
+            CancellationToken cancel = default);
+
+        Task<bool> DeleteReputationVote(
+            int id,
+            Guid deletedBy,
+            DateTimeOffset deletedAt,
+            string deleteReason,
+            CancellationToken cancel = default);
+
+        Task IncrementAdminAHelpResolvedCount(
+            Guid adminUserId,
+            DateTimeOffset now,
+            CancellationToken cancel = default);
+
+        Task<AdminAHelpObservRecord> GetAdminAHelpObserv(
+            Guid adminUserId,
+            CancellationToken cancel = default);
+
+        Task<List<AdminAHelpObservRecord>> GetAllAdminAHelpObserv(
+            CancellationToken cancel = default);
+
+        #endregion
+
         #region Rounds
 
         Task<int> AddNewRound(Server server, params Guid[] playerIds);
@@ -312,6 +358,7 @@ namespace Content.Server.Database
         Task CloseSponsor(Guid player, string role, DateTime endDate);
         Task<Sponsor?> GetActiveSponsor(Guid player, string role);
         Task<Sponsor?> GetActiveSponsor(Guid player);
+        Task<List<Sponsor>> GetAllActiveSponsors(Guid player);
 
         #endregion
 
@@ -706,6 +753,76 @@ namespace Content.Server.Database
             return RunDbCommand(() => _db.UpdateAdminRankAsync(rank, cancel));
         }
 
+        public Task<ReputationSummaryRecord> GetReputationSummary(
+            ReputationTargetKind kind,
+            Guid targetUserId,
+            CancellationToken cancel = default)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetReputationSummary(kind, targetUserId, cancel));
+        }
+
+        public Task<ReputationVoteRecord?> TryCreateReputationVote(
+            ReputationTargetKind kind,
+            Guid targetUserId,
+            string targetName,
+            Guid voterUserId,
+            string voterName,
+            ReputationVoteValue value,
+            string? comment,
+            int? roundId,
+            DateTimeOffset now,
+            CancellationToken cancel = default)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.TryCreateReputationVote(kind, targetUserId, targetName, voterUserId, voterName, value, comment, roundId, now, cancel));
+        }
+
+        public Task<List<ReputationVoteRecord>> GetReputationVotes(
+            ReputationTargetKind kind,
+            Guid targetUserId,
+            bool includeDeleted = false,
+            CancellationToken cancel = default)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetReputationVotes(kind, targetUserId, includeDeleted, cancel));
+        }
+
+        public Task<bool> DeleteReputationVote(
+            int id,
+            Guid deletedBy,
+            DateTimeOffset deletedAt,
+            string deleteReason,
+            CancellationToken cancel = default)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.DeleteReputationVote(id, deletedBy, deletedAt, deleteReason, cancel));
+        }
+
+        public Task IncrementAdminAHelpResolvedCount(
+            Guid adminUserId,
+            DateTimeOffset now,
+            CancellationToken cancel = default)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.IncrementAdminAHelpResolvedCount(adminUserId, now, cancel));
+        }
+
+        public Task<AdminAHelpObservRecord> GetAdminAHelpObserv(
+            Guid adminUserId,
+            CancellationToken cancel = default)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetAdminAHelpObserv(adminUserId, cancel));
+        }
+
+        public Task<List<AdminAHelpObservRecord>> GetAllAdminAHelpObserv(
+            CancellationToken cancel = default)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetAllAdminAHelpObserv(cancel));
+        }
+
         public async Task<Server> AddOrGetServer(string serverName)
         {
             var (server, existed) = await RunDbCommand(() => _db.AddOrGetServer(serverName));
@@ -1035,6 +1152,12 @@ namespace Content.Server.Database
         {
             DbReadOpsMetric.Inc();
             return RunDbCommand(() => _db.GetActiveSponsor(player));
+        }
+
+        public Task<List<Sponsor>> GetAllActiveSponsors(Guid player)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetAllActiveSponsors(player));
         }
 
         public Task<bool> CleanIPIntelCache(TimeSpan range)

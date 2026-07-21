@@ -8,11 +8,8 @@
   name: Kettlebell
   description: Небольшой штурмовик с легкими орудиями и неплохой броней
   price: 121841
-  category: Medium
+  category: Small
   group: BlackMarket
-  whitelist:
-  - Luna
-  - Frontier
   class:
   - Pirate
   engine:

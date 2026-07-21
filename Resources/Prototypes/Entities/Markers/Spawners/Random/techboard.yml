@@ -62,6 +62,4 @@
     - AutolatheMachineCircuitboard
     - OreProcessorMachineCircuitboard
     - CircuitImprinterMachineCircuitboard
-    - CoordinatesDiskFrontier
-    - MachineWarpDriveFlatpack
     rareChance: 0.2

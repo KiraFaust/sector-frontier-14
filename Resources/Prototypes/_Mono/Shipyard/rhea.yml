@@ -10,13 +10,10 @@
   name: Rhea
   description: A very small food ship.
   price: 29250
-  category: Medium
+  category: Small
   group: Shipyard
   shuttlePath: /Maps/_Mono/Shuttles/rhea.yml
   guidebookPage: Null
-  whitelist:
-  - Luna
-  - Frontier
   class:
   - Civilian
   - Kitchen

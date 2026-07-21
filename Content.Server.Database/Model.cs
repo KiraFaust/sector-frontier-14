@@ -51,6 +51,8 @@ namespace Content.Server.Database
         public DbSet<IPIntelCache> IPIntelCache { get; set; } = null!;
         public DbSet<Sponsor> Sponsor { get; set; } = null!;
         public DbSet<DynamicMarketEntry> DynamicMarket { get; set; } = null!;
+        public DbSet<ReputationVote> ReputationVotes { get; set; } = null!;
+        public DbSet<AdminAHelpObserv> AdminAHelpObservs { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -161,6 +163,15 @@ namespace Content.Server.Database
 
             modelBuilder.Entity<Player>()
                 .HasIndex(p => p.LastSeenUserName);
+
+            modelBuilder.Entity<ReputationVote>()
+                .HasIndex(v => new { v.TargetKind, v.TargetUserId });
+
+            modelBuilder.Entity<ReputationVote>()
+                .HasIndex(v => new { v.VoterUserId, v.TargetKind, v.TargetUserId, v.Deleted });
+
+            modelBuilder.Entity<ReputationVote>()
+                .HasIndex(v => v.Deleted);
 
             modelBuilder.Entity<ConnectionLog>()
                 .HasIndex(p => p.UserId);
@@ -337,6 +348,19 @@ namespace Content.Server.Database
         [Column("char_name")] public string CharacterName { get; set; } = null!;
         public string FlavorText { get; set; } = null!;
         public int ERPStatus { get; set; }
+        // Erida-Start
+        public string OOCFlavorText { get; set; } = null!;
+        public string CharacterFlavorText { get; set; } = null!;
+        public string GreenFlavorText { get; set; } = null!;
+        public string YellowFlavorText { get; set; } = null!;
+        public string RedFlavorText { get; set; } = null!;
+        public string TagsFlavorText { get; set; } = null!;
+        public string LinksFlavorText { get; set; } = null!;
+        public string NSFWFlavorText { get; set; } = null!;
+        public string NSFWOOCFlavorText { get; set; } = null!;
+        public string NSFWLinksFlavorText { get; set; } = null!;
+        public string NSFWTagsFlavorText { get; set; } = null!;
+        // Erida-End
         public int Age { get; set; }
         public int BankBalance { get; set; }
         public string Sex { get; set; } = null!;
@@ -596,6 +620,64 @@ namespace Content.Server.Database
 
         public int AdminRankId { get; set; }
         public AdminRank Rank { get; set; } = default!;
+    }
+
+    public class ReputationVote
+    {
+        [Required, Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+
+        [Required]
+        public ReputationTargetKind TargetKind { get; set; }
+
+        [Required]
+        public Guid TargetUserId { get; set; }
+
+        [Required, MaxLength(128)]
+        public string TargetNameSnapshot { get; set; } = string.Empty;
+
+        [Required]
+        public Guid VoterUserId { get; set; }
+
+        [Required, MaxLength(128)]
+        public string VoterNameSnapshot { get; set; } = string.Empty;
+
+        [Required]
+        public ReputationVoteValue Value { get; set; }
+
+        [MaxLength(4096)]
+        public string? Comment { get; set; }
+
+        public int? RoundId { get; set; }
+
+        public Round? Round { get; set; }
+
+        [Required]
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime? UpdatedAt { get; set; }
+
+        public bool Deleted { get; set; }
+
+        public Guid? DeletedById { get; set; }
+
+        public DateTime? DeletedAt { get; set; }
+
+        [MaxLength(4096)]
+        public string? DeleteReason { get; set; }
+    }
+
+    [Table("admin_ahelp_observ")]
+    public class AdminAHelpObserv
+    {
+        [Required, Key]
+        public Guid AdminUserId { get; set; }
+
+        [Required]
+        public int ResolvedAhelps { get; set; }
+
+        [Required]
+        public DateTime UpdatedAt { get; set; }
     }
 
     public class Round

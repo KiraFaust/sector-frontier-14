@@ -101,8 +101,6 @@ uplink-pirate-radio-jammer-desc = При активации это устрой�
 uplink-pirate-voicemask-name = Голосовая маска
 uplink-pirate-voicemask-desc = Противогаз, позволяющий подстроить свой голос под кого угодно.
 
-uplink-pirate-sector-banner-name = Секторный баннер Пиратов
-uplink-pirate-sector-banner-desc = Позволяет захватить звезду. Установите баннер на гриде маяка в системе звезды.
 
 uplink-pirate-cash2500-name = Кредиты (2,500)
 uplink-pirate-cash2500-desc = Йарр! Молодец, пират.
@@ -146,7 +144,7 @@ uplink-pirate-anaconda-name = Анаконда
 uplink-pirate-anaconda-desc = Гордость инженеров Cybersun. Портативное, компактное, самоперезаряжающееся баллистическое огнестрельное оружие.
 
 uplink-pirate-wspr-name = WSPR
-uplink-pirate-wspr-desc = Создано против Энни от ДСБФ. Использует те же 7.62x39mm дозвуковые боеприпасы.
+uplink-pirate-wspr-desc = Создано против Энни от СРБС. Использует те же 7.62x39mm дозвуковые боеприпасы.
 
 uplink-pirate-burner-name = Тяжелая винтовка Burner
 uplink-pirate-burner-desc = Разрушительная винтовка калибра 12.7x99mm. Поддерживает боеприпасы HE. Ужасно разрушительна.
@@ -205,16 +203,16 @@ uplink-pirate-box-highcal-he-desc = Коробка с разрывными бо�
 # equipment
 
 uplink-pirate-combat-hardsuit-name = Боевой скафандр
-uplink-pirate-combat-hardsuit-desc = Определенно не просто украденный костюм SCAF. На случай, если вы потеряли свой.
+uplink-pirate-combat-hardsuit-desc = 40/40/60//60/60//40/40 Определенно не просто украденный костюм SCAF. На случай, если вы потеряли свой.
 
 uplink-pirate-viper-group-standard-hardsuit-name = Скафандр JACKAL группы Viper
-uplink-pirate-viper-group-standard-hardsuit-desc = скафандр, украшенный фирменными знаками группы Viper. Броня отличается исключительной маневренностью для своей защиты и имеет встроенную систему ночного видения.
+uplink-pirate-viper-group-standard-hardsuit-desc = 40/40/40//60/60//60/60 скафандр, украшенный фирменными знаками группы Viper. Броня отличается исключительной маневренностью для своей защиты и имеет встроенную систему ночного видения.
 
 uplink-pirate-viper-group-medic-hardsuit-name = Скафандр IMP группы Viper
-uplink-pirate-viper-group-medic-hardsuit-desc = Скафандр, украшенный фирменными знаками группы Viper. Броня имеет различные усиленные пластины в жизненно важных областях и медицинский HUD, дополненный системами термических импульсов.
+uplink-pirate-viper-group-medic-hardsuit-desc = 60/60/60//40/40//40/40 Скафандр, украшенный фирменными знаками группы Viper. Броня имеет различные усиленные пластины в жизненно важных областях и медицинский HUD, дополненный системами термических импульсов.
 
 uplink-pirate-webvest-name = Тактический жилет
-uplink-pirate-webvest-desc = Веб-жилет, провезенный контрабандой в сектор, который не был потрёпан при перевозке, как те, что используются авантюристами. Отличная устойчивость к пулям, плохая устойчивость к ожогам.
+uplink-pirate-webvest-desc = Веб-жилет, провезенный контрабандой в сектор, который не был потрёпан при перевозке, как те, что используются Гражданскими. Отличная устойчивость к пулям, плохая устойчивость к ожогам.
 
 uplink-pirate-syndie-mask-name = Противогаз Синдиката
 uplink-pirate-syndie-mask-desc = Тактическая маска, провезенная в сектор, которую можно подключить к системе подачи воздуха.

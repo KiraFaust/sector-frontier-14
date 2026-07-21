@@ -283,6 +283,19 @@ namespace Content.Server.Database
                 profile.CharacterName,
                 profile.FlavorText,
                 profile.ERPStatus,
+                // Erida-Start
+                profile.OOCFlavorText,
+                profile.CharacterFlavorText,
+                profile.GreenFlavorText,
+                profile.YellowFlavorText,
+                profile.RedFlavorText,
+                profile.TagsFlavorText,
+                profile.LinksFlavorText,
+                profile.NSFWFlavorText,
+                profile.NSFWOOCFlavorText,
+                profile.NSFWLinksFlavorText,
+                profile.NSFWTagsFlavorText,
+                // Erida-End
                 profile.Species,
                 voice, // Corvax-TTS
                 profile.Age,
@@ -323,6 +336,19 @@ namespace Content.Server.Database
             profile.CharacterName = humanoid.Name;
             profile.FlavorText = humanoid.FlavorText;
             profile.ERPStatus = (int)humanoid.ERPStatus; //Lua
+            // Erida-Start
+            profile.OOCFlavorText = humanoid.OOCFlavorText;
+            profile.CharacterFlavorText = humanoid.CharacterFlavorText;
+            profile.GreenFlavorText = humanoid.GreenFlavorText;
+            profile.YellowFlavorText = humanoid.YellowFlavorText;
+            profile.RedFlavorText = humanoid.RedFlavorText;
+            profile.TagsFlavorText = humanoid.TagsFlavorText;
+            profile.LinksFlavorText = humanoid.LinksFlavorText;
+            profile.NSFWFlavorText = humanoid.NSFWFlavorText;
+            profile.NSFWLinksFlavorText = humanoid.NSFWLinksFlavorText;
+            profile.NSFWOOCFlavorText = humanoid.NSFWOOCFlavorText;
+            profile.NSFWTagsFlavorText = humanoid.NSFWTagsFlavorText;
+            // Erida-End
             profile.Species = humanoid.Species;
             profile.Voice = humanoid.Voice; // Corvax-TTS
             profile.Age = humanoid.Age;
@@ -953,6 +979,160 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
             await db.DbContext.SaveChangesAsync(cancel);
         }
+
+        #endregion
+
+        #region Reputation
+
+        public async Task<ReputationSummaryRecord> GetReputationSummary(
+            ReputationTargetKind kind,
+            Guid targetUserId,
+            CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+            return await GetReputationSummary(db.DbContext, kind, targetUserId, cancel);
+        }
+
+        private static async Task<ReputationSummaryRecord> GetReputationSummary(
+            ServerDbContext db,
+            ReputationTargetKind kind,
+            Guid targetUserId,
+            CancellationToken cancel = default)
+        {
+            var query = db.ReputationVotes
+                .Where(v => v.TargetKind == kind && v.TargetUserId == targetUserId && !v.Deleted);
+
+            var score = await query.SumAsync(v => (int) v.Value, cancel);
+            var activeVotes = await query.CountAsync(cancel);
+            var positiveVotes = await query.CountAsync(v => v.Value == ReputationVoteValue.Like, cancel);
+            var negativeVotes = await query.CountAsync(v => v.Value == ReputationVoteValue.Dislike, cancel);
+            var targetName = await db.ReputationVotes
+                .Where(v => v.TargetKind == kind && v.TargetUserId == targetUserId)
+                .OrderByDescending(v => v.UpdatedAt ?? v.CreatedAt)
+                .Select(v => v.TargetNameSnapshot)
+                .FirstOrDefaultAsync(cancel) ?? string.Empty;
+
+            return new ReputationSummaryRecord(
+                kind,
+                targetUserId,
+                targetName,
+                Math.Clamp(score, ReputationConstants.MinScore, ReputationConstants.MaxScore),
+                activeVotes,
+                positiveVotes,
+                negativeVotes);
+        }
+
+        public async Task<ReputationVoteRecord?> TryCreateReputationVote(
+            ReputationTargetKind kind,
+            Guid targetUserId,
+            string targetName,
+            Guid voterUserId,
+            string voterName,
+            ReputationVoteValue value,
+            string? comment,
+            int? roundId,
+            DateTimeOffset now,
+            CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+            var nowUtc = now.UtcDateTime;
+            var cooldownStart = nowUtc - ReputationConstants.VoteCooldown;
+
+            var hasRecentVote = await db.DbContext.ReputationVotes
+                .Where(v => v.TargetKind == kind &&
+                            v.TargetUserId == targetUserId &&
+                            v.VoterUserId == voterUserId &&
+                            !v.Deleted &&
+                            v.CreatedAt >= cooldownStart)
+                .AnyAsync(cancel);
+
+            if (hasRecentVote)
+                return null;
+
+            var vote = new ReputationVote
+            {
+                TargetKind = kind,
+                TargetUserId = targetUserId,
+                TargetNameSnapshot = targetName,
+                VoterUserId = voterUserId,
+                VoterNameSnapshot = voterName,
+                Value = value,
+                Comment = comment,
+                RoundId = roundId,
+                CreatedAt = nowUtc,
+            };
+
+            db.DbContext.ReputationVotes.Add(vote);
+
+            await db.DbContext.SaveChangesAsync(cancel);
+            return MakeReputationVoteRecord(vote);
+        }
+
+        public async Task<List<ReputationVoteRecord>> GetReputationVotes(
+            ReputationTargetKind kind,
+            Guid targetUserId,
+            bool includeDeleted = false,
+            CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+
+            var query = db.DbContext.ReputationVotes
+                .Where(v => v.TargetKind == kind && v.TargetUserId == targetUserId);
+
+            if (!includeDeleted)
+                query = query.Where(v => !v.Deleted);
+
+            var votes = await query
+                .OrderByDescending(v => v.UpdatedAt ?? v.CreatedAt)
+                .ToListAsync(cancel);
+
+            return votes.Select(MakeReputationVoteRecord).ToList();
+        }
+
+        public async Task<bool> DeleteReputationVote(
+            int id,
+            Guid deletedBy,
+            DateTimeOffset deletedAt,
+            string deleteReason,
+            CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+
+            var vote = await db.DbContext.ReputationVotes
+                .Where(v => v.Id == id)
+                .SingleOrDefaultAsync(cancel);
+
+            if (vote == null || vote.Deleted)
+                return false;
+
+            vote.Deleted = true;
+            vote.DeletedById = deletedBy;
+            vote.DeletedAt = deletedAt.UtcDateTime;
+            vote.DeleteReason = deleteReason;
+
+            await db.DbContext.SaveChangesAsync(cancel);
+            return true;
+        }
+
+        private ReputationVoteRecord MakeReputationVoteRecord(ReputationVote vote)
+        {
+            return new ReputationVoteRecord(
+                vote.Id,
+                vote.TargetKind,
+                vote.TargetUserId,
+                vote.TargetNameSnapshot,
+                vote.VoterUserId,
+                vote.VoterNameSnapshot,
+                vote.Value,
+                vote.Comment,
+                vote.RoundId,
+                NormalizeDatabaseTime(vote.CreatedAt),
+                NormalizeDatabaseTime(vote.UpdatedAt),
+                vote.Deleted,
+                vote.DeletedById,
+                NormalizeDatabaseTime(vote.DeletedAt),
+                vote.DeleteReason);
+        }
         #endregion
 
         #region Admin Logs
@@ -1025,6 +1205,72 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                     retryDelay *= 2;
                 }
             }
+        }
+
+        public async Task IncrementAdminAHelpResolvedCount(
+            Guid adminUserId,
+            DateTimeOffset now,
+            CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+
+            var row = await db.DbContext.AdminAHelpObservs
+                .SingleOrDefaultAsync(x => x.AdminUserId == adminUserId, cancel);
+
+            if (row == null)
+            {
+                row = new AdminAHelpObserv
+                {
+                    AdminUserId = adminUserId,
+                    ResolvedAhelps = 1,
+                    UpdatedAt = now.UtcDateTime,
+                };
+
+                db.DbContext.AdminAHelpObservs.Add(row);
+            }
+            else
+            {
+                row.ResolvedAhelps += 1;
+                row.UpdatedAt = now.UtcDateTime;
+            }
+
+            await db.DbContext.SaveChangesAsync(cancel);
+        }
+
+        public async Task<AdminAHelpObservRecord> GetAdminAHelpObserv(
+            Guid adminUserId,
+            CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+
+            var row = await db.DbContext.AdminAHelpObservs
+                .SingleOrDefaultAsync(x => x.AdminUserId == adminUserId, cancel);
+
+            if (row == null)
+                return new AdminAHelpObservRecord(adminUserId, 0, null);
+
+            return MakeAdminAHelpObservRecord(row);
+        }
+
+        public async Task<List<AdminAHelpObservRecord>> GetAllAdminAHelpObserv(
+            CancellationToken cancel = default)
+        {
+            await using var db = await GetDb(cancel);
+
+            var rows = await db.DbContext.AdminAHelpObservs
+                .OrderByDescending(x => x.ResolvedAhelps)
+                .ThenBy(x => x.AdminUserId)
+                .ToListAsync(cancel);
+
+            return rows.Select(MakeAdminAHelpObservRecord).ToList();
+        }
+
+        private AdminAHelpObservRecord MakeAdminAHelpObservRecord(AdminAHelpObserv observ)
+        {
+            return new AdminAHelpObservRecord(
+                observ.AdminUserId,
+                observ.ResolvedAhelps,
+                NormalizeDatabaseTime(observ.UpdatedAt));
         }
 
         protected abstract IQueryable<AdminLog> StartAdminLogsQuery(ServerDbContext db, LogFilter? filter = null);
@@ -1729,6 +1975,16 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 .Where(s => s.EndDate == null)
                 .OrderByDescending(s => s.StartDate)
                 .FirstOrDefaultAsync();
+        }
+
+        public async Task<List<Sponsor>> GetAllActiveSponsors(Guid player)
+        {
+            await using var db = await GetDb();
+
+            return await db.DbContext.Set<Sponsor>()
+                .Where(s => s.PlayerUserId == player)
+                .Where(s => s.EndDate == null)
+                .ToListAsync();
         }
 
         #endregion

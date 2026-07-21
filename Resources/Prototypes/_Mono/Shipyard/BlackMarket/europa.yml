@@ -9,14 +9,12 @@
   group: BlackMarket
   shuttlePath: /Maps/_Mono/Shuttles/BlackMarket/europa.yml
   guidebookPage: Null
-  whitelist:
-  - Luna
-  - Frontier
   class:
   - Pirate
+  - Medical # Lua
   - Capital
   engine:
-  - AME
+  - Bluespace # Lua
 
 - type: gameMap
   id: Europa

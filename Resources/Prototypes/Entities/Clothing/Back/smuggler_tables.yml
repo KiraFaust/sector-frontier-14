@@ -234,7 +234,7 @@
     - id: ReagentGrinderIndustrialMachineCircuitboard
     - id: BoozeDispenserMachineCircuitboard
     - id: MiniGravityGeneratorCircuitboard
-    - id: AmmoTechFabCircuitboard
+#    - id: AmmoTechFabCircuitboard # comment from _Lua
     - id: CryoPodMachineCircuitboard
     - id: PowerCageRechargerCircuitboard
     - id: ShuttleConsoleCircuitboard
@@ -638,8 +638,6 @@
     - id: SpectralLocator
     - id: ArabianLamp
       weight: 0.50
-    - id: ChameleonProjector
-      weight: 0.25
 
 - type: entityTable #10x tiny
   id: CubeTable

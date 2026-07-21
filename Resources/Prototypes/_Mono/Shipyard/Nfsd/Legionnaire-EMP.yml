@@ -15,15 +15,13 @@
   access: Security
   shuttlePath: /Maps/_Mono/Shuttles/Nfsd/Legionnaire-EMP.yml
   guidebookPage: Null
-  whitelist:
-  - Luna
-  - Frontier
   class:
+  - Nfsd # Lua
+  - Medical # Lua
   - Patrol
   - Pursuit
-  - Nfsd
   engine:
-  - Uranium
+  - AME # Lua
 
 - type: gameMap
   id: Legionnaire-EMP

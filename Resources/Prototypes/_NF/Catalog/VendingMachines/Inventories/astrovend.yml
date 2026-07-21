@@ -1,7 +1,6 @@
 - type: vendingMachineInventory
   id: AstroVendInventory
   startingInventory:
-    CoordinatesDiskFrontier: 4294967295
     StargateMinimapTablet: 4294967295
     StargateMinimapDisk: 4294967295
     NFWeaponHoloflareGun: 5
@@ -11,6 +10,7 @@
     RadioHandheldNF: 15
     ClothingMaskGas: 10
     JetpackMiniFilled: 10
+    GliderFilled: 3
     HandHeldMassScanner: 10
     AppraisalCartridge: 3
 # Keys
@@ -41,7 +41,6 @@
 - type: vendingMachineInventory
   id: AstroVendPOIInventory
   startingInventory:
-    CoordinatesDiskFrontier: 4294967295
     NFWeaponHoloflareGun: 4294967295 # Infinite
     ClothingOuterHardsuitSpatio: 4294967295 # Infinite
     ClothingShoesBootsMag: 4294967295 # Infinite

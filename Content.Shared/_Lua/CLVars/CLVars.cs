@@ -20,7 +20,21 @@ namespace Content.Shared.Lua.CLVar
         public static readonly CVarDef<string> TransferApiSecret = CVarDef.Create("transfer.api.secret", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
 
         public static readonly CVarDef<bool> NetDynamicTick =
-            CVarDef.Create("net.dynamictick", false, CVar.ARCHIVE | CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("net.dynamictick.enabled", false, CVar.ARCHIVE | CVar.SERVER | CVar.REPLICATED);
+        public static readonly CVarDef<int> NetDynamicTickMinTickrate =
+            CVarDef.Create("net.dynamictick.min_tickrate", 10, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<int> NetDynamicTickMaxTickrate =
+            CVarDef.Create("net.dynamictick.max_tickrate", 30, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> NetDynamicTickCheckInterval =
+            CVarDef.Create("net.dynamictick.check_interval", 1f, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> NetDynamicTickLowFpsMin =
+            CVarDef.Create("net.dynamictick.low_fps_min", 1f, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> NetDynamicTickLowFpsMax =
+            CVarDef.Create("net.dynamictick.low_fps_max", 20f, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> NetDynamicTickDecreaseDelay =
+            CVarDef.Create("net.dynamictick.decrease_delay", 15f, CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<float> NetDynamicTickIncreaseDelay =
+            CVarDef.Create("net.dynamictick.increase_delay", 1200f, CVar.SERVERONLY | CVar.ARCHIVE);
 
         public static readonly CVarDef<int> TransferMaxAmountPerOperation =
             CVarDef.Create("yupi.transfer.max_amount_per_operation", 50_000, CVar.SERVER | CVar.ARCHIVE);
@@ -29,13 +43,6 @@ namespace Content.Shared.Lua.CLVar
         /// </summary>
         public static readonly CVarDef<bool> GridFillCentcomm =
             CVarDef.Create("shuttle.grid_fill_centcom", true, CVar.SERVERONLY);
-
-        /// <summary>
-        /// Включение/отключение Автоудаления Шаттлов..
-        /// </summary>
-        public static readonly CVarDef<bool> AutoDelteEnabled =
-            CVarDef.Create("shuttle.autodelete_enabled", true, CVar.SERVERONLY | CVar.ARCHIVE,
-                "Отключить или включить автоудаление шаттлов.");
 
         /// <summary>
         /// Включение/отключение PVE-зон..
@@ -59,14 +66,21 @@ namespace Content.Shared.Lua.CLVar
             CVarDef.Create("starmap.data_id", "StarmapData", CVar.ARCHIVE);
         public static readonly CVarDef<bool> StarmapLazyLoading =
             CVarDef.Create("starmap.lazy_loading", true, CVar.ARCHIVE);
+        public static readonly CVarDef<bool> StarmapRequireSectorDisks =
+            CVarDef.Create("starmap.require_sector_disks", false, CVar.SERVERONLY | CVar.ARCHIVE);
         public static readonly CVarDef<bool> StargateGuideShown =
             CVarDef.Create("stargate.guide_shown", false, CVar.CLIENTONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<bool> FactionWarsGuideShown =
+            CVarDef.Create("faction_wars.guide_shown", false, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<int> ActionsActivePreset =
+            CVarDef.Create("actions.active_preset", 0, CVar.CLIENTONLY | CVar.ARCHIVE);
 
         public static readonly CVarDef<string> RabbitMQConnectionString =
             CVarDef.Create("rabbitmq.connection_string", "", CVar.SERVERONLY);
 
         public static readonly CVarDef<bool> IsERP =
-            CVarDef.Create("ic.erp", false, CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("ic.erp", true, CVar.SERVER | CVar.REPLICATED);
 
         /*
          *  World Gen
@@ -88,7 +102,7 @@ namespace Content.Shared.Lua.CLVar
             CVarDef.Create("lua.worldgen.typan_cargo_depots", 1, CVar.SERVERONLY);
 
         public static readonly CVarDef<bool> AsteroidSectorEnabled =
-            CVarDef.Create("game.asteroid_sector_enabled", false, CVar.SERVERONLY);
+            CVarDef.Create("game.asteroid_sector_enabled", true, CVar.SERVERONLY);
 
         /// <summary>
         /// Интервал автоматической выдачи зарплаты в секундах 3600 = 1 час.
@@ -143,19 +157,26 @@ namespace Content.Shared.Lua.CLVar
         public static readonly CVarDef<float> SpaceWhaleDespawnLifetimeMinutes =
             CVarDef.Create("spacewhale.despawn_lifetime_minutes", 20f, CVar.SERVERONLY | CVar.ARCHIVE);
 
-        public static readonly CVarDef<bool> ShuttleFreezeEnabled =
-            CVarDef.Create("shuttle.freeze.enabled", true, CVar.SERVERONLY);
-        public static readonly CVarDef<float> ShuttleFreezeDelay =
-            CVarDef.Create("shuttle.freeze.delay", 30f, CVar.SERVERONLY);
-        public static readonly CVarDef<float> ShuttleFreezeCheckInterval =
-            CVarDef.Create("shuttle.freeze.check_interval", 30f, CVar.SERVERONLY);
-        public static readonly CVarDef<float> ShuttleFreezeProximityTiles =
-            CVarDef.Create("shuttle.freeze.proximity_tiles", 3f, CVar.SERVERONLY);
-        public static readonly CVarDef<float> ShuttleFreezeUnfreezeInterval =
-            CVarDef.Create("shuttle.freeze.unfreeze_interval", 1f, CVar.SERVERONLY);
-
         public static readonly CVarDef<bool> StargateEnabled =
             CVarDef.Create("stargate.enabled", true, CVar.SERVERONLY);
+
+        public static readonly CVarDef<bool> StargateWorldSavesEnabled =
+            CVarDef.Create("stargate.world_saves_enabled", true, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<int> StargateWorldSaveAfterFrozenMinutes =
+            CVarDef.Create("stargate.world_save_after_frozen_minutes", 120, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<int> StargateWorldFreezeDelaySeconds =
+            CVarDef.Create("stargate.world_freeze_delay_seconds", 30, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<float> StargateWorldFreezeCheckIntervalSeconds =
+            CVarDef.Create("stargate.world_freeze_check_interval_seconds", 10f, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<int> StargateWorldSaveCompressLevel =
+            CVarDef.Create("stargate.world_save_compress_level", 3, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<bool> StargateWorldClearSavesOnRoundEnd =
+            CVarDef.Create("stargate.world_clear_saves_on_round_end", true, CVar.SERVERONLY | CVar.ARCHIVE);
 
         public static readonly CVarDef<bool> SalvageExpeditionEnabled =
             CVarDef.Create("salvage.expedition.enabled", true, CVar.SERVERONLY);
@@ -168,5 +189,38 @@ namespace Content.Shared.Lua.CLVar
             CVarDef.Create("npc.smart_despawn_dead_timeout", 600f, CVar.SERVERONLY);
         public static readonly CVarDef<float> NpcSmartDespawnCheckInterval =
             CVarDef.Create("npc.smart_despawn_check_interval", 10f, CVar.SERVERONLY);
+
+        public static readonly CVarDef<string> SponsorMusicApiUrl =
+            CVarDef.Create("sponsor_music.api_url", "", CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<string> SponsorMusicApiToken =
+            CVarDef.Create("sponsor_music.api_token", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+        public static readonly CVarDef<string> LunaCoinApiUrl =
+            CVarDef.Create("lunacoin.api_url", "", CVar.SERVERONLY | CVar.ARCHIVE);
+        public static readonly CVarDef<string> LunaCoinApiToken =
+            CVarDef.Create("lunacoin.api_token", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
+        public static readonly CVarDef<string> LunaCoinServerName =
+            CVarDef.Create("lunacoin.server_name", "luna", CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<bool> FactionWarEnabled =
+            CVarDef.Create("lua.faction_war.enabled", true, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<int> FactionWarPrimeStartHour =
+            CVarDef.Create("lua.faction_war.prime_start_hour", 22, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<int> FactionWarPrimeEndHour =
+            CVarDef.Create("lua.faction_war.prime_end_hour", 3, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<int> FactionWarCaptureRequiredAttackers =
+            CVarDef.Create("lua.faction_war.capture_required_attackers", 6, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<int> FactionWarCaptureDurationSeconds =
+            CVarDef.Create("lua.faction_war.capture_duration_seconds", 600, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<int> FactionWarDeclarationLockHours =
+            CVarDef.Create("lua.faction_war.declaration_lock_hours", 24, CVar.SERVERONLY | CVar.ARCHIVE);
+
+        public static readonly CVarDef<int> CompanyChangeLimitPerFactionPerRound =
+            CVarDef.Create("lua.company.change_faction_limit", 1, CVar.SERVERONLY | CVar.ARCHIVE);
     }
 }

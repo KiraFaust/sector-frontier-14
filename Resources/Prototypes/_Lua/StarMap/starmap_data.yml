@@ -21,9 +21,10 @@
       station: Beacon
       worldgenConfig: AsteroidSectorDefault
       autoStart: true
-      defaultGamePreset: NFPirate
-      requiredGamePresets: [ NFPirate, LuaAdventure ]
-      parallaxPool: [ MercenaryPlanet, LuaDarkSpace, LuaSpace, AspidParallax, BagelStation, CoreStation, OriginStation, TrainStation, KettleStation, Sky, Asteroids, Default, Xmas ]
+      defaultGamePreset: LuaAdventure
+      requiredGamePresets: [ LuaAdventure ]
+#      parallaxPool: [ MercenaryPlanet, LuaDarkSpace, LuaSpace, AspidParallax, BagelStation, CoreStation, OriginStation, TrainStation, KettleStation, Sky, Asteroids, Default, Xmas ]
+      parallaxPool: [LuaDarkSpace, Tortuga] # Корелляция для будущего лора поля астероидов
       deadDropEnabled: true
       deadDropCount: 8
       poiGroups:
@@ -37,28 +38,10 @@
 
     - id: TypanSector
       name: "Сектор Нордфолл"
-      position: "6.849328, 6.1968246"
-      starType: sector
-      color: "#990816"
-      station: Typan
-      worldgenConfig: Default
-      autoStart: true
-      defaultGamePreset: NFPirate
-      requiredGamePresets: [ NFPirate ]
-      parallaxPool: [ OriginStation, NordFoll ]
-      bluespaceEventsEnabled: false
-      crewMonitoringIsolated: true
-      poiGroups:
-        - group: TypanCargoDepot
-          count: 1
-
-    - id: TypanSectorLua
-      name: "Сектор Нордфолл"
       position: "6.9, 6"
       starType: sector
       color: "#990816"
       station: TypanLua
-      worldgenConfig: Default
       autoStart: true
       defaultGamePreset: LuaAdventure
       requiredGamePresets: [ LuaAdventure ]
@@ -69,39 +52,25 @@
         - group: TypanCargoDepot
           count: 1
 
-    - id: LuaTechSector
-      name: "Сектор LuaTech"
-      position: "-47.868465, 23.180416"
-      starType: sector
-      color: "#2595db"
-      station: LuaTech
-      autoStart: true
-      defaultGamePreset: NFPirate
-      requiredGamePresets: [ NFPirate, LuaAdventure ]
-      parallaxPool: [ LuaDarkSpace ]
-      bluespaceEventsEnabled: false
-      crewMonitoringIsolated: true
+    # - id: LuaTechSector
+    #   name: "Сектор LuaTech"
+    #   position: "-47.868465, 23.180416"
+    #   starType: sector
+    #   color: "#2595db"
+    #   station: LuaTech
+    #   autoStart: true
+    #   defaultGamePreset: LuaAdventure
+    #   requiredGamePresets: [ LuaAdventure ]
+    #   parallaxPool: [ LuaDarkSpace ]
+    #   bluespaceEventsEnabled: false
+    #   crewMonitoringIsolated: true
 
     - id: PirateSector
-      name: "Сектор Пиратов"
-      position: "-0.68800503, 3.7413952"
-      starType: sector
-      color: "#8A6642"
-      station: Cove
-      autoStart: true
-      defaultGamePreset: NFPirate
-      requiredGamePresets: [ NFPirate ]
-      parallaxPool: [ CoreStation, Tortuga ]
-      deadDropEnabled: true
-      bluespaceEventsEnabled: false
-      crewMonitoringIsolated: true
-
-    - id: PirateSectorLua
       name: "Сектор Пиратов"
       position: "-0.80699396, 4.2081265"
       starType: sector
       color: "#8A6642"
-      station: CoveLua
+      station: Murena #Lua Cove<Murena
       autoStart: true
       defaultGamePreset: LuaAdventure
       requiredGamePresets: [ LuaAdventure ]
@@ -109,28 +78,29 @@
       deadDropEnabled: true
       bluespaceEventsEnabled: false
       crewMonitoringIsolated: true
+      poiGroups:
+        - group: PirateCove
+          count: 1
 
-    - id: MercenarySector
-      name: "Сектор Наёмников"
-      position: "22.862686, -20.10457"
-      starType: sector
-      color: "#182faf"
-      station: MercMap
-      autoStart: true
-      defaultGamePreset: NFPirate
-      requiredGamePresets: [ NFPirate, LuaAdventure ]
-      parallaxPool: [ MercenaryPlanet, Sky ]
-      deadDropEnabled: true
-      deadDropCount: 1
-      bluespaceEventsEnabled: false
-      crewMonitoringIsolated: true
+    # - id: MercenarySector # Наёмники теперь спавнятся на ЧР в Поле Астероидов
+    #   name: "Сектор Наёмников"
+    #   position: "22.862686, -20.10457"
+    #   starType: sector
+    #   color: "#182faf"
+    #   station: MercMap
+    #   autoStart: true
+    #   defaultGamePreset: LuaAdventure
+    #   requiredGamePresets: [ LuaAdventure ]
+    #   parallaxPool: [ MercenaryPlanet, Sky ]
+    #   deadDropEnabled: true
+    #   deadDropCount: 1
+    #   bluespaceEventsEnabled: false
+    #   crewMonitoringIsolated: true
 
   hyperlanes:
     - [ FrontierSector, AsteroidSectorDefault ]
     - [ AsteroidSectorDefault, TypanSector ]
-    - [ AsteroidSectorDefault, TypanSectorLua ]
-    - [ AsteroidSectorDefault, LuaTechSector ]
+    # - [ AsteroidSectorDefault, LuaTechSector ]
     - [ AsteroidSectorDefault, PirateSector ]
-    - [ AsteroidSectorDefault, PirateSectorLua ]
-    - [ AsteroidSectorDefault, MercenarySector ]
+    # - [ AsteroidSectorDefault, MercenarySector ] # Наёмники теперь спавнятся на ЧР в Поле Астероидов
     - [ CentCom, FrontierSector ]

@@ -7,15 +7,22 @@
   name: job-name-vip
   description: job-description-vip
   playTimeTracker: JobVip
+  requiredCompany: Nanotrasen
   whitelisted: true
 #  sponsorOnly: true
   startingGear: VipGear
   canBeAntag: true
   icon: "JobIconVip"
   supervisors: job-supervisors-hire
+  displayWeight: 35
   setPreference: true
   accessGroups: # Frontier
   - GeneralAccess # Frontier
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: VipGear

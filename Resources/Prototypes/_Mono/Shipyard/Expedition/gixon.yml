@@ -14,14 +14,11 @@
   group: Expedition
   shuttlePath: /Maps/_Mono/Shuttles/Expedition/gixon.yml
   guidebookPage: Null
-  whitelist:
-  - Luna
-  - Frontier
   class:
   - Civilian
   - Expedition
-  - Science
   - Salvage
+  - Science # Lua
   engine:
   - Bananium
 

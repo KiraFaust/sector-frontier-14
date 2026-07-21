@@ -12,12 +12,12 @@
   category: Medium
   group: Expedition
   shuttlePath: /Maps/_Lua/Shuttles/Expedition/ilmus.yml
-  whitelist:
-  - Luna
-  - Frontier
   class:
-  - Expedition
   - Civilian
+  - Expedition # Lua
+  - Medical # Lua
+  - Kitchen # Lua
+  - Salvage # Lua
   engine:
   - AME
 

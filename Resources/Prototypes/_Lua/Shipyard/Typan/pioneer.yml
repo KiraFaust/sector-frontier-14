@@ -8,16 +8,14 @@
   name: Pioneer
   description: Корабль для секретных заданий и конспирации
   price: 42646
-  category: Small
+  category: Micro
   group: Typan
   access: SyndicateAgent
-  whitelist:
-  - Luna
-  - Frontier
   class:
   - Syndicate
+  - Expedition # Lua
   engine:
-  - Singularity
+  - Uranium # Lua
   shuttlePath: /Maps/_Lua/Shuttles/Typan/pioneer.yml
 
 - type: gameMap

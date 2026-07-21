@@ -51,7 +51,7 @@ namespace Content.Shared.Administration
         /// </summary>
         public bool CanScript()
         {
-            return HasFlag(AdminFlags.Host);
+            return false;
         }
 
         /// <summary>
@@ -71,6 +71,16 @@ namespace Content.Shared.Administration
         }
 
         public bool CanAdminReloadPrototypes()
+        {
+            return HasFlag(AdminFlags.Host);
+        }
+
+        public bool CanModeratePlayerReputation()
+        {
+            return HasFlag(AdminFlags.Repo) || HasFlag(AdminFlags.Host);
+        }
+
+        public bool CanModerateAdminReputation()
         {
             return HasFlag(AdminFlags.Host);
         }

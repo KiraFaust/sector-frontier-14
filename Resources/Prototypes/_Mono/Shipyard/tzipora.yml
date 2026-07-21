@@ -15,13 +15,12 @@
   group: Medical
   shuttlePath: /Maps/_Mono/Shuttles/tzipora.yml
   guidebookPage: null
-  whitelist:
-  - Luna
-  - Frontier
   class:
   - Civilian
   - Medical
+  - Paramedical # Lua
   - Chemistry
+  - Cryogenic # Lua
   engine:
   - AME
 

@@ -10,13 +10,11 @@
   category: Micro
   group: Typan
   access: SyndicateAgent
-  whitelist:
-  - Luna
-  - Frontier
   class:
   - Syndicate
+  - Patrol # Lua
   engine:
-  - Singularity
+  - Plasma # Lua
   shuttlePath: /Maps/_Lua/Shuttles/Typan/ganger.yml
 
 - type: gameMap

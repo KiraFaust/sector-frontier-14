@@ -14,14 +14,11 @@
   access: SyndicateAgent
   shuttlePath: /Maps/_Lua/Shuttles/Typan/Lancelot.yml
   guidebookPage: Null
-  whitelist:
-  - Luna
-  - Frontier
   class:
-  - Capital
   - Syndicate
+  - Capital # Lua
   engine:
-  - AME
+  - Bluespace # Lua
 
 - type: gameMap
   id: Lancelot

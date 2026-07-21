@@ -7,9 +7,11 @@
   components:
   - type: Sprite
     # sprite: _NF/Structures/Machines/cryopod.rsi
+    noRot: true
     sprite: _Lua/Structures/cryopod.rsi # Lua
     #snapCardinals: true # Frontier Чтобы это пофиксить я потратил 19 часов....
     layers:
+    # - state: opened
     - state: closed
   - type: Physics
     bodyType: Static
@@ -28,6 +30,7 @@
   - type: Appearance
   - type: Climbable
   - type: CryoSleep
+    shouldReopenRole: false # Lua
   - type: Construction
     graph: MachineCryoSleepPod
     node: MachineCryoSleepPod
@@ -43,8 +46,10 @@
   suffix: player
   components:
   - type: Sprite
+    noRot: true
     sprite: _Lua/Structures/cryopod.rsi
     layers:
+    # - state: opened
     - state: closed
   - type: Physics
     bodyType: Static
@@ -63,6 +68,7 @@
   - type: Appearance
   - type: Climbable
   - type: CryoSleep
+    shouldReopenRole: false # Lua
   - type: Construction
     graph: MachineCryoSleepPod
     node: MachineCryoSleepPod

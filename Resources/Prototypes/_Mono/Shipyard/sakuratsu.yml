@@ -14,13 +14,10 @@
   group: Shipyard
   shuttlePath: /Maps/_Mono/Shuttles/sakuratsu.yml
   guidebookPage: null
-  whitelist:
-  - Luna
-  - Frontier
   class:
   - Civilian
-  - Science
   - Salvage
+  - Science # Lua
   engine:
   - Uranium
 

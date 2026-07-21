@@ -5,13 +5,9 @@
   - GateShadowSnow
   - GateShadowDesert
   - GateCavesShadow
-  dungeonConfigs:
-  - NFHaunted
-  - GateHauntedOutpost
-  - GateSmallOutpost
-  - GateScatteredCaches
+  dungeonPool: true
   dungeonCountMin: 1
-  dungeonCountMax: 8
+  dungeonCountMax: 3
   dungeonDistanceMin: 35
   dungeonDistanceMax: 90
   worldRadiusMin: 215
@@ -31,7 +27,7 @@
   airMods:
   - GateAirPoisoned
   - GateAirToxic
-  weight: 0.5
+  weight: 0.04
 
 - type: stargatePlanetPreset
   id: SGPresetShadowHellscape
@@ -39,14 +35,9 @@
   - GateShadowLava
   - GateLavaShadow
   - GateInferno
-  dungeonConfigs:
-  - NFHaunted
-  - NFLavaBrig
-  - GateHauntedOutpost
-  - GateLavaOutpost
-  - GateScatteredCaches
+  dungeonPool: true
   dungeonCountMin: 1
-  dungeonCountMax: 8
+  dungeonCountMax: 3
   dungeonDistanceMin: 35
   dungeonDistanceMax: 80
   worldRadiusMin: 215
@@ -67,7 +58,7 @@
   airMods:
   - GateAirPlasmaTrace
   - GateAirHeavyToxic
-  weight: 0.3
+  weight: 0.07
 
 - type: stargatePlanetPreset
   id: SGPresetCursedWastes
@@ -76,11 +67,9 @@
   - GateShadowDesert
   - GateDesertCaves
   - GateWasteland
-  dungeonConfigs:
-  - GateScatteredCaches
-  - NFVirologyLab
+  dungeonPool: true
   dungeonCountMin: 1
-  dungeonCountMax: 8
+  dungeonCountMax: 3
   dungeonDistanceMin: 45
   dungeonDistanceMax: 100
   worldRadiusMin: 202
@@ -98,4 +87,4 @@
   - Night
   airMods:
   - GateAirSleepy
-  weight: 0.6
+  weight: 0.02

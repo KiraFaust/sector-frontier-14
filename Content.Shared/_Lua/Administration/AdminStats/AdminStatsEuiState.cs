@@ -33,6 +33,7 @@ public sealed class AdminStatsEuiState : EuiStateBase
     public long RamTotalBytes;
     public double CpuPercent;
     public int CpuCount;
+    public bool IsLinuxHost;
 }
 
 public static class AdminStatsEuiMsg

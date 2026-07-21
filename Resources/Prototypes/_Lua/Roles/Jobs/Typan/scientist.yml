@@ -3,9 +3,10 @@
 # See AGPLv3.txt for details.
 
 - type: job
-  id: OutpostSyndicateScience
+  id: OutpostTypanScience
   name: job-name-typan-science
-  playTimeTracker: JobOutpostTypanScience
+  playTimeTracker: JobOutpostSyndicateScience
+  requiredCompany: Syndicate
   salary: 35000
   description: Учёный из далёкого космоса.
   startingGear: SyndicateScience
@@ -14,26 +15,25 @@
   canBeAntag: false
   hideConsoleVisibility: true
   requirements:
-    # - !type:RoleTimeRequirement
-    #   role: JobOutpostTypanBotanist
-    #   time: 20600
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 12000
-    - !type:DepartmentTimeRequirement
-      department: Antag
-      time: 25000
-    - !type:DepartmentTimeRequirement
-      department: Civilian
-      time: 60000
-    - !type:OverallPlaytimeRequirement
-      time: 360000
+    - !type:RoleTimeRequirement
+      role: JobOutpostSyndicateBotanist
+      time: 20600
+    # - !type:DepartmentTimeRequirement
+    #   department: Security
+    #   time: 12000
+    # - !type:DepartmentTimeRequirement
+    #   department: Civilian
+    #   time: 60000
+    # - !type:OverallPlaytimeRequirement
+    #   time: 360000
   access:
   - SyndicateAgent
   - NuclearOperative
   accessGroups:
   - AllAccess
   special:
+  - !type:AddImplantSpecial
+    implants: [ DeathAcidifierImplantLWTypan ]
   - !type:AddComponentSpecial
     components:
       - type: Company
@@ -50,16 +50,16 @@
 - type: startingGear
   id: SyndicateScience
   equipment:
-    ears: ClothingHeadsetAltOutpostSyndicate
-    jumpsuit: ClothingUniformScienceOutpostSyndicate
+    ears: ClothingHeadsetAltOutpostTypan
+    jumpsuit: ClothingUniformScienceOutpostTypan
     outerClothing: ClothingOuterCoatLabOpened
-    gloves: ClothingHandsScienceOutpostSyndicate
+    gloves: ClothingHandsScienceOutpostTypan
     shoes: ClothingShoesBootsCombat
     back: ClothingBackpackSyndicateFilled
     id: SyndiPDAScience
 
 - type: chameleonOutfit
-  id: OutpostSyndicateScienceChameleonOutfit
-  job: OutpostSyndicateScience
+  id: OutpostTypanScienceChameleonOutfit
+  job: OutpostTypanScience
   equipment:
-    jumpsuit: ClothingUniformScienceOutpostSyndicate
+    jumpsuit: ClothingUniformScienceOutpostTypan

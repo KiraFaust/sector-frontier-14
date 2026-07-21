@@ -11,13 +11,12 @@
   category: Small
   group: Typan
   access: SyndicateAgent
-  whitelist:
-  - Luna
-  - Frontier
   class:
   - Syndicate
+  - Expedition # Lua
+  - Pursuit # Lua
   engine:
-  - Singularity
+  - Uranium # Lua
   shuttlePath: /Maps/_Lua/Shuttles/Typan/hunter.yml
 
 - type: gameMap

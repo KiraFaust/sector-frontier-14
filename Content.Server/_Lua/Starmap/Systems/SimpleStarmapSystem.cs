@@ -20,6 +20,7 @@ using Content.Shared.Backmen.Arrivals;
 using Content.Shared.Dataset;
 using Content.Shared.Lua.CLVar;
 using Content.Shared.Parallax;
+using Content.Shared.Shuttles.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
@@ -39,6 +40,14 @@ namespace Content.Server._Lua.Starmap.Systems
 {
     public sealed class SimpleStarmapSystem : EntitySystem
     {
+        private static readonly HashSet<string> DiskOptionalSectorIds =
+        [
+            "PirateSector",
+            "TypanSector",
+            "AsteroidSectorDefault",
+            "FrontierSector"
+        ];
+
         [Dependency] private readonly ShuttleSystem _shuttleSystem = default!;
         [Dependency] private readonly MapSystem _mapSystem = default!;
         [Dependency] private readonly IMapManager _mapManager = default!;
@@ -285,36 +294,27 @@ namespace Content.Server._Lua.Starmap.Systems
             { PlayDenySound(consoleUid); if (!string.IsNullOrEmpty(reason)) _popup.PopupEntity(reason!, consoleUid); return; }
             if (!_shuttleSystem.TryGetBluespaceDrive(shuttleUid.Value, out var warpDriveUid, out var warpDrive) || warpDriveUid == null)
             { PlayDenySound(consoleUid); _popup.PopupEntity(Loc.GetString("starmap-no-warpdrive"), consoleUid); return; }
-            if (TryComp<MapGridComponent>(shuttleUid.Value, out var grid))
-            {
-                var xform = Transform(shuttleUid.Value);
-                var bounds = xform.WorldMatrix.TransformBox(grid.LocalAABB).Enlarged(ShuttleConsoleSystem.ShuttleFTLRange);
-                var dockedShuttles = new HashSet<EntityUid>();
-                _shuttleSystem.GetAllDockedShuttlesIgnoringFTLLock(shuttleUid.Value, dockedShuttles);
-                foreach (var other in _mapManager.FindGridsIntersecting(xform.MapID, bounds))
-                {
-                    if (other.Owner == shuttleUid.Value) continue;
-                    if (dockedShuttles.Contains(other.Owner)) continue;
-                    if (IsGcAbleGrid(other.Owner)) continue;
-                    PlayDenySound(consoleUid); _popup.PopupEntity(Loc.GetString("shuttle-ftl-proximity"), consoleUid); return;
-                }
-            }
             void PlayDenySound(EntityUid uid)
             { _audio.PlayPvs(new SoundPathSpecifier("/Audio/Effects/Cargo/buzz_sigh.ogg"), uid); }
-            var transit = EnsureComp<WarpTransitComponent>(shuttleUid.Value);
-            transit.TargetMap = star.Map;
             var angle = (float)(_random.NextDouble() * 2 * Math.PI);
             var radius = _random.Next(1000, 5001);
             var offset = new Vector2((float)Math.Cos(angle) * radius, (float)Math.Sin(angle) * radius);
             var targetPos = star.Position + offset;
-            transit.TargetPosition = targetPos;
-            Dirty(shuttleUid.Value, transit);
             var targetCoordinates = new EntityCoordinates(mapUid, targetPos);
             _shuttleSystem.FTLToCoordinates(shuttleUid.Value, shuttleComponent, targetCoordinates, Angle.Zero);
+            if (!HasComp<FTLComponent>(shuttleUid.Value))
+            { PlayDenySound(consoleUid); return; }
+            var transit = EnsureComp<WarpTransitComponent>(shuttleUid.Value);
+            transit.TargetMap = star.Map;
+            transit.TargetPosition = targetPos;
+            Dirty(shuttleUid.Value, transit);
             try { EntityManager.System<StarmapSystem>().RefreshConsoles(); } catch { }
         }
         private bool HasDiskForSector(EntityUid consoleUid, MapId targetMap)
         {
+            if (!_configurationManager.GetCVar(CLVars.StarmapRequireSectorDisks) && IsDiskOptionalSectorMap(targetMap))
+                return true;
+
             if (targetMap == _ticker.DefaultMap) return true;
             if (_centcomm != null && _centcomm.CentComMap != MapId.Nullspace && targetMap == _centcomm.CentComMap) return true;
             if (!_containers.TryGetContainer(consoleUid, "disk_slot", out var diskCont) || diskCont.ContainedEntities.Count == 0) return false;
@@ -324,18 +324,57 @@ namespace Content.Server._Lua.Starmap.Systems
             foreach (var sid in diskComp.AllowedSectorIds)
             {
                 if (string.IsNullOrWhiteSpace(sid)) continue;
-                MapId mapId;
-                if (sid == "FrontierSector") mapId = _ticker.DefaultMap;
-                else if (_sectors.TryGetMapId(sid, out var resolved)) mapId = resolved;
-                else if (currentPreset == "LuaAdventure")
-                {
-                    var altId = sid switch { "TypanSector" => "TypanSectorLua", "PirateSector" => "PirateSectorLua", _ => null };
-                    if (altId == null || !_sectors.TryGetMapId(altId, out resolved)) continue;
-                    mapId = resolved;
-                }
-                else continue;
+                if (!TryResolveSectorMapId(sid, currentPreset, out var mapId))
+                    continue;
+
                 if (mapId == targetMap) return true;
             }
+            return false;
+        }
+
+        private bool IsDiskOptionalSectorMap(MapId targetMap)
+        {
+            var currentPreset = _ticker.CurrentPreset?.ID;
+            foreach (var sid in DiskOptionalSectorIds)
+            {
+                if (TryResolveSectorMapId(sid, currentPreset, out var mapId) && mapId == targetMap)
+                    return true;
+            }
+
+            return false;
+        }
+
+        private bool TryResolveSectorMapId(string sid, string? currentPreset, out MapId mapId)
+        {
+            if (sid == "FrontierSector")
+            {
+                mapId = _ticker.DefaultMap;
+                return true;
+            }
+
+            if (_sectors.TryGetMapId(sid, out var resolved))
+            {
+                mapId = resolved;
+                return true;
+            }
+
+            if (currentPreset == "LuaAdventure")
+            {
+                var altId = sid switch
+                {
+                    "TypanSector" => "TypanSectorLua",
+                    "PirateSector" => "PirateSectorLua",
+                    _ => null
+                };
+
+                if (altId != null && _sectors.TryGetMapId(altId, out resolved))
+                {
+                    mapId = resolved;
+                    return true;
+                }
+            }
+
+            mapId = MapId.Nullspace;
             return false;
         }
 

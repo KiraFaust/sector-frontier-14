@@ -14,14 +14,11 @@
   group: Shipyard
   shuttlePath: /Maps/_Mono/Shuttles/Baeg.yml
   guidebookPage: Null
-  whitelist:
-  - Luna
-  - Frontier
   class:
   - Civilian
   - Salvage
   engine:
-  - AME
+  - Welding # Lua
 
 - type: gameMap
   id: Baeg

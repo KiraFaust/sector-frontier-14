@@ -890,19 +890,6 @@
   - UplinkDeception
 
 - type: listing
-  id: UplinkChameleonProjector
-  name: uplink-chameleon-projector-name
-  description: uplink-chameleon-projector-desc
-  productEntity: ChameleonProjector
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 4
-  cost:
-    Telecrystal: 7
-  categories:
-  - UplinkDeception
-
-- type: listing
   id: UplinkHeadsetEncryptionKey
   name: uplink-encryption-key-name
   description: uplink-encryption-key-desc
@@ -1816,7 +1803,7 @@
   id: UplinkmodsuitSyndie
   name: uplink-syndicate-modsuit-name
   description: uplink-syndicate-modsuit-desc
-  icon: { sprite: /Textures/_Lua/Clothing/Back/nukeops.rsi, state: icon }
+  icon: { sprite: /Textures/_Lua/Clothing/Back/Backpacks/nukeops.rsi, state: icon }
   productEntity: ClothingmodsuitBloodRedHardsuit
   discountCategory: veryRareDiscounts
   discountDownTo:
@@ -1836,7 +1823,7 @@
   id: UplinkmodsuitSyndieelite
   name: uplink-syndicate-elite-modsuit-name
   description: uplink-syndicate-elite-modsuit-desc
-  icon: { sprite: /Textures/_Lua/Clothing/Back/pmc.rsi, state: icon }
+  icon: { sprite: /Textures/_Lua/Clothing/Back/Backpacks/pmc.rsi, state: icon }
   productEntity: ClothingmodsuitBloodRedHardsuitElite
   discountCategory: veryRareDiscounts
   discountDownTo:

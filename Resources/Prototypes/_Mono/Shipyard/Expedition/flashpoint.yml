@@ -16,11 +16,10 @@
   access: Mercenary
   shuttlePath: /Maps/_Mono/Shuttles/Expedition/flashpoint.yml
   guidebookPage: Null
-  whitelist:
-  - Luna
-  - Frontier
   class:
   - Civilian
+  - Cargo # Lua
+  - Mercenary # Lua
   - Expedition
   engine:
   - AME
