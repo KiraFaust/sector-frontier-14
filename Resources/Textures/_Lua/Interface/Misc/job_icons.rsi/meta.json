@@ -118,6 +118,9 @@
     },
     {
        "name" : "nfsdservice"
+    },
+    {
+       "name" : "sr"
     }
   ]
 }

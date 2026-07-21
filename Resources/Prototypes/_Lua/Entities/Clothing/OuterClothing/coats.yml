@@ -200,3 +200,22 @@
         Blunt: 0.6
         Slash: 0.6
         Piercing: 0.6
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatSr
+  name: sector representative coat
+  description: This coat is made with the best cotton in the galaxy. Well, it's just written on its tag. But it is very comfy.
+  components:
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Coats/sr_coat.rsi
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Coats/sr_coat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.5
+        Heat: 0.6
+        Caustic: 0.6

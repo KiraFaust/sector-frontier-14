@@ -17,9 +17,9 @@
   supervisors: job-supervisors-mmo # Frontier
   displayWeight: 30
   access:
-  - Medical
-  - Maintenance
-  - Paramedic
+  # - Medical
+  # - Maintenance
+  # - Paramedic  # ещё раз забудете закомментить что-то - пальцы переломаю.
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   special:

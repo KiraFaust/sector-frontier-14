@@ -5,11 +5,11 @@
   components:
   - type: Stamp
     stampedName: stamp-component-stamped-name-sr
-    stampedColor: "#6ec0ea"
-    stampState: "paper_stamp-hop"
+    stampedColor: "#e3c13b"
+    stampState: "paper_stamp-centcom"
     protected: True
   - type: Sprite
-    state: stamp-hop
+    state: stamp-sr
 
 - type: entity
   name: station traffic controller's rubber stamp

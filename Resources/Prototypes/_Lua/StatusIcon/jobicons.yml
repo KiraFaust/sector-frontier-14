@@ -161,3 +161,11 @@
     sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
     state: nfsdservice
   jobName: job-name-service-nfsd
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSr
+  icon:
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: sr
+  jobName: job-name-sr
